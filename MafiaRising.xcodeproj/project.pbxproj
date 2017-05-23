@@ -1,0 +1,697 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B488F041ED3653700A27479 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F031ED3653700A27479 /* HomeViewController.swift */; };
+		2B488F0A1ED366F400A27479 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F091ED366F400A27479 /* OptionsViewController.swift */; };
+		2B488F0C1ED3675800A27479 /* RulesMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F0B1ED3675800A27479 /* RulesMenuViewController.swift */; };
+		2B488F0E1ED3684100A27479 /* Tutorial1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F0D1ED3684100A27479 /* Tutorial1ViewController.swift */; };
+		2B488F101ED3688000A27479 /* ScriptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F0F1ED3688000A27479 /* ScriptViewController.swift */; };
+		2B488F121ED3688C00A27479 /* RolesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F111ED3688C00A27479 /* RolesViewController.swift */; };
+		2B488F1A1ED3697300A27479 /* 1PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F191ED3697300A27479 /* 1PlayerViewController.swift */; };
+		2B488F1C1ED3698600A27479 /* 2RoleSetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F1B1ED3698600A27479 /* 2RoleSetUpViewController.swift */; };
+		2B488F1E1ED3699400A27479 /* 3CardRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F1D1ED3699400A27479 /* 3CardRevealViewController.swift */; };
+		2B488F201ED369A100A27479 /* 4ReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F1F1ED369A100A27479 /* 4ReadyViewController.swift */; };
+		2B488F221ED369C300A27479 /* 5StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F211ED369C300A27479 /* 5StoryViewController.swift */; };
+		2B488F241ED369D700A27479 /* 6NightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F231ED369D700A27479 /* 6NightViewController.swift */; };
+		2B488F261ED369E600A27479 /* 6DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F251ED369E600A27479 /* 6DayViewController.swift */; };
+		2B488F291ED36A0200A27479 /* 7ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F281ED36A0200A27479 /* 7ChooseViewController.swift */; };
+		2B488F2B1ED36A3900A27479 /* 8VictoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F2A1ED36A3900A27479 /* 8VictoryViewController.swift */; };
+		2B488F2D1ED36A6100A27479 /* 9EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F2C1ED36A6100A27479 /* 9EndViewController.swift */; };
+		2B488F2F1ED375A000A27479 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F2E1ED375A000A27479 /* Header.swift */; };
+		2B488F311ED37F6A00A27479 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F301ED37F6A00A27479 /* Info.swift */; };
+		2B488F331ED3A32700A27479 /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F321ED3A32700A27479 /* PauseViewController.swift */; };
+		2B488F351ED3AEBC00A27479 /* GameRolesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F341ED3AEBC00A27479 /* GameRolesViewController.swift */; };
+		2B488F371ED3AFBC00A27479 /* RoleInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F361ED3AFBC00A27479 /* RoleInformationViewController.swift */; };
+		2BFEDDED1EC4C2E600AB18BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEDDEC1EC4C2E600AB18BD /* AppDelegate.swift */; };
+		2BFEDDF21EC4C2E600AB18BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BFEDDF01EC4C2E600AB18BD /* Main.storyboard */; };
+		2BFEDDF41EC4C2E600AB18BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BFEDDF31EC4C2E600AB18BD /* Assets.xcassets */; };
+		2BFEDDF71EC4C2E600AB18BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BFEDDF51EC4C2E600AB18BD /* LaunchScreen.storyboard */; };
+		2BFEDE021EC4C2E600AB18BD /* MafiaRisingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEDE011EC4C2E600AB18BD /* MafiaRisingTests.swift */; };
+		2BFEDE0D1EC4C2E700AB18BD /* MafiaRisingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEDE0C1EC4C2E700AB18BD /* MafiaRisingUITests.swift */; };
+		2BFEDE1B1EC4C7CE00AB18BD /* Kefa.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 2BFEDE1A1EC4C7CE00AB18BD /* Kefa.ttc */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2BFEDDFE1EC4C2E600AB18BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BFEDDE11EC4C2E600AB18BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BFEDDE81EC4C2E600AB18BD;
+			remoteInfo = MafiaRising;
+		};
+		2BFEDE091EC4C2E700AB18BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BFEDDE11EC4C2E600AB18BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BFEDDE81EC4C2E600AB18BD;
+			remoteInfo = MafiaRising;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B488F031ED3653700A27479 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2B488F091ED366F400A27479 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		2B488F0B1ED3675800A27479 /* RulesMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesMenuViewController.swift; sourceTree = "<group>"; };
+		2B488F0D1ED3684100A27479 /* Tutorial1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial1ViewController.swift; sourceTree = "<group>"; };
+		2B488F0F1ED3688000A27479 /* ScriptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptViewController.swift; sourceTree = "<group>"; };
+		2B488F111ED3688C00A27479 /* RolesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RolesViewController.swift; sourceTree = "<group>"; };
+		2B488F191ED3697300A27479 /* 1PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 1PlayerViewController.swift; sourceTree = "<group>"; };
+		2B488F1B1ED3698600A27479 /* 2RoleSetUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 2RoleSetUpViewController.swift; sourceTree = "<group>"; };
+		2B488F1D1ED3699400A27479 /* 3CardRevealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 3CardRevealViewController.swift; sourceTree = "<group>"; };
+		2B488F1F1ED369A100A27479 /* 4ReadyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 4ReadyViewController.swift; sourceTree = "<group>"; };
+		2B488F211ED369C300A27479 /* 5StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 5StoryViewController.swift; sourceTree = "<group>"; };
+		2B488F231ED369D700A27479 /* 6NightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 6NightViewController.swift; sourceTree = "<group>"; };
+		2B488F251ED369E600A27479 /* 6DayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 6DayViewController.swift; sourceTree = "<group>"; };
+		2B488F281ED36A0200A27479 /* 7ChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 7ChooseViewController.swift; sourceTree = "<group>"; };
+		2B488F2A1ED36A3900A27479 /* 8VictoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 8VictoryViewController.swift; sourceTree = "<group>"; };
+		2B488F2C1ED36A6100A27479 /* 9EndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 9EndViewController.swift; sourceTree = "<group>"; };
+		2B488F2E1ED375A000A27479 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		2B488F301ED37F6A00A27479 /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		2B488F321ED3A32700A27479 /* PauseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
+		2B488F341ED3AEBC00A27479 /* GameRolesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRolesViewController.swift; sourceTree = "<group>"; };
+		2B488F361ED3AFBC00A27479 /* RoleInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleInformationViewController.swift; sourceTree = "<group>"; };
+		2BFEDDE91EC4C2E600AB18BD /* MafiaRising.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MafiaRising.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BFEDDEC1EC4C2E600AB18BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2BFEDDF11EC4C2E600AB18BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2BFEDDF31EC4C2E600AB18BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BFEDDF61EC4C2E600AB18BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2BFEDDF81EC4C2E600AB18BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BFEDDFD1EC4C2E600AB18BD /* MafiaRisingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MafiaRisingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BFEDE011EC4C2E600AB18BD /* MafiaRisingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MafiaRisingTests.swift; sourceTree = "<group>"; };
+		2BFEDE031EC4C2E600AB18BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BFEDE081EC4C2E700AB18BD /* MafiaRisingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MafiaRisingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BFEDE0C1EC4C2E700AB18BD /* MafiaRisingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MafiaRisingUITests.swift; sourceTree = "<group>"; };
+		2BFEDE0E1EC4C2E700AB18BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BFEDE1A1EC4C7CE00AB18BD /* Kefa.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Kefa.ttc; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BFEDDE61EC4C2E600AB18BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BFEDDFA1EC4C2E600AB18BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BFEDE051EC4C2E600AB18BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B488F051ED3668900A27479 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B488F2E1ED375A000A27479 /* Header.swift */,
+				2B488F301ED37F6A00A27479 /* Info.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2B488F061ED3668F00A27479 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B488F031ED3653700A27479 /* HomeViewController.swift */,
+				2B488F151ED368D000A27479 /* Rules */,
+				2B488F141ED368CA00A27479 /* Options */,
+				2B488F131ED368BB00A27479 /* Game */,
+				2B488F321ED3A32700A27479 /* PauseViewController.swift */,
+				2B488F341ED3AEBC00A27479 /* GameRolesViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2B488F071ED3669700A27479 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2B488F081ED366DD00A27479 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2BFEDE1A1EC4C7CE00AB18BD /* Kefa.ttc */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2B488F131ED368BB00A27479 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				2B488F191ED3697300A27479 /* 1PlayerViewController.swift */,
+				2B488F1B1ED3698600A27479 /* 2RoleSetUpViewController.swift */,
+				2B488F1D1ED3699400A27479 /* 3CardRevealViewController.swift */,
+				2B488F1F1ED369A100A27479 /* 4ReadyViewController.swift */,
+				2B488F211ED369C300A27479 /* 5StoryViewController.swift */,
+				2B488F231ED369D700A27479 /* 6NightViewController.swift */,
+				2B488F251ED369E600A27479 /* 6DayViewController.swift */,
+				2B488F281ED36A0200A27479 /* 7ChooseViewController.swift */,
+				2B488F2A1ED36A3900A27479 /* 8VictoryViewController.swift */,
+				2B488F2C1ED36A6100A27479 /* 9EndViewController.swift */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		2B488F141ED368CA00A27479 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				2B488F091ED366F400A27479 /* OptionsViewController.swift */,
+			);
+			name = Options;
+			sourceTree = "<group>";
+		};
+		2B488F151ED368D000A27479 /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				2B488F0B1ED3675800A27479 /* RulesMenuViewController.swift */,
+				2B488F181ED3690900A27479 /* Roles */,
+				2B488F171ED368FE00A27479 /* Script */,
+				2B488F161ED368F600A27479 /* Tutorial */,
+			);
+			name = Rules;
+			sourceTree = "<group>";
+		};
+		2B488F161ED368F600A27479 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				2B488F0D1ED3684100A27479 /* Tutorial1ViewController.swift */,
+			);
+			name = Tutorial;
+			sourceTree = "<group>";
+		};
+		2B488F171ED368FE00A27479 /* Script */ = {
+			isa = PBXGroup;
+			children = (
+				2B488F0F1ED3688000A27479 /* ScriptViewController.swift */,
+			);
+			name = Script;
+			sourceTree = "<group>";
+		};
+		2B488F181ED3690900A27479 /* Roles */ = {
+			isa = PBXGroup;
+			children = (
+				2B488F111ED3688C00A27479 /* RolesViewController.swift */,
+				2B488F361ED3AFBC00A27479 /* RoleInformationViewController.swift */,
+			);
+			name = Roles;
+			sourceTree = "<group>";
+		};
+		2BFEDDE01EC4C2E600AB18BD = {
+			isa = PBXGroup;
+			children = (
+				2BFEDDEB1EC4C2E600AB18BD /* MafiaRising */,
+				2BFEDE001EC4C2E600AB18BD /* MafiaRisingTests */,
+				2BFEDE0B1EC4C2E700AB18BD /* MafiaRisingUITests */,
+				2BFEDDEA1EC4C2E600AB18BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2BFEDDEA1EC4C2E600AB18BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BFEDDE91EC4C2E600AB18BD /* MafiaRising.app */,
+				2BFEDDFD1EC4C2E600AB18BD /* MafiaRisingTests.xctest */,
+				2BFEDE081EC4C2E700AB18BD /* MafiaRisingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BFEDDEB1EC4C2E600AB18BD /* MafiaRising */ = {
+			isa = PBXGroup;
+			children = (
+				2B488F081ED366DD00A27479 /* Resources */,
+				2B488F071ED3669700A27479 /* Model */,
+				2B488F061ED3668F00A27479 /* Controller */,
+				2B488F051ED3668900A27479 /* View */,
+				2BFEDDEC1EC4C2E600AB18BD /* AppDelegate.swift */,
+				2BFEDDF01EC4C2E600AB18BD /* Main.storyboard */,
+				2BFEDDF31EC4C2E600AB18BD /* Assets.xcassets */,
+				2BFEDDF51EC4C2E600AB18BD /* LaunchScreen.storyboard */,
+				2BFEDDF81EC4C2E600AB18BD /* Info.plist */,
+			);
+			path = MafiaRising;
+			sourceTree = "<group>";
+		};
+		2BFEDE001EC4C2E600AB18BD /* MafiaRisingTests */ = {
+			isa = PBXGroup;
+			children = (
+				2BFEDE011EC4C2E600AB18BD /* MafiaRisingTests.swift */,
+				2BFEDE031EC4C2E600AB18BD /* Info.plist */,
+			);
+			path = MafiaRisingTests;
+			sourceTree = "<group>";
+		};
+		2BFEDE0B1EC4C2E700AB18BD /* MafiaRisingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2BFEDE0C1EC4C2E700AB18BD /* MafiaRisingUITests.swift */,
+				2BFEDE0E1EC4C2E700AB18BD /* Info.plist */,
+			);
+			path = MafiaRisingUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BFEDDE81EC4C2E600AB18BD /* MafiaRising */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BFEDE111EC4C2E700AB18BD /* Build configuration list for PBXNativeTarget "MafiaRising" */;
+			buildPhases = (
+				2BFEDDE51EC4C2E600AB18BD /* Sources */,
+				2BFEDDE61EC4C2E600AB18BD /* Frameworks */,
+				2BFEDDE71EC4C2E600AB18BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MafiaRising;
+			productName = MafiaRising;
+			productReference = 2BFEDDE91EC4C2E600AB18BD /* MafiaRising.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2BFEDDFC1EC4C2E600AB18BD /* MafiaRisingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BFEDE141EC4C2E700AB18BD /* Build configuration list for PBXNativeTarget "MafiaRisingTests" */;
+			buildPhases = (
+				2BFEDDF91EC4C2E600AB18BD /* Sources */,
+				2BFEDDFA1EC4C2E600AB18BD /* Frameworks */,
+				2BFEDDFB1EC4C2E600AB18BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BFEDDFF1EC4C2E600AB18BD /* PBXTargetDependency */,
+			);
+			name = MafiaRisingTests;
+			productName = MafiaRisingTests;
+			productReference = 2BFEDDFD1EC4C2E600AB18BD /* MafiaRisingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2BFEDE071EC4C2E600AB18BD /* MafiaRisingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BFEDE171EC4C2E700AB18BD /* Build configuration list for PBXNativeTarget "MafiaRisingUITests" */;
+			buildPhases = (
+				2BFEDE041EC4C2E600AB18BD /* Sources */,
+				2BFEDE051EC4C2E600AB18BD /* Frameworks */,
+				2BFEDE061EC4C2E600AB18BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BFEDE0A1EC4C2E700AB18BD /* PBXTargetDependency */,
+			);
+			name = MafiaRisingUITests;
+			productName = MafiaRisingUITests;
+			productReference = 2BFEDE081EC4C2E700AB18BD /* MafiaRisingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BFEDDE11EC4C2E600AB18BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Joseph Yuen";
+				TargetAttributes = {
+					2BFEDDE81EC4C2E600AB18BD = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					2BFEDDFC1EC4C2E600AB18BD = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2BFEDDE81EC4C2E600AB18BD;
+					};
+					2BFEDE071EC4C2E600AB18BD = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2BFEDDE81EC4C2E600AB18BD;
+					};
+				};
+			};
+			buildConfigurationList = 2BFEDDE41EC4C2E600AB18BD /* Build configuration list for PBXProject "MafiaRising" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BFEDDE01EC4C2E600AB18BD;
+			productRefGroup = 2BFEDDEA1EC4C2E600AB18BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BFEDDE81EC4C2E600AB18BD /* MafiaRising */,
+				2BFEDDFC1EC4C2E600AB18BD /* MafiaRisingTests */,
+				2BFEDE071EC4C2E600AB18BD /* MafiaRisingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BFEDDE71EC4C2E600AB18BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BFEDE1B1EC4C7CE00AB18BD /* Kefa.ttc in Resources */,
+				2BFEDDF71EC4C2E600AB18BD /* LaunchScreen.storyboard in Resources */,
+				2BFEDDF41EC4C2E600AB18BD /* Assets.xcassets in Resources */,
+				2BFEDDF21EC4C2E600AB18BD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BFEDDFB1EC4C2E600AB18BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BFEDE061EC4C2E600AB18BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BFEDDE51EC4C2E600AB18BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B488F0E1ED3684100A27479 /* Tutorial1ViewController.swift in Sources */,
+				2B488F1C1ED3698600A27479 /* 2RoleSetUpViewController.swift in Sources */,
+				2B488F0A1ED366F400A27479 /* OptionsViewController.swift in Sources */,
+				2B488F371ED3AFBC00A27479 /* RoleInformationViewController.swift in Sources */,
+				2B488F291ED36A0200A27479 /* 7ChooseViewController.swift in Sources */,
+				2B488F1E1ED3699400A27479 /* 3CardRevealViewController.swift in Sources */,
+				2BFEDDED1EC4C2E600AB18BD /* AppDelegate.swift in Sources */,
+				2B488F1A1ED3697300A27479 /* 1PlayerViewController.swift in Sources */,
+				2B488F041ED3653700A27479 /* HomeViewController.swift in Sources */,
+				2B488F311ED37F6A00A27479 /* Info.swift in Sources */,
+				2B488F121ED3688C00A27479 /* RolesViewController.swift in Sources */,
+				2B488F2D1ED36A6100A27479 /* 9EndViewController.swift in Sources */,
+				2B488F2F1ED375A000A27479 /* Header.swift in Sources */,
+				2B488F261ED369E600A27479 /* 6DayViewController.swift in Sources */,
+				2B488F0C1ED3675800A27479 /* RulesMenuViewController.swift in Sources */,
+				2B488F101ED3688000A27479 /* ScriptViewController.swift in Sources */,
+				2B488F241ED369D700A27479 /* 6NightViewController.swift in Sources */,
+				2B488F221ED369C300A27479 /* 5StoryViewController.swift in Sources */,
+				2B488F351ED3AEBC00A27479 /* GameRolesViewController.swift in Sources */,
+				2B488F331ED3A32700A27479 /* PauseViewController.swift in Sources */,
+				2B488F2B1ED36A3900A27479 /* 8VictoryViewController.swift in Sources */,
+				2B488F201ED369A100A27479 /* 4ReadyViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BFEDDF91EC4C2E600AB18BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BFEDE021EC4C2E600AB18BD /* MafiaRisingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BFEDE041EC4C2E600AB18BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BFEDE0D1EC4C2E700AB18BD /* MafiaRisingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BFEDDFF1EC4C2E600AB18BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BFEDDE81EC4C2E600AB18BD /* MafiaRising */;
+			targetProxy = 2BFEDDFE1EC4C2E600AB18BD /* PBXContainerItemProxy */;
+		};
+		2BFEDE0A1EC4C2E700AB18BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BFEDDE81EC4C2E600AB18BD /* MafiaRising */;
+			targetProxy = 2BFEDE091EC4C2E700AB18BD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2BFEDDF01EC4C2E600AB18BD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BFEDDF11EC4C2E600AB18BD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2BFEDDF51EC4C2E600AB18BD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BFEDDF61EC4C2E600AB18BD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BFEDE0F1EC4C2E700AB18BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2BFEDE101EC4C2E700AB18BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BFEDE121EC4C2E700AB18BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MafiaRising/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = illum.MafiaRising;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2BFEDE131EC4C2E700AB18BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MafiaRising/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = illum.MafiaRising;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		2BFEDE151EC4C2E700AB18BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MafiaRisingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = illum.MafiaRisingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MafiaRising.app/MafiaRising";
+			};
+			name = Debug;
+		};
+		2BFEDE161EC4C2E700AB18BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MafiaRisingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = illum.MafiaRisingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MafiaRising.app/MafiaRising";
+			};
+			name = Release;
+		};
+		2BFEDE181EC4C2E700AB18BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = MafiaRisingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = illum.MafiaRisingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MafiaRising;
+			};
+			name = Debug;
+		};
+		2BFEDE191EC4C2E700AB18BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = MafiaRisingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = illum.MafiaRisingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MafiaRising;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BFEDDE41EC4C2E600AB18BD /* Build configuration list for PBXProject "MafiaRising" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BFEDE0F1EC4C2E700AB18BD /* Debug */,
+				2BFEDE101EC4C2E700AB18BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BFEDE111EC4C2E700AB18BD /* Build configuration list for PBXNativeTarget "MafiaRising" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BFEDE121EC4C2E700AB18BD /* Debug */,
+				2BFEDE131EC4C2E700AB18BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BFEDE141EC4C2E700AB18BD /* Build configuration list for PBXNativeTarget "MafiaRisingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BFEDE151EC4C2E700AB18BD /* Debug */,
+				2BFEDE161EC4C2E700AB18BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BFEDE171EC4C2E700AB18BD /* Build configuration list for PBXNativeTarget "MafiaRisingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BFEDE181EC4C2E700AB18BD /* Debug */,
+				2BFEDE191EC4C2E700AB18BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BFEDDE11EC4C2E600AB18BD /* Project object */;
+}
