@@ -35,6 +35,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Kefa.ttc</string>
+		<string>Manteka.ttf</string>
 	</array>
 </dict>
 </plist>

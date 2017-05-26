@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B280F001ED8859700EF6EE1 /* Manteka.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B280EFF1ED8859700EF6EE1 /* Manteka.ttf */; };
 		2B488F041ED3653700A27479 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F031ED3653700A27479 /* HomeViewController.swift */; };
 		2B488F0A1ED366F400A27479 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F091ED366F400A27479 /* OptionsViewController.swift */; };
 		2B488F0C1ED3675800A27479 /* RulesMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F0B1ED3675800A27479 /* RulesMenuViewController.swift */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B280EFF1ED8859700EF6EE1 /* Manteka.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Manteka.ttf; sourceTree = "<group>"; };
 		2B488F031ED3653700A27479 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2B488F091ED366F400A27479 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		2B488F0B1ED3675800A27479 /* RulesMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesMenuViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				2BFEDE1A1EC4C7CE00AB18BD /* Kefa.ttc */,
+				2B280EFF1ED8859700EF6EE1 /* Manteka.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 			files = (
 				2BFEDE1B1EC4C7CE00AB18BD /* Kefa.ttc in Resources */,
 				2BFEDDF71EC4C2E600AB18BD /* LaunchScreen.storyboard in Resources */,
+				2B280F001ED8859700EF6EE1 /* Manteka.ttf in Resources */,
 				2BFEDDF41EC4C2E600AB18BD /* Assets.xcassets in Resources */,
 				2BFEDDF21EC4C2E600AB18BD /* Main.storyboard in Resources */,
 			);
