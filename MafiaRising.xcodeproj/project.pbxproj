@@ -12,7 +12,7 @@
 		2B488F0A1ED366F400A27479 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F091ED366F400A27479 /* OptionsViewController.swift */; };
 		2B488F0C1ED3675800A27479 /* RulesMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F0B1ED3675800A27479 /* RulesMenuViewController.swift */; };
 		2B488F0E1ED3684100A27479 /* Tutorial1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F0D1ED3684100A27479 /* Tutorial1ViewController.swift */; };
-		2B488F101ED3688000A27479 /* ScriptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F0F1ED3688000A27479 /* ScriptViewController.swift */; };
+		2B488F101ED3688000A27479 /* Script1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F0F1ED3688000A27479 /* Script1ViewController.swift */; };
 		2B488F121ED3688C00A27479 /* RolesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F111ED3688C00A27479 /* RolesViewController.swift */; };
 		2B488F1A1ED3697300A27479 /* 1PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F191ED3697300A27479 /* 1PlayerViewController.swift */; };
 		2B488F1C1ED3698600A27479 /* 2RoleSetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F1B1ED3698600A27479 /* 2RoleSetUpViewController.swift */; };
@@ -29,6 +29,27 @@
 		2B488F331ED3A32700A27479 /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F321ED3A32700A27479 /* PauseViewController.swift */; };
 		2B488F351ED3AEBC00A27479 /* GameRolesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F341ED3AEBC00A27479 /* GameRolesViewController.swift */; };
 		2B488F371ED3AFBC00A27479 /* RoleInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F361ED3AFBC00A27479 /* RoleInformationViewController.swift */; };
+		2BC4ABFF1ED888D00075D142 /* Script2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4ABFE1ED888D00075D142 /* Script2ViewController.swift */; };
+		2BC4AC011ED888D80075D142 /* Script3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC001ED888D80075D142 /* Script3ViewController.swift */; };
+		2BC4AC031ED888E10075D142 /* Script4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC021ED888E10075D142 /* Script4ViewController.swift */; };
+		2BC4AC051ED888F00075D142 /* Script5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC041ED888F00075D142 /* Script5ViewController.swift */; };
+		2BC4AC071ED888FC0075D142 /* Script6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC061ED888FC0075D142 /* Script6ViewController.swift */; };
+		2BC4AC091ED889060075D142 /* Script7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC081ED889060075D142 /* Script7ViewController.swift */; };
+		2BC4AC0B1ED8890E0075D142 /* Script8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC0A1ED8890E0075D142 /* Script8ViewController.swift */; };
+		2BC4AC0D1ED8891D0075D142 /* Script9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC0C1ED8891D0075D142 /* Script9ViewController.swift */; };
+		2BC4AC0F1ED889290075D142 /* Script10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC0E1ED889290075D142 /* Script10ViewController.swift */; };
+		2BC4AC111ED889330075D142 /* Script11ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC101ED889330075D142 /* Script11ViewController.swift */; };
+		2BC4AC131ED889470075D142 /* Script12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC121ED889470075D142 /* Script12ViewController.swift */; };
+		2BC4AC151ED8894F0075D142 /* Script13ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC141ED8894F0075D142 /* Script13ViewController.swift */; };
+		2BC4AC171ED899D80075D142 /* Script2AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC161ED899D80075D142 /* Script2AViewController.swift */; };
+		2BC4AC191ED899ED0075D142 /* Script3AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC181ED899ED0075D142 /* Script3AViewController.swift */; };
+		2BC4AC1B1ED899FD0075D142 /* Script4AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC1A1ED899FD0075D142 /* Script4AViewController.swift */; };
+		2BC4AC1D1ED89A090075D142 /* Script5AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC1C1ED89A090075D142 /* Script5AViewController.swift */; };
+		2BC4AC1F1ED89A110075D142 /* Script7AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC1E1ED89A110075D142 /* Script7AViewController.swift */; };
+		2BC4AC211ED89A200075D142 /* Script8AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC201ED89A200075D142 /* Script8AViewController.swift */; };
+		2BC4AC231ED89A330075D142 /* Script9AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC221ED89A330075D142 /* Script9AViewController.swift */; };
+		2BC4AC251ED89A3B0075D142 /* Script10AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC241ED89A3B0075D142 /* Script10AViewController.swift */; };
+		2BC4AC271ED89A490075D142 /* Script12AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC261ED89A490075D142 /* Script12AViewController.swift */; };
 		2BFEDDED1EC4C2E600AB18BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEDDEC1EC4C2E600AB18BD /* AppDelegate.swift */; };
 		2BFEDDF21EC4C2E600AB18BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BFEDDF01EC4C2E600AB18BD /* Main.storyboard */; };
 		2BFEDDF41EC4C2E600AB18BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BFEDDF31EC4C2E600AB18BD /* Assets.xcassets */; };
@@ -61,7 +82,7 @@
 		2B488F091ED366F400A27479 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		2B488F0B1ED3675800A27479 /* RulesMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesMenuViewController.swift; sourceTree = "<group>"; };
 		2B488F0D1ED3684100A27479 /* Tutorial1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial1ViewController.swift; sourceTree = "<group>"; };
-		2B488F0F1ED3688000A27479 /* ScriptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptViewController.swift; sourceTree = "<group>"; };
+		2B488F0F1ED3688000A27479 /* Script1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script1ViewController.swift; sourceTree = "<group>"; };
 		2B488F111ED3688C00A27479 /* RolesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RolesViewController.swift; sourceTree = "<group>"; };
 		2B488F191ED3697300A27479 /* 1PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 1PlayerViewController.swift; sourceTree = "<group>"; };
 		2B488F1B1ED3698600A27479 /* 2RoleSetUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 2RoleSetUpViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +99,27 @@
 		2B488F321ED3A32700A27479 /* PauseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
 		2B488F341ED3AEBC00A27479 /* GameRolesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRolesViewController.swift; sourceTree = "<group>"; };
 		2B488F361ED3AFBC00A27479 /* RoleInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleInformationViewController.swift; sourceTree = "<group>"; };
+		2BC4ABFE1ED888D00075D142 /* Script2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script2ViewController.swift; sourceTree = "<group>"; };
+		2BC4AC001ED888D80075D142 /* Script3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script3ViewController.swift; sourceTree = "<group>"; };
+		2BC4AC021ED888E10075D142 /* Script4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script4ViewController.swift; sourceTree = "<group>"; };
+		2BC4AC041ED888F00075D142 /* Script5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script5ViewController.swift; sourceTree = "<group>"; };
+		2BC4AC061ED888FC0075D142 /* Script6ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script6ViewController.swift; sourceTree = "<group>"; };
+		2BC4AC081ED889060075D142 /* Script7ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script7ViewController.swift; sourceTree = "<group>"; };
+		2BC4AC0A1ED8890E0075D142 /* Script8ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script8ViewController.swift; sourceTree = "<group>"; };
+		2BC4AC0C1ED8891D0075D142 /* Script9ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script9ViewController.swift; sourceTree = "<group>"; };
+		2BC4AC0E1ED889290075D142 /* Script10ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script10ViewController.swift; sourceTree = "<group>"; };
+		2BC4AC101ED889330075D142 /* Script11ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script11ViewController.swift; sourceTree = "<group>"; };
+		2BC4AC121ED889470075D142 /* Script12ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script12ViewController.swift; sourceTree = "<group>"; };
+		2BC4AC141ED8894F0075D142 /* Script13ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script13ViewController.swift; sourceTree = "<group>"; };
+		2BC4AC161ED899D80075D142 /* Script2AViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script2AViewController.swift; sourceTree = "<group>"; };
+		2BC4AC181ED899ED0075D142 /* Script3AViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script3AViewController.swift; sourceTree = "<group>"; };
+		2BC4AC1A1ED899FD0075D142 /* Script4AViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script4AViewController.swift; sourceTree = "<group>"; };
+		2BC4AC1C1ED89A090075D142 /* Script5AViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script5AViewController.swift; sourceTree = "<group>"; };
+		2BC4AC1E1ED89A110075D142 /* Script7AViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script7AViewController.swift; sourceTree = "<group>"; };
+		2BC4AC201ED89A200075D142 /* Script8AViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script8AViewController.swift; sourceTree = "<group>"; };
+		2BC4AC221ED89A330075D142 /* Script9AViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script9AViewController.swift; sourceTree = "<group>"; };
+		2BC4AC241ED89A3B0075D142 /* Script10AViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script10AViewController.swift; sourceTree = "<group>"; };
+		2BC4AC261ED89A490075D142 /* Script12AViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script12AViewController.swift; sourceTree = "<group>"; };
 		2BFEDDE91EC4C2E600AB18BD /* MafiaRising.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MafiaRising.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BFEDDEC1EC4C2E600AB18BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BFEDDF11EC4C2E600AB18BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -203,7 +245,28 @@
 		2B488F171ED368FE00A27479 /* Script */ = {
 			isa = PBXGroup;
 			children = (
-				2B488F0F1ED3688000A27479 /* ScriptViewController.swift */,
+				2B488F0F1ED3688000A27479 /* Script1ViewController.swift */,
+				2BC4ABFE1ED888D00075D142 /* Script2ViewController.swift */,
+				2BC4AC161ED899D80075D142 /* Script2AViewController.swift */,
+				2BC4AC181ED899ED0075D142 /* Script3AViewController.swift */,
+				2BC4AC001ED888D80075D142 /* Script3ViewController.swift */,
+				2BC4AC1A1ED899FD0075D142 /* Script4AViewController.swift */,
+				2BC4AC1C1ED89A090075D142 /* Script5AViewController.swift */,
+				2BC4AC1E1ED89A110075D142 /* Script7AViewController.swift */,
+				2BC4AC201ED89A200075D142 /* Script8AViewController.swift */,
+				2BC4AC021ED888E10075D142 /* Script4ViewController.swift */,
+				2BC4AC041ED888F00075D142 /* Script5ViewController.swift */,
+				2BC4AC061ED888FC0075D142 /* Script6ViewController.swift */,
+				2BC4AC081ED889060075D142 /* Script7ViewController.swift */,
+				2BC4AC221ED89A330075D142 /* Script9AViewController.swift */,
+				2BC4AC241ED89A3B0075D142 /* Script10AViewController.swift */,
+				2BC4AC0A1ED8890E0075D142 /* Script8ViewController.swift */,
+				2BC4AC261ED89A490075D142 /* Script12AViewController.swift */,
+				2BC4AC0C1ED8891D0075D142 /* Script9ViewController.swift */,
+				2BC4AC0E1ED889290075D142 /* Script10ViewController.swift */,
+				2BC4AC101ED889330075D142 /* Script11ViewController.swift */,
+				2BC4AC121ED889470075D142 /* Script12ViewController.swift */,
+				2BC4AC141ED8894F0075D142 /* Script13ViewController.swift */,
 			);
 			name = Script;
 			sourceTree = "<group>";
@@ -411,24 +474,45 @@
 				2B488F1C1ED3698600A27479 /* 2RoleSetUpViewController.swift in Sources */,
 				2B488F0A1ED366F400A27479 /* OptionsViewController.swift in Sources */,
 				2B488F371ED3AFBC00A27479 /* RoleInformationViewController.swift in Sources */,
+				2BC4AC1B1ED899FD0075D142 /* Script4AViewController.swift in Sources */,
 				2B488F291ED36A0200A27479 /* 7ChooseViewController.swift in Sources */,
+				2BC4ABFF1ED888D00075D142 /* Script2ViewController.swift in Sources */,
 				2B488F1E1ED3699400A27479 /* 3CardRevealViewController.swift in Sources */,
 				2BFEDDED1EC4C2E600AB18BD /* AppDelegate.swift in Sources */,
 				2B488F1A1ED3697300A27479 /* 1PlayerViewController.swift in Sources */,
+				2BC4AC131ED889470075D142 /* Script12ViewController.swift in Sources */,
+				2BC4AC0B1ED8890E0075D142 /* Script8ViewController.swift in Sources */,
+				2BC4AC171ED899D80075D142 /* Script2AViewController.swift in Sources */,
 				2B488F041ED3653700A27479 /* HomeViewController.swift in Sources */,
+				2BC4AC031ED888E10075D142 /* Script4ViewController.swift in Sources */,
 				2B488F311ED37F6A00A27479 /* Info.swift in Sources */,
+				2BC4AC111ED889330075D142 /* Script11ViewController.swift in Sources */,
+				2BC4AC231ED89A330075D142 /* Script9AViewController.swift in Sources */,
+				2BC4AC251ED89A3B0075D142 /* Script10AViewController.swift in Sources */,
+				2BC4AC0F1ED889290075D142 /* Script10ViewController.swift in Sources */,
+				2BC4AC271ED89A490075D142 /* Script12AViewController.swift in Sources */,
 				2B488F121ED3688C00A27479 /* RolesViewController.swift in Sources */,
+				2BC4AC151ED8894F0075D142 /* Script13ViewController.swift in Sources */,
+				2BC4AC191ED899ED0075D142 /* Script3AViewController.swift in Sources */,
+				2BC4AC071ED888FC0075D142 /* Script6ViewController.swift in Sources */,
 				2B488F2D1ED36A6100A27479 /* 9EndViewController.swift in Sources */,
+				2BC4AC011ED888D80075D142 /* Script3ViewController.swift in Sources */,
+				2BC4AC1F1ED89A110075D142 /* Script7AViewController.swift in Sources */,
 				2B488F2F1ED375A000A27479 /* Header.swift in Sources */,
 				2B488F261ED369E600A27479 /* 6DayViewController.swift in Sources */,
 				2B488F0C1ED3675800A27479 /* RulesMenuViewController.swift in Sources */,
-				2B488F101ED3688000A27479 /* ScriptViewController.swift in Sources */,
+				2BC4AC211ED89A200075D142 /* Script8AViewController.swift in Sources */,
+				2B488F101ED3688000A27479 /* Script1ViewController.swift in Sources */,
+				2BC4AC051ED888F00075D142 /* Script5ViewController.swift in Sources */,
+				2BC4AC091ED889060075D142 /* Script7ViewController.swift in Sources */,
 				2B488F241ED369D700A27479 /* 6NightViewController.swift in Sources */,
 				2B488F221ED369C300A27479 /* 5StoryViewController.swift in Sources */,
+				2BC4AC0D1ED8891D0075D142 /* Script9ViewController.swift in Sources */,
 				2B488F351ED3AEBC00A27479 /* GameRolesViewController.swift in Sources */,
 				2B488F331ED3A32700A27479 /* PauseViewController.swift in Sources */,
 				2B488F2B1ED36A3900A27479 /* 8VictoryViewController.swift in Sources */,
 				2B488F201ED369A100A27479 /* 4ReadyViewController.swift in Sources */,
+				2BC4AC1D1ED89A090075D142 /* Script5AViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

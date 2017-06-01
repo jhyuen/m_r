@@ -1,14 +1,14 @@
 //
-//  ScriptViewController.swift
+//  Script5AViewController.swift
 //  MafiaRising
 //
-//  Created by Joseph Yuen on 5/22/17.
+//  Created by Joseph Yuen on 5/26/17.
 //  Copyright © 2017 Joseph Yuen. All rights reserved.
 //
 
 import UIKit
 
-class ScriptViewController: UIViewController {
+class Script5AViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
