@@ -12,7 +12,6 @@
 		2B488F0A1ED366F400A27479 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F091ED366F400A27479 /* OptionsViewController.swift */; };
 		2B488F0C1ED3675800A27479 /* RulesMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F0B1ED3675800A27479 /* RulesMenuViewController.swift */; };
 		2B488F0E1ED3684100A27479 /* Tutorial1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F0D1ED3684100A27479 /* Tutorial1ViewController.swift */; };
-		2B488F101ED3688000A27479 /* Script1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F0F1ED3688000A27479 /* Script1ViewController.swift */; };
 		2B488F121ED3688C00A27479 /* RolesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F111ED3688C00A27479 /* RolesViewController.swift */; };
 		2B488F1A1ED3697300A27479 /* 1PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F191ED3697300A27479 /* 1PlayerViewController.swift */; };
 		2B488F1C1ED3698600A27479 /* 2RoleSetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F1B1ED3698600A27479 /* 2RoleSetUpViewController.swift */; };
@@ -29,6 +28,7 @@
 		2B488F331ED3A32700A27479 /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F321ED3A32700A27479 /* PauseViewController.swift */; };
 		2B488F351ED3AEBC00A27479 /* GameRolesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F341ED3AEBC00A27479 /* GameRolesViewController.swift */; };
 		2B488F371ED3AFBC00A27479 /* RoleInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F361ED3AFBC00A27479 /* RoleInformationViewController.swift */; };
+		2BB18CDF1EDFA811005E8515 /* Script1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB18CDE1EDFA811005E8515 /* Script1ViewController.swift */; };
 		2BC4ABFF1ED888D00075D142 /* Script2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4ABFE1ED888D00075D142 /* Script2ViewController.swift */; };
 		2BC4AC011ED888D80075D142 /* Script3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC001ED888D80075D142 /* Script3ViewController.swift */; };
 		2BC4AC031ED888E10075D142 /* Script4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC021ED888E10075D142 /* Script4ViewController.swift */; };
@@ -82,7 +82,6 @@
 		2B488F091ED366F400A27479 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		2B488F0B1ED3675800A27479 /* RulesMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesMenuViewController.swift; sourceTree = "<group>"; };
 		2B488F0D1ED3684100A27479 /* Tutorial1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial1ViewController.swift; sourceTree = "<group>"; };
-		2B488F0F1ED3688000A27479 /* Script1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script1ViewController.swift; sourceTree = "<group>"; };
 		2B488F111ED3688C00A27479 /* RolesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RolesViewController.swift; sourceTree = "<group>"; };
 		2B488F191ED3697300A27479 /* 1PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 1PlayerViewController.swift; sourceTree = "<group>"; };
 		2B488F1B1ED3698600A27479 /* 2RoleSetUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 2RoleSetUpViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +98,7 @@
 		2B488F321ED3A32700A27479 /* PauseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
 		2B488F341ED3AEBC00A27479 /* GameRolesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRolesViewController.swift; sourceTree = "<group>"; };
 		2B488F361ED3AFBC00A27479 /* RoleInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleInformationViewController.swift; sourceTree = "<group>"; };
+		2BB18CDE1EDFA811005E8515 /* Script1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script1ViewController.swift; sourceTree = "<group>"; };
 		2BC4ABFE1ED888D00075D142 /* Script2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script2ViewController.swift; sourceTree = "<group>"; };
 		2BC4AC001ED888D80075D142 /* Script3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script3ViewController.swift; sourceTree = "<group>"; };
 		2BC4AC021ED888E10075D142 /* Script4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script4ViewController.swift; sourceTree = "<group>"; };
@@ -245,7 +245,6 @@
 		2B488F171ED368FE00A27479 /* Script */ = {
 			isa = PBXGroup;
 			children = (
-				2B488F0F1ED3688000A27479 /* Script1ViewController.swift */,
 				2BC4ABFE1ED888D00075D142 /* Script2ViewController.swift */,
 				2BC4AC161ED899D80075D142 /* Script2AViewController.swift */,
 				2BC4AC181ED899ED0075D142 /* Script3AViewController.swift */,
@@ -267,6 +266,7 @@
 				2BC4AC101ED889330075D142 /* Script11ViewController.swift */,
 				2BC4AC121ED889470075D142 /* Script12ViewController.swift */,
 				2BC4AC141ED8894F0075D142 /* Script13ViewController.swift */,
+				2BB18CDE1EDFA811005E8515 /* Script1ViewController.swift */,
 			);
 			name = Script;
 			sourceTree = "<group>";
@@ -502,7 +502,6 @@
 				2B488F261ED369E600A27479 /* 6DayViewController.swift in Sources */,
 				2B488F0C1ED3675800A27479 /* RulesMenuViewController.swift in Sources */,
 				2BC4AC211ED89A200075D142 /* Script8AViewController.swift in Sources */,
-				2B488F101ED3688000A27479 /* Script1ViewController.swift in Sources */,
 				2BC4AC051ED888F00075D142 /* Script5ViewController.swift in Sources */,
 				2BC4AC091ED889060075D142 /* Script7ViewController.swift in Sources */,
 				2B488F241ED369D700A27479 /* 6NightViewController.swift in Sources */,
@@ -512,6 +511,7 @@
 				2B488F331ED3A32700A27479 /* PauseViewController.swift in Sources */,
 				2B488F2B1ED36A3900A27479 /* 8VictoryViewController.swift in Sources */,
 				2B488F201ED369A100A27479 /* 4ReadyViewController.swift in Sources */,
+				2BB18CDF1EDFA811005E8515 /* Script1ViewController.swift in Sources */,
 				2BC4AC1D1ED89A090075D142 /* Script5AViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,7 +2,7 @@
 //  Script1ViewController.swift
 //  MafiaRising
 //
-//  Created by Joseph Yuen on 5/22/17.
+//  Created by Joseph Yuen on 5/31/17.
 //  Copyright © 2017 Joseph Yuen. All rights reserved.
 //
 
