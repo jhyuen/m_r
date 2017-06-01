@@ -29,6 +29,9 @@
 		2B488F351ED3AEBC00A27479 /* GameRolesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F341ED3AEBC00A27479 /* GameRolesViewController.swift */; };
 		2B488F371ED3AFBC00A27479 /* RoleInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F361ED3AFBC00A27479 /* RoleInformationViewController.swift */; };
 		2BB18CE11EDFABE3005E8515 /* Script01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB18CE01EDFABE3005E8515 /* Script01ViewController.swift */; };
+		2BB18CE41EDFE25C005E8515 /* PlayerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB18CE31EDFE25C005E8515 /* PlayerInfoViewController.swift */; };
+		2BB18CE61EDFE268005E8515 /* OptionsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB18CE51EDFE268005E8515 /* OptionsInfoViewController.swift */; };
+		2BB18CE81EDFE277005E8515 /* CardsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB18CE71EDFE277005E8515 /* CardsInfoViewController.swift */; };
 		2BC4ABFF1ED888D00075D142 /* Script2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4ABFE1ED888D00075D142 /* Script2ViewController.swift */; };
 		2BC4AC011ED888D80075D142 /* Script3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC001ED888D80075D142 /* Script3ViewController.swift */; };
 		2BC4AC031ED888E10075D142 /* Script4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC021ED888E10075D142 /* Script4ViewController.swift */; };
@@ -99,6 +102,9 @@
 		2B488F341ED3AEBC00A27479 /* GameRolesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRolesViewController.swift; sourceTree = "<group>"; };
 		2B488F361ED3AFBC00A27479 /* RoleInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleInformationViewController.swift; sourceTree = "<group>"; };
 		2BB18CE01EDFABE3005E8515 /* Script01ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script01ViewController.swift; sourceTree = "<group>"; };
+		2BB18CE31EDFE25C005E8515 /* PlayerInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerInfoViewController.swift; sourceTree = "<group>"; };
+		2BB18CE51EDFE268005E8515 /* OptionsInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsInfoViewController.swift; sourceTree = "<group>"; };
+		2BB18CE71EDFE277005E8515 /* CardsInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsInfoViewController.swift; sourceTree = "<group>"; };
 		2BC4ABFE1ED888D00075D142 /* Script2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script2ViewController.swift; sourceTree = "<group>"; };
 		2BC4AC001ED888D80075D142 /* Script3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script3ViewController.swift; sourceTree = "<group>"; };
 		2BC4AC021ED888E10075D142 /* Script4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script4ViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +178,7 @@
 		2B488F061ED3668F00A27479 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2BB18CE21EDFE220005E8515 /* InfoCards */,
 				2B488F031ED3653700A27479 /* HomeViewController.swift */,
 				2B488F151ED368D000A27479 /* Rules */,
 				2B488F141ED368CA00A27479 /* Options */,
@@ -278,6 +285,16 @@
 				2B488F361ED3AFBC00A27479 /* RoleInformationViewController.swift */,
 			);
 			name = Roles;
+			sourceTree = "<group>";
+		};
+		2BB18CE21EDFE220005E8515 /* InfoCards */ = {
+			isa = PBXGroup;
+			children = (
+				2BB18CE31EDFE25C005E8515 /* PlayerInfoViewController.swift */,
+				2BB18CE51EDFE268005E8515 /* OptionsInfoViewController.swift */,
+				2BB18CE71EDFE277005E8515 /* CardsInfoViewController.swift */,
+			);
+			name = InfoCards;
 			sourceTree = "<group>";
 		};
 		2BFEDDE01EC4C2E600AB18BD = {
@@ -476,6 +493,7 @@
 				2B488F371ED3AFBC00A27479 /* RoleInformationViewController.swift in Sources */,
 				2BC4AC1B1ED899FD0075D142 /* Script4AViewController.swift in Sources */,
 				2B488F291ED36A0200A27479 /* 7ChooseViewController.swift in Sources */,
+				2BB18CE81EDFE277005E8515 /* CardsInfoViewController.swift in Sources */,
 				2BC4ABFF1ED888D00075D142 /* Script2ViewController.swift in Sources */,
 				2B488F1E1ED3699400A27479 /* 3CardRevealViewController.swift in Sources */,
 				2BFEDDED1EC4C2E600AB18BD /* AppDelegate.swift in Sources */,
@@ -491,6 +509,7 @@
 				2BC4AC251ED89A3B0075D142 /* Script10AViewController.swift in Sources */,
 				2BC4AC0F1ED889290075D142 /* Script10ViewController.swift in Sources */,
 				2BC4AC271ED89A490075D142 /* Script12AViewController.swift in Sources */,
+				2BB18CE41EDFE25C005E8515 /* PlayerInfoViewController.swift in Sources */,
 				2B488F121ED3688C00A27479 /* RolesViewController.swift in Sources */,
 				2BC4AC151ED8894F0075D142 /* Script13ViewController.swift in Sources */,
 				2BC4AC191ED899ED0075D142 /* Script3AViewController.swift in Sources */,
@@ -501,6 +520,7 @@
 				2BC4AC1F1ED89A110075D142 /* Script7AViewController.swift in Sources */,
 				2B488F2F1ED375A000A27479 /* Header.swift in Sources */,
 				2B488F261ED369E600A27479 /* 6DayViewController.swift in Sources */,
+				2BB18CE61EDFE268005E8515 /* OptionsInfoViewController.swift in Sources */,
 				2B488F0C1ED3675800A27479 /* RulesMenuViewController.swift in Sources */,
 				2BC4AC211ED89A200075D142 /* Script8AViewController.swift in Sources */,
 				2BC4AC051ED888F00075D142 /* Script5ViewController.swift in Sources */,
