@@ -245,6 +245,7 @@
 		2B488F171ED368FE00A27479 /* Script */ = {
 			isa = PBXGroup;
 			children = (
+				2BB18CDE1EDFA811005E8515 /* Script1ViewController.swift */,
 				2BC4ABFE1ED888D00075D142 /* Script2ViewController.swift */,
 				2BC4AC161ED899D80075D142 /* Script2AViewController.swift */,
 				2BC4AC181ED899ED0075D142 /* Script3AViewController.swift */,
@@ -266,7 +267,6 @@
 				2BC4AC101ED889330075D142 /* Script11ViewController.swift */,
 				2BC4AC121ED889470075D142 /* Script12ViewController.swift */,
 				2BC4AC141ED8894F0075D142 /* Script13ViewController.swift */,
-				2BB18CDE1EDFA811005E8515 /* Script1ViewController.swift */,
 			);
 			name = Script;
 			sourceTree = "<group>";
