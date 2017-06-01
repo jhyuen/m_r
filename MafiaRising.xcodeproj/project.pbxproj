@@ -28,7 +28,7 @@
 		2B488F331ED3A32700A27479 /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F321ED3A32700A27479 /* PauseViewController.swift */; };
 		2B488F351ED3AEBC00A27479 /* GameRolesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F341ED3AEBC00A27479 /* GameRolesViewController.swift */; };
 		2B488F371ED3AFBC00A27479 /* RoleInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F361ED3AFBC00A27479 /* RoleInformationViewController.swift */; };
-		2BB18CDF1EDFA811005E8515 /* Script1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB18CDE1EDFA811005E8515 /* Script1ViewController.swift */; };
+		2BB18CE11EDFABE3005E8515 /* Script01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB18CE01EDFABE3005E8515 /* Script01ViewController.swift */; };
 		2BC4ABFF1ED888D00075D142 /* Script2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4ABFE1ED888D00075D142 /* Script2ViewController.swift */; };
 		2BC4AC011ED888D80075D142 /* Script3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC001ED888D80075D142 /* Script3ViewController.swift */; };
 		2BC4AC031ED888E10075D142 /* Script4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC021ED888E10075D142 /* Script4ViewController.swift */; };
@@ -98,7 +98,7 @@
 		2B488F321ED3A32700A27479 /* PauseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
 		2B488F341ED3AEBC00A27479 /* GameRolesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRolesViewController.swift; sourceTree = "<group>"; };
 		2B488F361ED3AFBC00A27479 /* RoleInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleInformationViewController.swift; sourceTree = "<group>"; };
-		2BB18CDE1EDFA811005E8515 /* Script1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script1ViewController.swift; sourceTree = "<group>"; };
+		2BB18CE01EDFABE3005E8515 /* Script01ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script01ViewController.swift; sourceTree = "<group>"; };
 		2BC4ABFE1ED888D00075D142 /* Script2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script2ViewController.swift; sourceTree = "<group>"; };
 		2BC4AC001ED888D80075D142 /* Script3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script3ViewController.swift; sourceTree = "<group>"; };
 		2BC4AC021ED888E10075D142 /* Script4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script4ViewController.swift; sourceTree = "<group>"; };
@@ -245,7 +245,7 @@
 		2B488F171ED368FE00A27479 /* Script */ = {
 			isa = PBXGroup;
 			children = (
-				2BB18CDE1EDFA811005E8515 /* Script1ViewController.swift */,
+				2BB18CE01EDFABE3005E8515 /* Script01ViewController.swift */,
 				2BC4ABFE1ED888D00075D142 /* Script2ViewController.swift */,
 				2BC4AC161ED899D80075D142 /* Script2AViewController.swift */,
 				2BC4AC181ED899ED0075D142 /* Script3AViewController.swift */,
@@ -494,6 +494,7 @@
 				2B488F121ED3688C00A27479 /* RolesViewController.swift in Sources */,
 				2BC4AC151ED8894F0075D142 /* Script13ViewController.swift in Sources */,
 				2BC4AC191ED899ED0075D142 /* Script3AViewController.swift in Sources */,
+				2BB18CE11EDFABE3005E8515 /* Script01ViewController.swift in Sources */,
 				2BC4AC071ED888FC0075D142 /* Script6ViewController.swift in Sources */,
 				2B488F2D1ED36A6100A27479 /* 9EndViewController.swift in Sources */,
 				2BC4AC011ED888D80075D142 /* Script3ViewController.swift in Sources */,
@@ -511,7 +512,6 @@
 				2B488F331ED3A32700A27479 /* PauseViewController.swift in Sources */,
 				2B488F2B1ED36A3900A27479 /* 8VictoryViewController.swift in Sources */,
 				2B488F201ED369A100A27479 /* 4ReadyViewController.swift in Sources */,
-				2BB18CDF1EDFA811005E8515 /* Script1ViewController.swift in Sources */,
 				2BC4AC1D1ED89A090075D142 /* Script5AViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

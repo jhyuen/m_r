@@ -1,5 +1,5 @@
 //
-//  Script1ViewController.swift
+//  Script01ViewController.swift
 //  MafiaRising
 //
 //  Created by Joseph Yuen on 5/31/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Script1ViewController: UIViewController {
+class Script01ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

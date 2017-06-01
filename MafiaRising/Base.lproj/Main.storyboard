@@ -417,10 +417,37 @@
             </objects>
             <point key="canvasLocation" x="1073" y="779"/>
         </scene>
-        <!--Script1 View Controller-->
+        <!--Tutorial1 View Controller-->
+        <scene sceneID="5sL-me-M1H">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B9M-mE-cad" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="tnb-0D-PFE" customClass="Tutorial1ViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WGI-T4-3ML"/>
+                        <viewControllerLayoutGuide type="bottom" id="kgy-eB-7p9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="08i-XE-QPX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHr-91-iu1">
+                                <rect key="frame" x="155" y="20" width="167" height="175"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1797.5999999999999" y="778.56071964017997"/>
+        </scene>
+        <!--Script01 View Controller-->
         <scene sceneID="1lk-b8-G7t">
             <objects>
-                <viewController id="RLA-d7-xQH" customClass="Script1ViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RLA-d7-xQH" customClass="Script01ViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Otc-qh-Z2x"/>
                         <viewControllerLayoutGuide type="bottom" id="pHe-9F-TRa"/>
