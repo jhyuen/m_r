@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B00422E1EE1E41900A747BA /* Tutorial2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B00422D1EE1E41900A747BA /* Tutorial2ViewController.swift */; };
+		2B0042301EE1E43B00A747BA /* Tutorial3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B00422F1EE1E43A00A747BA /* Tutorial3ViewController.swift */; };
+		2B0042321EE1E44500A747BA /* Tutorial4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0042311EE1E44500A747BA /* Tutorial4ViewController.swift */; };
+		2B0042341EE1E44E00A747BA /* Tutorial5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0042331EE1E44E00A747BA /* Tutorial5ViewController.swift */; };
+		2B0042361EE1E45900A747BA /* Tutorial6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0042351EE1E45900A747BA /* Tutorial6ViewController.swift */; };
+		2B0042381EE1E46400A747BA /* Tutorial7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0042371EE1E46400A747BA /* Tutorial7ViewController.swift */; };
+		2B00423A1EE1E46B00A747BA /* Tutorial8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0042391EE1E46B00A747BA /* Tutorial8ViewController.swift */; };
+		2B00423C1EE1E47800A747BA /* Tutorial9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B00423B1EE1E47800A747BA /* Tutorial9ViewController.swift */; };
+		2B00423E1EE1E47F00A747BA /* Tutorial10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B00423D1EE1E47F00A747BA /* Tutorial10ViewController.swift */; };
+		2B0042401EE1E48800A747BA /* Tutorial11ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B00423F1EE1E48800A747BA /* Tutorial11ViewController.swift */; };
+		2B0042421EE1E49800A747BA /* Tutorial12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0042411EE1E49800A747BA /* Tutorial12ViewController.swift */; };
+		2B0042441EE1E4A100A747BA /* Tutorial13ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0042431EE1E4A100A747BA /* Tutorial13ViewController.swift */; };
+		2B0042461EE1E4AD00A747BA /* Tutorial14ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0042451EE1E4AD00A747BA /* Tutorial14ViewController.swift */; };
+		2B0042481EE1E4B900A747BA /* Tutorial15ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0042471EE1E4B900A747BA /* Tutorial15ViewController.swift */; };
+		2B00424A1EE1E4D600A747BA /* Tutorial16ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0042491EE1E4D600A747BA /* Tutorial16ViewController.swift */; };
+		2B00424C1EE1E4E000A747BA /* Tutorial17ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B00424B1EE1E4E000A747BA /* Tutorial17ViewController.swift */; };
+		2B00424E1EE1E4EC00A747BA /* Tutorial18ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B00424D1EE1E4EC00A747BA /* Tutorial18ViewController.swift */; };
+		2B0042501EE1E4F500A747BA /* Tutorial19ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B00424F1EE1E4F500A747BA /* Tutorial19ViewController.swift */; };
+		2B0042521EE1E4FC00A747BA /* Tutorial19AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0042511EE1E4FC00A747BA /* Tutorial19AViewController.swift */; };
+		2B0042541EE1E50A00A747BA /* Tutorial12AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0042531EE1E50A00A747BA /* Tutorial12AViewController.swift */; };
 		2B280F001ED8859700EF6EE1 /* Manteka.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B280EFF1ED8859700EF6EE1 /* Manteka.ttf */; };
 		2B488F041ED3653700A27479 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F031ED3653700A27479 /* HomeViewController.swift */; };
 		2B488F0A1ED366F400A27479 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F091ED366F400A27479 /* OptionsViewController.swift */; };
@@ -80,6 +100,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B00422D1EE1E41900A747BA /* Tutorial2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial2ViewController.swift; sourceTree = "<group>"; };
+		2B00422F1EE1E43A00A747BA /* Tutorial3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial3ViewController.swift; sourceTree = "<group>"; };
+		2B0042311EE1E44500A747BA /* Tutorial4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial4ViewController.swift; sourceTree = "<group>"; };
+		2B0042331EE1E44E00A747BA /* Tutorial5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial5ViewController.swift; sourceTree = "<group>"; };
+		2B0042351EE1E45900A747BA /* Tutorial6ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial6ViewController.swift; sourceTree = "<group>"; };
+		2B0042371EE1E46400A747BA /* Tutorial7ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial7ViewController.swift; sourceTree = "<group>"; };
+		2B0042391EE1E46B00A747BA /* Tutorial8ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial8ViewController.swift; sourceTree = "<group>"; };
+		2B00423B1EE1E47800A747BA /* Tutorial9ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial9ViewController.swift; sourceTree = "<group>"; };
+		2B00423D1EE1E47F00A747BA /* Tutorial10ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial10ViewController.swift; sourceTree = "<group>"; };
+		2B00423F1EE1E48800A747BA /* Tutorial11ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial11ViewController.swift; sourceTree = "<group>"; };
+		2B0042411EE1E49800A747BA /* Tutorial12ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial12ViewController.swift; sourceTree = "<group>"; };
+		2B0042431EE1E4A100A747BA /* Tutorial13ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial13ViewController.swift; sourceTree = "<group>"; };
+		2B0042451EE1E4AD00A747BA /* Tutorial14ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial14ViewController.swift; sourceTree = "<group>"; };
+		2B0042471EE1E4B900A747BA /* Tutorial15ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial15ViewController.swift; sourceTree = "<group>"; };
+		2B0042491EE1E4D600A747BA /* Tutorial16ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial16ViewController.swift; sourceTree = "<group>"; };
+		2B00424B1EE1E4E000A747BA /* Tutorial17ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial17ViewController.swift; sourceTree = "<group>"; };
+		2B00424D1EE1E4EC00A747BA /* Tutorial18ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial18ViewController.swift; sourceTree = "<group>"; };
+		2B00424F1EE1E4F500A747BA /* Tutorial19ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial19ViewController.swift; sourceTree = "<group>"; };
+		2B0042511EE1E4FC00A747BA /* Tutorial19AViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial19AViewController.swift; sourceTree = "<group>"; };
+		2B0042531EE1E50A00A747BA /* Tutorial12AViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial12AViewController.swift; sourceTree = "<group>"; };
 		2B280EFF1ED8859700EF6EE1 /* Manteka.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Manteka.ttf; sourceTree = "<group>"; };
 		2B488F031ED3653700A27479 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2B488F091ED366F400A27479 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +285,26 @@
 			isa = PBXGroup;
 			children = (
 				2B488F0D1ED3684100A27479 /* Tutorial1ViewController.swift */,
+				2B00422D1EE1E41900A747BA /* Tutorial2ViewController.swift */,
+				2B00422F1EE1E43A00A747BA /* Tutorial3ViewController.swift */,
+				2B0042311EE1E44500A747BA /* Tutorial4ViewController.swift */,
+				2B0042331EE1E44E00A747BA /* Tutorial5ViewController.swift */,
+				2B0042351EE1E45900A747BA /* Tutorial6ViewController.swift */,
+				2B0042371EE1E46400A747BA /* Tutorial7ViewController.swift */,
+				2B0042391EE1E46B00A747BA /* Tutorial8ViewController.swift */,
+				2B00423B1EE1E47800A747BA /* Tutorial9ViewController.swift */,
+				2B00423D1EE1E47F00A747BA /* Tutorial10ViewController.swift */,
+				2B00423F1EE1E48800A747BA /* Tutorial11ViewController.swift */,
+				2B0042411EE1E49800A747BA /* Tutorial12ViewController.swift */,
+				2B0042531EE1E50A00A747BA /* Tutorial12AViewController.swift */,
+				2B0042431EE1E4A100A747BA /* Tutorial13ViewController.swift */,
+				2B0042451EE1E4AD00A747BA /* Tutorial14ViewController.swift */,
+				2B0042471EE1E4B900A747BA /* Tutorial15ViewController.swift */,
+				2B0042491EE1E4D600A747BA /* Tutorial16ViewController.swift */,
+				2B00424B1EE1E4E000A747BA /* Tutorial17ViewController.swift */,
+				2B00424D1EE1E4EC00A747BA /* Tutorial18ViewController.swift */,
+				2B00424F1EE1E4F500A747BA /* Tutorial19ViewController.swift */,
+				2B0042511EE1E4FC00A747BA /* Tutorial19AViewController.swift */,
 			);
 			name = Tutorial;
 			sourceTree = "<group>";
@@ -489,49 +549,69 @@
 			files = (
 				2B488F0E1ED3684100A27479 /* Tutorial1ViewController.swift in Sources */,
 				2B488F1C1ED3698600A27479 /* 2RoleSetUpViewController.swift in Sources */,
+				2B0042441EE1E4A100A747BA /* Tutorial13ViewController.swift in Sources */,
+				2B00423C1EE1E47800A747BA /* Tutorial9ViewController.swift in Sources */,
 				2B488F0A1ED366F400A27479 /* OptionsViewController.swift in Sources */,
 				2B488F371ED3AFBC00A27479 /* RoleInformationViewController.swift in Sources */,
 				2BC4AC1B1ED899FD0075D142 /* Script4AViewController.swift in Sources */,
 				2B488F291ED36A0200A27479 /* 7ChooseViewController.swift in Sources */,
 				2BB18CE81EDFE277005E8515 /* CardsInfoViewController.swift in Sources */,
 				2BC4ABFF1ED888D00075D142 /* Script2ViewController.swift in Sources */,
+				2B00422E1EE1E41900A747BA /* Tutorial2ViewController.swift in Sources */,
 				2B488F1E1ED3699400A27479 /* 3CardRevealViewController.swift in Sources */,
 				2BFEDDED1EC4C2E600AB18BD /* AppDelegate.swift in Sources */,
 				2B488F1A1ED3697300A27479 /* 1PlayerViewController.swift in Sources */,
+				2B00423E1EE1E47F00A747BA /* Tutorial10ViewController.swift in Sources */,
+				2B0042401EE1E48800A747BA /* Tutorial11ViewController.swift in Sources */,
+				2B00424C1EE1E4E000A747BA /* Tutorial17ViewController.swift in Sources */,
 				2BC4AC131ED889470075D142 /* Script12ViewController.swift in Sources */,
 				2BC4AC0B1ED8890E0075D142 /* Script8ViewController.swift in Sources */,
+				2B0042481EE1E4B900A747BA /* Tutorial15ViewController.swift in Sources */,
 				2BC4AC171ED899D80075D142 /* Script2AViewController.swift in Sources */,
 				2B488F041ED3653700A27479 /* HomeViewController.swift in Sources */,
 				2BC4AC031ED888E10075D142 /* Script4ViewController.swift in Sources */,
 				2B488F311ED37F6A00A27479 /* Info.swift in Sources */,
+				2B0042321EE1E44500A747BA /* Tutorial4ViewController.swift in Sources */,
 				2BC4AC111ED889330075D142 /* Script11ViewController.swift in Sources */,
 				2BC4AC231ED89A330075D142 /* Script9AViewController.swift in Sources */,
 				2BC4AC251ED89A3B0075D142 /* Script10AViewController.swift in Sources */,
 				2BC4AC0F1ED889290075D142 /* Script10ViewController.swift in Sources */,
 				2BC4AC271ED89A490075D142 /* Script12AViewController.swift in Sources */,
+				2B00424A1EE1E4D600A747BA /* Tutorial16ViewController.swift in Sources */,
 				2BB18CE41EDFE25C005E8515 /* PlayerInfoViewController.swift in Sources */,
 				2B488F121ED3688C00A27479 /* RolesViewController.swift in Sources */,
 				2BC4AC151ED8894F0075D142 /* Script13ViewController.swift in Sources */,
 				2BC4AC191ED899ED0075D142 /* Script3AViewController.swift in Sources */,
+				2B0042461EE1E4AD00A747BA /* Tutorial14ViewController.swift in Sources */,
+				2B0042341EE1E44E00A747BA /* Tutorial5ViewController.swift in Sources */,
 				2BB18CE11EDFABE3005E8515 /* Script01ViewController.swift in Sources */,
 				2BC4AC071ED888FC0075D142 /* Script6ViewController.swift in Sources */,
 				2B488F2D1ED36A6100A27479 /* 9EndViewController.swift in Sources */,
 				2BC4AC011ED888D80075D142 /* Script3ViewController.swift in Sources */,
 				2BC4AC1F1ED89A110075D142 /* Script7AViewController.swift in Sources */,
+				2B00424E1EE1E4EC00A747BA /* Tutorial18ViewController.swift in Sources */,
 				2B488F2F1ED375A000A27479 /* Header.swift in Sources */,
 				2B488F261ED369E600A27479 /* 6DayViewController.swift in Sources */,
 				2BB18CE61EDFE268005E8515 /* OptionsInfoViewController.swift in Sources */,
 				2B488F0C1ED3675800A27479 /* RulesMenuViewController.swift in Sources */,
+				2B0042381EE1E46400A747BA /* Tutorial7ViewController.swift in Sources */,
 				2BC4AC211ED89A200075D142 /* Script8AViewController.swift in Sources */,
+				2B0042541EE1E50A00A747BA /* Tutorial12AViewController.swift in Sources */,
+				2B0042361EE1E45900A747BA /* Tutorial6ViewController.swift in Sources */,
 				2BC4AC051ED888F00075D142 /* Script5ViewController.swift in Sources */,
 				2BC4AC091ED889060075D142 /* Script7ViewController.swift in Sources */,
 				2B488F241ED369D700A27479 /* 6NightViewController.swift in Sources */,
+				2B0042521EE1E4FC00A747BA /* Tutorial19AViewController.swift in Sources */,
 				2B488F221ED369C300A27479 /* 5StoryViewController.swift in Sources */,
+				2B0042501EE1E4F500A747BA /* Tutorial19ViewController.swift in Sources */,
 				2BC4AC0D1ED8891D0075D142 /* Script9ViewController.swift in Sources */,
+				2B00423A1EE1E46B00A747BA /* Tutorial8ViewController.swift in Sources */,
 				2B488F351ED3AEBC00A27479 /* GameRolesViewController.swift in Sources */,
 				2B488F331ED3A32700A27479 /* PauseViewController.swift in Sources */,
 				2B488F2B1ED36A3900A27479 /* 8VictoryViewController.swift in Sources */,
 				2B488F201ED369A100A27479 /* 4ReadyViewController.swift in Sources */,
+				2B0042421EE1E49800A747BA /* Tutorial12ViewController.swift in Sources */,
+				2B0042301EE1E43B00A747BA /* Tutorial3ViewController.swift in Sources */,
 				2BC4AC1D1ED89A090075D142 /* Script5AViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
