@@ -4605,7 +4605,7 @@ Kill the mafia</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set-UP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="BaV-ew-0F6">
-                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -5463,7 +5463,7 @@ of their target</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="J5n-pz-r20">
-                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -5854,7 +5854,7 @@ night before</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal TutorialC12" translatesAutoresizingMaskIntoConstraints="NO" id="IaC-R4-M7z">
-                                                <rect key="frame" x="58.5" y="0.0" width="188" height="267.5"/>
+                                                <rect key="frame" x="58" y="0.0" width="189" height="267.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="IaC-R4-M7z" secondAttribute="height" multiplier="166:235" id="3NR-98-IjE"/>
                                                 </constraints>
@@ -6215,7 +6215,7 @@ may not appear as they seem</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="o2S-ez-Quo">
-                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
