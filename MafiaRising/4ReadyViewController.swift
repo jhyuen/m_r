@@ -22,7 +22,7 @@ class _ReadyViewController: UIViewController {
     }
     
     @IBAction func pauseBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: "ReadyToOptions", sender: self)
+        performSegue(withIdentifier: "ReadyToPause", sender: self)
     }
 
     /*

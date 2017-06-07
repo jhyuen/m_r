@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3B4-aq-i8L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3B4-aq-i8L">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -3072,6 +3072,9 @@ The end..."</string>
                                         <state key="normal" title="OPTIONS" backgroundImage="MRGeneralButton">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="optionsBtnPressed:" destination="PC0-jt-mGo" eventType="touchUpInside" id="fTq-8p-M7D"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxy-zi-T1X">
                                         <rect key="frame" x="0.0" y="363" width="200" height="101"/>
@@ -3107,6 +3110,9 @@ The end..."</string>
                             <constraint firstAttribute="trailing" secondItem="OXr-ck-8cg" secondAttribute="trailing" id="yRN-4V-gxW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="9nD-tn-Rq4" kind="show" identifier="PauseToOptions" id="xw3-iS-S4C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayX-T1-lyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3235,9 +3241,9 @@ of Players</string>
                     </view>
                     <connections>
                         <outlet property="numPlayerField" destination="vtC-Cg-A6j" id="96q-5k-GNj"/>
-                        <segue destination="9nD-tn-Rq4" kind="show" identifier="PlayersToOptions" id="od5-bd-Osi"/>
                         <segue destination="qYQ-O0-7Ps" kind="show" identifier="PlayersToInfo" id="LqO-RU-1gJ"/>
                         <segue destination="2Ec-qL-fxS" kind="show" identifier="goToRoleSetUp" id="AGl-PN-oUX"/>
+                        <segue destination="PC0-jt-mGo" kind="show" identifier="PlayersToPause" id="IiT-7w-mNC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JvO-E4-Sae" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3535,8 +3541,8 @@ of Players</string>
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="9nD-tn-Rq4" kind="show" identifier="CardsToOptions" animates="NO" id="zUS-3p-Az1"/>
                         <segue destination="TZg-g4-ZaJ" kind="show" identifier="CardsToInfo" id="dH3-a9-kdI"/>
+                        <segue destination="PC0-jt-mGo" kind="show" identifier="CardsToPause" id="5oF-XY-W7M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cil-kS-y4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3613,7 +3619,7 @@ of Players</string>
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="9nD-tn-Rq4" kind="show" identifier="ReadyToOptions" id="Hbh-zx-Z6Y"/>
+                        <segue destination="PC0-jt-mGo" kind="show" identifier="ReadyToPause" id="TDa-wu-gPe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTE-F1-sMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3739,7 +3745,7 @@ of Players</string>
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="9nD-tn-Rq4" kind="show" identifier="DayToOptions" id="8Xv-On-lHF"/>
+                        <segue destination="PC0-jt-mGo" kind="show" identifier="StoryToPause" id="dhy-OQ-mIy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uCi-wI-uQT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3940,7 +3946,7 @@ of Players</string>
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="9nD-tn-Rq4" kind="show" identifier="RoleToOptions" id="bqU-T2-bDu"/>
+                        <segue destination="9nD-tn-Rq4" kind="show" identifier="ChooseToPause" id="csY-zy-mJN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N8m-g9-txY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4090,17 +4096,17 @@ of Players</string>
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="9nD-tn-Rq4" kind="show" identifier="RoleToOptions" id="e4e-yj-zeR"/>
+                        <segue destination="9nD-tn-Rq4" kind="show" identifier="EndToPause" id="3TP-U9-MC4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9p-ge-hZ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8007" y="-575"/>
         </scene>
-        <!--Options Info View Controller-->
+        <!--Player Info View Controller-->
         <scene sceneID="ZVJ-J6-srJ">
             <objects>
-                <viewController id="qYQ-O0-7Ps" customClass="OptionsInfoViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qYQ-O0-7Ps" customClass="PlayerInfoViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LQp-rb-Pif"/>
                         <viewControllerLayoutGuide type="bottom" id="AkZ-X5-C0U"/>
@@ -4141,7 +4147,7 @@ of Players</string>
                                 </constraints>
                                 <state key="normal" image="MRBackButton"/>
                                 <connections>
-                                    <action selector="goBackToPlayer:" destination="qYQ-O0-7Ps" eventType="touchUpInside" id="CPO-K9-i1U"/>
+                                    <action selector="goBackToPlayer:" destination="qYQ-O0-7Ps" eventType="touchUpInside" id="zDm-Ry-JtQ"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vFu-h3-lLm">
@@ -4227,10 +4233,10 @@ generated story or not at all</string>
             </objects>
             <point key="canvasLocation" x="1072.8" y="-1290.4047976011996"/>
         </scene>
-        <!--Player Info View Controller-->
+        <!--Options Info View Controller-->
         <scene sceneID="4HJ-AS-SVw">
             <objects>
-                <viewController id="lcA-mS-A5M" customClass="PlayerInfoViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lcA-mS-A5M" customClass="OptionsInfoViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="888-0W-B7J"/>
                         <viewControllerLayoutGuide type="bottom" id="BSw-hP-jVX"/>
@@ -4270,6 +4276,9 @@ generated story or not at all</string>
                                     <constraint firstAttribute="width" constant="42" id="xWA-IE-jlP"/>
                                 </constraints>
                                 <state key="normal" image="MRBackButton"/>
+                                <connections>
+                                    <action selector="goBackToPlayer:" destination="lcA-mS-A5M" eventType="touchUpInside" id="Eg5-oJ-Z72"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fR0-en-hHU">
                                 <rect key="frame" x="46" y="164" width="283" height="227"/>
@@ -4396,6 +4405,9 @@ party excluding the moderator (you)</string>
                                     <constraint firstAttribute="height" constant="24" id="SpB-77-hvF"/>
                                 </constraints>
                                 <state key="normal" image="MRBackButton"/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="TZg-g4-ZaJ" eventType="touchUpInside" id="tZr-hc-Cve"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1X2-Sz-he5">
                                 <rect key="frame" x="46" y="164" width="283" height="243.5"/>
@@ -6530,6 +6542,7 @@ be a jerk ;)</string>
         <image name="m" width="523" height="486"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="od5-bd-Osi"/>
+        <segue reference="IiT-7w-mNC"/>
+        <segue reference="xw3-iS-S4C"/>
     </inferredMetricsTieBreakers>
 </document>

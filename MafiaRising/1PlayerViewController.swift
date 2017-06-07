@@ -28,7 +28,7 @@ class _PlayerViewController: UIViewController {
     
     // PauseButton
     @IBAction func pauseBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: "PlayersToOptions", sender: self)
+        performSegue(withIdentifier: "PlayersToPause", sender: self)
     }
 
     // Proceed Arrow

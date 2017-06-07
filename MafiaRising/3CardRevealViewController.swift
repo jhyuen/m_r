@@ -22,7 +22,7 @@ class _CardRevealViewController: UIViewController {
     }
     
     @IBAction func pauseBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: "CardsToOptions", sender: self)
+        performSegue(withIdentifier: "CardsToPause", sender: self)
     }
 
     /*

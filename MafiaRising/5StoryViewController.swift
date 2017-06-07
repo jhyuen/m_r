@@ -22,7 +22,7 @@ class _StoryViewController: UIViewController {
     }
     
     @IBAction func pauseBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: "DayToOptions", sender: self)
+        performSegue(withIdentifier: "StoryToPause", sender: self)
     }
 
     /*

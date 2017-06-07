@@ -22,7 +22,7 @@ class _EndViewController: UIViewController {
     }
     
     @IBAction func pauseBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: "DayToOptions", sender: self)
+        performSegue(withIdentifier: "EndToPause", sender: self)
     }
 
     /*

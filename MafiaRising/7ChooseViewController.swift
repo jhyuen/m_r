@@ -22,7 +22,7 @@ class _ChooseViewController: UIViewController {
     }
     
     @IBAction func pauseBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: "RoleToOptions", sender: self)
+        performSegue(withIdentifier: "ChooseToPause", sender: self)
     }
     /*
     // MARK: - Navigation
