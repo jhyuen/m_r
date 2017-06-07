@@ -5035,7 +5035,7 @@ for descriptions</string>
                                                     <constraint firstAttribute="width" secondItem="XCa-KR-WLq" secondAttribute="height" multiplier="166:235" id="5Cl-LT-dwY"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="OZe-1u-TRy" userLabel="Tell your party to close their eyes">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="OZe-1u-TRy" userLabel="Tell your party to close their eyes">
                                                 <rect key="frame" x="8" y="327.5" width="289" height="129.5"/>
                                                 <string key="text">Pass your device to each player
 

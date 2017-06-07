@@ -23,6 +23,7 @@ class TutorialPageVC: UIPageViewController, UIPageViewControllerDelegate, UIPage
                 self.VCInstance(name: "TutorialVC10"),
                 self.VCInstance(name: "TutorialVC11"),
                 self.VCInstance(name: "TutorialPVC1"),
+                self.VCInstance(name: "TutorialVC13"),
                 self.VCInstance(name: "TutorialVC14"),
                 self.VCInstance(name: "TutorialVC15"),
                 self.VCInstance(name: "TutorialVC16"),

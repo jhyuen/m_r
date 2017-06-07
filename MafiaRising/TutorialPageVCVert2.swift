@@ -11,8 +11,8 @@ import UIKit
 class TutorialPageVCVert2: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
     lazy var VCArray: [UIViewController] = {
-        return [self.VCInstance(name: "TutorialVC12"),
-                self.VCInstance(name: "TutorialVC12A")
+        return [self.VCInstance(name: "TutorialVC19"),
+                self.VCInstance(name: "TutorialVC19A")
         ]
     }()
     
