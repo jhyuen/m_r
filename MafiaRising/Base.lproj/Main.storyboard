@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Uxu-yi-Eea">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3B4-aq-i8L">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -3158,6 +3158,9 @@ The end..."</string>
                                     <constraint firstAttribute="height" constant="42" id="o6o-fA-A1b"/>
                                 </constraints>
                                 <state key="normal" image="MRInfoButton"/>
+                                <connections>
+                                    <action selector="goToPlayerInfo:" destination="3B4-aq-i8L" eventType="touchUpInside" id="605-nw-SfG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0m-tX-ykc" userLabel="Back">
                                 <rect key="frame" x="317" y="68" width="42" height="24"/>
@@ -3166,6 +3169,9 @@ The end..."</string>
                                     <constraint firstAttribute="width" constant="42" id="ruD-j2-K87"/>
                                 </constraints>
                                 <state key="normal" image="MRForwardButton"/>
+                                <connections>
+                                    <action selector="goToRoleSetUp:" destination="3B4-aq-i8L" eventType="touchUpInside" id="f9K-9u-ncJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5j-mC-FZg" userLabel="Pause">
                                 <rect key="frame" x="16" y="64" width="31" height="33"/>
@@ -3228,8 +3234,10 @@ of Players</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="numPlayerField" destination="vtC-Cg-A6j" id="96q-5k-GNj"/>
                         <segue destination="9nD-tn-Rq4" kind="show" identifier="PlayersToOptions" id="od5-bd-Osi"/>
                         <segue destination="qYQ-O0-7Ps" kind="show" identifier="PlayersToInfo" id="LqO-RU-1gJ"/>
+                        <segue destination="2Ec-qL-fxS" kind="show" identifier="goToRoleSetUp" id="AGl-PN-oUX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JvO-E4-Sae" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4132,6 +4140,9 @@ of Players</string>
                                     <constraint firstAttribute="height" constant="24" id="zIX-Xa-Snx"/>
                                 </constraints>
                                 <state key="normal" image="MRBackButton"/>
+                                <connections>
+                                    <action selector="goBackToPlayer:" destination="qYQ-O0-7Ps" eventType="touchUpInside" id="CPO-K9-i1U"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vFu-h3-lLm">
                                 <rect key="frame" x="46" y="164" width="283" height="243.5"/>
@@ -6519,6 +6530,6 @@ be a jerk ;)</string>
         <image name="m" width="523" height="486"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zUS-3p-Az1"/>
+        <segue reference="od5-bd-Osi"/>
     </inferredMetricsTieBreakers>
 </document>
