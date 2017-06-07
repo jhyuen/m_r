@@ -21,6 +21,9 @@ class _PlayerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func pauseBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: "PlayersToOptions", sender: self)
+    }
 
     /*
     // MARK: - Navigation

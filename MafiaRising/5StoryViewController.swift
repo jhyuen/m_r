@@ -21,6 +21,9 @@ class _StoryViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func pauseBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: "DayToOptions", sender: self)
+    }
 
     /*
     // MARK: - Navigation

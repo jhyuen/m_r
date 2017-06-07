@@ -258,6 +258,9 @@
                                     <constraint firstAttribute="height" constant="24" id="ncV-aO-hgK"/>
                                 </constraints>
                                 <state key="normal" image="MRBackButton"/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="9nD-tn-Rq4" eventType="touchUpInside" id="RJQ-JJ-cFc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -3171,6 +3174,9 @@ The end..."</string>
                                     <constraint firstAttribute="width" constant="31" id="h6P-j9-DaV"/>
                                 </constraints>
                                 <state key="normal" image="MRPauseButton"/>
+                                <connections>
+                                    <action selector="pauseBtnPressed:" destination="3B4-aq-i8L" eventType="touchUpInside" id="8kh-Fc-kii"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D21-FT-HGD">
                                 <rect key="frame" x="55" y="174" width="266" height="100"/>
@@ -3221,6 +3227,10 @@ of Players</string>
                             <constraint firstItem="p0m-tX-ykc" firstAttribute="trailing" secondItem="03N-eO-Gb2" secondAttribute="trailingMargin" id="vi2-xt-dwd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="9nD-tn-Rq4" kind="show" identifier="PlayersToOptions" id="od5-bd-Osi"/>
+                        <segue destination="qYQ-O0-7Ps" kind="show" identifier="PlayersToInfo" id="LqO-RU-1gJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JvO-E4-Sae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3375,6 +3385,9 @@ of Players</string>
                             <constraint firstItem="KrJ-SV-thy" firstAttribute="top" secondItem="lq4-lH-mnG" secondAttribute="bottom" constant="20" id="yQ5-YA-lqy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="lcA-mS-A5M" kind="show" identifier="RolesToInfo" id="fmw-NE-23T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ka-yH-c30" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3471,6 +3484,9 @@ of Players</string>
                                     <constraint firstAttribute="width" constant="31" id="zci-nF-vlJ"/>
                                 </constraints>
                                 <state key="normal" image="MRPauseButton"/>
+                                <connections>
+                                    <action selector="pauseBtnPressed:" destination="JET-0x-enT" eventType="touchUpInside" id="wTX-DJ-2SZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tx-Kf-NXZ">
                                 <rect key="frame" x="158" y="562" width="60" height="60"/>
@@ -3510,6 +3526,10 @@ of Players</string>
                             <constraint firstItem="5xW-xF-fcw" firstAttribute="top" secondItem="zry-tI-U3Q" secondAttribute="bottom" constant="30" id="zhd-rH-M63"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="9nD-tn-Rq4" kind="show" identifier="CardsToOptions" animates="NO" id="zUS-3p-Az1"/>
+                        <segue destination="TZg-g4-ZaJ" kind="show" identifier="CardsToInfo" id="dH3-a9-kdI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cil-kS-y4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3555,6 +3575,9 @@ of Players</string>
                                     <constraint firstAttribute="width" constant="31" id="kyd-mP-wTr"/>
                                 </constraints>
                                 <state key="normal" image="MRPauseButton"/>
+                                <connections>
+                                    <action selector="pauseBtnPressed:" destination="q0j-zv-644" eventType="touchUpInside" id="1b8-PB-uAD"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MRFinal ReadyC2" translatesAutoresizingMaskIntoConstraints="NO" id="Zf5-lG-FcV">
                                 <rect key="frame" x="69" y="304" width="237" height="59"/>
@@ -3581,6 +3604,9 @@ of Players</string>
                             <constraint firstItem="un1-zD-fZJ" firstAttribute="top" secondItem="ubR-lj-tyB" secondAttribute="bottom" constant="48" id="w7z-vd-Dar"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="9nD-tn-Rq4" kind="show" identifier="ReadyToOptions" id="Hbh-zx-Z6Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTE-F1-sMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3659,6 +3685,9 @@ of Players</string>
                                     <constraint firstAttribute="width" constant="31" id="Gg8-m8-veB"/>
                                 </constraints>
                                 <state key="normal" image="MRPauseButton"/>
+                                <connections>
+                                    <action selector="pauseBtnPressed:" destination="MAm-3Z-Idg" eventType="touchUpInside" id="c4s-hf-CW6"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DAY 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsO-4H-IUz">
                                 <rect key="frame" x="98" y="60" width="180" height="45"/>
@@ -3701,6 +3730,9 @@ of Players</string>
                             <constraint firstItem="pUr-b2-F1F" firstAttribute="leading" secondItem="oFQ-jJ-QIM" secondAttribute="leading" constant="20" id="vgv-rc-iic"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="9nD-tn-Rq4" kind="show" identifier="DayToOptions" id="8Xv-On-lHF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uCi-wI-uQT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3819,6 +3851,9 @@ of Players</string>
                                     <constraint firstAttribute="width" constant="31" id="N9y-Ah-jhr"/>
                                 </constraints>
                                 <state key="normal" image="MRPauseButton"/>
+                                <connections>
+                                    <action selector="pauseBtnPressed:" destination="kEY-wj-tGy" eventType="touchUpInside" id="x9e-cj-C9P"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9A4-1K-mif">
                                 <rect key="frame" x="98" y="60" width="180" height="45"/>
@@ -3896,6 +3931,9 @@ of Players</string>
                             <constraint firstItem="qlp-22-7kf" firstAttribute="leading" secondItem="lHO-1d-QjM" secondAttribute="leading" id="zTB-et-Dg6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="9nD-tn-Rq4" kind="show" identifier="RoleToOptions" id="bqU-T2-bDu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N8m-g9-txY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4001,6 +4039,9 @@ of Players</string>
                                     <constraint firstAttribute="width" constant="31" id="vWY-U9-3FB"/>
                                 </constraints>
                                 <state key="normal" image="MRPauseButton"/>
+                                <connections>
+                                    <action selector="pauseBtnPressed:" destination="e96-xE-FgR" eventType="touchUpInside" id="28p-OY-lM6"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROLES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbt-Yj-YOt">
                                 <rect key="frame" x="88" y="60" width="200" height="45"/>
@@ -4040,6 +4081,9 @@ of Players</string>
                             <constraint firstItem="X5k-9Q-gVi" firstAttribute="top" secondItem="jcF-mu-9iV" secondAttribute="top" id="yur-JS-ZFS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="9nD-tn-Rq4" kind="show" identifier="RoleToOptions" id="e4e-yj-zeR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9p-ge-hZ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -6474,4 +6518,7 @@ be a jerk ;)</string>
         <image name="MRPauseButton" width="46" height="49"/>
         <image name="m" width="523" height="486"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="zUS-3p-Az1"/>
+    </inferredMetricsTieBreakers>
 </document>

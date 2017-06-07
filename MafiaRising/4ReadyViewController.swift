@@ -21,6 +21,9 @@ class _ReadyViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func pauseBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: "ReadyToOptions", sender: self)
+    }
 
     /*
     // MARK: - Navigation
