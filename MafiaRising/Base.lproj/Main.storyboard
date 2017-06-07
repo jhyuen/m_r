@@ -446,7 +446,7 @@
         <!--Script01 View Controller-->
         <scene sceneID="1lk-b8-G7t">
             <objects>
-                <viewController storyboardIdentifier="ScriptVC1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RLA-d7-xQH" customClass="Script01ViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScriptVC1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RLA-d7-xQH" userLabel="Script01 View Controller" customClass="ScriptMainVC" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Otc-qh-Z2x"/>
                         <viewControllerLayoutGuide type="bottom" id="pHe-9F-TRa"/>
@@ -500,6 +500,7 @@ Swipe right to learn more!</string>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="A3z-zi-4MJ" secondAttribute="trailing" constant="20" id="6rR-v9-zTX"/>
                                     <constraint firstItem="A3z-zi-4MJ" firstAttribute="centerX" secondItem="bn5-8m-BIY" secondAttribute="centerX" id="MQw-Yr-VFb"/>
@@ -507,6 +508,9 @@ Swipe right to learn more!</string>
                                     <constraint firstItem="A3z-zi-4MJ" firstAttribute="leading" secondItem="bn5-8m-BIY" secondAttribute="leading" constant="20" id="qiQ-dz-h1D"/>
                                     <constraint firstItem="A3z-zi-4MJ" firstAttribute="top" secondItem="bn5-8m-BIY" secondAttribute="top" constant="20" id="sOc-M7-pec"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="uPj-Fd-Pxq" appends="YES" id="gb9-jc-7fR"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -526,6 +530,11 @@ Swipe right to learn more!</string>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8oG-1C-JLL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="uPj-Fd-Pxq">
+                    <connections>
+                        <action selector="swipeOccurred:" destination="RLA-d7-xQH" id="mv9-Zs-gzi"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2550" y="1466"/>
         </scene>
@@ -931,7 +940,7 @@ Swipe right to learn more!</string>
         <!--Script2 View Controller-->
         <scene sceneID="k7c-IL-7GJ">
             <objects>
-                <viewController storyboardIdentifier="ScriptVC2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ac7-j4-AK6" customClass="Script2ViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScriptVC2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ac7-j4-AK6" userLabel="Script2 View Controller" customClass="ScriptMainVC" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Dlr-4D-qpV"/>
                         <viewControllerLayoutGuide type="bottom" id="qOe-xO-ygz"/>
@@ -1116,7 +1125,7 @@ When they entered the room, some of them were changed. They were no longer the s
         <!--Script3 View Controller-->
         <scene sceneID="f7F-Nl-WJc">
             <objects>
-                <viewController storyboardIdentifier="ScriptVC3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sJN-gy-bZP" customClass="Script3ViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScriptVC3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sJN-gy-bZP" userLabel="Script3 View Controller" customClass="ScriptMainVC" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jVn-7B-Sls"/>
                         <viewControllerLayoutGuide type="bottom" id="DlT-mM-92G"/>
@@ -1310,7 +1319,7 @@ close their eyes</string>
         <!--Script4 View Controller-->
         <scene sceneID="ZtL-6w-7aK">
             <objects>
-                <viewController storyboardIdentifier="ScriptVC4" id="5CC-Mb-RTp" customClass="Script4ViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScriptVC4" id="5CC-Mb-RTp" userLabel="Script4 View Controller" customClass="ScriptMainVC" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hGx-lM-nhe"/>
                         <viewControllerLayoutGuide type="bottom" id="znd-20-r8E"/>
@@ -1508,7 +1517,7 @@ kill/investigate/save?"</string>
         <!--Script5 View Controller-->
         <scene sceneID="Nfm-Ed-ZMw">
             <objects>
-                <viewController storyboardIdentifier="ScriptVC5" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ekw-ZW-gZx" customClass="Script5ViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScriptVC5" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ekw-ZW-gZx" userLabel="Script5 View Controller" customClass="ScriptMainVC" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e3k-so-faY"/>
                         <viewControllerLayoutGuide type="bottom" id="AzR-37-egX"/>
@@ -1700,7 +1709,7 @@ kill/investigate/save?"</string>
         <!--Script6 View Controller-->
         <scene sceneID="9hG-ZJ-nfA">
             <objects>
-                <viewController storyboardIdentifier="ScriptVC6" id="OQz-yA-ySd" customClass="Script6ViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScriptVC6" id="OQz-yA-ySd" userLabel="Script6 View Controller" customClass="ScriptMainVC" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jzp-tK-j44"/>
                         <viewControllerLayoutGuide type="bottom" id="aKJ-CU-mjz"/>
@@ -1809,7 +1818,7 @@ have been called</string>
         <!--Script7 View Controller-->
         <scene sceneID="7HX-tb-h6B">
             <objects>
-                <viewController storyboardIdentifier="ScriptVC7" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vek-am-fbJ" customClass="Script7ViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScriptVC7" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vek-am-fbJ" userLabel="Script7 View Controller" customClass="ScriptMainVC" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lbz-eh-MXH"/>
                         <viewControllerLayoutGuide type="bottom" id="0CK-1R-YvX"/>
@@ -2005,7 +2014,7 @@ open your eyes."</string>
         <!--Script8 View Controller-->
         <scene sceneID="tXg-nT-x4g">
             <objects>
-                <viewController storyboardIdentifier="ScriptVC8" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZHT-d3-fwh" customClass="Script8ViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScriptVC8" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZHT-d3-fwh" userLabel="Script8 View Controller" customClass="ScriptMainVC" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SOx-0J-PQs"/>
                         <viewControllerLayoutGuide type="bottom" id="w2I-Wj-Ssr"/>
@@ -2210,7 +2219,7 @@ but he was saved."</string>
         <!--Script9 View Controller-->
         <scene sceneID="uFO-C5-C0f">
             <objects>
-                <viewController storyboardIdentifier="ScriptVC9" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xuC-nL-j2V" customClass="Script9ViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScriptVC9" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xuC-nL-j2V" userLabel="Script9 View Controller" customClass="ScriptMainVC" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0rt-dL-sge"/>
                         <viewControllerLayoutGuide type="bottom" id="hXp-Ld-zmr"/>
@@ -2412,7 +2421,7 @@ Yes, we must choose someone."</string>
         <!--Script10 View Controller-->
         <scene sceneID="0kd-Qf-sAq">
             <objects>
-                <viewController storyboardIdentifier="ScriptVC10" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BBx-E7-j5E" customClass="Script10ViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScriptVC10" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BBx-E7-j5E" userLabel="Script10 View Controller" customClass="ScriptMainVC" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ny6-y6-szZ"/>
                         <viewControllerLayoutGuide type="bottom" id="g7F-ef-I6G"/>
@@ -2620,7 +2629,7 @@ will lead to peace."</string>
         <!--Script11 View Controller-->
         <scene sceneID="wlh-h8-eXS">
             <objects>
-                <viewController storyboardIdentifier="ScriptVC11" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FGH-JX-bPy" customClass="Script11ViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScriptVC11" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FGH-JX-bPy" userLabel="Script11 View Controller" customClass="ScriptMainVC" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="42l-Ux-PD2"/>
                         <viewControllerLayoutGuide type="bottom" id="Qnu-Qg-iJV"/>
@@ -2710,7 +2719,7 @@ night and day cycles until the citizens of mafia have won</string>
         <!--Script12 View Controller-->
         <scene sceneID="HHZ-lr-T5H">
             <objects>
-                <viewController storyboardIdentifier="ScriptVC12" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YJ1-N9-4JA" customClass="Script12ViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScriptVC12" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YJ1-N9-4JA" userLabel="Script12 View Controller" customClass="ScriptMainVC" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0ih-H6-q0D"/>
                         <viewControllerLayoutGuide type="bottom" id="XuD-px-UmB"/>
@@ -2892,7 +2901,7 @@ The end..."</string>
         <!--Script13 View Controller-->
         <scene sceneID="fef-0J-Ax2">
             <objects>
-                <viewController storyboardIdentifier="ScriptVC13" useStoryboardIdentifierAsRestorationIdentifier="YES" id="U80-b6-jz1" customClass="Script13ViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScriptVC13" useStoryboardIdentifierAsRestorationIdentifier="YES" id="U80-b6-jz1" userLabel="Script13 View Controller" customClass="ScriptMainVC" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Ec-r1-q8j"/>
                         <viewControllerLayoutGuide type="bottom" id="9Xr-Sg-H7a"/>
@@ -2950,6 +2959,7 @@ The end..."</string>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="N2F-68-U1R" firstAttribute="top" secondItem="LWZ-sG-piL" secondAttribute="top" id="0pv-e9-ey5"/>
                             <constraint firstItem="9Xr-Sg-H7a" firstAttribute="top" secondItem="lEz-Tp-der" secondAttribute="bottom" id="B95-rN-VN5"/>
@@ -2963,9 +2973,17 @@ The end..."</string>
                             <constraint firstItem="lCJ-eH-3up" firstAttribute="top" secondItem="4Ec-r1-q8j" secondAttribute="bottom" id="keT-cZ-vN5"/>
                             <constraint firstItem="N2F-68-U1R" firstAttribute="leading" secondItem="LWZ-sG-piL" secondAttribute="leading" id="l1d-HA-i72"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xfL-eh-f3N" appends="YES" id="k4T-KP-5AG"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zqG-U1-dNF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="xfL-eh-f3N">
+                    <connections>
+                        <action selector="swipeOccurred:" destination="U80-b6-jz1" id="PDt-Ur-Mzm"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="12390" y="1466"/>
         </scene>
@@ -6294,6 +6312,7 @@ may not appear as they seem</string>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="5rT-Z7-L0a" firstAttribute="leading" secondItem="0nS-Yt-0hA" secondAttribute="leading" id="2e8-52-by0"/>
                             <constraint firstItem="Bbj-9v-72H" firstAttribute="top" secondItem="5rT-Z7-L0a" secondAttribute="bottom" id="4zb-f6-d7P"/>
@@ -6308,9 +6327,17 @@ may not appear as they seem</string>
                             <constraint firstItem="db2-zd-UyQ" firstAttribute="leading" secondItem="0nS-Yt-0hA" secondAttribute="leading" id="qW3-32-ZLk"/>
                             <constraint firstItem="5rT-Z7-L0a" firstAttribute="centerX" secondItem="0nS-Yt-0hA" secondAttribute="centerX" id="sv6-2p-p0B"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Bv6-gL-ZQj" appends="YES" id="qae-Xf-zle"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dU2-Jm-eMQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="Bv6-gL-ZQj" userLabel="Swipe Left">
+                    <connections>
+                        <action selector="swipeOccurred:" destination="iJd-9N-Ycm" id="os3-BB-6ui"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="16969" y="105"/>
         </scene>

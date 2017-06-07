@@ -94,6 +94,7 @@
 		84AF227E1EE7BD2F006D0EA5 /* ScriptPageVCVert7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF227D1EE7BD2F006D0EA5 /* ScriptPageVCVert7.swift */; };
 		84AF22801EE7BD36006D0EA5 /* ScriptPageVCVert8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF227F1EE7BD36006D0EA5 /* ScriptPageVCVert8.swift */; };
 		84AF22821EE7BD3E006D0EA5 /* ScriptPageVCVert9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF22811EE7BD3E006D0EA5 /* ScriptPageVCVert9.swift */; };
+		84D5BFDA1EE864CB0094390A /* ScriptMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5BFD91EE864CB0094390A /* ScriptMainVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,6 +208,7 @@
 		84AF227D1EE7BD2F006D0EA5 /* ScriptPageVCVert7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptPageVCVert7.swift; sourceTree = "<group>"; };
 		84AF227F1EE7BD36006D0EA5 /* ScriptPageVCVert8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptPageVCVert8.swift; sourceTree = "<group>"; };
 		84AF22811EE7BD3E006D0EA5 /* ScriptPageVCVert9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptPageVCVert9.swift; sourceTree = "<group>"; };
+		84D5BFD91EE864CB0094390A /* ScriptMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptMainVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,6 +368,7 @@
 				2BC4AC101ED889330075D142 /* Script11ViewController.swift */,
 				2BC4AC121ED889470075D142 /* Script12ViewController.swift */,
 				2BC4AC141ED8894F0075D142 /* Script13ViewController.swift */,
+				84D5BFD91EE864CB0094390A /* ScriptMainVC.swift */,
 				84AF22721EE7BCD9006D0EA5 /* PageVCs */,
 			);
 			name = Script;
@@ -620,6 +623,7 @@
 				2BC4AC131ED889470075D142 /* Script12ViewController.swift in Sources */,
 				2BC4AC0B1ED8890E0075D142 /* Script8ViewController.swift in Sources */,
 				2B0042481EE1E4B900A747BA /* Tutorial15ViewController.swift in Sources */,
+				84D5BFDA1EE864CB0094390A /* ScriptMainVC.swift in Sources */,
 				2BC4AC171ED899D80075D142 /* Script2AViewController.swift in Sources */,
 				2B488F041ED3653700A27479 /* HomeViewController.swift in Sources */,
 				2BC4AC031ED888E10075D142 /* Script4ViewController.swift in Sources */,
