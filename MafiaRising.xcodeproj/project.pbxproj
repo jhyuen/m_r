@@ -80,6 +80,20 @@
 		2BFEDE021EC4C2E600AB18BD /* MafiaRisingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEDE011EC4C2E600AB18BD /* MafiaRisingTests.swift */; };
 		2BFEDE0D1EC4C2E700AB18BD /* MafiaRisingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEDE0C1EC4C2E700AB18BD /* MafiaRisingUITests.swift */; };
 		2BFEDE1B1EC4C7CE00AB18BD /* Kefa.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 2BFEDE1A1EC4C7CE00AB18BD /* Kefa.ttc */; };
+		84AF22671EE7A12F006D0EA5 /* TutorialPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF22661EE7A12F006D0EA5 /* TutorialPageVC.swift */; };
+		84AF22691EE7A224006D0EA5 /* TutorialPageVCVert1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF22681EE7A224006D0EA5 /* TutorialPageVCVert1.swift */; };
+		84AF226B1EE7A291006D0EA5 /* TutorialPageVCVert2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF226A1EE7A291006D0EA5 /* TutorialPageVCVert2.swift */; };
+		84AF226D1EE7A589006D0EA5 /* TutorialMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF226C1EE7A589006D0EA5 /* TutorialMainVC.swift */; };
+		84AF226F1EE7B91D006D0EA5 /* ScriptPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF226E1EE7B91D006D0EA5 /* ScriptPageVC.swift */; };
+		84AF22711EE7BA6A006D0EA5 /* ScriptPageVCVert1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF22701EE7BA6A006D0EA5 /* ScriptPageVCVert1.swift */; };
+		84AF22741EE7BD01006D0EA5 /* ScriptPageVCVert2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF22731EE7BD01006D0EA5 /* ScriptPageVCVert2.swift */; };
+		84AF22761EE7BD0C006D0EA5 /* ScriptPageVCVert3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF22751EE7BD0C006D0EA5 /* ScriptPageVCVert3.swift */; };
+		84AF22781EE7BD14006D0EA5 /* ScriptPageVCVert4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF22771EE7BD14006D0EA5 /* ScriptPageVCVert4.swift */; };
+		84AF227A1EE7BD1E006D0EA5 /* ScriptPageVCVert5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF22791EE7BD1E006D0EA5 /* ScriptPageVCVert5.swift */; };
+		84AF227C1EE7BD26006D0EA5 /* ScriptPageVCVert6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF227B1EE7BD26006D0EA5 /* ScriptPageVCVert6.swift */; };
+		84AF227E1EE7BD2F006D0EA5 /* ScriptPageVCVert7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF227D1EE7BD2F006D0EA5 /* ScriptPageVCVert7.swift */; };
+		84AF22801EE7BD36006D0EA5 /* ScriptPageVCVert8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF227F1EE7BD36006D0EA5 /* ScriptPageVCVert8.swift */; };
+		84AF22821EE7BD3E006D0EA5 /* ScriptPageVCVert9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF22811EE7BD3E006D0EA5 /* ScriptPageVCVert9.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +193,20 @@
 		2BFEDE0C1EC4C2E700AB18BD /* MafiaRisingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MafiaRisingUITests.swift; sourceTree = "<group>"; };
 		2BFEDE0E1EC4C2E700AB18BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BFEDE1A1EC4C7CE00AB18BD /* Kefa.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Kefa.ttc; sourceTree = "<group>"; };
+		84AF22661EE7A12F006D0EA5 /* TutorialPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageVC.swift; sourceTree = "<group>"; };
+		84AF22681EE7A224006D0EA5 /* TutorialPageVCVert1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageVCVert1.swift; sourceTree = "<group>"; };
+		84AF226A1EE7A291006D0EA5 /* TutorialPageVCVert2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageVCVert2.swift; sourceTree = "<group>"; };
+		84AF226C1EE7A589006D0EA5 /* TutorialMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialMainVC.swift; sourceTree = "<group>"; };
+		84AF226E1EE7B91D006D0EA5 /* ScriptPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptPageVC.swift; sourceTree = "<group>"; };
+		84AF22701EE7BA6A006D0EA5 /* ScriptPageVCVert1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptPageVCVert1.swift; sourceTree = "<group>"; };
+		84AF22731EE7BD01006D0EA5 /* ScriptPageVCVert2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptPageVCVert2.swift; sourceTree = "<group>"; };
+		84AF22751EE7BD0C006D0EA5 /* ScriptPageVCVert3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptPageVCVert3.swift; sourceTree = "<group>"; };
+		84AF22771EE7BD14006D0EA5 /* ScriptPageVCVert4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptPageVCVert4.swift; sourceTree = "<group>"; };
+		84AF22791EE7BD1E006D0EA5 /* ScriptPageVCVert5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptPageVCVert5.swift; sourceTree = "<group>"; };
+		84AF227B1EE7BD26006D0EA5 /* ScriptPageVCVert6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptPageVCVert6.swift; sourceTree = "<group>"; };
+		84AF227D1EE7BD2F006D0EA5 /* ScriptPageVCVert7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptPageVCVert7.swift; sourceTree = "<group>"; };
+		84AF227F1EE7BD36006D0EA5 /* ScriptPageVCVert8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptPageVCVert8.swift; sourceTree = "<group>"; };
+		84AF22811EE7BD3E006D0EA5 /* ScriptPageVCVert9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptPageVCVert9.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +333,10 @@
 				2B00424D1EE1E4EC00A747BA /* Tutorial18ViewController.swift */,
 				2B00424F1EE1E4F500A747BA /* Tutorial19ViewController.swift */,
 				2B0042511EE1E4FC00A747BA /* Tutorial19AViewController.swift */,
+				84AF22661EE7A12F006D0EA5 /* TutorialPageVC.swift */,
+				84AF22681EE7A224006D0EA5 /* TutorialPageVCVert1.swift */,
+				84AF226A1EE7A291006D0EA5 /* TutorialPageVCVert2.swift */,
+				84AF226C1EE7A589006D0EA5 /* TutorialMainVC.swift */,
 			);
 			name = Tutorial;
 			sourceTree = "<group>";
@@ -334,6 +366,7 @@
 				2BC4AC101ED889330075D142 /* Script11ViewController.swift */,
 				2BC4AC121ED889470075D142 /* Script12ViewController.swift */,
 				2BC4AC141ED8894F0075D142 /* Script13ViewController.swift */,
+				84AF22721EE7BCD9006D0EA5 /* PageVCs */,
 			);
 			name = Script;
 			sourceTree = "<group>";
@@ -409,6 +442,23 @@
 				2BFEDE0E1EC4C2E700AB18BD /* Info.plist */,
 			);
 			path = MafiaRisingUITests;
+			sourceTree = "<group>";
+		};
+		84AF22721EE7BCD9006D0EA5 /* PageVCs */ = {
+			isa = PBXGroup;
+			children = (
+				84AF226E1EE7B91D006D0EA5 /* ScriptPageVC.swift */,
+				84AF22701EE7BA6A006D0EA5 /* ScriptPageVCVert1.swift */,
+				84AF22731EE7BD01006D0EA5 /* ScriptPageVCVert2.swift */,
+				84AF22751EE7BD0C006D0EA5 /* ScriptPageVCVert3.swift */,
+				84AF22771EE7BD14006D0EA5 /* ScriptPageVCVert4.swift */,
+				84AF22791EE7BD1E006D0EA5 /* ScriptPageVCVert5.swift */,
+				84AF227B1EE7BD26006D0EA5 /* ScriptPageVCVert6.swift */,
+				84AF227D1EE7BD2F006D0EA5 /* ScriptPageVCVert7.swift */,
+				84AF227F1EE7BD36006D0EA5 /* ScriptPageVCVert8.swift */,
+				84AF22811EE7BD3E006D0EA5 /* ScriptPageVCVert9.swift */,
+			);
+			name = PageVCs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -551,6 +601,8 @@
 				2B488F1C1ED3698600A27479 /* 2RoleSetUpViewController.swift in Sources */,
 				2B0042441EE1E4A100A747BA /* Tutorial13ViewController.swift in Sources */,
 				2B00423C1EE1E47800A747BA /* Tutorial9ViewController.swift in Sources */,
+				84AF22801EE7BD36006D0EA5 /* ScriptPageVCVert8.swift in Sources */,
+				84AF22741EE7BD01006D0EA5 /* ScriptPageVCVert2.swift in Sources */,
 				2B488F0A1ED366F400A27479 /* OptionsViewController.swift in Sources */,
 				2B488F371ED3AFBC00A27479 /* RoleInformationViewController.swift in Sources */,
 				2BC4AC1B1ED899FD0075D142 /* Script4AViewController.swift in Sources */,
@@ -561,6 +613,7 @@
 				2B488F1E1ED3699400A27479 /* 3CardRevealViewController.swift in Sources */,
 				2BFEDDED1EC4C2E600AB18BD /* AppDelegate.swift in Sources */,
 				2B488F1A1ED3697300A27479 /* 1PlayerViewController.swift in Sources */,
+				84AF226F1EE7B91D006D0EA5 /* ScriptPageVC.swift in Sources */,
 				2B00423E1EE1E47F00A747BA /* Tutorial10ViewController.swift in Sources */,
 				2B0042401EE1E48800A747BA /* Tutorial11ViewController.swift in Sources */,
 				2B00424C1EE1E4E000A747BA /* Tutorial17ViewController.swift in Sources */,
@@ -571,9 +624,11 @@
 				2B488F041ED3653700A27479 /* HomeViewController.swift in Sources */,
 				2BC4AC031ED888E10075D142 /* Script4ViewController.swift in Sources */,
 				2B488F311ED37F6A00A27479 /* Info.swift in Sources */,
+				84AF22691EE7A224006D0EA5 /* TutorialPageVCVert1.swift in Sources */,
 				2B0042321EE1E44500A747BA /* Tutorial4ViewController.swift in Sources */,
 				2BC4AC111ED889330075D142 /* Script11ViewController.swift in Sources */,
 				2BC4AC231ED89A330075D142 /* Script9AViewController.swift in Sources */,
+				84AF22671EE7A12F006D0EA5 /* TutorialPageVC.swift in Sources */,
 				2BC4AC251ED89A3B0075D142 /* Script10AViewController.swift in Sources */,
 				2BC4AC0F1ED889290075D142 /* Script10ViewController.swift in Sources */,
 				2BC4AC271ED89A490075D142 /* Script12AViewController.swift in Sources */,
@@ -581,8 +636,10 @@
 				2BB18CE41EDFE25C005E8515 /* PlayerInfoViewController.swift in Sources */,
 				2B488F121ED3688C00A27479 /* RolesViewController.swift in Sources */,
 				2BC4AC151ED8894F0075D142 /* Script13ViewController.swift in Sources */,
+				84AF22821EE7BD3E006D0EA5 /* ScriptPageVCVert9.swift in Sources */,
 				2BC4AC191ED899ED0075D142 /* Script3AViewController.swift in Sources */,
 				2B0042461EE1E4AD00A747BA /* Tutorial14ViewController.swift in Sources */,
+				84AF22711EE7BA6A006D0EA5 /* ScriptPageVCVert1.swift in Sources */,
 				2B0042341EE1E44E00A747BA /* Tutorial5ViewController.swift in Sources */,
 				2BB18CE11EDFABE3005E8515 /* Script01ViewController.swift in Sources */,
 				2BC4AC071ED888FC0075D142 /* Script6ViewController.swift in Sources */,
@@ -592,12 +649,17 @@
 				2B00424E1EE1E4EC00A747BA /* Tutorial18ViewController.swift in Sources */,
 				2B488F2F1ED375A000A27479 /* Header.swift in Sources */,
 				2B488F261ED369E600A27479 /* 6DayViewController.swift in Sources */,
+				84AF226D1EE7A589006D0EA5 /* TutorialMainVC.swift in Sources */,
 				2BB18CE61EDFE268005E8515 /* OptionsInfoViewController.swift in Sources */,
+				84AF226B1EE7A291006D0EA5 /* TutorialPageVCVert2.swift in Sources */,
 				2B488F0C1ED3675800A27479 /* RulesMenuViewController.swift in Sources */,
 				2B0042381EE1E46400A747BA /* Tutorial7ViewController.swift in Sources */,
+				84AF22761EE7BD0C006D0EA5 /* ScriptPageVCVert3.swift in Sources */,
 				2BC4AC211ED89A200075D142 /* Script8AViewController.swift in Sources */,
+				84AF227C1EE7BD26006D0EA5 /* ScriptPageVCVert6.swift in Sources */,
 				2B0042541EE1E50A00A747BA /* Tutorial12AViewController.swift in Sources */,
 				2B0042361EE1E45900A747BA /* Tutorial6ViewController.swift in Sources */,
+				84AF227A1EE7BD1E006D0EA5 /* ScriptPageVCVert5.swift in Sources */,
 				2BC4AC051ED888F00075D142 /* Script5ViewController.swift in Sources */,
 				2BC4AC091ED889060075D142 /* Script7ViewController.swift in Sources */,
 				2B488F241ED369D700A27479 /* 6NightViewController.swift in Sources */,
@@ -606,8 +668,10 @@
 				2B0042501EE1E4F500A747BA /* Tutorial19ViewController.swift in Sources */,
 				2BC4AC0D1ED8891D0075D142 /* Script9ViewController.swift in Sources */,
 				2B00423A1EE1E46B00A747BA /* Tutorial8ViewController.swift in Sources */,
+				84AF227E1EE7BD2F006D0EA5 /* ScriptPageVCVert7.swift in Sources */,
 				2B488F351ED3AEBC00A27479 /* GameRolesViewController.swift in Sources */,
 				2B488F331ED3A32700A27479 /* PauseViewController.swift in Sources */,
+				84AF22781EE7BD14006D0EA5 /* ScriptPageVCVert4.swift in Sources */,
 				2B488F2B1ED36A3900A27479 /* 8VictoryViewController.swift in Sources */,
 				2B488F201ED369A100A27479 /* 4ReadyViewController.swift in Sources */,
 				2B0042421EE1E49800A747BA /* Tutorial12ViewController.swift in Sources */,
