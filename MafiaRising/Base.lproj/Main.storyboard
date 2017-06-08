@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3B4-aq-i8L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TBE-rj-uHk">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -55,6 +55,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="285" height="65"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
                                                 <state key="normal" title="NEW GAME" backgroundImage="MRFinal HomeC3"/>
+                                                <connections>
+                                                    <action selector="pushNewGame:" destination="TBE-rj-uHk" eventType="touchUpInside" id="VB9-qj-LSr"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -75,6 +78,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="285" height="65"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
                                                 <state key="normal" title="OPTIONS" backgroundImage="MRFinal HomeC3"/>
+                                                <connections>
+                                                    <action selector="pushOptions:" destination="TBE-rj-uHk" eventType="touchUpInside" id="je8-qw-Asg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -85,6 +91,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="285" height="65"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
                                                 <state key="normal" title="RULES" backgroundImage="MRFinal HomeC3"/>
+                                                <connections>
+                                                    <action selector="pushRules:" destination="TBE-rj-uHk" eventType="touchUpInside" id="UMe-4G-DjN"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -117,6 +126,11 @@
                             <constraint firstItem="KL9-dn-hMK" firstAttribute="top" secondItem="RvP-9y-0bW" secondAttribute="bottom" constant="35" id="zWv-Ct-zxf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="3B4-aq-i8L" kind="show" identifier="HomeToPlayers" id="RLX-xd-W8t"/>
+                        <segue destination="Uxu-yi-Eea" kind="show" identifier="HomeToRules" id="jGj-z5-JdE"/>
+                        <segue destination="9nD-tn-Rq4" kind="show" identifier="HomeToOptions" id="bB7-vs-abW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zua-Ax-IX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,20 +175,6 @@
                                     <constraint firstAttribute="height" constant="13" id="C0q-TW-0Ir"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MRFinal OptionsC5" translatesAutoresizingMaskIntoConstraints="NO" id="XBk-yP-UqH">
-                                <rect key="frame" x="44" y="227" width="30" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="fph-G4-Sn8"/>
-                                    <constraint firstAttribute="width" constant="30" id="jJv-aN-MQ0"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MRFinal OptionsC10" translatesAutoresizingMaskIntoConstraints="NO" id="2oA-xI-92H">
-                                <rect key="frame" x="44" y="227" width="30" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="hiZ-Hi-kRN"/>
-                                    <constraint firstAttribute="width" constant="30" id="mpm-3R-U8F"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Narration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MA5-DC-Hj9">
                                 <rect key="frame" x="44" y="142" width="132" height="35"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
@@ -203,20 +203,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MRFinal OptionsC5" translatesAutoresizingMaskIntoConstraints="NO" id="vxO-db-grW">
-                                <rect key="frame" x="44" y="187" width="30" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="Nxl-pp-VpI"/>
-                                    <constraint firstAttribute="height" constant="34" id="TOC-yc-wLC"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MRFinal OptionsC10" translatesAutoresizingMaskIntoConstraints="NO" id="KYj-ep-bwa">
-                                <rect key="frame" x="44" y="181" width="30" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="3A9-fm-8ch"/>
-                                    <constraint firstAttribute="height" constant="46" id="Elb-mk-mkd"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5f0-Q6-52K">
                                 <rect key="frame" x="44" y="363" width="78.5" height="35"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
@@ -250,6 +236,9 @@
                                     <constraint firstAttribute="width" constant="42" id="oVv-17-Qty"/>
                                 </constraints>
                                 <state key="normal" image="MRInfoButton"/>
+                                <connections>
+                                    <action selector="goToOptionInfo:" destination="9nD-tn-Rq4" eventType="touchUpInside" id="DS5-Hq-jia"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YO-WX-dZY" userLabel="Back">
                                 <rect key="frame" x="16" y="69" width="42" height="24"/>
@@ -262,20 +251,31 @@
                                     <action selector="backBtnPressed:" destination="9nD-tn-Rq4" eventType="touchUpInside" id="RJQ-JJ-cFc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xod-P0-8L3" customClass="CheckBox" customModule="MafiaRising" customModuleProvider="target">
+                                <rect key="frame" x="44" y="187.5" width="30" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="DsE-pB-jwC"/>
+                                    <constraint firstAttribute="width" constant="30" id="kiH-Bx-azI"/>
+                                </constraints>
+                                <state key="normal" image="MRFinal OptionsC4"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHa-AV-2WO" customClass="CheckBox" customModule="MafiaRising" customModuleProvider="target">
+                                <rect key="frame" x="44" y="229" width="30" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="DcX-zb-Bxi"/>
+                                    <constraint firstAttribute="width" constant="30" id="lBI-LK-wlv"/>
+                                </constraints>
+                                <state key="normal" image="MRFinal OptionsC4"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="fxn-JP-cLp" secondAttribute="trailing" constant="10" id="1Vx-LU-D4B"/>
                             <constraint firstItem="Y46-hZ-wN3" firstAttribute="top" secondItem="r8a-TW-LFc" secondAttribute="bottom" constant="12" id="1Wt-7c-mJc"/>
-                            <constraint firstItem="2oA-xI-92H" firstAttribute="centerX" secondItem="XBk-yP-UqH" secondAttribute="centerX" id="2di-iW-HIh"/>
                             <constraint firstItem="r8a-TW-LFc" firstAttribute="top" secondItem="MA5-DC-Hj9" secondAttribute="bottom" constant="12" id="2e8-NG-vGD"/>
-                            <constraint firstItem="bv6-cE-oQK" firstAttribute="top" secondItem="XBk-yP-UqH" secondAttribute="bottom" constant="8" id="2gb-1T-KKd"/>
-                            <constraint firstItem="r8a-TW-LFc" firstAttribute="leading" secondItem="KYj-ep-bwa" secondAttribute="trailing" constant="22" id="3aJ-va-Ekr"/>
+                            <constraint firstItem="r8a-TW-LFc" firstAttribute="centerY" secondItem="Xod-P0-8L3" secondAttribute="centerY" id="4Vj-Vr-kU9"/>
                             <constraint firstItem="odX-CE-iNp" firstAttribute="centerX" secondItem="YyI-cr-CeW" secondAttribute="centerX" id="4YO-o4-ORz"/>
                             <constraint firstItem="g0T-nO-qbW" firstAttribute="centerX" secondItem="YyI-cr-CeW" secondAttribute="centerX" id="6Tq-iS-ZAU"/>
-                            <constraint firstItem="vxO-db-grW" firstAttribute="leading" secondItem="MA5-DC-Hj9" secondAttribute="leading" id="Bbm-tF-lQM"/>
-                            <constraint firstItem="2oA-xI-92H" firstAttribute="centerY" secondItem="XBk-yP-UqH" secondAttribute="centerY" id="DYS-NR-gH0"/>
-                            <constraint firstItem="vxO-db-grW" firstAttribute="centerY" secondItem="KYj-ep-bwa" secondAttribute="centerY" id="Ddc-zd-fha"/>
                             <constraint firstItem="Q77-Q7-qP2" firstAttribute="leading" secondItem="MA5-DC-Hj9" secondAttribute="leading" id="DoR-j9-oqH"/>
                             <constraint firstItem="g0T-nO-qbW" firstAttribute="top" secondItem="VZe-R4-PJu" secondAttribute="bottom" constant="40" id="EeL-gX-hwK"/>
                             <constraint firstItem="9cZ-g2-raz" firstAttribute="top" secondItem="VZe-R4-PJu" secondAttribute="bottom" id="G7v-Ju-3V6"/>
@@ -284,31 +284,35 @@
                             <constraint firstItem="GoL-f7-Zw3" firstAttribute="top" secondItem="fxn-JP-cLp" secondAttribute="bottom" constant="10" id="NHM-jf-UIv"/>
                             <constraint firstAttribute="trailing" secondItem="9cZ-g2-raz" secondAttribute="trailing" id="QWG-1B-W37"/>
                             <constraint firstItem="5f0-Q6-52K" firstAttribute="top" secondItem="Fhb-Il-Ccn" secondAttribute="bottom" constant="15" id="SuQ-bG-xuD"/>
-                            <constraint firstItem="Y46-hZ-wN3" firstAttribute="leading" secondItem="2oA-xI-92H" secondAttribute="trailing" constant="22" id="Tz6-us-4yQ"/>
                             <constraint firstItem="Fhb-Il-Ccn" firstAttribute="top" secondItem="bv6-cE-oQK" secondAttribute="bottom" constant="1" id="V1A-Ah-nr8"/>
                             <constraint firstItem="MA5-DC-Hj9" firstAttribute="leading" secondItem="YyI-cr-CeW" secondAttribute="leadingMargin" constant="28" id="Wjv-s8-nQm"/>
-                            <constraint firstItem="r8a-TW-LFc" firstAttribute="centerY" secondItem="vxO-db-grW" secondAttribute="centerY" id="Y2a-Rd-3rI"/>
+                            <constraint firstItem="Y46-hZ-wN3" firstAttribute="centerY" secondItem="gHa-AV-2WO" secondAttribute="centerY" id="YyD-sP-1Hv"/>
+                            <constraint firstItem="Y46-hZ-wN3" firstAttribute="leading" secondItem="gHa-AV-2WO" secondAttribute="trailing" constant="22" id="b6V-Qt-KmV"/>
                             <constraint firstItem="wmA-Ln-jA1" firstAttribute="leading" secondItem="YyI-cr-CeW" secondAttribute="leading" id="fsa-9Q-rDm"/>
                             <constraint firstItem="wmA-Ln-jA1" firstAttribute="top" secondItem="YyI-cr-CeW" secondAttribute="top" id="fyk-CR-7XI"/>
                             <constraint firstItem="g0T-nO-qbW" firstAttribute="centerX" secondItem="YyI-cr-CeW" secondAttribute="centerX" id="gLd-YU-LkJ"/>
                             <constraint firstItem="MA5-DC-Hj9" firstAttribute="top" secondItem="odX-CE-iNp" secondAttribute="bottom" constant="8" id="i6r-FY-W04"/>
-                            <constraint firstItem="vxO-db-grW" firstAttribute="centerX" secondItem="KYj-ep-bwa" secondAttribute="centerX" id="iyK-ci-9mz"/>
                             <constraint firstItem="8YO-WX-dZY" firstAttribute="leading" secondItem="YyI-cr-CeW" secondAttribute="leadingMargin" id="j4d-vR-8lh"/>
+                            <constraint firstItem="r8a-TW-LFc" firstAttribute="leading" secondItem="Xod-P0-8L3" secondAttribute="trailing" constant="22" id="jxY-s7-j3V"/>
+                            <constraint firstItem="Xod-P0-8L3" firstAttribute="leading" secondItem="MA5-DC-Hj9" secondAttribute="leading" id="mQh-EC-zG8"/>
                             <constraint firstItem="5f0-Q6-52K" firstAttribute="leading" secondItem="MA5-DC-Hj9" secondAttribute="leading" id="oT8-9F-Wfa"/>
                             <constraint firstItem="9cZ-g2-raz" firstAttribute="leading" secondItem="YyI-cr-CeW" secondAttribute="leading" id="oUm-u0-b85"/>
                             <constraint firstItem="Q77-Q7-qP2" firstAttribute="top" secondItem="Fhb-Il-Ccn" secondAttribute="bottom" constant="45" id="ofw-ao-leE"/>
+                            <constraint firstItem="bv6-cE-oQK" firstAttribute="top" secondItem="gHa-AV-2WO" secondAttribute="bottom" constant="10" id="qpi-kX-otl"/>
                             <constraint firstItem="Fhb-Il-Ccn" firstAttribute="leading" secondItem="MA5-DC-Hj9" secondAttribute="leading" id="rBh-7z-E0T"/>
                             <constraint firstItem="odX-CE-iNp" firstAttribute="top" secondItem="g0T-nO-qbW" secondAttribute="bottom" constant="20" id="rpp-Yw-VOH"/>
                             <constraint firstAttribute="trailing" secondItem="wmA-Ln-jA1" secondAttribute="trailing" id="tZR-5w-2xk"/>
                             <constraint firstItem="GoL-f7-Zw3" firstAttribute="top" secondItem="9cZ-g2-raz" secondAttribute="bottom" id="wuB-fx-kgf"/>
-                            <constraint firstItem="XBk-yP-UqH" firstAttribute="leading" secondItem="MA5-DC-Hj9" secondAttribute="leading" id="x9u-Mg-w2y"/>
-                            <constraint firstItem="Y46-hZ-wN3" firstAttribute="centerY" secondItem="XBk-yP-UqH" secondAttribute="centerY" id="xFK-hk-OZO"/>
+                            <constraint firstItem="gHa-AV-2WO" firstAttribute="leading" secondItem="MA5-DC-Hj9" secondAttribute="leading" id="y9G-Ec-iOA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="qYQ-O0-7Ps" kind="show" identifier="OptionToInfo" id="Dhz-4l-jf7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kam-R4-WNR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1072.8" y="98.50074962518741"/>
+            <point key="canvasLocation" x="1102" y="120"/>
         </scene>
         <!--Rules Menu View Controller-->
         <scene sceneID="TJo-uP-FAv">
@@ -346,6 +350,9 @@
                                     <constraint firstAttribute="height" constant="24" id="xS1-48-sQ9"/>
                                 </constraints>
                                 <state key="normal" image="MRBackButton"/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="Uxu-yi-Eea" eventType="touchUpInside" id="Qb8-5Z-g6G"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxj-Zh-hap" customClass="Header" customModule="MafiaRising" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
@@ -398,6 +405,9 @@
                                         <state key="normal" title="ROLES" backgroundImage="MRGeneralButton">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="rolesBtnPressed:" destination="Uxu-yi-Eea" eventType="touchUpInside" id="hiQ-ee-Bqe"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -424,11 +434,12 @@
                     <connections>
                         <segue destination="XFl-YP-TYn" kind="show" identifier="RulesToTut" animates="NO" id="mcV-tc-pkP"/>
                         <segue destination="mhI-wP-5BT" kind="show" identifier="RulesToScript" animates="NO" id="yqx-8T-zyb"/>
+                        <segue destination="TVh-SV-JGu" kind="show" identifier="RulesToRoles" id="8wV-LJ-1eU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7X2-x6-R6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1073" y="779"/>
+            <point key="canvasLocation" x="1102" y="782"/>
         </scene>
         <!--PageVCTutorial-->
         <scene sceneID="1lN-5c-L01">
@@ -729,6 +740,9 @@ Swipe right to learn more!</string>
                                     <constraint firstAttribute="width" constant="42" id="eWg-SL-2o9"/>
                                 </constraints>
                                 <state key="normal" image="MRBackButton"/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="TVh-SV-JGu" eventType="touchUpInside" id="dTF-FQ-oOE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -751,6 +765,9 @@ Swipe right to learn more!</string>
                             <constraint firstItem="4iN-Kb-aAB" firstAttribute="top" secondItem="SOs-kW-gt1" secondAttribute="bottom" constant="46" id="vkC-Xy-dNb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="43W-eP-keW" kind="show" id="If8-vf-kA5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C8U-Yw-u10" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -938,7 +955,7 @@ Swipe right to learn more!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96x-jO-mVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1801" y="2823"/>
+            <point key="canvasLocation" x="1801" y="2894"/>
         </scene>
         <!--Script2 View Controller-->
         <scene sceneID="k7c-IL-7GJ">
@@ -3026,6 +3043,9 @@ The end..."</string>
                                     <constraint firstAttribute="height" constant="24" id="Wba-2b-bRx"/>
                                 </constraints>
                                 <state key="normal" image="MRBackButton"/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="PC0-jt-mGo" eventType="touchUpInside" id="aZR-Nu-f4B"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXr-ck-8cg" customClass="Header" customModule="MafiaRising" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
@@ -3086,6 +3106,9 @@ The end..."</string>
                                         <state key="normal" title="RULES" backgroundImage="MRGeneralButton">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="rulesBtnPressed:" destination="PC0-jt-mGo" eventType="touchUpInside" id="V7K-hB-PX6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -3112,11 +3135,13 @@ The end..."</string>
                     </view>
                     <connections>
                         <segue destination="9nD-tn-Rq4" kind="show" identifier="PauseToOptions" id="xw3-iS-S4C"/>
+                        <segue destination="TBE-rj-uHk" kind="show" id="93s-S6-tCw"/>
+                        <segue destination="Uxu-yi-Eea" kind="show" identifier="PauseToRules" id="I53-ci-Nq8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayX-T1-lyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="356" y="779"/>
+            <point key="canvasLocation" x="356" y="771"/>
         </scene>
         <!--Player View Controller-->
         <scene sceneID="NQX-WX-jzd">
@@ -3241,9 +3266,9 @@ of Players</string>
                     </view>
                     <connections>
                         <outlet property="numPlayerField" destination="vtC-Cg-A6j" id="96q-5k-GNj"/>
-                        <segue destination="qYQ-O0-7Ps" kind="show" identifier="PlayersToInfo" id="LqO-RU-1gJ"/>
-                        <segue destination="2Ec-qL-fxS" kind="show" identifier="goToRoleSetUp" id="AGl-PN-oUX"/>
+                        <segue destination="2Ec-qL-fxS" kind="show" identifier="goToRoleSetUp" animates="NO" id="AGl-PN-oUX"/>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="PlayersToPause" id="IiT-7w-mNC"/>
+                        <segue destination="lcA-mS-A5M" kind="show" identifier="PlayersToInfo" id="nbH-fj-q58"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JvO-E4-Sae" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3296,6 +3321,9 @@ of Players</string>
                                     <constraint firstAttribute="width" constant="42" id="VNN-Mq-ML5"/>
                                 </constraints>
                                 <state key="normal" image="MRInfoButton"/>
+                                <connections>
+                                    <action selector="goToRoleInfo:" destination="2Ec-qL-fxS" eventType="touchUpInside" id="0i5-Xj-PLB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTe-D8-gvq" userLabel="Back">
                                 <rect key="frame" x="16" y="69" width="42" height="24"/>
@@ -3304,6 +3332,9 @@ of Players</string>
                                     <constraint firstAttribute="height" constant="24" id="JgY-mf-Hxy"/>
                                 </constraints>
                                 <state key="normal" image="MRBackButton"/>
+                                <connections>
+                                    <action selector="goBackToPlayer:" destination="2Ec-qL-fxS" eventType="touchUpInside" id="6bp-yd-5EP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4w-tR-aAv" userLabel="Back">
                                 <rect key="frame" x="317" y="68" width="42" height="24"/>
@@ -3314,62 +3345,44 @@ of Players</string>
                                 <state key="normal" image="MRForwardButton"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="OIN-Pa-qwo">
-                                <rect key="frame" x="79.5" y="169" width="217.5" height="135"/>
+                                <rect key="frame" x="72" y="169" width="231.5" height="133"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Jcf-M7-l50">
-                                        <rect key="frame" x="0.0" y="0.0" width="217.5" height="55"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Jcf-M7-l50">
+                                        <rect key="frame" x="0.0" y="0.0" width="231.5" height="54"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doctor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGe-Gr-NDS">
-                                                <rect key="frame" x="0.0" y="0.0" width="135.5" height="55"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="135.5" height="54"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="45"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wve-Fq-Amq">
-                                                <rect key="frame" x="160.5" y="0.0" width="57" height="55"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="MRFinal OptionsC5" translatesAutoresizingMaskIntoConstraints="NO" id="IO4-07-EHh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="56" height="54"/>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="MRFinal OptionsC10" translatesAutoresizingMaskIntoConstraints="NO" id="bbY-Ix-zCt">
-                                                        <rect key="frame" x="0.0" y="0.0" width="56" height="54"/>
-                                                    </imageView>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMv-vd-Lw1" customClass="CheckBox" customModule="MafiaRising" customModuleProvider="target">
+                                                <rect key="frame" x="175.5" y="0.0" width="56" height="54"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="55" id="6Ua-eY-mkx"/>
-                                                    <constraint firstItem="bbY-Ix-zCt" firstAttribute="centerY" secondItem="IO4-07-EHh" secondAttribute="centerY" id="HEQ-vb-NrA"/>
-                                                    <constraint firstAttribute="width" constant="57" id="WL9-7n-qO4"/>
-                                                    <constraint firstItem="bbY-Ix-zCt" firstAttribute="centerX" secondItem="IO4-07-EHh" secondAttribute="centerX" id="ycB-Dn-jSr"/>
+                                                    <constraint firstAttribute="height" constant="54" id="3VA-ZQ-xyh"/>
+                                                    <constraint firstAttribute="width" constant="56" id="v1t-33-Ups"/>
                                                 </constraints>
-                                            </view>
+                                                <state key="normal" image="MRFinal OptionsC4"/>
+                                            </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="7LJ-0Q-UdI">
-                                        <rect key="frame" x="0.0" y="80" width="217.5" height="55"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="7LJ-0Q-UdI">
+                                        <rect key="frame" x="0.0" y="79" width="231.5" height="54"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Police" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcW-xN-BYT">
-                                                <rect key="frame" x="0.0" y="0.0" width="120.5" height="55"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="135.5" height="54"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="45"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PUE-oM-cpk">
-                                                <rect key="frame" x="161.5" y="0.0" width="56" height="55"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="MRFinal OptionsC5" translatesAutoresizingMaskIntoConstraints="NO" id="YKt-DU-jLh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="56" height="54"/>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="MRFinal OptionsC10" translatesAutoresizingMaskIntoConstraints="NO" id="JL6-pD-BIv">
-                                                        <rect key="frame" x="0.0" y="0.0" width="56" height="54"/>
-                                                    </imageView>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcW-4r-gEs" customClass="CheckBox" customModule="MafiaRising" customModuleProvider="target">
+                                                <rect key="frame" x="175.5" y="0.0" width="56" height="54"/>
                                                 <constraints>
-                                                    <constraint firstItem="JL6-pD-BIv" firstAttribute="centerX" secondItem="YKt-DU-jLh" secondAttribute="centerX" id="7x4-lr-1VS"/>
-                                                    <constraint firstItem="JL6-pD-BIv" firstAttribute="centerY" secondItem="YKt-DU-jLh" secondAttribute="centerY" id="TZw-JS-0ke"/>
+                                                    <constraint firstAttribute="width" constant="56" id="275-PD-I6Y"/>
+                                                    <constraint firstAttribute="height" constant="54" id="rfo-M4-Ywh"/>
                                                 </constraints>
-                                            </view>
+                                                <state key="normal" image="MRFinal OptionsC4"/>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -3400,7 +3413,10 @@ of Players</string>
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="lcA-mS-A5M" kind="show" identifier="RolesToInfo" id="fmw-NE-23T"/>
+                        <outlet property="isDoctor" destination="QMv-vd-Lw1" id="byd-UX-CHf"/>
+                        <outlet property="isPolice" destination="WcW-4r-gEs" id="ehb-vr-dUn"/>
+                        <segue destination="JET-0x-enT" kind="show" identifier="RolesToCards" id="bun-w4-Bvq"/>
+                        <segue destination="MMk-s6-MBe" kind="show" identifier="RolesToInfo" id="5DK-wl-vuS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ka-yH-c30" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4103,10 +4119,10 @@ of Players</string>
             </objects>
             <point key="canvasLocation" x="8007" y="-575"/>
         </scene>
-        <!--Player Info View Controller-->
+        <!--Options Info View Controller-->
         <scene sceneID="ZVJ-J6-srJ">
             <objects>
-                <viewController id="qYQ-O0-7Ps" customClass="PlayerInfoViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qYQ-O0-7Ps" customClass="OptionsInfoViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LQp-rb-Pif"/>
                         <viewControllerLayoutGuide type="bottom" id="AkZ-X5-C0U"/>
@@ -4147,7 +4163,7 @@ of Players</string>
                                 </constraints>
                                 <state key="normal" image="MRBackButton"/>
                                 <connections>
-                                    <action selector="goBackToPlayer:" destination="qYQ-O0-7Ps" eventType="touchUpInside" id="zDm-Ry-JtQ"/>
+                                    <action selector="goBackToOptions:" destination="qYQ-O0-7Ps" eventType="touchUpInside" id="1lv-p2-Rb3"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vFu-h3-lLm">
@@ -4231,12 +4247,12 @@ generated story or not at all</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OmL-cd-8j5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1072.8" y="-1290.4047976011996"/>
+            <point key="canvasLocation" x="1886" y="119"/>
         </scene>
-        <!--Options Info View Controller-->
+        <!--Player Info View Controller-->
         <scene sceneID="4HJ-AS-SVw">
             <objects>
-                <viewController id="lcA-mS-A5M" customClass="OptionsInfoViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lcA-mS-A5M" customClass="PlayerInfoViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="888-0W-B7J"/>
                         <viewControllerLayoutGuide type="bottom" id="BSw-hP-jVX"/>
@@ -4280,8 +4296,8 @@ generated story or not at all</string>
                                     <action selector="goBackToPlayer:" destination="lcA-mS-A5M" eventType="touchUpInside" id="Eg5-oJ-Z72"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fR0-en-hHU">
-                                <rect key="frame" x="46" y="164" width="283" height="227"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fR0-en-hHU">
+                                <rect key="frame" x="46" y="164" width="283" height="274"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="eUc-u0-UKw">
                                         <rect key="frame" x="0.0" y="0.0" width="226" height="73"/>
@@ -4303,7 +4319,7 @@ party excluding the moderator (you)</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Osd-GX-yyb">
-                                        <rect key="frame" x="0.0" y="93" width="190.5" height="57"/>
+                                        <rect key="frame" x="0.0" y="83" width="190.5" height="57"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mafia Ratio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCW-4N-Wf6">
                                                 <rect key="frame" x="0.0" y="0.0" width="190.5" height="40.5"/>
@@ -4320,7 +4336,7 @@ party excluding the moderator (you)</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="3K3-52-VjI">
-                                        <rect key="frame" x="0.0" y="170" width="196" height="57"/>
+                                        <rect key="frame" x="0.0" y="150" width="196" height="57"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min Players" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDQ-Ds-Vmy">
                                                 <rect key="frame" x="0.0" y="0.0" width="196" height="40.5"/>
@@ -4330,6 +4346,23 @@ party excluding the moderator (you)</string>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 People" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Kdx-aJ-34B">
                                                 <rect key="frame" x="0.0" y="40.5" width="54" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Kci-Ii-nVo">
+                                        <rect key="frame" x="0.0" y="217" width="202" height="57"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Players" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLI-Ra-3YP">
+                                                <rect key="frame" x="0.0" y="0.0" width="202" height="40.5"/>
+                                                <fontDescription key="fontDescription" name="Kefa-Bold" family="Kefa" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 People" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="yiL-Sg-VCu">
+                                                <rect key="frame" x="0.0" y="40.5" width="62" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -4360,7 +4393,7 @@ party excluding the moderator (you)</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dhh-Z6-rE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1886" y="-1290"/>
+            <point key="canvasLocation" x="1073" y="-1290"/>
         </scene>
         <!--Cards Info View Controller-->
         <scene sceneID="1e1-os-e1u">
@@ -4407,6 +4440,7 @@ party excluding the moderator (you)</string>
                                 <state key="normal" image="MRBackButton"/>
                                 <connections>
                                     <action selector="backBtnPressed:" destination="TZg-g4-ZaJ" eventType="touchUpInside" id="tZr-hc-Cve"/>
+                                    <action selector="goBackToCards:" destination="TZg-g4-ZaJ" eventType="touchUpInside" id="96a-bP-gkH"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1X2-Sz-he5">
@@ -4543,7 +4577,7 @@ party excluding the moderator (you)</string>
 No worries...
 
 Swipe right
-to learn more</string>
+to learn more!</string>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="38"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -6492,6 +6526,118 @@ be a jerk ;)</string>
             </objects>
             <point key="canvasLocation" x="16969" y="-575"/>
         </scene>
+        <!--Role Info View Controller-->
+        <scene sceneID="R7c-YC-NHW">
+            <objects>
+                <viewController id="MMk-s6-MBe" customClass="RoleInfoViewController" customModule="MafiaRising" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="stk-Bn-DZy"/>
+                        <viewControllerLayoutGuide type="bottom" id="lbt-zc-2TB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9QX-jz-OhG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfX-Eg-2bD" customClass="Header" customModule="MafiaRising" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <color key="backgroundColor" red="0.12939286229999999" green="0.12942269440000001" blue="0.12939092520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="VRK-K3-Yek"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MRFinal CardsInfoC2" translatesAutoresizingMaskIntoConstraints="NO" id="4Zx-Ya-6UI">
+                                <rect key="frame" x="107" y="60" width="162" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="Nsd-gh-RXw"/>
+                                    <constraint firstAttribute="width" constant="162" id="s6Y-4S-D2g"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MRDivider" translatesAutoresizingMaskIntoConstraints="NO" id="p4E-oG-EYh">
+                                <rect key="frame" x="68" y="121" width="240" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="13" id="L1I-p4-gPT"/>
+                                    <constraint firstAttribute="width" constant="240" id="NbL-uF-j3o"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="com-PT-Xjl" userLabel="Back">
+                                <rect key="frame" x="16" y="69" width="42" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="bEO-F5-g2f"/>
+                                    <constraint firstAttribute="height" constant="24" id="hfC-mQ-h8E"/>
+                                </constraints>
+                                <state key="normal" image="MRBackButton"/>
+                                <connections>
+                                    <action selector="goBackToRole:" destination="MMk-s6-MBe" eventType="touchUpInside" id="BTX-Rv-nze"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="P6S-a6-eZj">
+                                <rect key="frame" x="46" y="164" width="283" height="215"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="2Yi-de-L5i">
+                                        <rect key="frame" x="0.0" y="0.0" width="278.5" height="89.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doctor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwL-S0-BsY">
+                                                <rect key="frame" x="0.0" y="0.0" width="110.5" height="40.5"/>
+                                                <fontDescription key="fontDescription" name="Kefa-Bold" family="Kefa" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="alx-7l-uyu">
+                                                <rect key="frame" x="0.0" y="40.5" width="278.5" height="49"/>
+                                                <string key="text">A doctor protects one player every night. The protected member cannot be killed by the mafia that night but can be executed at the tribunal.</string>
+                                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="MvD-Cc-RCF">
+                                        <rect key="frame" x="0.0" y="109.5" width="278" height="105.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Police" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORS-vf-EnX">
+                                                <rect key="frame" x="0.0" y="0.0" width="98.5" height="40.5"/>
+                                                <fontDescription key="fontDescription" name="Kefa-Bold" family="Kefa" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qqk-bg-YWs">
+                                                <rect key="frame" x="0.0" y="40.5" width="278" height="65"/>
+                                                <string key="text">The police is allowed to investigate one player every night. If his accusations are correct, the moderator affirms the police with a nod or dismisses with a shake of the head.</string>
+                                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FfX-Eg-2bD" secondAttribute="trailing" id="64n-O5-g82"/>
+                            <constraint firstItem="FfX-Eg-2bD" firstAttribute="top" secondItem="9QX-jz-OhG" secondAttribute="top" id="Amf-TG-hdy"/>
+                            <constraint firstItem="4Zx-Ya-6UI" firstAttribute="centerX" secondItem="9QX-jz-OhG" secondAttribute="centerX" id="DzZ-2S-R7a"/>
+                            <constraint firstItem="p4E-oG-EYh" firstAttribute="top" secondItem="4Zx-Ya-6UI" secondAttribute="bottom" constant="20" id="GlK-Se-Obm"/>
+                            <constraint firstItem="4Zx-Ya-6UI" firstAttribute="top" secondItem="stk-Bn-DZy" secondAttribute="bottom" constant="40" id="Q3M-YV-boY"/>
+                            <constraint firstItem="FfX-Eg-2bD" firstAttribute="leading" secondItem="9QX-jz-OhG" secondAttribute="leading" id="RnB-hD-4J2"/>
+                            <constraint firstItem="P6S-a6-eZj" firstAttribute="top" secondItem="p4E-oG-EYh" secondAttribute="bottom" constant="30" id="aKq-OJ-bu5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="P6S-a6-eZj" secondAttribute="trailing" constant="30" id="cfA-hV-2xO"/>
+                            <constraint firstItem="P6S-a6-eZj" firstAttribute="centerX" secondItem="9QX-jz-OhG" secondAttribute="centerX" id="fqG-T5-WWO"/>
+                            <constraint firstItem="P6S-a6-eZj" firstAttribute="leading" secondItem="9QX-jz-OhG" secondAttribute="leadingMargin" constant="30" id="ijJ-BQ-zd2"/>
+                            <constraint firstItem="4Zx-Ya-6UI" firstAttribute="centerX" secondItem="9QX-jz-OhG" secondAttribute="centerX" id="izf-P4-Kdb"/>
+                            <constraint firstItem="p4E-oG-EYh" firstAttribute="centerX" secondItem="9QX-jz-OhG" secondAttribute="centerX" id="mO6-oO-v81"/>
+                            <constraint firstItem="com-PT-Xjl" firstAttribute="leading" secondItem="9QX-jz-OhG" secondAttribute="leadingMargin" id="pxI-Ec-Ubq"/>
+                            <constraint firstItem="4Zx-Ya-6UI" firstAttribute="centerY" secondItem="com-PT-Xjl" secondAttribute="centerY" id="tjs-km-Yjp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DKU-xB-LpR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1886" y="-1290"/>
+        </scene>
     </scenes>
     <resources>
         <image name="MRBackButton" width="92" height="52"/>
@@ -6504,8 +6650,7 @@ be a jerk ;)</string>
         <image name="MRFinal HomeC7" width="1440" height="2560"/>
         <image name="MRFinal MafiaWinC2" width="24" height="24"/>
         <image name="MRFinal OptionsC1" width="336" height="61"/>
-        <image name="MRFinal OptionsC10" width="60" height="71"/>
-        <image name="MRFinal OptionsC5" width="78" height="78"/>
+        <image name="MRFinal OptionsC4" width="78" height="78"/>
         <image name="MRFinal PauseC1" width="221" height="54"/>
         <image name="MRFinal PauseRolesC2" width="238" height="60"/>
         <image name="MRFinal PlayersC1" width="336" height="60"/>
@@ -6542,7 +6687,8 @@ be a jerk ;)</string>
         <image name="m" width="523" height="486"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="IiT-7w-mNC"/>
+        <segue reference="5oF-XY-W7M"/>
+        <segue reference="I53-ci-Nq8"/>
         <segue reference="xw3-iS-S4C"/>
     </inferredMetricsTieBreakers>
 </document>

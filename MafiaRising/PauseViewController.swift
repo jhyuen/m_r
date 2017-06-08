@@ -21,9 +21,29 @@ class PauseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // Back Button
+    @IBAction func backBtnPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // Home Button
+    // Add segue
+    // Remember to keep game data for continue
+    
+    // Roles Button
+    // Add segue
+    // Remember to keep game data for roles screen
+    
+    // Options Button
     @IBAction func optionsBtnPressed(_ sender: Any) {
         performSegue(withIdentifier: "PauseToOptions", sender: self)
     }
+    
+    // Rules Button
+    @IBAction func rulesBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: "PauseToRules", sender: self)
+    }
+    
   /*
     // MARK: - Navigation
 

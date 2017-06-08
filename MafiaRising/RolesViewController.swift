@@ -21,15 +21,17 @@ class RolesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Back Button
+    @IBAction func backBtnPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
-    */
+    
+    enum Roles: Int {
+        case MODERATOR = 0
+        case CITIZEN = 1
+        case MAFIA = 2
+        case DOCTOR = 3
+        case POLICE = 4
+    }
 
 }

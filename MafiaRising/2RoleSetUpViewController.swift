@@ -10,9 +10,11 @@ import UIKit
 
 class _RoleSetUpViewController: UIViewController {
 
+    @IBOutlet weak var isDoctor: CheckBox!
+    @IBOutlet weak var isPolice: CheckBox!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -21,15 +23,22 @@ class _RoleSetUpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Back Button
+    @IBAction func goBackToPlayer(_ sender: Any) {
+            dismiss(animated: false, completion: nil )
     }
-    */
+    
+    /*
+    @IBAction func goToCards(_ sender: Any) {
+    } */
+    
+       /*
+        performSegue(withIdentifier: "RolesToCards", sender: Any?)
+    }*/
+    
+    // Info Button
+    @IBAction func goToRoleInfo (_ sender: Any) {
+        performSegue(withIdentifier: "RolesToInfo", sender: self)
+    }
 
 }

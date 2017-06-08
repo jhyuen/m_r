@@ -10,7 +10,8 @@ import UIKit
 
 class _PlayerViewController: UIViewController {
 
-    
+    let minimumPlayers = 5
+    let maximumPlayers = 30
     
     @IBOutlet weak var numPlayerField: UITextField!
     
@@ -26,7 +27,7 @@ class _PlayerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // PauseButton
+    // Pause Button
     @IBAction func pauseBtnPressed(_ sender: Any) {
         performSegue(withIdentifier: "PlayersToPause", sender: self)
     }
@@ -36,7 +37,7 @@ class _PlayerViewController: UIViewController {
         
         if numPlayerField.text?.isEmpty == false {
             
-            if (Int(numPlayerField.text!))! >= 0 && (Int(numPlayerField.text!))! <= 30 {
+            if (Int(numPlayerField.text!))! >= minimumPlayers && (Int(numPlayerField.text!))! <= maximumPlayers {
                 
                 let numPlayers: Int = (Int(numPlayerField.text!))!
                 performSegue(withIdentifier: "goToRoleSetUp", sender: numPlayers)
@@ -45,6 +46,7 @@ class _PlayerViewController: UIViewController {
         }
     }
     
+    // Info Button
     @IBAction func goToPlayerInfo(_ sender: Any) {
         performSegue(withIdentifier: "PlayersToInfo", sender: self)
     }

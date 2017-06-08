@@ -21,11 +21,24 @@ class RulesMenuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // Back Button
+    @IBAction func backBtnPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // Tutorial Button
     @IBAction func tutorialBtnPressed(_ sender: Any) {
         performSegue(withIdentifier: "RulesToTut", sender: self)
     }
     
+    // Script Button
     @IBAction func scriptBtnPressed(_ sender: Any) {
         performSegue(withIdentifier: "RulesToScript", sender: self)
     }
+    
+    // Roles Button
+    @IBAction func rolesBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: "RulesToRoles", sender: self)
+    }
+    
 }

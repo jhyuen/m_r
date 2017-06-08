@@ -21,7 +21,8 @@ class CardsInfoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func backBtnPressed(_ sender: Any) {
+    // Back Button
+    @IBAction func goBackToCards(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
 

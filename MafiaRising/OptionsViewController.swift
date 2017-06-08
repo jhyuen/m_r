@@ -21,7 +21,13 @@ class OptionsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // Back Button
     @IBAction func backBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    // Info Button
+    @IBAction func goToOptionInfo(_ sender: Any) {
+        performSegue(withIdentifier: "OptionToInfo", sender: self)
     }
 }

@@ -21,15 +21,22 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // New Game Button
+    @IBAction func pushNewGame(_ sender: Any) {
+        performSegue(withIdentifier: "HomeToPlayers", sender: self)
     }
-    */
+    
+    // Continue Button
+    // write some stuff
+    
+    // Options Button
+    @IBAction func pushOptions(_ sender: Any) {
+        performSegue(withIdentifier: "HomeToOptions", sender: self)
+    }
+    
+    // Rules Button
+    @IBAction func pushRules(_ sender: Any) {
+        performSegue(withIdentifier: "HomeToRules", sender: self)
+    }
 
 }

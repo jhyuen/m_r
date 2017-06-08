@@ -28,6 +28,8 @@
 		2B0042521EE1E4FC00A747BA /* Tutorial19AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0042511EE1E4FC00A747BA /* Tutorial19AViewController.swift */; };
 		2B0042541EE1E50A00A747BA /* Tutorial12AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0042531EE1E50A00A747BA /* Tutorial12AViewController.swift */; };
 		2B280F001ED8859700EF6EE1 /* Manteka.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B280EFF1ED8859700EF6EE1 /* Manteka.ttf */; };
+		2B406E7A1EE8820C0099A0B8 /* RoleInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B406E791EE8820C0099A0B8 /* RoleInfoViewController.swift */; };
+		2B406E7C1EE896360099A0B8 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B406E7B1EE896360099A0B8 /* CheckBox.swift */; };
 		2B488F041ED3653700A27479 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F031ED3653700A27479 /* HomeViewController.swift */; };
 		2B488F0A1ED366F400A27479 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F091ED366F400A27479 /* OptionsViewController.swift */; };
 		2B488F0C1ED3675800A27479 /* RulesMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F0B1ED3675800A27479 /* RulesMenuViewController.swift */; };
@@ -136,6 +138,8 @@
 		2B0042511EE1E4FC00A747BA /* Tutorial19AViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial19AViewController.swift; sourceTree = "<group>"; };
 		2B0042531EE1E50A00A747BA /* Tutorial12AViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial12AViewController.swift; sourceTree = "<group>"; };
 		2B280EFF1ED8859700EF6EE1 /* Manteka.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Manteka.ttf; sourceTree = "<group>"; };
+		2B406E791EE8820C0099A0B8 /* RoleInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleInfoViewController.swift; sourceTree = "<group>"; };
+		2B406E7B1EE896360099A0B8 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		2B488F031ED3653700A27479 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2B488F091ED366F400A27479 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		2B488F0B1ED3675800A27479 /* RulesMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesMenuViewController.swift; sourceTree = "<group>"; };
@@ -262,6 +266,7 @@
 		2B488F071ED3669700A27479 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2B406E7B1EE896360099A0B8 /* CheckBox.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -389,6 +394,7 @@
 				2BB18CE31EDFE25C005E8515 /* PlayerInfoViewController.swift */,
 				2BB18CE51EDFE268005E8515 /* OptionsInfoViewController.swift */,
 				2BB18CE71EDFE277005E8515 /* CardsInfoViewController.swift */,
+				2B406E791EE8820C0099A0B8 /* RoleInfoViewController.swift */,
 			);
 			name = InfoCards;
 			sourceTree = "<group>";
@@ -601,6 +607,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B488F0E1ED3684100A27479 /* Tutorial1ViewController.swift in Sources */,
+				2B406E7C1EE896360099A0B8 /* CheckBox.swift in Sources */,
 				2B488F1C1ED3698600A27479 /* 2RoleSetUpViewController.swift in Sources */,
 				2B0042441EE1E4A100A747BA /* Tutorial13ViewController.swift in Sources */,
 				2B00423C1EE1E47800A747BA /* Tutorial9ViewController.swift in Sources */,
@@ -648,6 +655,7 @@
 				2BB18CE11EDFABE3005E8515 /* Script01ViewController.swift in Sources */,
 				2BC4AC071ED888FC0075D142 /* Script6ViewController.swift in Sources */,
 				2B488F2D1ED36A6100A27479 /* 9EndViewController.swift in Sources */,
+				2B406E7A1EE8820C0099A0B8 /* RoleInfoViewController.swift in Sources */,
 				2BC4AC011ED888D80075D142 /* Script3ViewController.swift in Sources */,
 				2BC4AC1F1ED89A110075D142 /* Script7AViewController.swift in Sources */,
 				2B00424E1EE1E4EC00A747BA /* Tutorial18ViewController.swift in Sources */,
