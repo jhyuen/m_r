@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TBE-rj-uHk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TBE-rj-uHk">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -3237,6 +3237,12 @@ of Players</string>
                                 <fontDescription key="fontDescription" name="Kefa-Bold" family="Kefa" pointSize="50"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
                             </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ClL-mv-6MZ" userLabel="Error Label">
+                                <rect key="frame" x="0.0" y="414" width="375" height="35"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
+                                <color key="textColor" red="0.5790170431137085" green="0.09017818421125412" blue="0.036765597760677338" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -3250,6 +3256,8 @@ of Players</string>
                             <constraint firstItem="DcU-de-Uof" firstAttribute="top" secondItem="L00-qA-e7P" secondAttribute="bottom" constant="40" id="PAF-Du-zCF"/>
                             <constraint firstItem="DcU-de-Uof" firstAttribute="centerY" secondItem="Z5j-mC-FZg" secondAttribute="centerY" id="PmP-kr-5SQ"/>
                             <constraint firstItem="DcU-de-Uof" firstAttribute="centerX" secondItem="03N-eO-Gb2" secondAttribute="centerX" id="QBt-qE-8hB"/>
+                            <constraint firstAttribute="trailing" secondItem="ClL-mv-6MZ" secondAttribute="trailing" id="QUP-Tf-dkz"/>
+                            <constraint firstItem="ClL-mv-6MZ" firstAttribute="leading" secondItem="03N-eO-Gb2" secondAttribute="leading" id="TAH-Ne-zoK"/>
                             <constraint firstItem="vtC-Cg-A6j" firstAttribute="top" secondItem="D21-FT-HGD" secondAttribute="bottom" constant="30" id="VUo-7C-qMo"/>
                             <constraint firstAttribute="trailing" secondItem="UdD-Bn-9BY" secondAttribute="trailing" id="WHD-R8-0Nj"/>
                             <constraint firstItem="XKJ-8A-6CI" firstAttribute="top" secondItem="DcU-de-Uof" secondAttribute="bottom" constant="20" id="Yvc-s9-1a5"/>
@@ -3261,19 +3269,33 @@ of Players</string>
                             <constraint firstItem="wah-ju-OK5" firstAttribute="top" secondItem="L00-qA-e7P" secondAttribute="bottom" id="hGX-MO-U1f"/>
                             <constraint firstAttribute="trailing" secondItem="wah-ju-OK5" secondAttribute="trailing" id="joB-Dg-h4Z"/>
                             <constraint firstItem="XKJ-8A-6CI" firstAttribute="centerX" secondItem="03N-eO-Gb2" secondAttribute="centerX" id="kBz-Sx-OKR"/>
+                            <constraint firstItem="ClL-mv-6MZ" firstAttribute="top" secondItem="vtC-Cg-A6j" secondAttribute="bottom" constant="10" id="lfX-PV-X8W"/>
                             <constraint firstItem="p0m-tX-ykc" firstAttribute="trailing" secondItem="03N-eO-Gb2" secondAttribute="trailingMargin" id="vi2-xt-dwd"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="errorLabel" destination="ClL-mv-6MZ" id="ppK-oD-rA3"/>
                         <outlet property="numPlayerField" destination="vtC-Cg-A6j" id="96q-5k-GNj"/>
+                        <outlet property="toolBar" destination="Kl9-lF-JOS" id="dPm-QW-JUs"/>
                         <segue destination="2Ec-qL-fxS" kind="show" identifier="goToRoleSetUp" animates="NO" id="AGl-PN-oUX"/>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="PlayersToPause" id="IiT-7w-mNC"/>
                         <segue destination="lcA-mS-A5M" kind="show" identifier="PlayersToInfo" id="nbH-fj-q58"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JvO-E4-Sae" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Kl9-lF-JOS">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem title="Done" style="done" id="KhE-78-dKo">
+                            <connections>
+                                <action selector="keyboardDoneBtnPressed:" destination="3B4-aq-i8L" id="4kz-iK-8WX"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
             </objects>
-            <point key="canvasLocation" x="1073" y="-575"/>
+            <point key="canvasLocation" x="1072.8" y="-575.26236881559225"/>
         </scene>
         <!--Role Set Up View Controller-->
         <scene sceneID="cO0-An-ET3">
@@ -3345,7 +3367,7 @@ of Players</string>
                                 <state key="normal" image="MRForwardButton"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="OIN-Pa-qwo">
-                                <rect key="frame" x="72" y="169" width="231.5" height="133"/>
+                                <rect key="frame" x="72.5" y="169" width="231.5" height="133"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Jcf-M7-l50">
                                         <rect key="frame" x="0.0" y="0.0" width="231.5" height="54"/>
@@ -6687,8 +6709,8 @@ be a jerk ;)</string>
         <image name="m" width="523" height="486"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5oF-XY-W7M"/>
-        <segue reference="I53-ci-Nq8"/>
+        <segue reference="IiT-7w-mNC"/>
         <segue reference="xw3-iS-S4C"/>
+        <segue reference="I53-ci-Nq8"/>
     </inferredMetricsTieBreakers>
 </document>

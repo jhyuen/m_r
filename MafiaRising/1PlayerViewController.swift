@@ -14,14 +14,43 @@ class _PlayerViewController: UIViewController {
     let maximumPlayers = 30
     
     @IBOutlet weak var numPlayerField: UITextField!
+    @IBOutlet weak var toolBar: UIToolbar!
+    @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(_PlayerViewController.dismissKeyboard)))
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(_PlayerViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(_PlayerViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
-
+    func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= (keyboardSize.height / 2)
+            }
+        }
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += (keyboardSize.height / 2)
+            }
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        errorLabel.isHidden = true
+        numPlayerField.text = ""
+    }
+    
+    func dismissKeyboard() {
+        numPlayerField.resignFirstResponder()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -41,8 +70,14 @@ class _PlayerViewController: UIViewController {
                 
                 let numPlayers: Int = (Int(numPlayerField.text!))!
                 performSegue(withIdentifier: "goToRoleSetUp", sender: numPlayers)
-                
+                errorLabel.isHidden = true
+            } else {
+                errorLabel.isHidden = false
+                errorLabel.text = "The Valid Player Range is 5 to 30"
             }
+        } else {
+            errorLabel.isHidden = false
+            errorLabel.text = "Please Enter the Number of Players"
         }
     }
     
