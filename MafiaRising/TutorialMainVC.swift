@@ -29,7 +29,7 @@ class TutorialMainVC: UIViewController {
     
     
     func returnToOptions() {
-        dismiss(animated: false, completion: nil)
+        dismissBottomToTop(theVC: self)
     }
     
     

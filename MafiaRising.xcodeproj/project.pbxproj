@@ -82,6 +82,8 @@
 		2BFEDE021EC4C2E600AB18BD /* MafiaRisingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEDE011EC4C2E600AB18BD /* MafiaRisingTests.swift */; };
 		2BFEDE0D1EC4C2E700AB18BD /* MafiaRisingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEDE0C1EC4C2E700AB18BD /* MafiaRisingUITests.swift */; };
 		2BFEDE1B1EC4C7CE00AB18BD /* Kefa.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 2BFEDE1A1EC4C7CE00AB18BD /* Kefa.ttc */; };
+		84A3C3511EE9D19A00C802E6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3C3501EE9D19A00C802E6 /* Constants.swift */; };
+		84A3C3531EE9DD6900C802E6 /* ScaleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3C3521EE9DD6900C802E6 /* ScaleSegue.swift */; };
 		84AF22671EE7A12F006D0EA5 /* TutorialPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF22661EE7A12F006D0EA5 /* TutorialPageVC.swift */; };
 		84AF22691EE7A224006D0EA5 /* TutorialPageVCVert1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF22681EE7A224006D0EA5 /* TutorialPageVCVert1.swift */; };
 		84AF226B1EE7A291006D0EA5 /* TutorialPageVCVert2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF226A1EE7A291006D0EA5 /* TutorialPageVCVert2.swift */; };
@@ -198,6 +200,8 @@
 		2BFEDE0C1EC4C2E700AB18BD /* MafiaRisingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MafiaRisingUITests.swift; sourceTree = "<group>"; };
 		2BFEDE0E1EC4C2E700AB18BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BFEDE1A1EC4C7CE00AB18BD /* Kefa.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Kefa.ttc; sourceTree = "<group>"; };
+		84A3C3501EE9D19A00C802E6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		84A3C3521EE9DD6900C802E6 /* ScaleSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleSegue.swift; sourceTree = "<group>"; };
 		84AF22661EE7A12F006D0EA5 /* TutorialPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageVC.swift; sourceTree = "<group>"; };
 		84AF22681EE7A224006D0EA5 /* TutorialPageVCVert1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageVCVert1.swift; sourceTree = "<group>"; };
 		84AF226A1EE7A291006D0EA5 /* TutorialPageVCVert2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageVCVert2.swift; sourceTree = "<group>"; };
@@ -252,6 +256,7 @@
 		2B488F061ED3668F00A27479 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				84A3C3501EE9D19A00C802E6 /* Constants.swift */,
 				2BB18CE21EDFE220005E8515 /* InfoCards */,
 				2B488F031ED3653700A27479 /* HomeViewController.swift */,
 				2B488F151ED368D000A27479 /* Rules */,
@@ -259,6 +264,7 @@
 				2B488F131ED368BB00A27479 /* Game */,
 				2B488F321ED3A32700A27479 /* PauseViewController.swift */,
 				2B488F341ED3AEBC00A27479 /* GameRolesViewController.swift */,
+				84A3C3521EE9DD6900C802E6 /* ScaleSegue.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -617,6 +623,7 @@
 				2B488F371ED3AFBC00A27479 /* RoleInformationViewController.swift in Sources */,
 				2BC4AC1B1ED899FD0075D142 /* Script4AViewController.swift in Sources */,
 				2B488F291ED36A0200A27479 /* 7ChooseViewController.swift in Sources */,
+				84A3C3511EE9D19A00C802E6 /* Constants.swift in Sources */,
 				2BB18CE81EDFE277005E8515 /* CardsInfoViewController.swift in Sources */,
 				2BC4ABFF1ED888D00075D142 /* Script2ViewController.swift in Sources */,
 				2B00422E1EE1E41900A747BA /* Tutorial2ViewController.swift in Sources */,
@@ -670,6 +677,7 @@
 				2BC4AC211ED89A200075D142 /* Script8AViewController.swift in Sources */,
 				84AF227C1EE7BD26006D0EA5 /* ScriptPageVCVert6.swift in Sources */,
 				2B0042541EE1E50A00A747BA /* Tutorial12AViewController.swift in Sources */,
+				84A3C3531EE9DD6900C802E6 /* ScaleSegue.swift in Sources */,
 				2B0042361EE1E45900A747BA /* Tutorial6ViewController.swift in Sources */,
 				84AF227A1EE7BD1E006D0EA5 /* ScriptPageVCVert5.swift in Sources */,
 				2BC4AC051ED888F00075D142 /* Script5ViewController.swift in Sources */,
