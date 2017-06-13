@@ -661,57 +661,67 @@ Swipe right to learn more!</string>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cte-aE-38N">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="77"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="95o-w5-8Nb"/>
                                             <constraint firstAttribute="width" constant="200" id="aib-XF-89e"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
                                         <state key="normal" title="MODERATOR" backgroundImage="MRGeneralButton">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onRoleBtnTapped:" destination="TVh-SV-JGu" eventType="touchUpInside" id="aqu-az-ndC"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nf-Rw-Za1">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nf-Rw-Za1">
                                         <rect key="frame" x="0.0" y="97" width="200" height="76.5"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="EDw-rp-Bcm"/>
                                             <constraint firstAttribute="width" constant="200" id="kyc-Iw-rHz"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
                                         <state key="normal" title="CITIZEN" backgroundImage="MRGeneralButton">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onRoleBtnTapped:" destination="TVh-SV-JGu" eventType="touchUpInside" id="dxS-4U-1FE"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1E-KJ-Pnf">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1E-KJ-Pnf">
                                         <rect key="frame" x="0.0" y="193.5" width="200" height="77"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="WMT-he-8iG"/>
-                                            <constraint firstAttribute="height" constant="75" id="uP8-PA-0vC"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
                                         <state key="normal" title="MAFIA" backgroundImage="MRGeneralButton">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onRoleBtnTapped:" destination="TVh-SV-JGu" eventType="touchUpInside" id="4bx-gF-MnV"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyW-pX-uYY">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyW-pX-uYY">
                                         <rect key="frame" x="0.0" y="290.5" width="200" height="76.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="8VY-iQ-Svc"/>
-                                            <constraint firstAttribute="height" constant="75" id="rM3-Ug-0qQ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
                                         <state key="normal" title="DOCTOR" backgroundImage="MRGeneralButton">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onRoleBtnTapped:" destination="TVh-SV-JGu" eventType="touchUpInside" id="Jjj-qd-SrN"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaq-Lu-ozQ">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaq-Lu-ozQ">
                                         <rect key="frame" x="0.0" y="387" width="200" height="77"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="fj9-vd-RlJ"/>
-                                            <constraint firstAttribute="height" constant="75" id="vtM-ha-1jE"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
                                         <state key="normal" title="POLICE" backgroundImage="MRGeneralButton">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onRoleBtnTapped:" destination="TVh-SV-JGu" eventType="touchUpInside" id="r6S-lE-5XL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -758,7 +768,7 @@ Swipe right to learn more!</string>
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="43W-eP-keW" kind="show" id="If8-vf-kA5"/>
+                        <segue destination="43W-eP-keW" kind="show" identifier="RolesToRoleInformation" id="If8-vf-kA5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C8U-Yw-u10" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -881,6 +891,9 @@ Swipe right to learn more!</string>
                                     <constraint firstAttribute="width" constant="42" id="hTe-Wj-jo4"/>
                                 </constraints>
                                 <state key="normal" image="MRBackButton"/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="43W-eP-keW" eventType="touchUpInside" id="nbX-si-6wm"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POLICE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ab-DE-7Rj">
                                 <rect key="frame" x="68" y="65" width="240" height="31"/>
@@ -905,7 +918,7 @@ Swipe right to learn more!</string>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="w7s-he-ovs">
                                 <rect key="frame" x="68" y="157" width="240" height="490"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="270" verticalCompressionResistancePriority="630" image="MRFinal RolesPoliceC3" translatesAutoresizingMaskIntoConstraints="NO" id="naG-Hl-V7v">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="270" verticalCompressionResistancePriority="630" image="MRFinal RolesPoliceC3" translatesAutoresizingMaskIntoConstraints="NO" id="naG-Hl-V7v" customClass="RoleImg" customModule="MafiaRising" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="naG-Hl-V7v" secondAttribute="height" multiplier="1:1" id="OfX-9j-Jxk"/>
@@ -944,6 +957,12 @@ Swipe right to learn more!</string>
                             <constraint firstItem="8Ab-DE-7Rj" firstAttribute="centerY" secondItem="a81-b6-vzR" secondAttribute="centerY" id="yuW-bU-xOE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="roleAllegiance" destination="pnF-cF-eAH" id="tld-dx-Dy7"/>
+                        <outlet property="roleCharacter" destination="8Ab-DE-7Rj" id="p5M-Ou-TOb"/>
+                        <outlet property="roleDescription" destination="Xlo-Nf-Uc1" id="KBh-9d-Kg5"/>
+                        <outlet property="roleImg" destination="naG-Hl-V7v" id="ZTm-aB-wVI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96x-jO-mVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3351,7 +3370,7 @@ of Players</string>
                                 <state key="normal" image="MRForwardButton"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="OIN-Pa-qwo">
-                                <rect key="frame" x="72" y="169" width="231.5" height="133"/>
+                                <rect key="frame" x="72.5" y="169" width="231.5" height="133"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Jcf-M7-l50">
                                         <rect key="frame" x="0.0" y="0.0" width="231.5" height="54"/>

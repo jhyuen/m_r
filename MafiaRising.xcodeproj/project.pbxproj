@@ -98,6 +98,7 @@
 		84AF227E1EE7BD2F006D0EA5 /* ScriptPageVCVert7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF227D1EE7BD2F006D0EA5 /* ScriptPageVCVert7.swift */; };
 		84AF22801EE7BD36006D0EA5 /* ScriptPageVCVert8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF227F1EE7BD36006D0EA5 /* ScriptPageVCVert8.swift */; };
 		84AF22821EE7BD3E006D0EA5 /* ScriptPageVCVert9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF22811EE7BD3E006D0EA5 /* ScriptPageVCVert9.swift */; };
+		84CF2CDA1EF05304008A7052 /* RoleImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF2CD91EF05304008A7052 /* RoleImg.swift */; };
 		84D5BFDA1EE864CB0094390A /* ScriptMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5BFD91EE864CB0094390A /* ScriptMainVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -216,6 +217,7 @@
 		84AF227D1EE7BD2F006D0EA5 /* ScriptPageVCVert7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptPageVCVert7.swift; sourceTree = "<group>"; };
 		84AF227F1EE7BD36006D0EA5 /* ScriptPageVCVert8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptPageVCVert8.swift; sourceTree = "<group>"; };
 		84AF22811EE7BD3E006D0EA5 /* ScriptPageVCVert9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptPageVCVert9.swift; sourceTree = "<group>"; };
+		84CF2CD91EF05304008A7052 /* RoleImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleImg.swift; sourceTree = "<group>"; };
 		84D5BFD91EE864CB0094390A /* ScriptMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptMainVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -273,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				2B406E7B1EE896360099A0B8 /* CheckBox.swift */,
+				84CF2CD91EF05304008A7052 /* RoleImg.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -675,6 +678,7 @@
 				2B0042381EE1E46400A747BA /* Tutorial7ViewController.swift in Sources */,
 				84AF22761EE7BD0C006D0EA5 /* ScriptPageVCVert3.swift in Sources */,
 				2BC4AC211ED89A200075D142 /* Script8AViewController.swift in Sources */,
+				84CF2CDA1EF05304008A7052 /* RoleImg.swift in Sources */,
 				84AF227C1EE7BD26006D0EA5 /* ScriptPageVCVert6.swift in Sources */,
 				2B0042541EE1E50A00A747BA /* Tutorial12AViewController.swift in Sources */,
 				84A3C3531EE9DD6900C802E6 /* ScaleSegue.swift in Sources */,
