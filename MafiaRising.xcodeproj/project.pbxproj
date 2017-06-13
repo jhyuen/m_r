@@ -547,6 +547,7 @@
 				TargetAttributes = {
 					2BFEDDE81EC4C2E600AB18BD = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = UV9N6MFHJM;
 						ProvisioningStyle = Automatic;
 					};
 					2BFEDDFC1EC4C2E600AB18BD = {
@@ -852,6 +853,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = UV9N6MFHJM;
 				INFOPLIST_FILE = MafiaRising/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = illum.MafiaRising;
@@ -865,6 +868,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = UV9N6MFHJM;
 				INFOPLIST_FILE = MafiaRising/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = illum.MafiaRising;

@@ -15,6 +15,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     @IBOutlet weak var roleLbl: UILabel!
     @IBOutlet weak var numberLbl: UILabel!
     @IBOutlet weak var playerImage: UIImageView!
+    @IBOutlet weak var cameraBtn: UIButton!
     
     var captureSession = AVCaptureSession()
     var sessionOutput = AVCapturePhotoOutput()
@@ -47,7 +48,10 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
                             
                             cameraView.layer.addSublayer(previewLayer)
                             
-                            previewLayer.position = CGPoint(x: self.cameraView.frame.width / 2, y: self.cameraView.frame.height / 2)
+                            // sets up location of camera view
+                            previewLayer.position = CGPoint(x: self.cameraView.frame.width/2, y: self.cameraView.frame.height/2)
+                            
+                            // sets bounds of camera view
                             previewLayer.bounds = cameraView.frame
                             
                             captureSession.startRunning()
@@ -105,6 +109,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
             playerImage.isHidden = false
             roleLbl.isHidden = false
             numberLbl.isHidden = false
+            cameraBtn.isHidden = true
             
             captureSession.stopRunning()
             previewLayer.removeFromSuperlayer()
