@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JET-0x-enT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TVh-SV-JGu">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -915,17 +915,17 @@ Swipe right to learn more!</string>
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="w7s-he-ovs">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="w7s-he-ovs">
                                 <rect key="frame" x="68" y="157" width="240" height="490"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="270" verticalCompressionResistancePriority="630" image="MRFinal RolesPoliceC3" translatesAutoresizingMaskIntoConstraints="NO" id="naG-Hl-V7v" customClass="RoleImg" customModule="MafiaRising" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="270" verticalCompressionResistancePriority="630" image="MRFinal RolesMafia" translatesAutoresizingMaskIntoConstraints="NO" id="naG-Hl-V7v">
+                                        <rect key="frame" x="2.5" y="0.0" width="235" height="235"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="naG-Hl-V7v" secondAttribute="height" multiplier="1:1" id="OfX-9j-Jxk"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="200" verticalCompressionResistancePriority="820" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xlo-Nf-Uc1">
-                                        <rect key="frame" x="0.0" y="250" width="240" height="240"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="200" verticalCompressionResistancePriority="820" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xlo-Nf-Uc1">
+                                        <rect key="frame" x="0.0" y="255" width="240" height="235"/>
                                         <string key="text">The POLICE's duty is to investigate the criminals of his or her town. At night, the POLICE indicates to the MODERATOR who he wants to suspect. If the POLICE has correctly identitifed the MAFIA, the MODERATOR will notify the POLICE with a nod. I f the POLICE has NOT identified the MAFIA, the MODERATOR will notify the POLICE with a shake of the head. During the day, the POLICE will use the information gathered to sway the public opinion to hopefully kill the MAFIA.</string>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="15"/>
                                         <nil key="textColor"/>
@@ -6680,7 +6680,7 @@ be a jerk ;)</string>
         <image name="MRFinal ReadyC1" width="640" height="920"/>
         <image name="MRFinal ReadyC2" width="356" height="70"/>
         <image name="MRFinal RoleSetUpC1" width="286" height="70"/>
-        <image name="MRFinal RolesPoliceC3" width="165" height="166"/>
+        <image name="MRFinal RolesMafia" width="165" height="168"/>
         <image name="MRFinal RulesC2" width="222" height="56"/>
         <image name="MRFinal ScriptC04" width="166" height="235"/>
         <image name="MRFinal ScriptC05" width="166" height="235"/>
