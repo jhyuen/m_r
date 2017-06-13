@@ -27,6 +27,12 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         // Do any additional setup after loading the view.
     }
     
+    // sets bounds of camera view
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        previewLayer.frame = cameraView.bounds
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -52,7 +58,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
                             previewLayer.position = CGPoint(x: self.cameraView.frame.width/2, y: self.cameraView.frame.height/2)
                             
                             // sets bounds of camera view
-                            previewLayer.bounds = playerImage.frame
+                            // previewLayer.frame = playerImage.bounds
                             
                             captureSession.startRunning()
                         }
@@ -64,6 +70,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         }
     }
 
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
