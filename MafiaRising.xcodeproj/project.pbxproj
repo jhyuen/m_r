@@ -258,7 +258,6 @@
 		2B488F061ED3668F00A27479 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				84A3C3501EE9D19A00C802E6 /* Constants.swift */,
 				2BB18CE21EDFE220005E8515 /* InfoCards */,
 				2B488F031ED3653700A27479 /* HomeViewController.swift */,
 				2B488F151ED368D000A27479 /* Rules */,
@@ -266,7 +265,6 @@
 				2B488F131ED368BB00A27479 /* Game */,
 				2B488F321ED3A32700A27479 /* PauseViewController.swift */,
 				2B488F341ED3AEBC00A27479 /* GameRolesViewController.swift */,
-				84A3C3521EE9DD6900C802E6 /* ScaleSegue.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -276,6 +274,8 @@
 			children = (
 				2B406E7B1EE896360099A0B8 /* CheckBox.swift */,
 				84CF2CD91EF05304008A7052 /* RoleImg.swift */,
+				84A3C3501EE9D19A00C802E6 /* Constants.swift */,
+				84A3C3521EE9DD6900C802E6 /* ScaleSegue.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
