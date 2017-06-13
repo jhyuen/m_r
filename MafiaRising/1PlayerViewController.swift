@@ -90,7 +90,7 @@ class _PlayerViewController: UIViewController {
                 errorLabel.isHidden = true
             } else {
                 errorLabel.isHidden = false
-                errorLabel.text = "The Valid Player Range is 5 to 30"
+                errorLabel.text = "Enter a number from 5-30"
             }
         } else {
             errorLabel.isHidden = false

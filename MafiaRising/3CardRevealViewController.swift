@@ -52,7 +52,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
                             previewLayer.position = CGPoint(x: self.cameraView.frame.width/2, y: self.cameraView.frame.height/2)
                             
                             // sets bounds of camera view
-                            previewLayer.bounds = cameraView.frame
+                            previewLayer.bounds = playerImage.frame
                             
                             captureSession.startRunning()
                         }
