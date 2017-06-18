@@ -50,6 +50,7 @@
 		2B488F331ED3A32700A27479 /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F321ED3A32700A27479 /* PauseViewController.swift */; };
 		2B488F351ED3AEBC00A27479 /* GameRolesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F341ED3AEBC00A27479 /* GameRolesViewController.swift */; };
 		2B488F371ED3AFBC00A27479 /* RoleInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F361ED3AFBC00A27479 /* RoleInformationViewController.swift */; };
+		2B764C641EF5C37F005BC32B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B764C631EF5C37F005BC32B /* Player.swift */; };
 		2BB18CE11EDFABE3005E8515 /* Script01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB18CE01EDFABE3005E8515 /* Script01ViewController.swift */; };
 		2BB18CE41EDFE25C005E8515 /* PlayerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB18CE31EDFE25C005E8515 /* PlayerInfoViewController.swift */; };
 		2BB18CE61EDFE268005E8515 /* OptionsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB18CE51EDFE268005E8515 /* OptionsInfoViewController.swift */; };
@@ -163,6 +164,7 @@
 		2B488F321ED3A32700A27479 /* PauseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
 		2B488F341ED3AEBC00A27479 /* GameRolesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRolesViewController.swift; sourceTree = "<group>"; };
 		2B488F361ED3AFBC00A27479 /* RoleInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleInformationViewController.swift; sourceTree = "<group>"; };
+		2B764C631EF5C37F005BC32B /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		2BB18CE01EDFABE3005E8515 /* Script01ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script01ViewController.swift; sourceTree = "<group>"; };
 		2BB18CE31EDFE25C005E8515 /* PlayerInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerInfoViewController.swift; sourceTree = "<group>"; };
 		2BB18CE51EDFE268005E8515 /* OptionsInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsInfoViewController.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				84CF2CD91EF05304008A7052 /* RoleImg.swift */,
 				84A3C3501EE9D19A00C802E6 /* Constants.swift */,
 				84A3C3521EE9DD6900C802E6 /* ScaleSegue.swift */,
+				2B764C631EF5C37F005BC32B /* Player.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 				2BC4AC271ED89A490075D142 /* Script12AViewController.swift in Sources */,
 				2B00424A1EE1E4D600A747BA /* Tutorial16ViewController.swift in Sources */,
 				2BB18CE41EDFE25C005E8515 /* PlayerInfoViewController.swift in Sources */,
+				2B764C641EF5C37F005BC32B /* Player.swift in Sources */,
 				2B488F121ED3688C00A27479 /* RolesViewController.swift in Sources */,
 				2BC4AC151ED8894F0075D142 /* Script13ViewController.swift in Sources */,
 				84AF22821EE7BD3E006D0EA5 /* ScriptPageVCVert9.swift in Sources */,

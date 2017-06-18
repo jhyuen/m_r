@@ -85,9 +85,11 @@ class _PlayerViewController: UIViewController {
             
             if (Int(numPlayerField.text!))! >= minimumPlayers && (Int(numPlayerField.text!))! <= maximumPlayers {
                 
-                let numPlayers: Int = (Int(numPlayerField.text!))!
-                performSegue(withIdentifier: "goToRoleSetUp", sender: numPlayers)
-                errorLabel.isHidden = true
+                if let numPlayers: Int = (Int(numPlayerField.text!)) {
+                    performSegue(withIdentifier: "PlayersToRoleSetUp", sender: numPlayers)
+                    errorLabel.isHidden = true
+                }
+                
             } else {
                 errorLabel.isHidden = false
                 errorLabel.text = "Enter a number from 5-30"
@@ -103,5 +105,14 @@ class _PlayerViewController: UIViewController {
         performSegue(withIdentifier: "PlayersToInfo", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PlayersToRoleSetUp" {
+            if let selectedVC = segue.destination as? _RoleSetUpViewController {
+                if let theNumPlayers = sender as? Int {
+                    selectedVC.numPlayers = theNumPlayers
+                }
+            }
+        }
+    }
 
 }

@@ -16,6 +16,10 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     @IBOutlet weak var numberLbl: UILabel!
     @IBOutlet weak var playerImage: UIImageView!
     @IBOutlet weak var cameraBtn: UIButton!
+    @IBOutlet weak var repeatPictureBtn: UIButton!
+    
+    // transferred from previous VC
+    var masterPlayerArray: Array<Int> = []
     
     var captureSession = AVCaptureSession()
     var sessionOutput = AVCapturePhotoOutput()
@@ -23,8 +27,11 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // test previous segue and global variables
+        print("\(masterPlayerArray)")
+        print("\(policeExist)")
+        print("\(doctorExist)")
     }
     
     // sets bounds of camera view
@@ -36,6 +43,8 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        
+        // sets up camera feed
         let deviceSession = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInDualCamera,.builtInTelephotoCamera, .builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .unspecified)
         
         for device in (deviceSession?.devices)!{
@@ -97,6 +106,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         sessionOutput.capturePhoto(with: settings, delegate: self)
     }
     
+    // processes picture
     func capture(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhotoSampleBuffer photoSampleBuffer: CMSampleBuffer?, previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
         
         if let error = error {
@@ -110,17 +120,64 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
                         return
                     }
             
+            // old views hidden
             cameraView.isHidden = true
+            cameraBtn.isHidden = true
             
+            // new views unhidden
             playerImage.image = UIImage(data: dataImage)
             playerImage.isHidden = false
             roleLbl.isHidden = false
             numberLbl.isHidden = false
-            cameraBtn.isHidden = true
+            repeatPictureBtn.isHidden = false
             
+            // end capture session
             captureSession.stopRunning()
             previewLayer.removeFromSuperlayer()
         }
         
+    }
+    
+    @IBAction func retakePicture(_ sender: Any) {
+        
+        // reset views
+        cameraView.isHidden = false
+        cameraBtn.isHidden = false
+        playerImage.isHidden = true
+        roleLbl.isHidden = true
+        numberLbl.isHidden = true
+        repeatPictureBtn.isHidden = true
+    
+        /*
+        for device in (deviceSession?.devices)!{
+            if device.position == AVCaptureDevicePosition.front {
+                do {
+                    let input = try AVCaptureDeviceInput(device: device)
+                    if captureSession.canAddInput(input) {
+                        captureSession.addInput(input)
+                        
+                        if captureSession.canAddOutput(sessionOutput) {
+                            captureSession.addOutput(sessionOutput)
+                            
+                            previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+                            previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+                            previewLayer.connection.videoOrientation = .portrait
+                            
+                            cameraView.layer.addSublayer(previewLayer)
+                            
+                            // sets up location of camera view
+                            previewLayer.position = CGPoint(x: self.cameraView.frame.width/2, y: self.cameraView.frame.height/2)
+                            
+                            // sets bounds of camera view
+                            // previewLayer.frame = playerImage.bounds
+                            
+                            captureSession.startRunning()
+                        }
+                    }
+                } catch let avError {
+                    print (avError)
+                }
+            }
+        }*/
     }
 }

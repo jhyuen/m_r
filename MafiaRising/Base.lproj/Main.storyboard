@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JET-0x-enT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TBE-rj-uHk">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -3240,7 +3240,7 @@ of Players</string>
                                 <fontDescription key="fontDescription" name="Kefa-Bold" family="Kefa" pointSize="50"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
                             </textField>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ClL-mv-6MZ" userLabel="Error Label">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warning" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ClL-mv-6MZ" userLabel="Error Label">
                                 <rect key="frame" x="40" y="414" width="295" height="17.5"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="15"/>
                                 <color key="textColor" red="0.5790170431137085" green="0.09017818421125412" blue="0.036765597760677338" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3280,7 +3280,7 @@ of Players</string>
                         <outlet property="errorLabel" destination="ClL-mv-6MZ" id="ppK-oD-rA3"/>
                         <outlet property="numPlayerField" destination="vtC-Cg-A6j" id="96q-5k-GNj"/>
                         <outlet property="toolBar" destination="Kl9-lF-JOS" id="dPm-QW-JUs"/>
-                        <segue destination="2Ec-qL-fxS" kind="show" identifier="goToRoleSetUp" animates="NO" id="AGl-PN-oUX"/>
+                        <segue destination="2Ec-qL-fxS" kind="show" identifier="PlayersToRoleSetUp" animates="NO" id="AGl-PN-oUX"/>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="PlayersToPause" id="IiT-7w-mNC"/>
                         <segue destination="lcA-mS-A5M" kind="show" identifier="PlayersToInfo" id="nbH-fj-q58"/>
                     </connections>
@@ -3368,9 +3368,12 @@ of Players</string>
                                     <constraint firstAttribute="width" constant="42" id="gdd-IS-XE0"/>
                                 </constraints>
                                 <state key="normal" image="MRForwardButton"/>
+                                <connections>
+                                    <action selector="goToCards:" destination="2Ec-qL-fxS" eventType="touchUpInside" id="tlE-IH-c8Q"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="OIN-Pa-qwo">
-                                <rect key="frame" x="72.5" y="169" width="231.5" height="133"/>
+                                <rect key="frame" x="72" y="169" width="231.5" height="133"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Jcf-M7-l50">
                                         <rect key="frame" x="0.0" y="0.0" width="231.5" height="54"/>
@@ -3559,6 +3562,15 @@ of Players</string>
                                     <constraint firstAttribute="width" secondItem="EO8-NG-3pV" secondAttribute="height" multiplier="2:3" id="E24-fz-Dyh"/>
                                 </constraints>
                             </view>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSa-LL-Fuq">
+                                <rect key="frame" x="57" y="151" width="261" height="391"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tSa-LL-Fuq" secondAttribute="height" multiplier="2:3" id="Nro-Ns-rgJ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="retakePicture:" destination="JET-0x-enT" eventType="touchUpInside" id="oq5-gc-5j6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -3577,6 +3589,7 @@ of Players</string>
                             <constraint firstItem="wkj-F9-U7c" firstAttribute="centerX" secondItem="QJ8-FU-1bY" secondAttribute="centerX" id="NWZ-Ox-Hc7"/>
                             <constraint firstItem="ADi-VS-fQM" firstAttribute="top" secondItem="WRw-TF-cN3" secondAttribute="bottom" constant="17" id="O7v-Gp-ReQ"/>
                             <constraint firstItem="nFU-Ah-YNl" firstAttribute="leading" secondItem="QJ8-FU-1bY" secondAttribute="leading" id="Pfk-Kx-I1D"/>
+                            <constraint firstItem="tSa-LL-Fuq" firstAttribute="top" secondItem="Kvt-h7-eJS" secondAttribute="bottom" constant="17" id="QPE-fg-Iu7"/>
                             <constraint firstItem="5xW-xF-fcw" firstAttribute="top" secondItem="wkj-F9-U7c" secondAttribute="bottom" constant="25" id="QlA-R7-tKY"/>
                             <constraint firstItem="otr-pN-5XM" firstAttribute="top" secondItem="QJ8-FU-1bY" secondAttribute="top" id="TBd-xe-DTv"/>
                             <constraint firstItem="ADi-VS-fQM" firstAttribute="centerX" secondItem="QJ8-FU-1bY" secondAttribute="centerX" id="TRP-dh-zLt"/>
@@ -3586,6 +3599,8 @@ of Players</string>
                             <constraint firstItem="otr-pN-5XM" firstAttribute="leading" secondItem="QJ8-FU-1bY" secondAttribute="leading" id="bdG-Cy-HwK"/>
                             <constraint firstItem="ADi-VS-fQM" firstAttribute="top" secondItem="EO8-NG-3pV" secondAttribute="bottom" constant="17" id="cIt-A3-Fpi"/>
                             <constraint firstItem="J7b-cP-tPy" firstAttribute="centerY" secondItem="XTN-pU-96I" secondAttribute="centerY" id="dSD-dz-C5i"/>
+                            <constraint firstItem="tSa-LL-Fuq" firstAttribute="centerX" secondItem="QJ8-FU-1bY" secondAttribute="centerX" id="dZc-vJ-lSn"/>
+                            <constraint firstItem="ADi-VS-fQM" firstAttribute="top" secondItem="tSa-LL-Fuq" secondAttribute="bottom" constant="17" id="g4x-mR-YzQ"/>
                             <constraint firstItem="Kvt-h7-eJS" firstAttribute="centerX" secondItem="QJ8-FU-1bY" secondAttribute="centerX" id="gXU-bI-Q1s"/>
                             <constraint firstAttribute="trailing" secondItem="otr-pN-5XM" secondAttribute="trailing" id="oI2-01-ntj"/>
                             <constraint firstItem="wkj-F9-U7c" firstAttribute="top" secondItem="ADi-VS-fQM" secondAttribute="bottom" constant="5" id="qcA-rs-nEq"/>
@@ -3599,6 +3614,7 @@ of Players</string>
                         <outlet property="cameraView" destination="EO8-NG-3pV" id="mnC-96-tob"/>
                         <outlet property="numberLbl" destination="wkj-F9-U7c" id="s3M-pX-Fb3"/>
                         <outlet property="playerImage" destination="WRw-TF-cN3" id="zkA-yO-C03"/>
+                        <outlet property="repeatPictureBtn" destination="tSa-LL-Fuq" id="UPh-pW-oT1"/>
                         <outlet property="roleLbl" destination="ADi-VS-fQM" id="ti4-e1-gor"/>
                         <segue destination="TZg-g4-ZaJ" kind="show" identifier="CardsToInfo" id="dH3-a9-kdI"/>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="CardsToPause" id="5oF-XY-W7M"/>
@@ -6714,7 +6730,7 @@ be a jerk ;)</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5oF-XY-W7M"/>
-        <segue reference="bB7-vs-abW"/>
         <segue reference="jGj-z5-JdE"/>
+        <segue reference="bB7-vs-abW"/>
     </inferredMetricsTieBreakers>
 </document>
