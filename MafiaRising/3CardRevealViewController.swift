@@ -41,8 +41,8 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         print("\(policeExist)")
         print("\(doctorExist)")
         
-         // sets up camera feed
-         let deviceSession = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInDualCamera,.builtInTelephotoCamera, .builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .unspecified)
+        // sets up camera feed
+        let deviceSession = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInDualCamera,.builtInTelephotoCamera, .builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .unspecified)
          
         for device in (deviceSession?.devices)!{
             if device.position == AVCaptureDevicePosition.front {
@@ -104,18 +104,31 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     @IBAction func revealNextCard(_ sender: Any) {
         addPlayer(picture: playerImage.image!, role: "Citizen")
         
+        print("\(playerIndexCount)")
+        
         playerIndexCount = playerIndexCount + 1
+        
+        print("\(playerIndexCount)")
         
         if playerIndexCount == masterIndexArray.count {
             performSegue(withIdentifier: "CardsToReady", sender: masterPlayerArray)
         }
         
+        // Reset views
+        cameraView.isHidden = false
+        cameraBtn.isHidden = false
+        playerImage.isHidden = true
+        roleLbl.isHidden = true
+        numberLbl.isHidden = true
+        repeatPictureBtn.isHidden = true
+        proceedBtn.isHidden = true
+        
     }
-    
     
     // Camera Button
     @IBAction func takePhoto(_ sender: Any) {
         
+        print("\(playerIndexCount)")
         updateNumberLbl()
         updateRoleLbl()
         
@@ -154,10 +167,10 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
             proceedBtn.isHidden = false
             
             // end capture session
-            captureSession.stopRunning()
+            // captureSession.stopRunning()
             previewLayer.removeFromSuperlayer()
         }
-        
+    
     }
     
     // retake picture
@@ -173,6 +186,8 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         proceedBtn.isHidden = true
     
         /*
+        let deviceSession = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInDualCamera,.builtInTelephotoCamera, .builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .unspecified)
+        
         for device in (deviceSession?.devices)!{
             if device.position == AVCaptureDevicePosition.front {
                 do {
@@ -202,9 +217,10 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
                     print (avError)
                 }
             }
-        }*/
+        } */
     }
     
+    /*
     // shows words and count
     func cardLoop() {
         
@@ -226,10 +242,11 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         }
         
     }
+     */
     
     // update number label with current player
     func updateNumberLbl() {
-        let counter: String = "\(playerIndexCount)/\(masterIndexArray.count)"
+        let counter: String = "\(playerIndexCount + 1)/\(masterIndexArray.count)"
         numberLbl.text = counter
     }
     
