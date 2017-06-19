@@ -102,7 +102,8 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     
     // Proceed Button
     @IBAction func revealNextCard(_ sender: Any) {
-        addPlayer(picture: playerImage.image!, role: "Citizen")
+        
+        addPlayer(picture: playerImage.image!, role: roleLbl.text!)
         
         print("\(playerIndexCount)")
         
@@ -123,7 +124,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         cameraView.isHidden = false
         cameraBtn.isHidden = false
         playerImage.isHidden = true
-        roleLbl.isHidden = true 
+        roleLbl.isHidden = true
         numberLbl.isHidden = true
         repeatPictureBtn.isHidden = true
         proceedBtn.isHidden = true
@@ -186,65 +187,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         numberLbl.isHidden = true
         repeatPictureBtn.isHidden = true
         proceedBtn.isHidden = true
-    
-        /*
-        let deviceSession = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInDualCamera,.builtInTelephotoCamera, .builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .unspecified)
-        
-        for device in (deviceSession?.devices)!{
-            if device.position == AVCaptureDevicePosition.front {
-                do {
-                    let input = try AVCaptureDeviceInput(device: device)
-                    if captureSession.canAddInput(input) {
-                        captureSession.addInput(input)
-                        
-                        if captureSession.canAddOutput(sessionOutput) {
-                            captureSession.addOutput(sessionOutput)
-                            
-                            previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-                            previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-                            previewLayer.connection.videoOrientation = .portrait
-                            
-                            cameraView.layer.addSublayer(previewLayer)
-                            
-                            // sets up location of camera view
-                            previewLayer.position = CGPoint(x: self.cameraView.frame.width/2, y: self.cameraView.frame.height/2)
-                            
-                            // sets bounds of camera view
-                            // previewLayer.frame = playerImage.bounds
-                            
-                            captureSession.startRunning()
-                        }
-                    }
-                } catch let avError {
-                    print (avError)
-                }
-            }
-        } */
     }
-    
-    /*
-    // shows words and count
-    func cardLoop() {
-        
-        for playerIndex in 0..<masterIndexArray.count {
-            
-            // call photo code
-            
-            // CODE BELOW EXECUTES WHEN I PRESS THE BUTTON
-            
-            updateNumberLbl()
-            updateRoleLbl()
-            
-            // press next button
-            
-            // create character
-            
-            // process picture
-            
-        }
-        
-    }
-     */
     
     // update number label with current player
     func updateNumberLbl() {

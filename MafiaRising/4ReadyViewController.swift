@@ -10,13 +10,14 @@ import UIKit
 
 class _ReadyViewController: UIViewController {
 
+    @IBOutlet weak var testImage: UIImageView!
+    
     // transfer master player array
     var masterPlayerArray: Array<Player> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        testImage.image = masterPlayerArray[0].picture
     }
 
     override func didReceiveMemoryWarning() {
