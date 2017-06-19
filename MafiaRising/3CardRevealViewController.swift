@@ -111,6 +111,11 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         print("\(playerIndexCount)")
         
         if playerIndexCount == masterIndexArray.count {
+            
+            // end capture session
+            captureSession.stopRunning()
+            previewLayer.removeFromSuperlayer()
+            
             performSegue(withIdentifier: "CardsToReady", sender: masterPlayerArray)
         }
         
@@ -118,7 +123,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         cameraView.isHidden = false
         cameraBtn.isHidden = false
         playerImage.isHidden = true
-        roleLbl.isHidden = true
+        roleLbl.isHidden = true 
         numberLbl.isHidden = true
         repeatPictureBtn.isHidden = true
         proceedBtn.isHidden = true
@@ -166,9 +171,6 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
             repeatPictureBtn.isHidden = false
             proceedBtn.isHidden = false
             
-            // end capture session
-            // captureSession.stopRunning()
-            previewLayer.removeFromSuperlayer()
         }
     
     }

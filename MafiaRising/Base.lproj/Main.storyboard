@@ -3560,7 +3560,6 @@ of Players</string>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EO8-NG-3pV" userLabel="Camera View">
                                 <rect key="frame" x="57" y="151" width="261" height="391"/>
-                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="0.56105522260273977" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EO8-NG-3pV" secondAttribute="height" multiplier="2:3" id="E24-fz-Dyh"/>
                                 </constraints>
@@ -3622,7 +3621,7 @@ of Players</string>
                         <outlet property="roleLbl" destination="ADi-VS-fQM" id="ti4-e1-gor"/>
                         <segue destination="TZg-g4-ZaJ" kind="show" identifier="CardsToInfo" id="dH3-a9-kdI"/>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="CardsToPause" id="5oF-XY-W7M"/>
-                        <segue destination="q0j-zv-644" kind="show" identifier="CardsToReady" id="oaV-mC-QWl"/>
+                        <segue destination="q0j-zv-644" kind="show" identifier="CardsToReady" animates="NO" id="oaV-mC-QWl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cil-kS-y4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
