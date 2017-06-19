@@ -3536,13 +3536,16 @@ of Players</string>
                                     <action selector="goToCardInfo:" destination="JET-0x-enT" eventType="touchUpInside" id="zxM-2H-Gj0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bg2-Z0-Bmw" userLabel="Back">
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bg2-Z0-Bmw" userLabel="Back">
                                 <rect key="frame" x="317" y="68" width="42" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="4gZ-8N-Xed"/>
                                     <constraint firstAttribute="width" constant="42" id="zGZ-Fl-cKy"/>
                                 </constraints>
                                 <state key="normal" image="MRForwardButton"/>
+                                <connections>
+                                    <action selector="revealNextCard:" destination="JET-0x-enT" eventType="touchUpInside" id="zaD-Mi-o8a"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTN-pU-96I" userLabel="Pause">
                                 <rect key="frame" x="16" y="64" width="31" height="33"/>
@@ -3614,10 +3617,12 @@ of Players</string>
                         <outlet property="cameraView" destination="EO8-NG-3pV" id="mnC-96-tob"/>
                         <outlet property="numberLbl" destination="wkj-F9-U7c" id="s3M-pX-Fb3"/>
                         <outlet property="playerImage" destination="WRw-TF-cN3" id="zkA-yO-C03"/>
+                        <outlet property="proceedBtn" destination="bg2-Z0-Bmw" id="yJq-fv-syA"/>
                         <outlet property="repeatPictureBtn" destination="tSa-LL-Fuq" id="UPh-pW-oT1"/>
                         <outlet property="roleLbl" destination="ADi-VS-fQM" id="ti4-e1-gor"/>
                         <segue destination="TZg-g4-ZaJ" kind="show" identifier="CardsToInfo" id="dH3-a9-kdI"/>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="CardsToPause" id="5oF-XY-W7M"/>
+                        <segue destination="q0j-zv-644" kind="show" identifier="CardsToReady" id="oaV-mC-QWl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cil-kS-y4R" userLabel="First Responder" sceneMemberID="firstResponder"/>

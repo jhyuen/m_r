@@ -10,6 +10,9 @@ import UIKit
 
 class _ReadyViewController: UIViewController {
 
+    // transfer master player array
+    var masterPlayerArray: Array<Player> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

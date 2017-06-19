@@ -132,7 +132,7 @@ class _RoleSetUpViewController: UIViewController {
         if segue.identifier == "RolesToCards" {
             if let selectedVC = segue.destination as? _CardRevealViewController {
                 if let theMasterArray = sender as? Array<Int> {
-                    selectedVC.masterPlayerArray = theMasterArray
+                    selectedVC.masterIndexArray = theMasterArray
                 }
             }
         }

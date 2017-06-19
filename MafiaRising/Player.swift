@@ -10,19 +10,17 @@ import Foundation
 import UIKit
 class Player {
     
-    // private var _picture:UIImage
+    private var _picture:UIImage = UIImage(named: "m")!
     private var _isDead: Bool = false
     private var _isProtected: Bool = false
     private var _isTargeted: Bool = false
     private var _role:String = "Citizen"
     
-    /*
      var picture: UIImage {
-     get {
-     return _picture
+        get {
+            return _picture
+        }
      }
-     }
-     */
     
     var isDead: Bool {
         get {
@@ -56,7 +54,8 @@ class Player {
     }
     
     // add in _picture to initializer
-    init(role: String) {
+    init(picture: UIImage, role: String) {
+        self._picture = picture
         self._role = role
     }
     
