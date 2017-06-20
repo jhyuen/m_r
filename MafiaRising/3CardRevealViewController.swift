@@ -18,6 +18,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     @IBOutlet weak var cameraBtn: UIButton!
     @IBOutlet weak var repeatPictureBtn: UIButton!
     @IBOutlet weak var proceedBtn: UIButton!
+    @IBOutlet weak var preNumLbl: UILabel!
     
     // transferred from previous VC
     var masterIndexArray: Array<Int> = []
@@ -40,6 +41,9 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         print("\(masterIndexArray)")
         print("\(policeExist)")
         print("\(doctorExist)")
+        
+        updateRoleLbl()
+        updateNumberLbl()
         
         // sets up camera feed
         let deviceSession = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInDualCamera,.builtInTelephotoCamera, .builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .unspecified)
@@ -105,11 +109,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         
         addPlayer(picture: playerImage.image!, role: roleLbl.text!)
         
-        print("\(playerIndexCount)")
-        
         playerIndexCount = playerIndexCount + 1
-        
-        print("\(playerIndexCount)")
         
         if playerIndexCount == masterIndexArray.count {
             
@@ -118,25 +118,25 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
             previewLayer.removeFromSuperlayer()
             
             performSegue(withIdentifier: "CardsToReady", sender: masterPlayerArray)
+        } else {
+            
+            updateNumberLbl()
+            updateRoleLbl()
+            
+            // Reset views
+            cameraView.isHidden = false
+            cameraBtn.isHidden = false
+            preNumLbl.isHidden = false
+            playerImage.isHidden = true
+            roleLbl.isHidden = true
+            numberLbl.isHidden = true
+            repeatPictureBtn.isHidden = true
+            proceedBtn.isHidden = true
         }
-        
-        // Reset views
-        cameraView.isHidden = false
-        cameraBtn.isHidden = false
-        playerImage.isHidden = true
-        roleLbl.isHidden = true
-        numberLbl.isHidden = true
-        repeatPictureBtn.isHidden = true
-        proceedBtn.isHidden = true
-        
     }
     
     // Camera Button
     @IBAction func takePhoto(_ sender: Any) {
-        
-        print("\(playerIndexCount)")
-        updateNumberLbl()
-        updateRoleLbl()
         
         let settings = AVCapturePhotoSettings()
         let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
@@ -163,6 +163,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
             // old views hidden
             cameraView.isHidden = true
             cameraBtn.isHidden = true
+            preNumLbl.isHidden = true
             
             // new views unhidden
             playerImage.image = UIImage(data: dataImage)
@@ -182,6 +183,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         // reset views
         cameraView.isHidden = false
         cameraBtn.isHidden = false
+        preNumLbl.isHidden = false
         playerImage.isHidden = true
         roleLbl.isHidden = true
         numberLbl.isHidden = true
@@ -193,6 +195,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     func updateNumberLbl() {
         let counter: String = "\(playerIndexCount + 1)/\(masterIndexArray.count)"
         numberLbl.text = counter
+        preNumLbl.text = counter
     }
     
     // update role label with current player

@@ -8,16 +8,16 @@
 
 import UIKit
 
-class _ReadyViewController: UIViewController {
+var cycle: Int = 1
+var part: Int = 0
 
-    @IBOutlet weak var testImage: UIImageView!
+class _ReadyViewController: UIViewController {
     
     // transfer master player array
     var masterPlayerArray: Array<Player> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        testImage.image = masterPlayerArray[0].picture
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,18 +25,23 @@ class _ReadyViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // Pause Button
     @IBAction func pauseBtnPressed(_ sender: Any) {
         performSegue(withIdentifier: "ReadyToPause", sender: self)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    // Proceed Button
+    @IBAction func goToStory(_ sender: Any) {
+        performSegue(withIdentifier: "ReadyToStory", sender: masterPlayerArray)
     }
-    */
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ReadyToStory" {
+            if let selectedVC = segue.destination as? _StoryViewController {
+                if let thePlayerArray = sender as? Array<Player> {
+                    selectedVC.masterPlayerArray = thePlayerArray
+                }
+            }
+        }
+    }
 }
