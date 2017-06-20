@@ -15,7 +15,7 @@ class _ReadyViewController: UIViewController {
     
     // transfer master player array
     var masterPlayerArray: Array<Player> = []
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -32,6 +32,11 @@ class _ReadyViewController: UIViewController {
     
     // Proceed Button
     @IBAction func goToStory(_ sender: Any) {
+        
+        // reset cycle
+        cycle = 1
+        part = 0
+        
         performSegue(withIdentifier: "ReadyToStory", sender: masterPlayerArray)
     }
     

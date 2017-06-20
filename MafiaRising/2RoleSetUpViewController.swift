@@ -63,7 +63,7 @@ class _RoleSetUpViewController: UIViewController {
         performSegue(withIdentifier: "RolesToCards", sender: masterIndex)
     }
     
-    // Creates Master Index
+    // Create Master Index
     func setRoleIndex(numMafia: Int, possibleSpecialRoles: Int) -> Array<Int>{
         
         // Randomization of Roles
@@ -71,10 +71,10 @@ class _RoleSetUpViewController: UIViewController {
         // 2 = police
         // 3 = doctor
         
-        // generate tag array
+        // Generate tag array
         var potentialIndex = [Int](repeating: 0, count: numPlayers)
         
-        // loop through number of special roles
+        // Loop through number of special roles
         for role in 0..<possibleSpecialRoles {
             
             var nextIndex: Int
@@ -83,17 +83,17 @@ class _RoleSetUpViewController: UIViewController {
                 nextIndex = Int(arc4random_uniform(UInt32(numPlayers)))
             } while potentialIndex[nextIndex] != 0
             
-            // sets mafia index
+            // Set mafia index
             if role < numMafia {
                 potentialIndex[nextIndex] = 1
             }
             
-            // sets police index
+            // Set police index
             if role == numMafia {
                 potentialIndex[nextIndex] = 2
             }
             
-            // sets doctor index
+            // Set doctor index
             if role == numMafia + 1 {
                 potentialIndex[nextIndex] = 3
             }
@@ -103,7 +103,7 @@ class _RoleSetUpViewController: UIViewController {
         return potentialIndex
     }
     
-    // Refines Master Index to Exclude Certain Roles
+    // Refine Master Index to Exclude Certain Roles
     func refineRoleIndex(index: Array<Int>) -> Array<Int> {
         
         var masterIndex: Array<Int> = index

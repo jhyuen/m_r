@@ -20,6 +20,9 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     @IBOutlet weak var proceedBtn: UIButton!
     @IBOutlet weak var preNumLbl: UILabel!
     
+    // may delete if stupid
+    @IBOutlet weak var portraitHelper: UIImageView!
+    
     // transferred from previous VC
     var masterIndexArray: Array<Int> = []
     
@@ -132,6 +135,9 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
             numberLbl.isHidden = true
             repeatPictureBtn.isHidden = true
             proceedBtn.isHidden = true
+            
+            // may delete if stupid
+            portraitHelper.isHidden = false
         }
     }
     
@@ -173,6 +179,9 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
             repeatPictureBtn.isHidden = false
             proceedBtn.isHidden = false
             
+            // may delete if stupid
+            portraitHelper.isHidden = true
+            
         }
     
     }
@@ -189,6 +198,9 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         numberLbl.isHidden = true
         repeatPictureBtn.isHidden = true
         proceedBtn.isHidden = true
+        
+        // may delete if stupid
+        portraitHelper.isHidden = false
     }
     
     // update number label with current player

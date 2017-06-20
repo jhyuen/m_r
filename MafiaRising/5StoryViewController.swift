@@ -15,7 +15,7 @@ class _StoryViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
-    let WIDTH: CGFloat = 75
+    let WIDTH: CGFloat = 90
     let HEIGHT: CGFloat = 135
     
     // tranfer master player array
@@ -77,7 +77,7 @@ class _StoryViewController: UIViewController {
             
             imgView.frame = CGRect(x: -WIDTH + ((WIDTH) * CGFloat(player+1)), y: 0, width: WIDTH, height: HEIGHT)
             
-            // imgView.contentMode = .scaleAspectFit
+            imgView.contentMode = .scaleToFill
         }
         
         scrollView.contentSize = CGSize(width: WIDTH*CGFloat(masterPlayerArray.count), height: scrollView.frame.size.height)
@@ -102,6 +102,20 @@ class _StoryViewController: UIViewController {
         
         // Increase part
         part = part + 1
+        
+        if part == 1 {
+            performSegue(withIdentifier: "StoryToNight", sender: masterPlayerArray)
+        }
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "StoryToNight" {
+            if let selectedVC = segue.destination as? _NightViewController {
+                if let thePlayerArray = sender as? Array<Player> {
+                    selectedVC.masterPlayerArray = thePlayerArray
+                }
+            }
+        }
+    }
+    
 }

@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MafiaRising/3CardRevealViewController.swift"
-            timestampString = "519598264.524521"
+            timestampString = "519695309.830997"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "revealNextCard(_:)"
             landmarkType = "7">
          </BreakpointContent>

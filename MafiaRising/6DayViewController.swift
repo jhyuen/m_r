@@ -10,6 +10,9 @@ import UIKit
 
 class _DayViewController: UIViewController {
 
+    // transfer array
+    var masterPlayerArray: Array<Player> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

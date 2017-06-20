@@ -16,7 +16,7 @@ class Player {
     private var _isTargeted: Bool = false
     private var _role:String = "Citizen"
     
-     var picture: UIImage {
+    var picture: UIImage {
         get {
             return _picture
         }
@@ -53,7 +53,6 @@ class Player {
         
     }
     
-    // add in _picture to initializer
     init(picture: UIImage, role: String) {
         self._picture = picture
         self._role = role
