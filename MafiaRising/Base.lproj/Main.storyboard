@@ -3088,14 +3088,14 @@ The end..."</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Gjk-Jp-Gls">
-                                <rect key="frame" x="88" y="163" width="200" height="464"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Gjk-Jp-Gls">
+                                <rect key="frame" x="88" y="148" width="200" height="300"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvT-Rm-h9c">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="101"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="dBl-UH-Z6c"/>
                                             <constraint firstAttribute="width" constant="200" id="gPf-Tq-rxY"/>
+                                            <constraint firstAttribute="height" constant="60" id="gtI-Nc-dgM"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
                                         <state key="normal" title="HOME" backgroundImage="MRGeneralButton">
@@ -3106,10 +3106,10 @@ The end..."</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pr-Fv-ppd">
-                                        <rect key="frame" x="0.0" y="121" width="200" height="101"/>
+                                        <rect key="frame" x="0.0" y="80" width="200" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="B3F-35-u2E"/>
-                                            <constraint firstAttribute="height" constant="75" id="ufz-zo-9Fq"/>
+                                            <constraint firstAttribute="height" constant="60" id="CTA-gA-ln0"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
                                         <state key="normal" title="ROLES" backgroundImage="MRGeneralButton">
@@ -3120,10 +3120,10 @@ The end..."</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buR-KZ-1DN">
-                                        <rect key="frame" x="0.0" y="242" width="200" height="101"/>
+                                        <rect key="frame" x="0.0" y="160" width="200" height="60"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="3Il-KF-TN6"/>
                                             <constraint firstAttribute="width" constant="200" id="REO-tg-KGq"/>
-                                            <constraint firstAttribute="height" constant="75" id="WVX-cF-bgD"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
                                         <state key="normal" title="OPTIONS" backgroundImage="MRGeneralButton">
@@ -3134,10 +3134,10 @@ The end..."</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxy-zi-T1X">
-                                        <rect key="frame" x="0.0" y="363" width="200" height="101"/>
+                                        <rect key="frame" x="0.0" y="240" width="200" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="Bh3-e4-gO0"/>
                                             <constraint firstAttribute="width" constant="200" id="pVr-VR-4Mh"/>
+                                            <constraint firstAttribute="height" constant="60" id="zOe-5B-AI7"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
                                         <state key="normal" title="RULES" backgroundImage="MRGeneralButton">
@@ -3152,7 +3152,7 @@ The end..."</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Gjk-Jp-Gls" firstAttribute="top" secondItem="sx2-zU-gAr" secondAttribute="bottom" constant="35" id="0oX-21-1Ij"/>
+                            <constraint firstItem="Gjk-Jp-Gls" firstAttribute="top" secondItem="sx2-zU-gAr" secondAttribute="bottom" constant="20" id="0oX-21-1Ij"/>
                             <constraint firstItem="hO6-bL-T4d" firstAttribute="top" secondItem="svM-yr-TbZ" secondAttribute="bottom" id="3V0-P8-bcP"/>
                             <constraint firstItem="svM-yr-TbZ" firstAttribute="leading" secondItem="zLm-FY-JSh" secondAttribute="leading" id="AMt-ue-Xxh"/>
                             <constraint firstItem="OXr-ck-8cg" firstAttribute="leading" secondItem="zLm-FY-JSh" secondAttribute="leading" id="CO3-k1-KmF"/>
@@ -3165,7 +3165,6 @@ The end..."</string>
                             <constraint firstItem="Gjk-Jp-Gls" firstAttribute="centerX" secondItem="zLm-FY-JSh" secondAttribute="centerX" id="d3D-12-7ZC"/>
                             <constraint firstItem="OXr-ck-8cg" firstAttribute="top" secondItem="zLm-FY-JSh" secondAttribute="top" id="fac-UQ-We6"/>
                             <constraint firstItem="sx2-zU-gAr" firstAttribute="top" secondItem="5qf-vA-cAl" secondAttribute="bottom" constant="20" id="kqb-IO-n8O"/>
-                            <constraint firstItem="hO6-bL-T4d" firstAttribute="top" secondItem="Gjk-Jp-Gls" secondAttribute="bottom" constant="40" id="ptq-4Y-Uco"/>
                             <constraint firstItem="5qf-vA-cAl" firstAttribute="centerY" secondItem="s6m-HN-rLD" secondAttribute="centerY" id="vyF-Wd-2dV"/>
                             <constraint firstAttribute="trailing" secondItem="OXr-ck-8cg" secondAttribute="trailing" id="yRN-4V-gxW"/>
                         </constraints>
@@ -6899,9 +6898,9 @@ be a jerk ;)</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="I53-ci-Nq8"/>
-        <segue reference="TDa-wu-gPe"/>
-        <segue reference="kkV-ey-5fO"/>
-        <segue reference="DTs-jA-27W"/>
+        <segue reference="dhy-OQ-mIy"/>
+        <segue reference="Y5H-lc-M15"/>
+        <segue reference="nFz-PG-5cK"/>
         <segue reference="xw3-iS-S4C"/>
     </inferredMetricsTieBreakers>
 </document>
