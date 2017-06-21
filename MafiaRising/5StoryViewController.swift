@@ -36,6 +36,9 @@ class _StoryViewController: UIViewController {
     // Random Number
     var randNum: Int = 0
     
+    // Profile Weird Noises Array
+    var profileNoisesNames: Array<String> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -89,16 +92,26 @@ class _StoryViewController: UIViewController {
         for player in 0..<masterPlayerArray.count {
             
             let img = masterPlayerArray[player].picture
-            let imgView = UIImageView(image: img)
+  
+            let btnView = UIButton(type: .custom)
+            btnView.setImage(img, for: .normal)
+            //let imgView = UIImageView(image: img)
             
             // Add portrait
-            scrollView.addSubview(imgView)
+            scrollView.addSubview(btnView)
+            //scrollView.addSubview(imgView)
             
             // Set frame of portrait
-            imgView.frame = CGRect(x: -WIDTH + ((WIDTH) * CGFloat(player+1)), y: 0, width: WIDTH, height: HEIGHT)
+            btnView.frame = CGRect(x: -WIDTH + ((WIDTH) * CGFloat(player+1)), y: 0, width: WIDTH, height: HEIGHT)
+            // imgView.frame = CGRect(x: -WIDTH + ((WIDTH) * CGFloat(player+1)), y: 0, width: WIDTH, height: HEIGHT)
             
             // Set portrait to "scale to fill"
-            imgView.contentMode = .scaleToFill
+            btnView.contentMode = .scaleToFill
+            // imgView.contentMode = .scaleToFill
+            
+            // Set button functionality
+            btnView.addTarget(self, action: #selector(touchPortrait), for: .touchUpInside)
+        
         }
         
         // Set frame of ScrollView
@@ -133,6 +146,12 @@ class _StoryViewController: UIViewController {
             
             performSegue(withIdentifier: "StoryToChoose", sender: masterPlayerArray)
         }
+    }
+    
+    func touchPortrait() {
+        // randNum = Int(arc4random_uniform(UInt32(profileNoisesNames.count)))
+        // play profileNoisesNames[randNum]
+        print("You hit a button")
     }
     
     override func didReceiveMemoryWarning() {
