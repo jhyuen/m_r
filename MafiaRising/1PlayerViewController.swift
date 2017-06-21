@@ -10,23 +10,30 @@ import UIKit
 
 class _PlayerViewController: UIViewController {
 
-    let minimumPlayers = 5
-    let maximumPlayers = 30
-    
+    // UI Outlets
     @IBOutlet weak var numPlayerField: UITextField!
     @IBOutlet weak var toolBar: UIToolbar!
     @IBOutlet weak var errorLabel: UILabel!
     
+    // Constants
+    let minimumPlayers = 5
+    let maximumPlayers = 30
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        errorLabel.isHidden = true
+        numPlayerField.text = ""
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(_PlayerViewController.dismissKeyboard)))
         
-        // notifications that allow view to be pushed up when keyboard appears
+        // Notifications that allow view to be pushed up when keyboard appears
         NotificationCenter.default.addObserver(self, selector: #selector(_PlayerViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(_PlayerViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-
-        //setup keyboard toolbar
+        
+        // Setup keyboard toolbar
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
         
@@ -37,40 +44,6 @@ class _PlayerViewController: UIViewController {
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
         
         numPlayerField.inputAccessoryView = toolBar
-    }
-    
-    func doneClicked() {
-        view.endEditing(true)
-    }
-    
-    func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0{
-                self.view.frame.origin.y -= (keyboardSize.height / 2)
-            }
-        }
-    }
-    
-    func keyboardWillHide(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y != 0{
-                self.view.frame.origin.y += (keyboardSize.height / 2)
-            }
-        }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        errorLabel.isHidden = true
-        numPlayerField.text = ""
-    }
-    
-    func dismissKeyboard() {
-        numPlayerField.resignFirstResponder()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // Pause Button
@@ -103,6 +76,35 @@ class _PlayerViewController: UIViewController {
     // Info Button
     @IBAction func goToPlayerInfo(_ sender: Any) {
         performSegue(withIdentifier: "PlayersToInfo", sender: self)
+    }
+    
+    func doneClicked() {
+        view.endEditing(true)
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= (keyboardSize.height / 2)
+            }
+        }
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += (keyboardSize.height / 2)
+            }
+        }
+    }
+    
+    func dismissKeyboard() {
+        numPlayerField.resignFirstResponder()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -13,18 +13,15 @@ var doctorExist: Bool = false
 
 class _RoleSetUpViewController: UIViewController {
 
+    // UI Outlets
     @IBOutlet weak var isDoctor: CheckBox!
     @IBOutlet weak var isPolice: CheckBox!
 
+    // Number of players Instantiated
     var numPlayers: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,7 +47,7 @@ class _RoleSetUpViewController: UIViewController {
         
         let numMafia: Int = numPlayers/5
         
-        // Changes when adding new special role types
+        // Change when adding new special role types
         let numPossibleSpecialRoles: Int = numMafia + 2
         
         // Instantiation of Master Index Array
@@ -128,6 +125,10 @@ class _RoleSetUpViewController: UIViewController {
         return masterIndex
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "RolesToCards" {
             if let selectedVC = segue.destination as? _CardRevealViewController {
@@ -137,27 +138,5 @@ class _RoleSetUpViewController: UIViewController {
             }
         }
     }
-    
-    /* 
-     
-     MAY USE IN THE FUTURE BUT NOT NOW!!!
-     
-    // Calculates the number of special roles (roles other than citizens)
-    func numActualSpecialRoles(numMafia: Int, police: Bool, doctor: Bool) -> Int {
-        
-        var specialRoles: Int = 0
-        
-        if police {
-            specialRoles = specialRoles + 1
-        }
-        
-        if doctor {
-            specialRoles = specialRoles + 1
-        }
-        
-        return numMafia + specialRoles
-    }
-     
-     */
 
 }

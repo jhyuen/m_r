@@ -11,6 +11,7 @@ import AVFoundation
 
 class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate {
 
+    // UI Outlets
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var roleLbl: UILabel!
     @IBOutlet weak var numberLbl: UILabel!
@@ -23,22 +24,31 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     // may delete if stupid
     @IBOutlet weak var portraitHelper: UIImageView!
     
-    // transferred from previous VC
+    // Transfer Index Array
     var masterIndexArray: Array<Int> = []
     
     var captureSession = AVCaptureSession()
     var sessionOutput = AVCapturePhotoOutput()
     var previewLayer = AVCaptureVideoPreviewLayer()
     
-    // the master player array
+    // Master Player Array Instantiation
     var masterPlayerArray: Array<Player> = []
     
-    // count variable
-    // not using loop because does not allow for simple progression
+    // Count variable
     var playerIndexCount: Int = 0
+    
+    // Set bounds of camera view
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        previewLayer.frame = cameraView.bounds
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         // test previous segue and global variables
         print("\(masterIndexArray)")
@@ -48,31 +58,28 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         updateRoleLbl()
         updateNumberLbl()
         
-        // sets up camera feed
+        // Set up camera feed
         let deviceSession = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInDualCamera,.builtInTelephotoCamera, .builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .unspecified)
-         
+        
         for device in (deviceSession?.devices)!{
             if device.position == AVCaptureDevicePosition.front {
                 do {
                     let input = try AVCaptureDeviceInput(device: device)
                     if captureSession.canAddInput(input) {
                         captureSession.addInput(input)
-         
+                        
                         if captureSession.canAddOutput(sessionOutput) {
                             captureSession.addOutput(sessionOutput)
-         
+                            
                             previewLayer = AVCaptureVideoPreviewLayer(session:captureSession)
                             previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
                             previewLayer.connection.videoOrientation = .portrait
-         
+                            
                             cameraView.layer.addSublayer(previewLayer)
-         
-                            // sets up location of camera view
+                            
+                            // Set up location of camera view
                             previewLayer.position = CGPoint(x: self.cameraView.frame.width/2, y: self.cameraView.frame.height/2)
-        
-                            // sets bounds of camera view
-                            // previewLayer.frame = playerImage.bounds
-         
+                            
                             captureSession.startRunning()
                         }
                     }
@@ -81,20 +88,6 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
                 }
             }
         }
-    }
-    
-    // sets bounds of camera view
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        previewLayer.frame = cameraView.bounds
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
     // Pause Button
@@ -116,11 +109,12 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         
         if playerIndexCount == masterIndexArray.count {
             
-            // end capture session
+            // End capture session
             captureSession.stopRunning()
             previewLayer.removeFromSuperlayer()
             
             performSegue(withIdentifier: "CardsToReady", sender: masterPlayerArray)
+            
         } else {
             
             updateNumberLbl()
@@ -141,6 +135,23 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         }
     }
     
+    // Retake picture
+    @IBAction func retakePicture(_ sender: Any) {
+        
+        // Reset views
+        cameraView.isHidden = false
+        cameraBtn.isHidden = false
+        preNumLbl.isHidden = false
+        playerImage.isHidden = true
+        roleLbl.isHidden = true
+        numberLbl.isHidden = true
+        repeatPictureBtn.isHidden = true
+        proceedBtn.isHidden = true
+        
+        // may delete if stupid
+        portraitHelper.isHidden = false
+    }
+    
     // Camera Button
     @IBAction func takePhoto(_ sender: Any) {
         
@@ -152,7 +163,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         sessionOutput.capturePhoto(with: settings, delegate: self)
     }
     
-    // process picture
+    // Process picture
     func capture(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhotoSampleBuffer photoSampleBuffer: CMSampleBuffer?, previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
         
         if let error = error {
@@ -166,12 +177,12 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
                         return
                     }
             
-            // old views hidden
+            // Old views hidden
             cameraView.isHidden = true
             cameraBtn.isHidden = true
             preNumLbl.isHidden = true
             
-            // new views unhidden
+            // New views unhidden
             playerImage.image = UIImage(data: dataImage)
             playerImage.isHidden = false
             roleLbl.isHidden = false
@@ -186,58 +197,45 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     
     }
     
-    // retake picture
-    @IBAction func retakePicture(_ sender: Any) {
-        
-        // reset views
-        cameraView.isHidden = false
-        cameraBtn.isHidden = false
-        preNumLbl.isHidden = false
-        playerImage.isHidden = true
-        roleLbl.isHidden = true
-        numberLbl.isHidden = true
-        repeatPictureBtn.isHidden = true
-        proceedBtn.isHidden = true
-        
-        // may delete if stupid
-        portraitHelper.isHidden = false
-    }
-    
-    // update number label with current player
+    // Update number label with current player
     func updateNumberLbl() {
         let counter: String = "\(playerIndexCount + 1)/\(masterIndexArray.count)"
         numberLbl.text = counter
         preNumLbl.text = counter
     }
     
-    // update role label with current player
+    // Update role label with current player
     func updateRoleLbl() {
         
         var role: String
         
         // 0 = citizen
         if masterIndexArray[playerIndexCount] == 0 {
-            role = "Citizen"
+            role = "CITIZEN"
             // 1 = mafia
         } else if masterIndexArray[playerIndexCount] == 1 {
-            role = "Mafia"
+            role = "MAFIA"
             // 2 = police
         } else if policeExist && masterIndexArray[playerIndexCount] == 2 {
-            role = "Police"
+            role = "POLICE"
             // 3 = doctor
         } else if doctorExist && masterIndexArray[playerIndexCount] == 3 {
-            role = "Doctor"
+            role = "DOCTOR"
             // default = citizen
         } else {
-            role = "Citizen"
+            role = "CITIZEN"
         }
         
         roleLbl.text = role
     }
     
-    // create new player and add them to the Master Player Array
+    // Create new player and add them to the Master Player Array
     func addPlayer(picture: UIImage, role: String) {
         masterPlayerArray.append(Player(picture: picture, role: role))
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

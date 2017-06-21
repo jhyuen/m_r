@@ -8,16 +8,24 @@
 
 import UIKit
 
+// 0 = Continue
+// 1 = Mafia Defeat
+// 2 = Mafia Victory
+var conclusion: Int = 0
+
 class _ChooseViewController: UIViewController {
 
+    // UI Outlets
+    @IBOutlet weak var roleLbl: UILabel!
     @IBOutlet weak var soundEffectBtn1: UIButton!
     @IBOutlet weak var soundEffectBtn2: UIButton!
     @IBOutlet weak var soundEffectBtn3: UIButton!
     @IBOutlet weak var soundEffectBtn4: UIButton!
     
-    // transfer array
+    // Transfer Array
     var masterPlayerArray: Array<Player> = []
     
+    // Sound Effect Lists
     // !!! maybe make another sound effect array for tribunal sounds, not just night phase !!!
     var nightSoundEffectsArray: Array<SoundEffect> = []
     var tribunalSoundEffectsArray: Array<SoundEffect> = []
@@ -28,38 +36,143 @@ class _ChooseViewController: UIViewController {
     var sE3: String = "se3"
     var sE4: String = "se4"
     
+    // Subpart Instantiation
+    var subPart: Int = 1
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        /*
+        print("ChooseViewController")
+        print("Cycle is \(cycle)")
+        print("Part is \(part)")
+        print("\(masterPlayerArray[0].isDead)")
+        print("\(masterPlayerArray[1].isDead)")
+        print("\(masterPlayerArray[2].isDead)")
+        print("\(masterPlayerArray[3].isDead)")
+        print("\(masterPlayerArray[4].isDead)")
+        print("\(masterPlayerArray[0].role)")
+        print("\(masterPlayerArray[1].role)")
+        print("\(masterPlayerArray[2].role)")
+        print("\(masterPlayerArray[3].role)")
+        print("\(masterPlayerArray[4].role)")
+        
+        // Reset subPart
+        subPart = 1
+        
+        // load pictures from array
+        
         if part == 2 {
-            updateSounds(arrayType: nightSoundEffectsArray)
-        } else {
-            updateSounds(arrayType: tribunalSoundEffectsArray)
+            
+            // Update title
+            roleLbl.text = "MAFIA"
+            // updateSounds(arrayType: nightSoundEffectsArray)
+            
+        } else if part == 5 {
+            
+            // Update title
+            roleLbl.text = "TRIBUNAL"
+            
+            // updateSounds(arrayType: tribunalSoundEffectsArray)
         }
-        */
         
     }
     
     // Pause Button
     @IBAction func pauseBtnPressed(_ sender: Any) {
         performSegue(withIdentifier: "ChooseToPause", sender: self)
-    }
+    } 
     
     // Repeat Button
     @IBAction func repeatDirections(_ sender: Any) {
-        
+        // depending on subpart and cycle
+        // remember to load different files
     }
     
     // Proceed Button
     @IBAction func goToNextScreen(_ sender: Any) {
+        
+        // Finish Mafia Selection
+        if part == 2 && subPart == 1 {
+            
+            // checked box is targetted
+            // uncheck all boxes
+            
+            if policeExist {
+                subPart = subPart + 1
+                roleLbl.text = "POLICE"
+            } else if doctorExist {
+                subPart = subPart + 2
+                roleLbl.text = "DOCTOR"
+            } else {
+                
+                // update masterPlayerArray with decisions
+                
+                if checkForEndGame(players: masterPlayerArray) {
+                    part = part + 1
+                    performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
+                } else {
+                    part = part + 1
+                    performSegue(withIdentifier: "ChooseToDay", sender: masterPlayerArray)
+                }
+            }
+            
+        // Finish Police Selection
+        } else if part == 2 && subPart == 2 {
+            
+            // checked box is targetted
+            // uncheck all boxes
+            
+            if doctorExist {
+                subPart = subPart + 1
+                roleLbl.text = "DOCTOR"
+            } else {
+                
+                // update masterPlayerArray with decisions
+                
+                if checkForEndGame(players: masterPlayerArray) {
+                    part = part + 1
+                    performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
+                } else {
+                    part = part + 1
+                    performSegue(withIdentifier: "ChooseToDay", sender: masterPlayerArray)
+                }
+            }
+            
+        // Finish Doctor Selection
+        } else if part == 2 && subPart == 3 {
+            
+            // checked box is targetted
+            // uncheck all boxes
+            
+            // update masterPlayerArray with decisions
+            
+            if checkForEndGame(players: masterPlayerArray) {
+                part = part + 1
+                performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
+            } else {
+                part = part + 1
+                performSegue(withIdentifier: "ChooseToDay", sender: masterPlayerArray)
+            }
+            
+        // Finish Tribunal Selection
+        } else if part == 5 {
+            
+            // update masterPlayerArray with decisions
+            
+            if checkForEndGame(players: masterPlayerArray) {
+                part = part + 1
+                performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
+            } else {
+                cycle = cycle + 1
+                part = 0
+                performSegue(withIdentifier: "ChooseToStory", sender: masterPlayerArray)
+            }
+        }
+        
         
     }
     
@@ -82,6 +195,7 @@ class _ChooseViewController: UIViewController {
         print("\(sE4)")
     }
     
+    // Set each sound effect button with picture and sound
     func updateSounds(arrayType: Array<SoundEffect>) {
         
          // Generate tag array
@@ -114,6 +228,7 @@ class _ChooseViewController: UIViewController {
                 soundEffectBtn2.setBackgroundImage(UIImage(named: arrayType[nextIndex].picture), for: UIControlState.normal)
                 // Sound
                 sE2 = arrayType[nextIndex].effect
+                
             case 3:
                 // Tag Index
                 soundEffectsIndex[nextIndex] = 1
@@ -121,6 +236,7 @@ class _ChooseViewController: UIViewController {
                 soundEffectBtn3.setBackgroundImage(UIImage(named: arrayType[nextIndex].picture), for: UIControlState.normal)
                 // Sound
                 sE3 = arrayType[nextIndex].effect
+                
             case 4:
                 // Tag Index
                 soundEffectsIndex[nextIndex] = 1
@@ -128,11 +244,51 @@ class _ChooseViewController: UIViewController {
                 soundEffectBtn4.setBackgroundImage(UIImage(named: arrayType[nextIndex].picture), for: UIControlState.normal)
                 // Sound
                 sE4 = arrayType[nextIndex].effect
+                
             default:
                 print("You have found a bug!!! Congratulations!!!")
             }
          
         }
+    }
+    
+    // Check for end game scenario
+    func checkForEndGame(players: Array<Player>) -> Bool{
+        
+        var mafiaPop: Int = 0
+        var townPop: Int = 0
+        
+        for player in 0..<players.count {
+            if players[player].isDead == false {
+                if players[player].role == "MAFIA" {
+                    mafiaPop = mafiaPop + 1
+                } else {
+                    townPop = townPop + 1
+                }
+            }
+        }
+        
+        print("\(mafiaPop)")
+        print("\(townPop)")
+        
+        
+        // 0 = Continue
+        // 1 = Mafia Defeat
+        // 2 = Mafia Victory
+        
+        if mafiaPop == 0 {
+            conclusion = 1
+            return true
+        } else if mafiaPop >= townPop {
+            conclusion = 2
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -141,13 +297,20 @@ class _ChooseViewController: UIViewController {
                 if let thePlayerArray = sender as? Array<Player> {
                     selectedVC.masterPlayerArray = thePlayerArray
                 }
-            } else if segue.identifier == "ChooseToStory" {
-                if let selectedVC = segue.destination as? _StoryViewController {
+            }
+        } else if segue.identifier == "ChooseToStory" {
+            if let selectedVC = segue.destination as? _StoryViewController {
+                if let thePlayerArray = sender as? Array<Player> {
+                    selectedVC.masterPlayerArray = thePlayerArray
+                }
+            }
+        } else if segue.identifier == "ChooseToVictory" {
+                if let selectedVC = segue.destination as? _VictoryViewController {
                     if let thePlayerArray = sender as? Array<Player> {
                         selectedVC.masterPlayerArray = thePlayerArray
                     }
                 }
-            }
+
         }
     }
 

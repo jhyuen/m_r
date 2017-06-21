@@ -10,15 +10,16 @@ import UIKit
 
 class _StoryViewController: UIViewController {
 
+    // UI Outlet
     @IBOutlet weak var mainPicture: UIImageView!
     @IBOutlet weak var mainTitle: UILabel!
-    
     @IBOutlet weak var scrollView: UIScrollView!
     
+    // ScrollView Constants
     let WIDTH: CGFloat = 90
     let HEIGHT: CGFloat = 135
     
-    // tranfer master player array
+    // Transfer Array
     var masterPlayerArray: Array<Player> = []
     
     // Main Picture Potential Photos
@@ -31,16 +32,30 @@ class _StoryViewController: UIViewController {
     // Murder Pictures Array
     var murderPictureNames: Array<String> = []
     
-    // random Number
+    // Random Number
     var randNum: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        print("\(cycle)")
+        super.viewWillAppear(animated)
+        
+        print("StoryViewController")
+        print("Cycle is \(cycle)")
+        print("Part is \(part)")
+        print("\(masterPlayerArray[0].isDead)")
+        print("\(masterPlayerArray[1].isDead)")
+        print("\(masterPlayerArray[2].isDead)")
+        print("\(masterPlayerArray[3].isDead)")
+        print("\(masterPlayerArray[4].isDead)")
+        print("\(masterPlayerArray[0].role)")
+        print("\(masterPlayerArray[1].role)")
+        print("\(masterPlayerArray[2].role)")
+        print("\(masterPlayerArray[3].role)")
+        print("\(masterPlayerArray[4].role)")
+        
         
         // Set main title to correct wording
         if cycle == 1 && part == 0 {
@@ -69,22 +84,24 @@ class _StoryViewController: UIViewController {
             
         }
         
+        // Add player portaits to ScrollView
         for player in 0..<masterPlayerArray.count {
+            
             let img = masterPlayerArray[player].picture
             let imgView = UIImageView(image: img)
             
+            // Add portrait
             scrollView.addSubview(imgView)
             
+            // Set frame of portrait
             imgView.frame = CGRect(x: -WIDTH + ((WIDTH) * CGFloat(player+1)), y: 0, width: WIDTH, height: HEIGHT)
             
+            // Set portrait to "scale to fill"
             imgView.contentMode = .scaleToFill
         }
         
+        // Set frame of ScrollView
         scrollView.contentSize = CGSize(width: WIDTH*CGFloat(masterPlayerArray.count), height: scrollView.frame.size.height)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
     // Pause Button
@@ -100,17 +117,36 @@ class _StoryViewController: UIViewController {
     // Proceed Button
     @IBAction func goToNextScreen(_ sender: Any) {
         
-        // Increase part
-        part = part + 1
-        
-        if part == 1 {
+        if part == 0 {
+            
+            // Increase Part
+            part = part + 1
+            
             performSegue(withIdentifier: "StoryToNight", sender: masterPlayerArray)
         }
+        
+        if part == 4 {
+            
+            // Increase Part
+            part = part + 1
+            
+            performSegue(withIdentifier: "StoryToChoose", sender: masterPlayerArray)
+        }
     }
-
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "StoryToNight" {
             if let selectedVC = segue.destination as? _NightViewController {
+                if let thePlayerArray = sender as? Array<Player> {
+                    selectedVC.masterPlayerArray = thePlayerArray
+                }
+            }
+        } else if segue.identifier == "StoryToChoose" {
+            if let selectedVC = segue.destination as? _ChooseViewController {
                 if let thePlayerArray = sender as? Array<Player> {
                     selectedVC.masterPlayerArray = thePlayerArray
                 }

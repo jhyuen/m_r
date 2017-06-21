@@ -10,29 +10,60 @@ import UIKit
 
 class _DayViewController: UIViewController {
 
-    // transfer array
+    // UI Outlets
+    @IBOutlet weak var dayNum: UILabel!
+    
+    // Transfer Array
     var masterPlayerArray: Array<Player> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("DayViewController")
+        print("Cycle is \(cycle)")
+        print("Part is \(part)")
+        print("\(masterPlayerArray[0].isDead)")
+        print("\(masterPlayerArray[1].isDead)")
+        print("\(masterPlayerArray[2].isDead)")
+        print("\(masterPlayerArray[3].isDead)")
+        print("\(masterPlayerArray[4].isDead)")
+        print("\(masterPlayerArray[0].role)")
+        print("\(masterPlayerArray[1].role)")
+        print("\(masterPlayerArray[2].role)")
+        print("\(masterPlayerArray[3].role)")
+        print("\(masterPlayerArray[4].role)")
+        
+        dayNum.text = "\(cycle)"
+    }
+
+    // Proceed Button
+    @IBAction func goToStory(_ sender: Any) {
+       
+        if part == 3 {
+            
+            // Increase part
+            part = part + 1
+            
+            performSegue(withIdentifier: "DayToStory", sender: masterPlayerArray)
+            
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
-    */
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DayToStory" {
+            if let selectedVC = segue.destination as? _StoryViewController {
+                if let thePlayerArray = sender as? Array<Player> {
+                    selectedVC.masterPlayerArray = thePlayerArray
+                }
+            }
+        }
+    }
 }

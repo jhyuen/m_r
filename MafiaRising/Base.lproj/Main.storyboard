@@ -643,6 +643,7 @@ Swipe right to learn more!</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nightNum" destination="3Gj-vT-1E7" id="bmS-0E-ZMD"/>
                         <segue destination="kEY-wj-tGy" kind="show" identifier="NightToChoose" id="DTs-jA-27W"/>
                     </connections>
                 </viewController>
@@ -3523,7 +3524,7 @@ of Players</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wkj-F9-U7c">
-                                <rect key="frame" x="151" y="607" width="75" height="35"/>
+                                <rect key="frame" x="150" y="607" width="75" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Uws-ho-uL6"/>
                                 </constraints>
@@ -3894,6 +3895,7 @@ of Players</string>
                         <outlet property="scrollView" destination="Twh-X9-WTE" id="60X-q5-5st"/>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="StoryToPause" id="dhy-OQ-mIy"/>
                         <segue destination="x6I-ks-Nig" kind="show" identifier="StoryToNight" id="XfW-qg-n7e"/>
+                        <segue destination="kEY-wj-tGy" kind="show" identifier="StoryToChoose" id="nFz-PG-5cK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uCi-wI-uQT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3934,10 +3936,20 @@ of Players</string>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLg-vZ-ks5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <action selector="goToStory:" destination="QpL-Dl-0m0" eventType="touchUpInside" id="GcO-Fs-RGp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="MvC-bK-5G0" firstAttribute="centerX" secondItem="JqI-eZ-ffE" secondAttribute="centerX" id="4Dw-tE-VlI"/>
+                            <constraint firstItem="FLg-vZ-ks5" firstAttribute="top" secondItem="JqI-eZ-ffE" secondAttribute="top" id="6xQ-aP-jyq"/>
+                            <constraint firstItem="jFx-D4-cne" firstAttribute="top" secondItem="FLg-vZ-ks5" secondAttribute="bottom" id="JMh-dO-kIi"/>
+                            <constraint firstAttribute="trailing" secondItem="FLg-vZ-ks5" secondAttribute="trailing" id="P0Z-jW-Nrj"/>
+                            <constraint firstItem="FLg-vZ-ks5" firstAttribute="leading" secondItem="JqI-eZ-ffE" secondAttribute="leading" id="au9-Lf-vtr"/>
                             <constraint firstItem="FK6-EW-Tci" firstAttribute="top" secondItem="cwL-9n-qw1" secondAttribute="bottom" id="bjj-TO-Qs9"/>
                             <constraint firstItem="cwL-9n-qw1" firstAttribute="centerX" secondItem="JqI-eZ-ffE" secondAttribute="centerX" id="dSY-hB-3NJ"/>
                             <constraint firstItem="FK6-EW-Tci" firstAttribute="centerX" secondItem="JqI-eZ-ffE" secondAttribute="centerX" id="fMn-ui-IUk"/>
@@ -3946,12 +3958,13 @@ of Players</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dayNum" destination="FK6-EW-Tci" id="S13-vT-qb3"/>
                         <segue destination="MAm-3Z-Idg" kind="show" identifier="DayToStory" id="Jyo-Dw-ayh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QNp-ku-F01" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5465" y="-1289"/>
+            <point key="canvasLocation" x="5464.8000000000002" y="-1289.5052473763119"/>
         </scene>
         <!--Choose View Controller-->
         <scene sceneID="6di-DN-Ala">
@@ -4140,6 +4153,7 @@ of Players</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="roleLbl" destination="9A4-1K-mif" id="ULf-Ac-7K4"/>
                         <outlet property="soundEffectBtn1" destination="wpC-4i-Lpb" id="KrS-gt-0YU"/>
                         <outlet property="soundEffectBtn2" destination="wpC-4i-Lpb" id="sX9-M7-OkU"/>
                         <outlet property="soundEffectBtn3" destination="VyX-Lg-MZx" id="ozG-iH-IFT"/>
@@ -4176,33 +4190,46 @@ of Players</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MRFinal CitizensWinC1" translatesAutoresizingMaskIntoConstraints="NO" id="wni-xX-whe">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MRFinal MafiaWinC1" translatesAutoresizingMaskIntoConstraints="NO" id="wni-xX-whe">
                                 <rect key="frame" x="78" y="265" width="219" height="97"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="219" id="3f7-eQ-9lG"/>
                                     <constraint firstAttribute="height" constant="97" id="fa9-vL-JxF"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASe-3E-2vg">
-                                <rect key="frame" x="178" y="377" width="20" height="20"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MRFinal MafiaWinC2" translatesAutoresizingMaskIntoConstraints="NO" id="L7T-g4-1CY">
+                                <rect key="frame" x="177.5" y="377" width="20" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="DkA-gx-eQg"/>
-                                    <constraint firstAttribute="height" constant="20" id="c84-Rb-E02"/>
+                                    <constraint firstAttribute="height" constant="20" id="YvU-Dj-OjY"/>
+                                    <constraint firstAttribute="width" constant="20" id="yXc-Em-P00"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="MRFinal MafiaWinC2"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdw-My-Y7e">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <action selector="goToEnd:" destination="Mzs-IF-RIf" eventType="touchUpInside" id="9xl-b3-bPQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Qdw-My-Y7e" firstAttribute="leading" secondItem="zbH-09-n2d" secondAttribute="leading" id="8Oz-4j-TTT"/>
+                            <constraint firstItem="Qdw-My-Y7e" firstAttribute="top" secondItem="zbH-09-n2d" secondAttribute="top" id="DCI-yv-Mgu"/>
                             <constraint firstItem="wni-xX-whe" firstAttribute="centerY" secondItem="zbH-09-n2d" secondAttribute="centerY" constant="-20" id="FXc-rr-uj7"/>
-                            <constraint firstItem="ASe-3E-2vg" firstAttribute="centerX" secondItem="zbH-09-n2d" secondAttribute="centerX" id="Hj1-LU-pyk"/>
+                            <constraint firstAttribute="trailing" secondItem="Qdw-My-Y7e" secondAttribute="trailing" id="HU9-DB-SBu"/>
+                            <constraint firstItem="L7T-g4-1CY" firstAttribute="top" secondItem="wni-xX-whe" secondAttribute="bottom" constant="15" id="JfJ-oz-5hQ"/>
+                            <constraint firstItem="ezy-oa-ChG" firstAttribute="top" secondItem="Qdw-My-Y7e" secondAttribute="bottom" id="OTD-8c-qAM"/>
                             <constraint firstItem="2Yx-cc-pz3" firstAttribute="centerX" secondItem="zbH-09-n2d" secondAttribute="centerX" id="Xf8-Y6-Ihp"/>
                             <constraint firstAttribute="bottom" secondItem="2Yx-cc-pz3" secondAttribute="bottom" constant="5" id="as6-rU-NCb"/>
                             <constraint firstItem="wni-xX-whe" firstAttribute="centerX" secondItem="zbH-09-n2d" secondAttribute="centerX" id="kbO-S1-fUA"/>
-                            <constraint firstItem="ASe-3E-2vg" firstAttribute="top" secondItem="wni-xX-whe" secondAttribute="bottom" constant="15" id="l0C-tM-dm6"/>
+                            <constraint firstItem="L7T-g4-1CY" firstAttribute="centerX" secondItem="zbH-09-n2d" secondAttribute="centerX" id="tek-tW-UJU"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundView" destination="zbH-09-n2d" id="6da-kd-enf"/>
+                        <outlet property="btmLbl" destination="2Yx-cc-pz3" id="0EL-lq-JPw"/>
+                        <outlet property="dot" destination="L7T-g4-1CY" id="IpH-56-oEX"/>
+                        <outlet property="winnerImage" destination="wni-xX-whe" id="1xE-0a-JI3"/>
                         <segue destination="e96-xE-FgR" kind="show" identifier="VictoryToEnd" id="GtG-eL-rWC"/>
                     </connections>
                 </viewController>
@@ -6816,9 +6843,9 @@ be a jerk ;)</string>
         <image name="MRFinal CardC1" width="297" height="70"/>
         <image name="MRFinal CardC6" width="83" height="80"/>
         <image name="MRFinal CardsInfoC2" width="145" height="45"/>
-        <image name="MRFinal CitizensWinC1" width="309" height="138"/>
         <image name="MRFinal HomeC3" width="1147" height="232"/>
         <image name="MRFinal HomeC7" width="1440" height="2560"/>
+        <image name="MRFinal MafiaWinC1" width="221" height="137"/>
         <image name="MRFinal MafiaWinC2" width="24" height="24"/>
         <image name="MRFinal OptionsC1" width="336" height="61"/>
         <image name="MRFinal OptionsC4" width="78" height="78"/>
@@ -6860,9 +6887,10 @@ be a jerk ;)</string>
         <image name="portraitFiller" width="433" height="653"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="jGj-z5-JdE"/>
         <segue reference="dhy-OQ-mIy"/>
         <segue reference="Y5H-lc-M15"/>
+        <segue reference="nFz-PG-5cK"/>
         <segue reference="csY-zy-mJN"/>
-        <segue reference="jGj-z5-JdE"/>
     </inferredMetricsTieBreakers>
 </document>
