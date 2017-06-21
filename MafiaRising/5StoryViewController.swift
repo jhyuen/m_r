@@ -11,6 +11,7 @@ import UIKit
 class _StoryViewController: UIViewController {
 
     // UI Outlet
+    // may turn into button if showing words
     @IBOutlet weak var mainPicture: UIImageView!
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -74,7 +75,7 @@ class _StoryViewController: UIViewController {
              mainPicture.image = UIImage(named: introPictureNames[randNum])
              */
             
-        } else if cycle > 1 && part > 0 {
+        } else if cycle >= 1 && part > 0 {
             mainTitle.text = "DAY \(cycle)"
             
             /*

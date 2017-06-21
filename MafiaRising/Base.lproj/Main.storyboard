@@ -4168,10 +4168,10 @@ of Players</string>
                         <outlet property="soundEffectBtn2" destination="wpC-4i-Lpb" id="sX9-M7-OkU"/>
                         <outlet property="soundEffectBtn3" destination="VyX-Lg-MZx" id="ozG-iH-IFT"/>
                         <outlet property="soundEffectBtn4" destination="Glf-kc-3hI" id="p5I-Ln-qCW"/>
-                        <segue destination="9nD-tn-Rq4" kind="show" identifier="ChooseToPause" id="csY-zy-mJN"/>
                         <segue destination="QpL-Dl-0m0" kind="show" identifier="ChooseToDay" id="Xxf-v6-6cj"/>
                         <segue destination="MAm-3Z-Idg" kind="show" identifier="ChooseToStory" id="Y5H-lc-M15"/>
                         <segue destination="Mzs-IF-RIf" kind="show" identifier="ChooseToVictory" id="HeH-F8-GWu"/>
+                        <segue destination="PC0-jt-mGo" kind="show" identifier="ChooseToPause" id="wNd-ep-vfX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N8m-g9-txY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -6898,9 +6898,9 @@ be a jerk ;)</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="I53-ci-Nq8"/>
-        <segue reference="dhy-OQ-mIy"/>
-        <segue reference="Y5H-lc-M15"/>
+        <segue reference="wNd-ep-vfX"/>
         <segue reference="nFz-PG-5cK"/>
+        <segue reference="Y5H-lc-M15"/>
         <segue reference="xw3-iS-S4C"/>
     </inferredMetricsTieBreakers>
 </document>
