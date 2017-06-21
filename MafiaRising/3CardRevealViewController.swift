@@ -31,8 +31,11 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     var sessionOutput = AVCapturePhotoOutput()
     var previewLayer = AVCaptureVideoPreviewLayer()
     
-    // Master Player Array Instantiation
+    // Master Player Array Official Instantiation
     var masterPlayerArray: Array<Player> = []
+    
+    // Disable Pause->Roles
+    var fakeMasterPlayerArray: Array<Player> = []
     
     // Count variable
     var playerIndexCount: Int = 0
@@ -92,7 +95,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     
     // Pause Button
     @IBAction func pauseBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: "CardsToPause", sender: self)
+        performSegue(withIdentifier: "CardsToPause", sender: fakeMasterPlayerArray)
     }
 
     // Info Button
@@ -241,6 +244,12 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "CardsToReady" {
             if let selectedVC = segue.destination as? _ReadyViewController {
+                if let thePlayerArray = sender as? Array<Player> {
+                    selectedVC.masterPlayerArray = thePlayerArray
+                }
+            }
+        } else if segue.identifier == "CardsToPause" {
+            if let selectedVC = segue.destination as? PauseViewController {
                 if let thePlayerArray = sender as? Array<Player> {
                     selectedVC.masterPlayerArray = thePlayerArray
                 }

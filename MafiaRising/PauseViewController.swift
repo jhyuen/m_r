@@ -9,16 +9,24 @@
 import UIKit
 
 class PauseViewController: UIViewController {
-
+    
+    @IBOutlet weak var rolesBtn: UIButton!
+    
+    // Transfer Array
+    var masterPlayerArray: Array<Player> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if masterPlayerArray.count == 0 {
+            rolesBtn.isEnabled = false
+        } else {
+            rolesBtn.isEnabled = true
+        }
     }
     
     // Back Button
@@ -27,10 +35,15 @@ class PauseViewController: UIViewController {
     }
     
     // Home Button
-    // Add segue
-    // Remember to keep game data for continue
+    @IBAction func homeBtnPressed(_ sender: Any) {
+        // !!! possibly change sender depending on how we do continue
+        performSegue(withIdentifier: "PauseToHome", sender: self)
+    }
     
     // Roles Button
+    @IBAction func rolesBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: "PauseToRoles", sender: masterPlayerArray)
+    }
     // Add segue
     // Remember to keep game data for roles screen
     
@@ -44,14 +57,19 @@ class PauseViewController: UIViewController {
         performSegue(withIdentifier: "PauseToRules", sender: self)
     }
     
-  /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PauseToRoles" {
+            if let selectedVC = segue.destination as? GameRolesViewController {
+                if let theArray = sender as? Array<Player> {
+                    selectedVC.masterPlayerArray = theArray
+                }
+            }
+        }
+    }
 
 }

@@ -22,7 +22,7 @@ class _ReadyViewController: UIViewController {
     
     // Pause Button
     @IBAction func pauseBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: "ReadyToPause", sender: self)
+        performSegue(withIdentifier: "ReadyToPause", sender: masterPlayerArray)
     }
     
     // Proceed Button
@@ -42,6 +42,12 @@ class _ReadyViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ReadyToStory" {
             if let selectedVC = segue.destination as? _StoryViewController {
+                if let thePlayerArray = sender as? Array<Player> {
+                    selectedVC.masterPlayerArray = thePlayerArray
+                }
+            }
+        } else if segue.identifier == "ReadyToPause" {
+            if let selectedVC = segue.destination as? PauseViewController {
                 if let thePlayerArray = sender as? Array<Player> {
                     selectedVC.masterPlayerArray = thePlayerArray
                 }

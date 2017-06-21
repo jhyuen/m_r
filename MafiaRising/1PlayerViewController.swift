@@ -19,6 +19,8 @@ class _PlayerViewController: UIViewController {
     let minimumPlayers = 5
     let maximumPlayers = 30
     
+    var masterPlayerArray: Array<Player> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -48,7 +50,7 @@ class _PlayerViewController: UIViewController {
     
     // Pause Button
     @IBAction func pauseBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: "PlayersToPause", sender: self)
+        performSegue(withIdentifier: "PlayersToPause", sender: masterPlayerArray)
     }
 
     // Proceed Arrow
@@ -112,6 +114,12 @@ class _PlayerViewController: UIViewController {
             if let selectedVC = segue.destination as? _RoleSetUpViewController {
                 if let theNumPlayers = sender as? Int {
                     selectedVC.numPlayers = theNumPlayers
+                }
+            }
+        } else if segue.identifier == "PlayersToPause" {
+            if let selectedVC = segue.destination as? PauseViewController {
+                if let theArray = sender as? Array<Player> {
+                    selectedVC.masterPlayerArray = theArray
                 }
             }
         }

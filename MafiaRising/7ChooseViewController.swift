@@ -83,7 +83,7 @@ class _ChooseViewController: UIViewController {
     
     // Pause Button
     @IBAction func pauseBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: "ChooseToPause", sender: self)
+        performSegue(withIdentifier: "ChooseToPause", sender: masterPlayerArray)
     } 
     
     // Repeat Button
@@ -310,7 +310,12 @@ class _ChooseViewController: UIViewController {
                         selectedVC.masterPlayerArray = thePlayerArray
                     }
                 }
-
+        } else if segue.identifier == "ChooseToPause" {
+            if let selectedVC = segue.destination as? PauseViewController {
+                if let thePlayerArray = sender as? Array<Player> {
+                    selectedVC.masterPlayerArray = thePlayerArray
+                }
+            }
         }
     }
 

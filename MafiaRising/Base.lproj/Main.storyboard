@@ -846,6 +846,9 @@ Swipe right to learn more!</string>
                                     <constraint firstAttribute="height" constant="24" id="w8h-iB-DZc"/>
                                 </constraints>
                                 <state key="normal" image="MRBackButton"/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="3SB-Ud-paO" eventType="touchUpInside" id="RtL-hA-2uk"/>
+                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibg-7h-XsT">
                                 <rect key="frame" x="36" y="158" width="303" height="479"/>
@@ -875,7 +878,7 @@ Swipe right to learn more!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSI-ea-wWy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-388" y="771.36431784107947"/>
+            <point key="canvasLocation" x="-489" y="770"/>
         </scene>
         <!--Role Information View Controller-->
         <scene sceneID="815-F5-kwT">
@@ -3098,6 +3101,9 @@ The end..."</string>
                                         <state key="normal" title="HOME" backgroundImage="MRGeneralButton">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="homeBtnPressed:" destination="PC0-jt-mGo" eventType="touchUpInside" id="zhM-Yx-NCU"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pr-Fv-ppd">
                                         <rect key="frame" x="0.0" y="121" width="200" height="101"/>
@@ -3109,6 +3115,9 @@ The end..."</string>
                                         <state key="normal" title="ROLES" backgroundImage="MRGeneralButton">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="rolesBtnPressed:" destination="PC0-jt-mGo" eventType="touchUpInside" id="ZAY-EN-9SM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buR-KZ-1DN">
                                         <rect key="frame" x="0.0" y="242" width="200" height="101"/>
@@ -3162,14 +3171,16 @@ The end..."</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="rolesBtn" destination="1Pr-Fv-ppd" id="96h-2h-al2"/>
                         <segue destination="9nD-tn-Rq4" kind="show" identifier="PauseToOptions" id="xw3-iS-S4C"/>
-                        <segue destination="TBE-rj-uHk" kind="show" id="93s-S6-tCw"/>
+                        <segue destination="TBE-rj-uHk" kind="show" identifier="PauseToHome" id="93s-S6-tCw"/>
                         <segue destination="Uxu-yi-Eea" kind="show" identifier="PauseToRules" id="I53-ci-Nq8"/>
+                        <segue destination="3SB-Ud-paO" kind="show" identifier="PauseToRoles" id="c66-br-zBn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayX-T1-lyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="356" y="771"/>
+            <point key="canvasLocation" x="356" y="779"/>
         </scene>
         <!--Player View Controller-->
         <scene sceneID="NQX-WX-jzd">
@@ -6887,10 +6898,10 @@ be a jerk ;)</string>
         <image name="portraitFiller" width="433" height="653"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jGj-z5-JdE"/>
-        <segue reference="dhy-OQ-mIy"/>
-        <segue reference="Y5H-lc-M15"/>
+        <segue reference="I53-ci-Nq8"/>
+        <segue reference="TDa-wu-gPe"/>
+        <segue reference="kkV-ey-5fO"/>
         <segue reference="DTs-jA-27W"/>
-        <segue reference="csY-zy-mJN"/>
+        <segue reference="xw3-iS-S4C"/>
     </inferredMetricsTieBreakers>
 </document>

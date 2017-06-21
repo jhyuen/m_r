@@ -106,7 +106,7 @@ class _StoryViewController: UIViewController {
     
     // Pause Button
     @IBAction func pauseBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: "StoryToPause", sender: self)
+        performSegue(withIdentifier: "StoryToPause", sender: masterPlayerArray)
     }
     
     // Repeat Voice Button
@@ -147,6 +147,12 @@ class _StoryViewController: UIViewController {
             }
         } else if segue.identifier == "StoryToChoose" {
             if let selectedVC = segue.destination as? _ChooseViewController {
+                if let thePlayerArray = sender as? Array<Player> {
+                    selectedVC.masterPlayerArray = thePlayerArray
+                }
+            }
+        } else if segue.identifier == "StoryToPause" {
+            if let selectedVC = segue.destination as? PauseViewController {
                 if let thePlayerArray = sender as? Array<Player> {
                     selectedVC.masterPlayerArray = thePlayerArray
                 }
