@@ -3828,7 +3828,7 @@ of Players</string>
                                     <action selector="pauseBtnPressed:" destination="MAm-3Z-Idg" eventType="touchUpInside" id="c4s-hf-CW6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DAY 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsO-4H-IUz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STORY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsO-4H-IUz">
                                 <rect key="frame" x="88" y="60" width="200" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="QrW-v6-5PP"/>
@@ -4064,13 +4064,13 @@ of Players</string>
                                     <action selector="pauseBtnPressed:" destination="kEY-wj-tGy" eventType="touchUpInside" id="x9e-cj-C9P"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9A4-1K-mif">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOOSE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="9A4-1K-mif">
                                 <rect key="frame" x="98" y="60" width="180" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="1Jb-w7-MfE"/>
                                     <constraint firstAttribute="height" constant="45" id="RVz-fs-sru"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Kefa-Bold" family="Kefa" pointSize="58"/>
+                                <fontDescription key="fontDescription" name="Kefa-Bold" family="Kefa" pointSize="35"/>
                                 <color key="textColor" red="0.57095879319999998" green="0.062791772189999998" blue="0.0014788985720000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -6890,7 +6890,7 @@ be a jerk ;)</string>
         <segue reference="jGj-z5-JdE"/>
         <segue reference="dhy-OQ-mIy"/>
         <segue reference="Y5H-lc-M15"/>
-        <segue reference="nFz-PG-5cK"/>
+        <segue reference="DTs-jA-27W"/>
         <segue reference="csY-zy-mJN"/>
     </inferredMetricsTieBreakers>
 </document>
