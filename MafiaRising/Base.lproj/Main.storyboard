@@ -3397,7 +3397,7 @@ of Players</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="OIN-Pa-qwo">
-                                <rect key="frame" x="72" y="169" width="231.5" height="133"/>
+                                <rect key="frame" x="72.5" y="169" width="231.5" height="133"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Jcf-M7-l50">
                                         <rect key="frame" x="0.0" y="0.0" width="231.5" height="54"/>
@@ -3523,7 +3523,7 @@ of Players</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wkj-F9-U7c">
-                                <rect key="frame" x="150.5" y="607" width="75" height="35"/>
+                                <rect key="frame" x="151" y="607" width="75" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Uws-ho-uL6"/>
                                 </constraints>
@@ -4023,6 +4023,9 @@ of Players</string>
                                             <constraint firstAttribute="height" constant="20" id="WQc-o4-GNa"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="MRFinal Story_Events_RecapC7"/>
+                                        <connections>
+                                            <action selector="repeatDirections:" destination="kEY-wj-tGy" eventType="touchUpInside" id="9C8-aa-rZf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -4033,6 +4036,9 @@ of Players</string>
                                     <constraint firstAttribute="width" constant="42" id="YJo-LQ-0aO"/>
                                 </constraints>
                                 <state key="normal" image="MRForwardButton"/>
+                                <connections>
+                                    <action selector="goToNextScreen:" destination="kEY-wj-tGy" eventType="touchUpInside" id="OAf-XQ-7MV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0G-Jt-SNy" userLabel="Pause">
                                 <rect key="frame" x="16" y="66" width="31" height="33"/>
