@@ -10,6 +10,9 @@ import UIKit
 
 class GameRolesViewController: UIViewController {
 
+    // UI Outlets
+    @IBOutlet weak var rolesScrollView: UIScrollView!
+    
     // Transfer Array
     var masterPlayerArray: Array<Player> = []
     
@@ -28,3 +31,6 @@ class GameRolesViewController: UIViewController {
     }
 
 }
+
+
+

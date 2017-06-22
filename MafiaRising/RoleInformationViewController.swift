@@ -49,14 +49,14 @@ class RoleInformationViewController: UIViewController {
             roleCharacter.text = "MODERATOR"
             roleAllegiance.text = "NEUTRAL"
             roleImg.image = UIImage(named: moderatorImg)
-            roleDescription.text = "The moderator creates an immersive story for the players to play in. By interacting with various characters in the game, the moderator controls the game's prograssion. Also, the moderator may add sound effects to dramatize the game experience."
+            roleDescription.text = "The MODERATOR creates an immersive story for the players to play in. By interacting with various characters in the game, the MODERATOR controls the game's prograssion. Also, the MODERATOR may add sound effects to dramatize the game experience."
             
         case 1:
             
             roleCharacter.text = "CITIZEN"
             roleAllegiance.text = "PRO-TOWN"
             roleImg.image = UIImage(named: citizenImg)
-            roleDescription.text = "Citizens are the main inhabitants of the town. Unlike the other roles, citizens do not have any special powers. Their role, however, is not frowned upon for they have the opportunity to vote during the tribunal. During the tribunal, citizens typically make up the majority of voters."
+            roleDescription.text = "CITIZENS are the main inhabitants of the town. Unlike the other roles, CITIZENS do not have any special powers. Their role, however, is not frowned upon for they have the opportunity to vote during the tribunal. During the tribunal, CITIZENS typically make up the majority of voters."
             
         case 2:
             

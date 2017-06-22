@@ -60,7 +60,6 @@ class _StoryViewController: UIViewController {
         print("\(masterPlayerArray[3].role)")
         print("\(masterPlayerArray[4].role)")
         
-        
         // Set main title to correct wording
         if cycle == 1 && part == 0 {
             mainTitle.text = "STORY"
