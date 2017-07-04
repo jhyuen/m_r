@@ -25,6 +25,9 @@ class _ChooseViewController: UIViewController {
     // Transfer Array
     var masterPlayerArray: Array<Player> = []
     
+    // Collection View
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     // Sound Effect Lists
     // !!! maybe make another sound effect array for tribunal sounds, not just night phase !!!
     var nightSoundEffectsArray: Array<SoundEffect> = []
@@ -42,6 +45,49 @@ class _ChooseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    /*
+    // load pictures from array
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return masterPlayerArray.count
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as UICollectionViewCell
+        
+        //let button = cell.viewWithTag(1) as! UILabel
+        
+        let img = masterPlayerArray[indexPath.row].picture
+        
+        let btnView = UIButton(type: .custom)
+        btnView.setImage(img, for: .normal)
+        
+        // Add portrait
+        cell.viewWithTag(1)?.addSubview(btnView)
+        //scrollView.addSubview(imgView)
+        
+        // Set frame of portrait
+        btnView.frame = CGRect(x: 0, y: 0, width: cell.frame.width/3, height: cell.frame.height/3)
+        
+        // Set portrait to "scale to fill"
+        btnView.contentMode = .scaleToFill
+        
+        /*
+        // Set button functionality
+        btnView.addTarget(self, action: #selector(touchPortrait), for: .touchUpInside)
+ 
+        let subLabel = UIButton(type(of: custom))
+        subLabel.image = Array[indexPath.row]
+        cell.viewWithTag(1)?.addSubview(subLabel)
+        subLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 140)
+        subLabel.textAlignment = NSTextAlignment.center
+        subLabel.textColor = UIColor.white
+        return cell
+         */
+        
+        return cell
+    } */
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -63,7 +109,7 @@ class _ChooseViewController: UIViewController {
         // Reset subPart
         subPart = 1
         
-        // load pictures from array
+        //setUpCollectionView()
         
         if part == 2 {
             
