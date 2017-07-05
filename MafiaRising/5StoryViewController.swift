@@ -124,7 +124,7 @@ class _StoryViewController: UIViewController {
     
     // Repeat Voice Button
     @IBAction func repeatVoice(_ sender: Any) {
-        
+        print("You hit the repeat button")
     }
     
     // Proceed Button

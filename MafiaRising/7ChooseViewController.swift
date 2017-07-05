@@ -109,7 +109,8 @@ class _ChooseViewController: UIViewController {
         // Reset subPart
         subPart = 1
         
-        //setUpCollectionView()
+        // !!! Remember to Call This !!!
+        setupCollectionView()
         
         if part == 2 {
             
@@ -134,6 +135,8 @@ class _ChooseViewController: UIViewController {
     
     // Repeat Button
     @IBAction func repeatDirections(_ sender: Any) {
+        
+        print("You hit the repeat button")
         // depending on subpart and cycle
         // remember to load different files
     }
@@ -218,8 +221,6 @@ class _ChooseViewController: UIViewController {
                 performSegue(withIdentifier: "ChooseToStory", sender: masterPlayerArray)
             }
         }
-        
-        
     }
     
     // Sound Effect Buttons
@@ -239,6 +240,19 @@ class _ChooseViewController: UIViewController {
     @IBAction func pressSoundEffectBtn4(_ sender: Any) {
         // play
         print("\(sE4)")
+    }
+    
+    
+    // Set Up Collection View
+    func setupCollectionView() {
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumInteritemSpacing  = 0
+        layout.minimumLineSpacing = 0
+        collectionView.register(PlayerCollectionViewCell.self, forCellWithReuseIdentifier: "playerCollectionCell")
+        collectionView.backgroundColor = nil
+        
+        collectionView.delegate = self as? UICollectionViewDelegate
+        collectionView.dataSource = self as? UICollectionViewDataSource
     }
     
     // Set each sound effect button with picture and sound
@@ -365,4 +379,41 @@ class _ChooseViewController: UIViewController {
         }
     }
 
+}
+
+extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    // Specifying the number of sections in the collectionView
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    // Specifying the number of cells in the given section
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return masterPlayerArray.count
+    }
+    
+    // We use this method to dequeue the cell and set it up
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "playerCollectionCell", for: indexPath) as! PlayerCollectionViewCell
+        cell.awakeFromNib()
+        // cell.delegate = self
+        return cell
+    }
+    
+    // We use this method to populate the data of a given cell
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        let playerCell = cell as! PlayerCollectionViewCell
+        playerCell.playerBtnView.setImage(masterPlayerArray[indexPath.row].picture, for: .normal)
+    }
+    
+    // Sets size of cell
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: (collectionView.frame.width/3.2), height: 200)
+    }
+    
+    // Tap cell functionality
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
+    }
 }

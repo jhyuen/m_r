@@ -51,6 +51,7 @@
 		2B488F351ED3AEBC00A27479 /* GameRolesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F341ED3AEBC00A27479 /* GameRolesViewController.swift */; };
 		2B488F371ED3AFBC00A27479 /* RoleInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F361ED3AFBC00A27479 /* RoleInformationViewController.swift */; };
 		2B5CC8EF1F0C0496002A04B4 /* ChooseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5CC8EE1F0C0496002A04B4 /* ChooseCollectionViewController.swift */; };
+		2B5CC8F31F0C3483002A04B4 /* PlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5CC8F21F0C3483002A04B4 /* PlayerCollectionViewCell.swift */; };
 		2B764C641EF5C37F005BC32B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B764C631EF5C37F005BC32B /* Player.swift */; };
 		2B764D141EF9E9BC005BC32B /* SoundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B764D131EF9E9BC005BC32B /* SoundEffect.swift */; };
 		2BB18CE11EDFABE3005E8515 /* Script01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB18CE01EDFABE3005E8515 /* Script01ViewController.swift */; };
@@ -167,6 +168,7 @@
 		2B488F341ED3AEBC00A27479 /* GameRolesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRolesViewController.swift; sourceTree = "<group>"; };
 		2B488F361ED3AFBC00A27479 /* RoleInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleInformationViewController.swift; sourceTree = "<group>"; };
 		2B5CC8EE1F0C0496002A04B4 /* ChooseCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseCollectionViewController.swift; sourceTree = "<group>"; };
+		2B5CC8F21F0C3483002A04B4 /* PlayerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCollectionViewCell.swift; sourceTree = "<group>"; };
 		2B764C631EF5C37F005BC32B /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		2B764D131EF9E9BC005BC32B /* SoundEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundEffect.swift; sourceTree = "<group>"; };
 		2BB18CE01EDFABE3005E8515 /* Script01ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script01ViewController.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				2B764C631EF5C37F005BC32B /* Player.swift */,
 				2B764D131EF9E9BC005BC32B /* SoundEffect.swift */,
 				2B5CC8EE1F0C0496002A04B4 /* ChooseCollectionViewController.swift */,
+				2B5CC8F21F0C3483002A04B4 /* PlayerCollectionViewCell.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -654,6 +657,7 @@
 				84D5BFDA1EE864CB0094390A /* ScriptMainVC.swift in Sources */,
 				2BC4AC171ED899D80075D142 /* Script2AViewController.swift in Sources */,
 				2B488F041ED3653700A27479 /* HomeViewController.swift in Sources */,
+				2B5CC8F31F0C3483002A04B4 /* PlayerCollectionViewCell.swift in Sources */,
 				2BC4AC031ED888E10075D142 /* Script4ViewController.swift in Sources */,
 				2B488F311ED37F6A00A27479 /* Info.swift in Sources */,
 				84AF22691EE7A224006D0EA5 /* TutorialPageVCVert1.swift in Sources */,
