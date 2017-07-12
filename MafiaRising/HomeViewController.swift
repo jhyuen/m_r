@@ -8,6 +8,9 @@
 
 import UIKit
 
+var tutorialProgress = 0;
+var scriptProgress = 0;
+
 class HomeViewController: UIViewController {
 
     override func viewDidLoad() {

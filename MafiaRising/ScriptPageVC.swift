@@ -44,10 +44,9 @@ class ScriptPageVC: UIPageViewController, UIPageViewControllerDelegate, UIPageVi
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if let firstVC = VCArray.first {
-            setViewControllers([firstVC], direction: .forward, animated: false, completion: nil)
-            currentIndex = 0
-        }
+        let firstVC = VCArray[scriptProgress]
+        setViewControllers([firstVC], direction: .forward, animated: false, completion: nil)
+        currentIndex = scriptProgress
     }
     
     private func VCInstance (name:String) -> UIViewController {
@@ -56,12 +55,15 @@ class ScriptPageVC: UIPageViewController, UIPageViewControllerDelegate, UIPageVi
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         // dismisses view when it goes off screen
+        scriptProgress = currentIndex
         if currentIndex == 0 && scrollView.contentOffset.x < (scrollView.bounds.size.width - slideOffset) {
             scrollView.contentOffset = CGPoint(x: scrollView.bounds.size.width, y: 0)
             dismissLeftToRight(theVC: self)
+            scriptProgress = 0
         } else if currentIndex == VCArray.count - 1 && scrollView.contentOffset.x > (scrollView.bounds.size.width + slideOffset) {
             scrollView.contentOffset = CGPoint(x: scrollView.bounds.size.width, y: 0)
             dismissRightToLeft(theVC: self)
+            scriptProgress = 0
         }
     }
     
@@ -70,9 +72,11 @@ class ScriptPageVC: UIPageViewController, UIPageViewControllerDelegate, UIPageVi
         if currentIndex == 0 && scrollView.contentOffset.x < (scrollView.bounds.size.width - slideOffset) {
             scrollView.contentOffset = CGPoint(x: scrollView.bounds.size.width, y: 0)
             dismissLeftToRight(theVC: self)
+            scriptProgress = 0
         } else if currentIndex == VCArray.count - 1 && scrollView.contentOffset.x > (scrollView.bounds.size.width + slideOffset) {
             scrollView.contentOffset = CGPoint(x: scrollView.bounds.size.width, y: 0)
             dismissRightToLeft(theVC: self)
+            scriptProgress = 0
         }
     }
     

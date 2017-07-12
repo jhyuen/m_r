@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MafiaRising/HomeViewController.swift"
-            timestampString = "519459620.549963"
+            timestampString = "521586252.386045"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "HomeViewController"
             landmarkType = "3">
          </BreakpointContent>
