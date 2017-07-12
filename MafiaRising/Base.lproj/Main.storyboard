@@ -850,13 +850,13 @@ Swipe right to learn more!</string>
                                     <action selector="backBtnPressed:" destination="3SB-Ud-paO" eventType="touchUpInside" id="RtL-hA-2uk"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibg-7h-XsT">
-                                <rect key="frame" x="36" y="158" width="303" height="479"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibg-7h-XsT">
+                                <rect key="frame" x="46" y="138" width="283" height="499"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ibg-7h-XsT" firstAttribute="top" secondItem="RAf-Vm-umN" secondAttribute="bottom" constant="30" id="2wD-M1-BBA"/>
+                            <constraint firstItem="ibg-7h-XsT" firstAttribute="top" secondItem="RAf-Vm-umN" secondAttribute="bottom" constant="10" id="2wD-M1-BBA"/>
                             <constraint firstItem="K6s-cl-ddo" firstAttribute="top" secondItem="O0T-23-gCK" secondAttribute="bottom" id="A8P-LE-CVk"/>
                             <constraint firstItem="ztK-P8-Uac" firstAttribute="top" secondItem="K6s-cl-ddo" secondAttribute="bottom" id="Alb-cn-1Vb"/>
                             <constraint firstAttribute="trailing" secondItem="K6s-cl-ddo" secondAttribute="trailing" id="JeD-Jd-Cn8"/>
@@ -866,9 +866,9 @@ Swipe right to learn more!</string>
                             <constraint firstItem="2Al-5x-NV5" firstAttribute="centerY" secondItem="Yry-rb-IiQ" secondAttribute="centerY" id="RHq-mh-ujB"/>
                             <constraint firstAttribute="trailing" secondItem="cBx-WQ-A8g" secondAttribute="trailing" id="WI7-R6-wqu"/>
                             <constraint firstItem="2Al-5x-NV5" firstAttribute="centerX" secondItem="Ljy-zk-PBh" secondAttribute="centerX" id="YNq-0D-Aof"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ibg-7h-XsT" secondAttribute="trailing" constant="20" id="d5x-MT-ydi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ibg-7h-XsT" secondAttribute="trailing" constant="30" id="d5x-MT-ydi"/>
                             <constraint firstItem="K6s-cl-ddo" firstAttribute="leading" secondItem="Ljy-zk-PBh" secondAttribute="leading" id="gO4-qM-KjT"/>
-                            <constraint firstItem="ibg-7h-XsT" firstAttribute="leading" secondItem="Ljy-zk-PBh" secondAttribute="leadingMargin" constant="20" id="h4x-Mt-uZX"/>
+                            <constraint firstItem="ibg-7h-XsT" firstAttribute="leading" secondItem="Ljy-zk-PBh" secondAttribute="leadingMargin" constant="30" id="h4x-Mt-uZX"/>
                             <constraint firstItem="Yry-rb-IiQ" firstAttribute="leading" secondItem="Ljy-zk-PBh" secondAttribute="leadingMargin" id="hOi-VL-DhQ"/>
                             <constraint firstItem="cBx-WQ-A8g" firstAttribute="top" secondItem="Ljy-zk-PBh" secondAttribute="top" id="jm1-Bn-k7P"/>
                             <constraint firstItem="ztK-P8-Uac" firstAttribute="top" secondItem="ibg-7h-XsT" secondAttribute="bottom" constant="30" id="se6-TL-uym"/>
@@ -6898,9 +6898,9 @@ be a jerk ;)</string>
         <image name="portraitFiller" width="433" height="653"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Y5H-lc-M15"/>
+        <segue reference="dhy-OQ-mIy"/>
+        <segue reference="kkV-ey-5fO"/>
         <segue reference="nFz-PG-5cK"/>
-        <segue reference="wNd-ep-vfX"/>
         <segue reference="xw3-iS-S4C"/>
         <segue reference="I53-ci-Nq8"/>
     </inferredMetricsTieBreakers>

@@ -409,7 +409,9 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     // Sets size of cell
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (collectionView.frame.width/3.2), height: 200)
+        return CGSize(width: (collectionView.frame.width/3.2), height: collectionView.frame.height/2.05)
+        // 200
+        // 2.05
     }
     
     // Tap cell functionality
