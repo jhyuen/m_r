@@ -18,6 +18,12 @@ class _ReadyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // !!! populating the master array for testing
+        let image = UIImage(named: "MRFinal RolesCitizen")
+        for _ in 1...7 {
+            masterPlayerArray.append(Player(picture: image!, role: "CITIZEN"))
+        }
     }
     
     // Pause Button
