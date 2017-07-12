@@ -850,13 +850,13 @@ Swipe right to learn more!</string>
                                     <action selector="backBtnPressed:" destination="3SB-Ud-paO" eventType="touchUpInside" id="RtL-hA-2uk"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibg-7h-XsT">
-                                <rect key="frame" x="46" y="138" width="283" height="499"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibg-7h-XsT">
+                                <rect key="frame" x="46" y="148" width="283" height="489"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ibg-7h-XsT" firstAttribute="top" secondItem="RAf-Vm-umN" secondAttribute="bottom" constant="10" id="2wD-M1-BBA"/>
+                            <constraint firstItem="ibg-7h-XsT" firstAttribute="top" secondItem="RAf-Vm-umN" secondAttribute="bottom" constant="20" id="2wD-M1-BBA"/>
                             <constraint firstItem="K6s-cl-ddo" firstAttribute="top" secondItem="O0T-23-gCK" secondAttribute="bottom" id="A8P-LE-CVk"/>
                             <constraint firstItem="ztK-P8-Uac" firstAttribute="top" secondItem="K6s-cl-ddo" secondAttribute="bottom" id="Alb-cn-1Vb"/>
                             <constraint firstAttribute="trailing" secondItem="K6s-cl-ddo" secondAttribute="trailing" id="JeD-Jd-Cn8"/>
@@ -3411,7 +3411,7 @@ of Players</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="OIN-Pa-qwo">
-                                <rect key="frame" x="72" y="169" width="231.5" height="133"/>
+                                <rect key="frame" x="72.5" y="169" width="231.5" height="133"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Jcf-M7-l50">
                                         <rect key="frame" x="0.0" y="0.0" width="231.5" height="54"/>
@@ -3537,7 +3537,7 @@ of Players</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wkj-F9-U7c">
-                                <rect key="frame" x="150.5" y="607" width="75" height="35"/>
+                                <rect key="frame" x="150" y="607" width="75" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Uws-ho-uL6"/>
                                 </constraints>
@@ -6898,9 +6898,9 @@ be a jerk ;)</string>
         <image name="portraitFiller" width="433" height="653"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dhy-OQ-mIy"/>
-        <segue reference="kkV-ey-5fO"/>
+        <segue reference="wNd-ep-vfX"/>
         <segue reference="nFz-PG-5cK"/>
+        <segue reference="Y5H-lc-M15"/>
         <segue reference="xw3-iS-S4C"/>
         <segue reference="I53-ci-Nq8"/>
     </inferredMetricsTieBreakers>

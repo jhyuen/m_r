@@ -109,7 +109,7 @@ class _ChooseViewController: UIViewController {
         // Reset subPart
         subPart = 1
         
-        // !!! Remember to Call This !!!
+        // Remember to Call This
         setupCollectionView()
         
         if part == 2 {
@@ -147,7 +147,9 @@ class _ChooseViewController: UIViewController {
         // Finish Mafia Selection
         if part == 2 && subPart == 1 {
             
-            // checked box is targetted
+            // checked box is targeted
+            // selectedPlayer.attemptMurder
+            
             // uncheck all boxes
             
             if policeExist {
@@ -173,6 +175,9 @@ class _ChooseViewController: UIViewController {
         } else if part == 2 && subPart == 2 {
             
             // checked box is targetted
+            // if selectedPlayer.role == "MAFIA" {
+            // put thumbs up } else { thumbs down}
+            
             // uncheck all boxes
             
             if doctorExist {
@@ -195,6 +200,7 @@ class _ChooseViewController: UIViewController {
         } else if part == 2 && subPart == 3 {
             
             // checked box is targetted
+            // selectedPlayer.protect
             // uncheck all boxes
             
             // update masterPlayerArray with decisions
@@ -405,6 +411,9 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         let playerCell = cell as! PlayerCollectionViewCell
         playerCell.playerBtnView.setImage(masterPlayerArray[indexPath.row].picture, for: .normal)
+        if !masterPlayerArray[indexPath.row].isDead {
+            playerCell.playerBtnView.addTarget(self, action: #selector(selectPlayer(sender:)), for: .touchUpInside)
+        }
     }
     
     // Sets size of cell
@@ -417,5 +426,19 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
     // Tap cell functionality
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.row)
+    }
+    
+    func selectPlayer(sender: UIButton) {
+        //sender.tintColor = UIColor.red
+        /* if let image = sender.imageView?.image?.withRenderingMode(.alwaysTemplate) {
+            sender.setImage(image, for: .normal)
+            sender.tintColor = UIColor.red
+        }
+        /*
+         // Add the subview to the Button
+         contentView.addSubview(overlay)
+         */ */
+        
+        print("selecting person")
     }
 }
