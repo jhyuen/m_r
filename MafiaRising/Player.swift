@@ -80,6 +80,10 @@ class Player {
     func murder() {
         _isDead = true
         _isTargeted = false
+        
+        
+        //_picture.layer.borderColor = UIColor.red.withAlphaComponent(0.5).cgColor
+        //self._picture.layer.borderWidth = 1000
     }
     
 }
