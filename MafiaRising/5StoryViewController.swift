@@ -109,7 +109,9 @@ class _StoryViewController: UIViewController {
             // imgView.contentMode = .scaleToFill
             
             // Set button functionality
-            btnView.addTarget(self, action: #selector(touchPortrait), for: .touchUpInside)
+            if !masterPlayerArray[player].isDead {
+                btnView.addTarget(self, action: #selector(touchPortrait), for: .touchUpInside)
+            }
         
         }
         

@@ -20,13 +20,11 @@ class _ReadyViewController: UIViewController {
         super.viewDidLoad()
         
         // !!! populating the master array for testing
-        /*
         let image = UIImage(named: "MRFinal RolesCitizen")
         for _ in 1...7 {
             masterPlayerArray.append(Player(picture: image!, role: "CITIZEN"))
         }
         masterPlayerArray[5].murder()
-        */
     }
     
     // Pause Button

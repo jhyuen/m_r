@@ -41,6 +41,9 @@ class _ChooseViewController: UIViewController {
     
     // Subpart Instantiation
     var subPart: Int = 1
+    
+    // Selected Player Index Instantiation
+    var selectedPlayerIndex: Int = -1
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -410,7 +413,13 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
     // We use this method to populate the data of a given cell
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         let playerCell = cell as! PlayerCollectionViewCell
-        playerCell.playerBtnView.setImage(masterPlayerArray[indexPath.row].picture, for: .normal)
+        let imgView = masterPlayerArray[indexPath.row].pictureView
+        // adds imageView to button subView
+        playerCell.playerBtnView.addSubview(imgView)
+        // fits imageView to bounds of button
+        imgView.frame = playerCell.playerBtnView.bounds
+        // tag is 1 greater than index to avoid default tag
+        playerCell.playerBtnView.tag = indexPath.row + 1
         if !masterPlayerArray[indexPath.row].isDead {
             playerCell.playerBtnView.addTarget(self, action: #selector(selectPlayer(sender:)), for: .touchUpInside)
         }
@@ -429,16 +438,22 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func selectPlayer(sender: UIButton) {
-        //sender.tintColor = UIColor.red
-        /* if let image = sender.imageView?.image?.withRenderingMode(.alwaysTemplate) {
-            sender.setImage(image, for: .normal)
-            sender.tintColor = UIColor.red
-        }
-        /*
-         // Add the subview to the Button
-         contentView.addSubview(overlay)
-         */ */
         
+        if selectedPlayerIndex >= 0 {
+            // Has effect of untinting the currently selected button
+            masterPlayerArray[selectedPlayerIndex].pictureView.layer.borderWidth = 0
+        }
+        
+        if sender.tag > 0 {
+            // Adjust the boarders of the imageView
+            masterPlayerArray[sender.tag - 1].pictureView.layer.borderColor = UIColor.red.withAlphaComponent(0.5).cgColor
+            masterPlayerArray[sender.tag - 1].pictureView.layer.borderWidth = 1000
+        }
+        
+        // stores proper master player array index in selectedPlayerIndex
+        selectedPlayerIndex = sender.tag - 1
+        
+        print(selectedPlayerIndex)
         print("selecting person")
     }
 }

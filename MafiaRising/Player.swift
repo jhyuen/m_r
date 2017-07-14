@@ -10,17 +10,23 @@ import Foundation
 import UIKit
 class Player {
     
-    private var _picture:UIImage = UIImage(named: "m")!
+    private var _pictureView: UIImageView = UIImageView(image: UIImage(named: "m"))
     private var _isDead: Bool = false
     private var _isProtected: Bool = false
     private var _isTargeted: Bool = false
     private var _role:String = "Citizen"
     
+    var pictureView: UIImageView {
+        get {
+            return _pictureView
+        }
+    }
+    
     var picture: UIImage {
         get {
-            return _picture
+            return _pictureView.image!
         }
-     }
+    }
     
     var isDead: Bool {
         get {
@@ -54,7 +60,7 @@ class Player {
     }
     
     init(picture: UIImage, role: String) {
-        self._picture = picture
+        self._pictureView.image = picture
         self._role = role
     }
     
@@ -80,10 +86,6 @@ class Player {
     func murder() {
         _isDead = true
         _isTargeted = false
-        
-        
-        //_picture.layer.borderColor = UIColor.red.withAlphaComponent(0.5).cgColor
-        //self._picture.layer.borderWidth = 1000
     }
     
 }
