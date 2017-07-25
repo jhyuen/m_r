@@ -4288,6 +4288,9 @@ of Players</string>
                                     <constraint firstAttribute="width" constant="42" id="dp5-Us-06A"/>
                                 </constraints>
                                 <state key="normal" image="MRForwardButton"/>
+                                <connections>
+                                    <action selector="goToHome:" destination="e96-xE-FgR" eventType="touchUpInside" id="pvA-Uf-C5P"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUP-Nm-q4k" userLabel="Pause">
                                 <rect key="frame" x="16" y="66" width="31" height="33"/>
@@ -4341,6 +4344,7 @@ of Players</string>
                     <connections>
                         <outlet property="rolesScrollView" destination="fCd-Vz-N3P" id="ynX-tx-FJw"/>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="EndToPause" id="QFZ-Cg-Yd8"/>
+                        <segue destination="TBE-rj-uHk" kind="show" identifier="EndToHome" id="t2K-qO-woi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9p-ge-hZ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -6899,9 +6903,10 @@ be a jerk ;)</string>
         <image name="portraitFiller" width="433" height="653"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QFZ-Cg-Yd8"/>
-        <segue reference="nFz-PG-5cK"/>
+        <segue reference="dhy-OQ-mIy"/>
         <segue reference="kkV-ey-5fO"/>
+        <segue reference="t2K-qO-woi"/>
+        <segue reference="nFz-PG-5cK"/>
         <segue reference="bB7-vs-abW"/>
         <segue reference="jGj-z5-JdE"/>
     </inferredMetricsTieBreakers>

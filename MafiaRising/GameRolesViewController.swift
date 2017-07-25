@@ -34,6 +34,9 @@ class GameRolesViewController: UIViewController, UIScrollViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        let UITapRecognizer = UITapGestureRecognizer(target: self, action: #selector(GameRolesViewController.touchPortrait(sender:)))
+        //UITapRecognizer.delegate = self as! UIGestureRecognizerDelegate
+        
         // Set frame of ScrollView
         rolesScrollView.contentSize = CGSize(width: rolesScrollView.frame.size.width, height: (HEIGHT + SPACE)*CGFloat(masterPlayerArray.count))
         
@@ -42,37 +45,52 @@ class GameRolesViewController: UIViewController, UIScrollViewDelegate {
             
             let buttonHeight = (HEIGHT + SPACE) * (CGFloat(player))
             
-            let img = masterPlayerArray[player].picture
+            let imgView = masterPlayerArray[player].pictureView
             let roleName = masterPlayerArray[player].role
             
             let btnView = UIButton(type: .custom)
-            btnView.setImage(img, for: .normal)
+            //btnView.setImage(img, for: .normal)
+            //let imgView = img
+            
+            btnView.addSubview(imgView)
             
             let roleLbl = UILabel()
             roleLbl.text = roleName
             
             // Add portrait
             rolesScrollView.addSubview(btnView)
+            //rolesScrollView.addSubview(imgView)
             rolesScrollView.addSubview(roleLbl)
             
             if player == 0 {
                 // Set frame of portrait
                 btnView.frame = CGRect(x: 0, y: 0, width: WIDTH, height: HEIGHT)
+                //imgView.frame = CGRect(x: 0, y: 0, width: WIDTH, height: HEIGHT)
+                imgView.frame = btnView.bounds
             } else {
                 // Set frame of portrait
                 btnView.frame = CGRect(x: 0, y: buttonHeight, width: WIDTH, height: HEIGHT)
+                //imgView.frame = CGRect(x: 0, y: buttonHeight, width: WIDTH, height: HEIGHT)
+                imgView.frame = btnView.bounds
             }
             
             // Set frame of label
             roleLbl.frame = CGRect(x: WIDTH + GAP, y: buttonHeight + (HEIGHT / 2) - (FONTSIZE / 2), width: 125, height: FONTSIZE)
             
             // Set portrait to "scale to fill"
-            btnView.contentMode = .scaleAspectFit
+            //btnView.contentMode = .scaleAspectFit
+            btnView.contentMode = .scaleToFill
+            imgView.contentMode = .scaleToFill
+            
             // set label font
             roleLbl.font = UIFont(name: "Kefa", size: FONTSIZE)
             
             // Set button functionality
             btnView.addTarget(self, action: #selector(touchPortrait), for: .touchUpInside)
+            //imgView.addTarget(self, action: #selector(touchPortrait), for: .touchUpInside)
+            
+            //imgView.addGestureRecognizer(UITapRecognizer)
+            //imgView.isUserInteractionEnabled = true
             
         }
     }
@@ -82,7 +100,7 @@ class GameRolesViewController: UIViewController, UIScrollViewDelegate {
         dismiss(animated: true, completion: nil)
     }
     
-    func touchPortrait() {
+    func touchPortrait(sender: AnyObject) {
         // randNum = Int(arc4random_uniform(UInt32(profileNoisesNames.count)))
         // play profileNoisesNames[randNum]
         print("You hit a button")

@@ -82,6 +82,11 @@ class _EndViewController: UIViewController, UIScrollViewDelegate {
         performSegue(withIdentifier: "EndToPause", sender: masterPlayerArray)
     }
     
+    // Proceed Button
+    @IBAction func goToHome(_ sender: Any) {
+        performSegue(withIdentifier: "EndToHome", sender: self)
+    }
+    
     func touchPortrait() {
         // randNum = Int(arc4random_uniform(UInt32(profileNoisesNames.count)))
         // play profileNoisesNames[randNum]
@@ -98,5 +103,15 @@ class _EndViewController: UIViewController, UIScrollViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EndToPause" {
+            if let selectedVC = segue.destination as? PauseViewController {
+                    if let thePlayerArray = sender as? Array<Player> {
+                        selectedVC.masterPlayerArray = thePlayerArray
+                    }
+            }
+        }
     }
 }
