@@ -3411,7 +3411,7 @@ of Players</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="OIN-Pa-qwo">
-                                <rect key="frame" x="72.5" y="169" width="231.5" height="133"/>
+                                <rect key="frame" x="72" y="169" width="231.5" height="133"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Jcf-M7-l50">
                                         <rect key="frame" x="0.0" y="0.0" width="231.5" height="54"/>
@@ -3537,7 +3537,7 @@ of Players</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wkj-F9-U7c">
-                                <rect key="frame" x="150" y="607" width="75" height="35"/>
+                                <rect key="frame" x="150.5" y="607" width="75" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Uws-ho-uL6"/>
                                 </constraints>
@@ -4311,8 +4311,8 @@ of Players</string>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCd-Vz-N3P">
-                                <rect key="frame" x="16" y="148" width="343" height="519"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCd-Vz-N3P">
+                                <rect key="frame" x="46" y="153" width="283" height="484"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -4322,16 +4322,16 @@ of Players</string>
                             <constraint firstItem="D4r-7K-5HH" firstAttribute="centerY" secondItem="Vbt-Yj-YOt" secondAttribute="centerY" id="A1z-iJ-0YG"/>
                             <constraint firstAttribute="trailing" secondItem="3K8-hN-KFz" secondAttribute="trailing" id="EUg-ym-0Z0"/>
                             <constraint firstItem="D4r-7K-5HH" firstAttribute="trailing" secondItem="jcF-mu-9iV" secondAttribute="trailingMargin" id="F6q-k4-LH3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fCd-Vz-N3P" secondAttribute="trailing" id="GXB-G0-AQq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fCd-Vz-N3P" secondAttribute="trailing" constant="30" id="GXB-G0-AQq"/>
                             <constraint firstItem="Vbt-Yj-YOt" firstAttribute="top" secondItem="zlW-vk-uC5" secondAttribute="bottom" constant="40" id="MHb-fc-xQy"/>
-                            <constraint firstItem="CfA-JK-kd5" firstAttribute="top" secondItem="fCd-Vz-N3P" secondAttribute="bottom" id="OIK-NA-SJJ"/>
+                            <constraint firstItem="CfA-JK-kd5" firstAttribute="top" secondItem="fCd-Vz-N3P" secondAttribute="bottom" constant="30" id="OIK-NA-SJJ"/>
                             <constraint firstItem="X5k-9Q-gVi" firstAttribute="leading" secondItem="jcF-mu-9iV" secondAttribute="leading" id="PhP-al-ArK"/>
                             <constraint firstItem="CfA-JK-kd5" firstAttribute="top" secondItem="3K8-hN-KFz" secondAttribute="bottom" id="RhS-WN-orx"/>
                             <constraint firstItem="3K8-hN-KFz" firstAttribute="leading" secondItem="jcF-mu-9iV" secondAttribute="leading" id="Vfz-Lo-hJK"/>
                             <constraint firstItem="3K8-hN-KFz" firstAttribute="top" secondItem="zlW-vk-uC5" secondAttribute="bottom" id="c22-eh-KNc"/>
-                            <constraint firstItem="fCd-Vz-N3P" firstAttribute="leading" secondItem="jcF-mu-9iV" secondAttribute="leadingMargin" id="c9m-8Y-Xps"/>
+                            <constraint firstItem="fCd-Vz-N3P" firstAttribute="leading" secondItem="jcF-mu-9iV" secondAttribute="leadingMargin" constant="30" id="c9m-8Y-Xps"/>
                             <constraint firstItem="y00-g8-kDk" firstAttribute="centerX" secondItem="jcF-mu-9iV" secondAttribute="centerX" id="j8x-DW-E3X"/>
-                            <constraint firstItem="fCd-Vz-N3P" firstAttribute="top" secondItem="y00-g8-kDk" secondAttribute="bottom" constant="15" id="lNG-7L-ItO"/>
+                            <constraint firstItem="fCd-Vz-N3P" firstAttribute="top" secondItem="y00-g8-kDk" secondAttribute="bottom" constant="20" id="lNG-7L-ItO"/>
                             <constraint firstAttribute="trailing" secondItem="X5k-9Q-gVi" secondAttribute="trailing" id="pj6-26-jO7"/>
                             <constraint firstItem="Vbt-Yj-YOt" firstAttribute="centerY" secondItem="nUP-Nm-q4k" secondAttribute="centerY" id="rf2-BV-WHp"/>
                             <constraint firstItem="nUP-Nm-q4k" firstAttribute="leading" secondItem="jcF-mu-9iV" secondAttribute="leadingMargin" id="uVx-YZ-2Em"/>
@@ -6899,10 +6899,10 @@ be a jerk ;)</string>
         <image name="portraitFiller" width="433" height="653"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bB7-vs-abW"/>
-        <segue reference="TDa-wu-gPe"/>
-        <segue reference="kkV-ey-5fO"/>
+        <segue reference="QFZ-Cg-Yd8"/>
         <segue reference="nFz-PG-5cK"/>
+        <segue reference="kkV-ey-5fO"/>
+        <segue reference="bB7-vs-abW"/>
         <segue reference="jGj-z5-JdE"/>
     </inferredMetricsTieBreakers>
 </document>
