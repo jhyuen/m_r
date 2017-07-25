@@ -34,7 +34,9 @@ class GameRolesViewController: UIViewController, UIScrollViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let UITapRecognizer = UITapGestureRecognizer(target: self, action: #selector(GameRolesViewController.touchPortrait(sender:)))
+        // don't worry about this recognizer code... I was trying
+        // to make an image view a button... didn't exactly work the way I wanted
+        //let UITapRecognizer = UITapGestureRecognizer(target: self, action: #selector(GameRolesViewController.touchPortrait(sender:)))
         //UITapRecognizer.delegate = self as! UIGestureRecognizerDelegate
         
         // Set frame of ScrollView
@@ -78,7 +80,6 @@ class GameRolesViewController: UIViewController, UIScrollViewDelegate {
             roleLbl.frame = CGRect(x: WIDTH + GAP, y: buttonHeight + (HEIGHT / 2) - (FONTSIZE / 2), width: 125, height: FONTSIZE)
             
             // Set portrait to "scale to fill"
-            //btnView.contentMode = .scaleAspectFit
             btnView.contentMode = .scaleToFill
             imgView.contentMode = .scaleToFill
             
@@ -89,6 +90,7 @@ class GameRolesViewController: UIViewController, UIScrollViewDelegate {
             btnView.addTarget(self, action: #selector(touchPortrait), for: .touchUpInside)
             //imgView.addTarget(self, action: #selector(touchPortrait), for: .touchUpInside)
             
+            // don't worry about this
             //imgView.addGestureRecognizer(UITapRecognizer)
             //imgView.isUserInteractionEnabled = true
             
@@ -100,6 +102,7 @@ class GameRolesViewController: UIViewController, UIScrollViewDelegate {
         dismiss(animated: true, completion: nil)
     }
     
+    // Touch Portrait
     func touchPortrait(sender: AnyObject) {
         // randNum = Int(arc4random_uniform(UInt32(profileNoisesNames.count)))
         // play profileNoisesNames[randNum]
