@@ -447,7 +447,7 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
         if sender.tag > 0 {
             // Adjust the boarders of the imageView
             masterPlayerArray[sender.tag - 1].pictureView.layer.borderColor = UIColor.red.withAlphaComponent(0.5).cgColor
-            masterPlayerArray[sender.tag - 1].pictureView.layer.borderWidth = 1000
+            masterPlayerArray[sender.tag - 1].pictureView.layer.borderWidth = 10
         }
         
         // stores proper master player array index in selectedPlayerIndex
