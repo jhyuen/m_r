@@ -10,6 +10,7 @@ import UIKit
 
 var tutorialProgress = 0;
 var scriptProgress = 0;
+var currentGameFinished = false;
 
 class HomeViewController: UIViewController {
 
@@ -30,7 +31,11 @@ class HomeViewController: UIViewController {
     }
     
     // Continue Button
-    // write some stuff
+    @IBAction func pushContinue(_ sender: Any) {
+        if !currentGameFinished {
+            
+        }
+    }
     
     // Options Button
     @IBAction func pushOptions(_ sender: Any) {

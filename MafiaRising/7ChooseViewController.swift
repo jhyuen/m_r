@@ -149,7 +149,7 @@ class _ChooseViewController: UIViewController {
     // Proceed Button
     @IBAction func goToNextScreen(_ sender: Any) {
         
-        if selectedPlayerIndex >= 0 {
+        if selectedPlayerIndex >= 0 || (roleLbl.text == "DOCTOR" && !doctorsAreAlive) || (roleLbl.text == "POLICE" && !policeAreAlive) {
             removeBorderAndIndicator()
             
             policeAreAlive = false
@@ -157,9 +157,9 @@ class _ChooseViewController: UIViewController {
             
             // reenables all players and check police and doctor status
             for player in masterPlayerArray {
-                if player.role == "POLICE" {
+                if player.role == "POLICE" && !player.isDead {
                     policeAreAlive = true
-                } else if player.role == "DOCTOR" {
+                } else if player.role == "DOCTOR" && !player.isDead {
                     doctorsAreAlive = true
                 }
                 if !player.isEnabled {
@@ -179,9 +179,15 @@ class _ChooseViewController: UIViewController {
                 if policeExist {
                     subPart = subPart + 1
                     roleLbl.text = "POLICE"
+                    if !policeAreAlive {
+                        disableAll()
+                    }
                 } else if doctorExist {
                     subPart = subPart + 2
                     roleLbl.text = "DOCTOR"
+                    if !doctorsAreAlive {
+                        disableAll()
+                    }
                 } else {
                     
                     // update masterPlayerArray with decisions
@@ -189,6 +195,7 @@ class _ChooseViewController: UIViewController {
                     
                     if checkForEndGame(players: masterPlayerArray) {
                         part = part + 1
+                        currentGameFinished = true
                         performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
                     } else {
                         part = part + 1
@@ -197,7 +204,7 @@ class _ChooseViewController: UIViewController {
                 }
                 
                 // Finish Police Selection
-            } else if part == 2 && subPart == 2 && policeAreAlive {
+            } else if part == 2 && subPart == 2 {
                 
                 // checked box is targetted
                 // if selectedPlayer.role == "MAFIA" {
@@ -208,12 +215,16 @@ class _ChooseViewController: UIViewController {
                 if doctorExist {
                     subPart = subPart + 1
                     roleLbl.text = "DOCTOR"
+                    if !doctorsAreAlive {
+                        disableAll()
+                    }
                 } else {
                     
                     // update masterPlayerArray with decisions
                     
                     if checkForEndGame(players: masterPlayerArray) {
                         part = part + 1
+                        currentGameFinished = true
                         performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
                     } else {
                         part = part + 1
@@ -222,11 +233,13 @@ class _ChooseViewController: UIViewController {
                 }
                 
                 // Finish Doctor Selection
-            } else if part == 2 && subPart == 3 && doctorsAreAlive {
+            } else if part == 2 && subPart == 3 {
                 
                 // checked box is targetted
                 // selectedPlayer.protect
-                masterPlayerArray[selectedPlayerIndex].protect()
+                if doctorsAreAlive {
+                    masterPlayerArray[selectedPlayerIndex].protect()
+                }
                 // uncheck all boxes
                 
                 // update masterPlayerArray with decisions
@@ -239,6 +252,7 @@ class _ChooseViewController: UIViewController {
                 
                 if checkForEndGame(players: masterPlayerArray) {
                     part = part + 1
+                    currentGameFinished = true
                     performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
                 } else {
                     part = part + 1
@@ -253,6 +267,7 @@ class _ChooseViewController: UIViewController {
                 
                 if checkForEndGame(players: masterPlayerArray) {
                     part = part + 1
+                    currentGameFinished = true
                     performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
                 } else {
                     cycle = cycle + 1
@@ -260,6 +275,10 @@ class _ChooseViewController: UIViewController {
                     performSegue(withIdentifier: "ChooseToStory", sender: masterPlayerArray)
                 }
             }
+            // reset collectionView to first column
+            collectionView.contentOffset.x = 0
+             // reset selectedPlayerIndex
+            selectedPlayerIndex = -1
         }
     }
     
@@ -291,8 +310,8 @@ class _ChooseViewController: UIViewController {
         collectionView.register(PlayerCollectionViewCell.self, forCellWithReuseIdentifier: "playerCollectionCell")
         collectionView.backgroundColor = nil
         
-        collectionView.delegate = self as? UICollectionViewDelegate
-        collectionView.dataSource = self as? UICollectionViewDataSource
+        collectionView.delegate = self as UICollectionViewDelegate
+        collectionView.dataSource = self as UICollectionViewDataSource
     }
     
     // Set each sound effect button with picture and sound
@@ -419,6 +438,25 @@ class _ChooseViewController: UIViewController {
         }
     }
     
+    func disableAll() {
+        for player in masterPlayerArray {
+            player.disablePlayer()
+        }
+    }
+    
+    // Remove thumbsUp or thumbsDown from collectionView cell
+    func removeBorderAndIndicator() {
+        if selectedPlayerIndex >= 0 {
+            // Has effect of untinting the currently selected button
+            masterPlayerArray[selectedPlayerIndex].pictureView.layer.borderWidth = 0
+            let role = masterPlayerArray[selectedPlayerIndex].role
+            if  role == "MAFIA" {
+                masterPlayerArray[selectedPlayerIndex].pictureView.viewWithTag(30)?.removeFromSuperview()
+            } else {
+                masterPlayerArray[selectedPlayerIndex].pictureView.viewWithTag(31)?.removeFromSuperview()
+            }
+        }
+    }
 }
 
 extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -472,7 +510,7 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
         let borderSize = 10
         
         removeBorderAndIndicator()
-        
+     
         if sender.tag > 0 {
             // Police Select
             if roleLbl.text == "POLICE" {
@@ -487,43 +525,32 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
                         role = UIImageView(image: UIImage(named: "ThumbsDown"))
                         role.tag = 31
                     }
-                        role.frame = masterPlayerArray[sender.tag - 1].pictureView.bounds
-                        role.frame.size.width = role.frame.size.width - (2 * CGFloat(borderSize))
-                        role.frame.origin.x = role.frame.origin.x + CGFloat(borderSize)
-                        
-                        role.frame.size.height = role.frame.size.height - (2 * CGFloat(borderSize))
-                        role.frame.origin.y = role.frame.origin.y + CGFloat(borderSize)
-                        role.contentMode = .scaleAspectFit
-                        masterPlayerArray[sender.tag - 1].pictureView.addSubview(role)
+                    role.frame = masterPlayerArray[sender.tag - 1].pictureView.bounds
+                    role.frame.size.width = role.frame.size.width - (2 * CGFloat(borderSize))
+                    role.frame.origin.x = role.frame.origin.x + CGFloat(borderSize)
+                    
+                    role.frame.size.height = role.frame.size.height - (2 * CGFloat(borderSize))
+                    role.frame.origin.y = role.frame.origin.y + CGFloat(borderSize)
+                    role.contentMode = .scaleAspectFit
+                    masterPlayerArray[sender.tag - 1].pictureView.addSubview(role)
                 }
             } else {
                 // Other Selections
                 if (roleLbl.text == "DOCTOR" && doctorsAreAlive) || roleLbl.text != "DOCTOR" {
-                        masterPlayerArray[sender.tag - 1].pictureView.layer.borderColor = UIColor.white.withAlphaComponent(0.5).cgColor
+                    masterPlayerArray[sender.tag - 1].pictureView.layer.borderColor = UIColor.white.withAlphaComponent(0.5).cgColor
                 }
             }
             
-            // Set border size
-            masterPlayerArray[sender.tag - 1].pictureView.layer.borderWidth = CGFloat(borderSize)
-            
-            // Stores proper master player array index in selectedPlayerIndex
-            selectedPlayerIndex = sender.tag - 1
-            
-            print(selectedPlayerIndex)
-            print("selecting person")
-        }
-    }
-    
-    func removeBorderAndIndicator() {
-        if selectedPlayerIndex >= 0 {
-            // Has effect of untinting the currently selected button
-            masterPlayerArray[selectedPlayerIndex].pictureView.layer.borderWidth = 0
-            let role = masterPlayerArray[selectedPlayerIndex].role
-            if  role == "MAFIA" {
-                masterPlayerArray[selectedPlayerIndex].pictureView.viewWithTag(30)?.removeFromSuperview()
-            } else {
-                masterPlayerArray[selectedPlayerIndex].pictureView.viewWithTag(31)?.removeFromSuperview()
-            } 
+            if !((roleLbl.text == "DOCTOR" && !doctorsAreAlive) || (roleLbl.text == "POLICE" && !policeAreAlive)) {
+                // Set border size
+                masterPlayerArray[sender.tag - 1].pictureView.layer.borderWidth = CGFloat(borderSize)
+                
+                // Stores proper master player array index in selectedPlayerIndex
+                selectedPlayerIndex = sender.tag - 1
+                
+                print(selectedPlayerIndex)
+                print("selecting person")
+            }
         }
     }
 }

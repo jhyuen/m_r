@@ -14,11 +14,11 @@ class _PlayerViewController: UIViewController {
     @IBOutlet weak var numPlayerField: UITextField!
     @IBOutlet weak var toolBar: UIToolbar!
     @IBOutlet weak var errorLabel: UILabel!
-    
+
     // Constants
     let minimumPlayers = 5
     let maximumPlayers = 30
-    
+
     var masterPlayerArray: Array<Player> = []
     
     override func viewDidLoad() {
@@ -26,6 +26,9 @@ class _PlayerViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        // Reset game status
+        currentGameFinished = false
+        
         errorLabel.isHidden = true
         numPlayerField.text = ""
         

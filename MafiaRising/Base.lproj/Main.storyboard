@@ -69,6 +69,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="285" height="65"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
                                                 <state key="normal" title="CONTINUE" backgroundImage="MRFinal HomeC3"/>
+                                                <connections>
+                                                    <action selector="pushContinue:" destination="TBE-rj-uHk" eventType="touchUpInside" id="KRk-vG-bfz"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -135,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zua-Ax-IX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="356" y="99"/>
+            <point key="canvasLocation" x="356" y="118"/>
         </scene>
         <!--Options View Controller-->
         <scene sceneID="36b-ou-0Ex">
@@ -3411,7 +3414,7 @@ of Players</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="OIN-Pa-qwo">
-                                <rect key="frame" x="72" y="169" width="231.5" height="133"/>
+                                <rect key="frame" x="72.5" y="169" width="231.5" height="133"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Jcf-M7-l50">
                                         <rect key="frame" x="0.0" y="0.0" width="231.5" height="54"/>
@@ -3537,7 +3540,7 @@ of Players</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wkj-F9-U7c">
-                                <rect key="frame" x="150.5" y="607" width="75" height="35"/>
+                                <rect key="frame" x="150" y="607" width="75" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Uws-ho-uL6"/>
                                 </constraints>
@@ -6903,11 +6906,11 @@ be a jerk ;)</string>
         <image name="portraitFiller" width="433" height="653"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dhy-OQ-mIy"/>
-        <segue reference="kkV-ey-5fO"/>
         <segue reference="t2K-qO-woi"/>
         <segue reference="nFz-PG-5cK"/>
-        <segue reference="bB7-vs-abW"/>
+        <segue reference="Y5H-lc-M15"/>
+        <segue reference="dhy-OQ-mIy"/>
         <segue reference="jGj-z5-JdE"/>
+        <segue reference="bB7-vs-abW"/>
     </inferredMetricsTieBreakers>
 </document>
