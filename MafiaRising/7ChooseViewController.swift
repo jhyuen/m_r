@@ -147,21 +147,69 @@ class _ChooseViewController: UIViewController {
     // Proceed Button
     @IBAction func goToNextScreen(_ sender: Any) {
         
-        // Finish Mafia Selection
-        if part == 2 && subPart == 1 {
+        if selectedPlayerIndex >= 0 {
+            // Has effect of untinting the currently selected button
+            masterPlayerArray[selectedPlayerIndex].pictureView.layer.borderWidth = 0
             
-            // checked box is targeted
-            // selectedPlayer.attemptMurder
             
-            // uncheck all boxes
-            
-            if policeExist {
-                subPart = subPart + 1
-                roleLbl.text = "POLICE"
-            } else if doctorExist {
-                subPart = subPart + 2
-                roleLbl.text = "DOCTOR"
-            } else {
+            // Finish Mafia Selection
+            if part == 2 && subPart == 1 {
+                
+                // checked box is targeted
+                // selectedPlayer.attemptMurder
+                
+                // uncheck all boxes
+                
+                if policeExist {
+                    subPart = subPart + 1
+                    roleLbl.text = "POLICE"
+                } else if doctorExist {
+                    subPart = subPart + 2
+                    roleLbl.text = "DOCTOR"
+                } else {
+                    
+                    // update masterPlayerArray with decisions
+                    
+                    if checkForEndGame(players: masterPlayerArray) {
+                        part = part + 1
+                        performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
+                    } else {
+                        part = part + 1
+                        performSegue(withIdentifier: "ChooseToDay", sender: masterPlayerArray)
+                    }
+                }
+                
+                // Finish Police Selection
+            } else if part == 2 && subPart == 2 {
+                
+                // checked box is targetted
+                // if selectedPlayer.role == "MAFIA" {
+                // put thumbs up } else { thumbs down}
+                
+                // uncheck all boxes
+                
+                if doctorExist {
+                    subPart = subPart + 1
+                    roleLbl.text = "DOCTOR"
+                } else {
+                    
+                    // update masterPlayerArray with decisions
+                    
+                    if checkForEndGame(players: masterPlayerArray) {
+                        part = part + 1
+                        performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
+                    } else {
+                        part = part + 1
+                        performSegue(withIdentifier: "ChooseToDay", sender: masterPlayerArray)
+                    }
+                }
+                
+                // Finish Doctor Selection
+            } else if part == 2 && subPart == 3 {
+                
+                // checked box is targetted
+                // selectedPlayer.protect
+                // uncheck all boxes
                 
                 // update masterPlayerArray with decisions
                 
@@ -172,21 +220,9 @@ class _ChooseViewController: UIViewController {
                     part = part + 1
                     performSegue(withIdentifier: "ChooseToDay", sender: masterPlayerArray)
                 }
-            }
-            
-        // Finish Police Selection
-        } else if part == 2 && subPart == 2 {
-            
-            // checked box is targetted
-            // if selectedPlayer.role == "MAFIA" {
-            // put thumbs up } else { thumbs down}
-            
-            // uncheck all boxes
-            
-            if doctorExist {
-                subPart = subPart + 1
-                roleLbl.text = "DOCTOR"
-            } else {
+                
+                // Finish Tribunal Selection
+            } else if part == 5 {
                 
                 // update masterPlayerArray with decisions
                 
@@ -194,40 +230,10 @@ class _ChooseViewController: UIViewController {
                     part = part + 1
                     performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
                 } else {
-                    part = part + 1
-                    performSegue(withIdentifier: "ChooseToDay", sender: masterPlayerArray)
+                    cycle = cycle + 1
+                    part = 0
+                    performSegue(withIdentifier: "ChooseToStory", sender: masterPlayerArray)
                 }
-            }
-            
-        // Finish Doctor Selection
-        } else if part == 2 && subPart == 3 {
-            
-            // checked box is targetted
-            // selectedPlayer.protect
-            // uncheck all boxes
-            
-            // update masterPlayerArray with decisions
-            
-            if checkForEndGame(players: masterPlayerArray) {
-                part = part + 1
-                performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
-            } else {
-                part = part + 1
-                performSegue(withIdentifier: "ChooseToDay", sender: masterPlayerArray)
-            }
-            
-        // Finish Tribunal Selection
-        } else if part == 5 {
-            
-            // update masterPlayerArray with decisions
-            
-            if checkForEndGame(players: masterPlayerArray) {
-                part = part + 1
-                performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
-            } else {
-                cycle = cycle + 1
-                part = 0
-                performSegue(withIdentifier: "ChooseToStory", sender: masterPlayerArray)
             }
         }
     }
@@ -446,7 +452,13 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
         
         if sender.tag > 0 {
             // Adjust the boarders of the imageView
-            masterPlayerArray[sender.tag - 1].pictureView.layer.borderColor = UIColor.red.withAlphaComponent(0.5).cgColor
+            if  masterPlayerArray[sender.tag - 1].role == "MAFIA" {
+                masterPlayerArray[sender.tag - 1].pictureView.layer.borderColor = UIColor.red.withAlphaComponent(0.5).cgColor
+            } else if  masterPlayerArray[sender.tag - 1].role == "CITIZEN" {
+                masterPlayerArray[sender.tag - 1].pictureView.layer.borderColor = UIColor.green.withAlphaComponent(0.5).cgColor
+            }else {
+                masterPlayerArray[sender.tag - 1].pictureView.layer.borderColor = UIColor.white.withAlphaComponent(0.5).cgColor
+            }
             masterPlayerArray[sender.tag - 1].pictureView.layer.borderWidth = 10
         }
         

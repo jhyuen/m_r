@@ -20,9 +20,18 @@ class _ReadyViewController: UIViewController {
         super.viewDidLoad()
         
         // !!! populating the master array for testing
-        let image = UIImage(named: "MRFinal RolesCitizen")
-        for _ in 1...7 {
-            masterPlayerArray.append(Player(picture: image!, role: "CITIZEN"))
+        let citImage = UIImage(named: "MRFinal RolesCitizen")
+        let mafImage = UIImage(named: "MRFinal RolesMafia")
+        let docImage = UIImage(named: "MRFinal RolesDoctor")
+        
+        for index in 1...13 {
+            if index % 3 == 0 {
+                masterPlayerArray.append(Player(picture: mafImage!, role: "MAFIA"))
+            } else if index % 11 == 0 {
+                masterPlayerArray.append(Player(picture: docImage!, role: "DOCTOR"))
+            } else {
+                masterPlayerArray.append(Player(picture: citImage!, role: "CITIZEN"))
+            }
         }
         masterPlayerArray[5].murder()
     }

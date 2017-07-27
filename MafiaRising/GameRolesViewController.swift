@@ -47,7 +47,9 @@ class GameRolesViewController: UIViewController, UIScrollViewDelegate {
             
             let buttonHeight = (HEIGHT + SPACE) * (CGFloat(player))
             
-            let imgView = masterPlayerArray[player].pictureView
+           // let imgView = masterPlayerArray[player].pictureView
+            let imgView = UIImageView(image:  masterPlayerArray[player].picture)
+            
             let roleName = masterPlayerArray[player].role
             
             let btnView = UIButton(type: .custom)
@@ -83,6 +85,10 @@ class GameRolesViewController: UIViewController, UIScrollViewDelegate {
             btnView.contentMode = .scaleToFill
             imgView.contentMode = .scaleToFill
             
+            if masterPlayerArray[player].isDead {
+                applyFilter(imageView: imgView)
+            }
+            
             // set label font
             roleLbl.font = UIFont(name: "Kefa", size: FONTSIZE)
             
@@ -116,6 +122,12 @@ class GameRolesViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    func applyFilter(imageView: UIImageView) {
+        let overlay: UIView = UIView(frame: CGRect(x: 0, y: 0, width: imageView.frame.size.width, height: imageView.frame.size.height))
+        overlay.backgroundColor = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 0.5)
+        imageView.addSubview(overlay)
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
