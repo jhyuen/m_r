@@ -14,7 +14,9 @@ class Player {
     private var _isDead: Bool = false
     private var _isProtected: Bool = false
     private var _isTargeted: Bool = false
+    private var _isEnabled: Bool = true
     private var _role:String = "Citizen"
+
     
     var pictureView: UIImageView {
         get {
@@ -43,6 +45,12 @@ class Player {
     var isTargeted: Bool {
         get {
             return _isTargeted
+        }
+    }
+    
+    var isEnabled: Bool {
+        get {
+            return _isEnabled
         }
     }
     
@@ -90,4 +98,19 @@ class Player {
         self._pictureView.layer.borderWidth = 100
     }
     
+    func disablePlayer() {
+        self._pictureView.layer.borderColor = UIColor.black.withAlphaComponent(0.5).cgColor
+        self._pictureView.layer.borderWidth = 100
+        self._isEnabled = false
+    }
+    
+    func enablePlayer() {
+        if self.isDead {
+            self._pictureView.layer.borderColor = UIColor.red.withAlphaComponent(0.5).cgColor
+            self._pictureView.layer.borderWidth = 100
+        } else {
+            self._pictureView.layer.borderWidth = 0
+        }
+        self._isEnabled = true
+    }
 }

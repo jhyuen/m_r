@@ -91,9 +91,12 @@ class _StoryViewController: UIViewController {
         for player in 0..<masterPlayerArray.count {
             
             let img = masterPlayerArray[player].picture
-  
+            let imgView = UIImageView(image: img)
+            
             let btnView = UIButton(type: .custom)
-            btnView.setImage(img, for: .normal)
+            btnView.addSubview(imgView)
+            
+            //btnView.setImage(img, for: .normal)
             //let imgView = UIImageView(image: img)
             
             // Add portrait
@@ -104,13 +107,17 @@ class _StoryViewController: UIViewController {
             btnView.frame = CGRect(x: -WIDTH + ((WIDTH) * CGFloat(player+1)), y: 0, width: WIDTH, height: HEIGHT)
             // imgView.frame = CGRect(x: -WIDTH + ((WIDTH) * CGFloat(player+1)), y: 0, width: WIDTH, height: HEIGHT)
             
+            imgView.frame = btnView.bounds
+            
             // Set portrait to "scale to fill"
             btnView.contentMode = .scaleToFill
-            // imgView.contentMode = .scaleToFill
+            imgView.contentMode = .scaleToFill
             
             // Set button functionality
             if !masterPlayerArray[player].isDead {
                 btnView.addTarget(self, action: #selector(touchPortrait), for: .touchUpInside)
+            } else {
+                applyFilter(imageView: imgView)
             }
         
         }
@@ -147,6 +154,13 @@ class _StoryViewController: UIViewController {
             
             performSegue(withIdentifier: "StoryToChoose", sender: masterPlayerArray)
         }
+    }
+    
+    // adds red tint to imageView
+    func applyFilter(imageView: UIImageView) {
+        let overlay: UIView = UIView(frame: CGRect(x: 0, y: 0, width: imageView.frame.size.width, height: imageView.frame.size.height))
+        overlay.backgroundColor = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 0.5)
+        imageView.addSubview(overlay)
     }
     
     func touchPortrait() {

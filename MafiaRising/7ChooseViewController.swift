@@ -12,9 +12,11 @@ import UIKit
 // 1 = Mafia Defeat
 // 2 = Mafia Victory
 var conclusion: Int = 0
+var policeAreAlive = false
+var doctorsAreAlive = false
 
 class _ChooseViewController: UIViewController {
-
+    
     // UI Outlets
     @IBOutlet weak var roleLbl: UILabel!
     @IBOutlet weak var soundEffectBtn1: UIButton!
@@ -44,53 +46,53 @@ class _ChooseViewController: UIViewController {
     
     // Selected Player Index Instantiation
     var selectedPlayerIndex: Int = -1
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     /*
-    // load pictures from array
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return masterPlayerArray.count
-    }
+     // load pictures from array
+     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+     return masterPlayerArray.count
+     }
+     
+     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as UICollectionViewCell
+     
+     //let button = cell.viewWithTag(1) as! UILabel
+     
+     let img = masterPlayerArray[indexPath.row].picture
+     
+     let btnView = UIButton(type: .custom)
+     btnView.setImage(img, for: .normal)
+     
+     // Add portrait
+     cell.viewWithTag(1)?.addSubview(btnView)
+     //scrollView.addSubview(imgView)
+     
+     // Set frame of portrait
+     btnView.frame = CGRect(x: 0, y: 0, width: cell.frame.width/3, height: cell.frame.height/3)
+     
+     // Set portrait to "scale to fill"
+     btnView.contentMode = .scaleToFill
+     
+     /*
+     // Set button functionality
+     btnView.addTarget(self, action: #selector(touchPortrait), for: .touchUpInside)
+     
+     let subLabel = UIButton(type(of: custom))
+     subLabel.image = Array[indexPath.row]
+     cell.viewWithTag(1)?.addSubview(subLabel)
+     subLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 140)
+     subLabel.textAlignment = NSTextAlignment.center
+     subLabel.textColor = UIColor.white
+     return cell
+     */
+     
+     return cell
+     } */
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as UICollectionViewCell
-        
-        //let button = cell.viewWithTag(1) as! UILabel
-        
-        let img = masterPlayerArray[indexPath.row].picture
-        
-        let btnView = UIButton(type: .custom)
-        btnView.setImage(img, for: .normal)
-        
-        // Add portrait
-        cell.viewWithTag(1)?.addSubview(btnView)
-        //scrollView.addSubview(imgView)
-        
-        // Set frame of portrait
-        btnView.frame = CGRect(x: 0, y: 0, width: cell.frame.width/3, height: cell.frame.height/3)
-        
-        // Set portrait to "scale to fill"
-        btnView.contentMode = .scaleToFill
-        
-        /*
-        // Set button functionality
-        btnView.addTarget(self, action: #selector(touchPortrait), for: .touchUpInside)
- 
-        let subLabel = UIButton(type(of: custom))
-        subLabel.image = Array[indexPath.row]
-        cell.viewWithTag(1)?.addSubview(subLabel)
-        subLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 140)
-        subLabel.textAlignment = NSTextAlignment.center
-        subLabel.textColor = UIColor.white
-        return cell
-         */
-        
-        return cell
-    } */
-
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -134,7 +136,7 @@ class _ChooseViewController: UIViewController {
     // Pause Button
     @IBAction func pauseBtnPressed(_ sender: Any) {
         performSegue(withIdentifier: "ChooseToPause", sender: masterPlayerArray)
-    } 
+    }
     
     // Repeat Button
     @IBAction func repeatDirections(_ sender: Any) {
@@ -148,15 +150,29 @@ class _ChooseViewController: UIViewController {
     @IBAction func goToNextScreen(_ sender: Any) {
         
         if selectedPlayerIndex >= 0 {
-            // Has effect of untinting the currently selected button
-            masterPlayerArray[selectedPlayerIndex].pictureView.layer.borderWidth = 0
+            removeBorderAndIndicator()
             
+            policeAreAlive = false
+            doctorsAreAlive = false
+            
+            // reenables all players and check police and doctor status
+            for player in masterPlayerArray {
+                if player.role == "POLICE" {
+                    policeAreAlive = true
+                } else if player.role == "DOCTOR" {
+                    doctorsAreAlive = true
+                }
+                if !player.isEnabled {
+                    player.enablePlayer()
+                }
+            }
             
             // Finish Mafia Selection
             if part == 2 && subPart == 1 {
                 
                 // checked box is targeted
                 // selectedPlayer.attemptMurder
+                masterPlayerArray[selectedPlayerIndex].attemptMurder()
                 
                 // uncheck all boxes
                 
@@ -169,6 +185,7 @@ class _ChooseViewController: UIViewController {
                 } else {
                     
                     // update masterPlayerArray with decisions
+                    masterPlayerArray[selectedPlayerIndex].murder()
                     
                     if checkForEndGame(players: masterPlayerArray) {
                         part = part + 1
@@ -180,7 +197,7 @@ class _ChooseViewController: UIViewController {
                 }
                 
                 // Finish Police Selection
-            } else if part == 2 && subPart == 2 {
+            } else if part == 2 && subPart == 2 && policeAreAlive {
                 
                 // checked box is targetted
                 // if selectedPlayer.role == "MAFIA" {
@@ -205,13 +222,20 @@ class _ChooseViewController: UIViewController {
                 }
                 
                 // Finish Doctor Selection
-            } else if part == 2 && subPart == 3 {
+            } else if part == 2 && subPart == 3 && doctorsAreAlive {
                 
                 // checked box is targetted
                 // selectedPlayer.protect
+                masterPlayerArray[selectedPlayerIndex].protect()
                 // uncheck all boxes
                 
                 // update masterPlayerArray with decisions
+                for player in masterPlayerArray {
+                    if player.isTargeted && !player.isProtected {
+                        player.murder()
+                    }
+                    player.save()
+                }
                 
                 if checkForEndGame(players: masterPlayerArray) {
                     part = part + 1
@@ -225,6 +249,7 @@ class _ChooseViewController: UIViewController {
             } else if part == 5 {
                 
                 // update masterPlayerArray with decisions
+                masterPlayerArray[selectedPlayerIndex].murder()
                 
                 if checkForEndGame(players: masterPlayerArray) {
                     part = part + 1
@@ -273,21 +298,21 @@ class _ChooseViewController: UIViewController {
     // Set each sound effect button with picture and sound
     func updateSounds(arrayType: Array<SoundEffect>) {
         
-         // Generate tag array
-         var soundEffectsIndex = [Int](repeating: 0, count: arrayType.count)
-         
-         // Loop through number of sound effect buttons
-         for soundEffectNum in 1...4 {
-         
+        // Generate tag array
+        var soundEffectsIndex = [Int](repeating: 0, count: arrayType.count)
+        
+        // Loop through number of sound effect buttons
+        for soundEffectNum in 1...4 {
+            
             var nextIndex: Int
-         
+            
             repeat {
                 nextIndex = Int(arc4random_uniform(UInt32(arrayType.count)))
             } while soundEffectsIndex[nextIndex] == 1
-         
+            
             // Set sound effect button with random sound and corresponding picture
             switch soundEffectNum {
-         
+                
             case 1:
                 // Tag Index
                 soundEffectsIndex[nextIndex] = 1
@@ -323,7 +348,7 @@ class _ChooseViewController: UIViewController {
             default:
                 print("You have found a bug!!! Congratulations!!!")
             }
-         
+            
         }
     }
     
@@ -380,11 +405,11 @@ class _ChooseViewController: UIViewController {
                 }
             }
         } else if segue.identifier == "ChooseToVictory" {
-                if let selectedVC = segue.destination as? _VictoryViewController {
-                    if let thePlayerArray = sender as? Array<Player> {
-                        selectedVC.masterPlayerArray = thePlayerArray
-                    }
+            if let selectedVC = segue.destination as? _VictoryViewController {
+                if let thePlayerArray = sender as? Array<Player> {
+                    selectedVC.masterPlayerArray = thePlayerArray
                 }
+            }
         } else if segue.identifier == "ChooseToPause" {
             if let selectedVC = segue.destination as? PauseViewController {
                 if let thePlayerArray = sender as? Array<Player> {
@@ -393,7 +418,7 @@ class _ChooseViewController: UIViewController {
             }
         }
     }
-
+    
 }
 
 extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -444,28 +469,61 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func selectPlayer(sender: UIButton) {
+        let borderSize = 10
         
+        removeBorderAndIndicator()
+        
+        if sender.tag > 0 {
+            // Police Select
+            if roleLbl.text == "POLICE" {
+                var role: UIImageView
+                if  policeAreAlive {
+                    if  masterPlayerArray[sender.tag - 1].role == "MAFIA" {
+                        masterPlayerArray[sender.tag - 1].pictureView.layer.borderColor = UIColor.green.withAlphaComponent(0.5).cgColor
+                        role = UIImageView(image: UIImage(named: "ThumbsUp"))
+                        role.tag = 30
+                    } else {
+                        masterPlayerArray[sender.tag - 1].pictureView.layer.borderColor = UIColor.red.withAlphaComponent(0.5).cgColor
+                        role = UIImageView(image: UIImage(named: "ThumbsDown"))
+                        role.tag = 31
+                    }
+                        role.frame = masterPlayerArray[sender.tag - 1].pictureView.bounds
+                        role.frame.size.width = role.frame.size.width - (2 * CGFloat(borderSize))
+                        role.frame.origin.x = role.frame.origin.x + CGFloat(borderSize)
+                        
+                        role.frame.size.height = role.frame.size.height - (2 * CGFloat(borderSize))
+                        role.frame.origin.y = role.frame.origin.y + CGFloat(borderSize)
+                        role.contentMode = .scaleAspectFit
+                        masterPlayerArray[sender.tag - 1].pictureView.addSubview(role)
+                }
+            } else {
+                // Other Selections
+                if (roleLbl.text == "DOCTOR" && doctorsAreAlive) || roleLbl.text != "DOCTOR" {
+                        masterPlayerArray[sender.tag - 1].pictureView.layer.borderColor = UIColor.white.withAlphaComponent(0.5).cgColor
+                }
+            }
+            
+            // Set border size
+            masterPlayerArray[sender.tag - 1].pictureView.layer.borderWidth = CGFloat(borderSize)
+            
+            // Stores proper master player array index in selectedPlayerIndex
+            selectedPlayerIndex = sender.tag - 1
+            
+            print(selectedPlayerIndex)
+            print("selecting person")
+        }
+    }
+    
+    func removeBorderAndIndicator() {
         if selectedPlayerIndex >= 0 {
             // Has effect of untinting the currently selected button
             masterPlayerArray[selectedPlayerIndex].pictureView.layer.borderWidth = 0
+            let role = masterPlayerArray[selectedPlayerIndex].role
+            if  role == "MAFIA" {
+                masterPlayerArray[selectedPlayerIndex].pictureView.viewWithTag(30)?.removeFromSuperview()
+            } else {
+                masterPlayerArray[selectedPlayerIndex].pictureView.viewWithTag(31)?.removeFromSuperview()
+            } 
         }
-        
-        if sender.tag > 0 {
-            // Adjust the boarders of the imageView
-            if  masterPlayerArray[sender.tag - 1].role == "MAFIA" {
-                masterPlayerArray[sender.tag - 1].pictureView.layer.borderColor = UIColor.red.withAlphaComponent(0.5).cgColor
-            } else if  masterPlayerArray[sender.tag - 1].role == "CITIZEN" {
-                masterPlayerArray[sender.tag - 1].pictureView.layer.borderColor = UIColor.green.withAlphaComponent(0.5).cgColor
-            }else {
-                masterPlayerArray[sender.tag - 1].pictureView.layer.borderColor = UIColor.white.withAlphaComponent(0.5).cgColor
-            }
-            masterPlayerArray[sender.tag - 1].pictureView.layer.borderWidth = 10
-        }
-        
-        // stores proper master player array index in selectedPlayerIndex
-        selectedPlayerIndex = sender.tag - 1
-        
-        print(selectedPlayerIndex)
-        print("selecting person")
     }
 }

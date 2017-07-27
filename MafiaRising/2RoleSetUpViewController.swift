@@ -8,8 +8,8 @@
 
 import UIKit
 
-var policeExist: Bool = false
-var doctorExist: Bool = false
+var policeExist: Bool = true
+var doctorExist: Bool = true
 
 class _RoleSetUpViewController: UIViewController {
 
