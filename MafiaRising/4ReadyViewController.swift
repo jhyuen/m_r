@@ -19,30 +19,38 @@ class _ReadyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // !!! populating the master array for testing
-        let citImage = UIImage(named: "MRFinal RolesCitizen")
-        let polImage = UIImage(named: "MRFinal RolesPolice")
-        let mafImage = UIImage(named: "MRFinal RolesMafia")
-        let docImage = UIImage(named: "MRFinal RolesDoctor")
-        
-        for index in 1...13 {
-            if index % 3 == 0 {
-                masterPlayerArray.append(Player(picture: mafImage!, role: "MAFIA"))
-            } else if index % 11 == 0 {
-                masterPlayerArray.append(Player(picture: docImage!, role: "DOCTOR"))
-            } else if index % 4 == 0 {
-                masterPlayerArray.append(Player(picture: polImage!, role: "POLICE"))
-            } else {
-                masterPlayerArray.append(Player(picture: citImage!, role: "CITIZEN"))
-            }
-        }
+//        masterPlayerArray.removeAll()
+//        // !!! populating the master array for testing
+//        let citImage = UIImage(named: "MRFinal RolesCitizen")
+//        let polImage = UIImage(named: "MRFinal RolesPolice")
+//        let mafImage = UIImage(named: "MRFinal RolesMafia")
+//        let docImage = UIImage(named: "MRFinal RolesDoctor")
+//        
+//        for index in 1...13 {
+//            if index % 3 == 0 {
+//                masterPlayerArray.append(Player(picture: mafImage!, role: "MAFIA"))
+//            } else if index % 11 == 0 {
+//                masterPlayerArray.append(Player(picture: docImage!, role: "DOCTOR"))
+//            } else if index % 4 == 0 {
+//                masterPlayerArray.append(Player(picture: polImage!, role: "POLICE"))
+//            } else {
+//                masterPlayerArray.append(Player(picture: citImage!, role: "CITIZEN"))
+//            }
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         // Reset game status
+        // Reset cycle
+        cycle = 1
+        UserDefaults.standard.set(cycle, forKey: "Cycle")
+        part = 0
         currentGameFinished = false
-        savedMasterArray.removeAll()
-        savedMasterArray.append(contentsOf: masterPlayerArray)
+        UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
+        
+        savedMasterArray = masterPlayerArray
+        let data = NSKeyedArchiver.archivedData(withRootObject: savedMasterArray)
+        UserDefaults.standard.set(data, forKey: "savedMasterArray")
     }
     
     // Pause Button
@@ -52,10 +60,6 @@ class _ReadyViewController: UIViewController {
     
     // Proceed Button
     @IBAction func goToStory(_ sender: Any) {
-       // Reset cycle
-        cycle = 1
-        part = 0
-        
         performSegue(withIdentifier: "ReadyToStory", sender: masterPlayerArray)
     }
     

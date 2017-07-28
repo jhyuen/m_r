@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-class Player {
+class Player: NSObject, NSCoding {
     
     private var _pictureView: UIImageView = UIImageView(image: UIImage(named: "m"))
     private var _isDead: Bool = false
@@ -63,12 +63,21 @@ class Player {
     // Initializers
     
     // default initializer
-    init() {
+    override init() {
         
     }
     
     init(picture: UIImage, role: String) {
         self._pictureView.image = picture
+        self._role = role
+    }
+    
+    init(pictureView: UIImageView, isDead: Bool, isProtected: Bool, isTargeted: Bool, isEnabled:Bool, role: String) {
+        self._pictureView = pictureView
+        self._isDead = isDead
+        self._isProtected = isProtected
+        self._isTargeted = isTargeted
+        self._isEnabled = isEnabled
         self._role = role
     }
     
@@ -117,5 +126,34 @@ class Player {
             self._pictureView.layer.borderWidth = 0
         }
         self._isEnabled = true
+    }
+    
+    // NSCoding
+    required convenience init?(coder decoder: NSCoder) {
+        guard let pictureView = decoder.decodeObject(forKey: "pictureView") as? UIImageView,
+//            let isDead = decoder.decodeObject(forKey: "isDead") as? Bool,
+//            let isProtected = decoder.decodeObject(forKey: "isProtected") as? Bool,
+//            let isTargeted = decoder.decodeObject(forKey: "isTargeted") as? Bool,
+//            let isEnabled = decoder.decodeObject(forKey: "isEnabled") as? Bool,
+            let role = decoder.decodeObject(forKey: "role") as? String
+            else { return nil }
+        
+        self.init(
+            pictureView: pictureView,
+            isDead: decoder.decodeBool(forKey: "isDead"),
+            isProtected: decoder.decodeBool(forKey: "isProtected"),
+            isTargeted: decoder.decodeBool(forKey: "isTargeted"),
+            isEnabled: decoder.decodeBool(forKey: "isEnabled"),
+            role: role
+        )
+    }
+    
+    func encode(with coder: NSCoder) {
+        coder.encode(self._pictureView, forKey: "pictureView")
+        coder.encode(self._isDead, forKey: "isDead")
+        coder.encode(self._isProtected, forKey: "isProtected")
+        coder.encode(self._isTargeted, forKey: "isTargeted")
+        coder.encode(self._isEnabled, forKey: "isEnabled")
+        coder.encode(self._role, forKey: "role")
     }
 }

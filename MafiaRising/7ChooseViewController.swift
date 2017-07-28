@@ -199,6 +199,7 @@ class _ChooseViewController: UIViewController {
                     if checkForEndGame(players: masterPlayerArray) {
                         part = part + 1
                         currentGameFinished = true
+                        UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
                         performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
                     } else {
                         part = part + 1
@@ -228,6 +229,7 @@ class _ChooseViewController: UIViewController {
                     if checkForEndGame(players: masterPlayerArray) {
                         part = part + 1
                         currentGameFinished = true
+                        UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
                         performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
                     } else {
                         part = part + 1
@@ -256,6 +258,7 @@ class _ChooseViewController: UIViewController {
                 if checkForEndGame(players: masterPlayerArray) {
                     part = part + 1
                     currentGameFinished = true
+                    UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
                     performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
                 } else {
                     part = part + 1
@@ -272,9 +275,11 @@ class _ChooseViewController: UIViewController {
                 if checkForEndGame(players: masterPlayerArray) {
                     part = part + 1
                     currentGameFinished = true
+                    UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
                     performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
                 } else {
                     cycle = cycle + 1
+                    UserDefaults.standard.set(cycle, forKey: "Cycle")
                     part = 0
                     performSegue(withIdentifier: "ChooseToStory", sender: masterPlayerArray)
                 }
@@ -499,6 +504,8 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
         playerCell.playerBtnView.tag = indexPath.row + 1
         if !masterPlayerArray[indexPath.row].isDead {
             playerCell.playerBtnView.addTarget(self, action: #selector(selectPlayer(sender:)), for: .touchUpInside)
+        } else {
+            masterPlayerArray[indexPath.row].murder()
         }
     }
     

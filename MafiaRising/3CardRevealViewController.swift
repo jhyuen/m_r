@@ -256,4 +256,26 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
             }
         }
     }
+ // !!! REMOVE FROM FINAL PRODUCT, FOR TESTING ONLY
+    @IBAction func bypassPressed(_ sender: Any) {
+        
+        // !!! populating the master array for testing
+        let citImage = UIImage(named: "MRFinal RolesCitizen")
+        let polImage = UIImage(named: "MRFinal RolesPolice")
+        let mafImage = UIImage(named: "MRFinal RolesMafia")
+        let docImage = UIImage(named: "MRFinal RolesDoctor")
+        
+        for index in 1...masterIndexArray.count {
+            if index % 3 == 0 {
+                masterPlayerArray.append(Player(picture: mafImage!, role: "MAFIA"))
+            } else if index % 11 == 0 {
+                masterPlayerArray.append(Player(picture: docImage!, role: "DOCTOR"))
+            } else if index % 4 == 0 {
+                masterPlayerArray.append(Player(picture: polImage!, role: "POLICE"))
+            } else {
+                masterPlayerArray.append(Player(picture: citImage!, role: "CITIZEN"))
+            }
+        }
+        performSegue(withIdentifier: "CardsToReady", sender: masterPlayerArray)
+    }
 }

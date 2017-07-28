@@ -29,7 +29,9 @@ class _PlayerViewController: UIViewController {
         // Reset globals
         passedReady = false
         currentGameFinished = true;
+        UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
         isDay = false;
+        UserDefaults.standard.set(isDay, forKey: "isDay")
         
         errorLabel.isHidden = true
         numPlayerField.text = ""

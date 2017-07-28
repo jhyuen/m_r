@@ -34,7 +34,6 @@ class OptionsViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         soundEffectsSlider.value = optionsParameters.soundEffectsVol
         musicSlider.value = optionsParameters.musicVol
         directionsBtn.isChecked = optionsParameters.enableDirections
@@ -46,6 +45,12 @@ class OptionsViewController: UIViewController {
         
         optionsParameters.enableDirections = directionsBtn.isChecked
         optionsParameters.enableStory = storyBtn.isChecked
+        
+        // Store sound options
+        UserDefaults.standard.set(optionsParameters.enableDirections, forKey: "EnableDirections")
+        UserDefaults.standard.set(optionsParameters.enableStory, forKey: "EnableStory")
+        UserDefaults.standard.set(optionsParameters.musicVol, forKey: "MusicVol")
+        UserDefaults.standard.set(optionsParameters.soundEffectsVol, forKey: "SEVol")
         
         // test if options were updated
         print(optionsParameters.enableDirections)

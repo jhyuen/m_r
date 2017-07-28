@@ -40,7 +40,7 @@ class PauseViewController: UIViewController {
         if recentlyMurdered >= 0 {
             if masterPlayerArray[recentlyMurdered].isDead{
                 masterPlayerArray[recentlyMurdered].revive()
-                cycle = cycle - 1
+                UserDefaults.standard.set(cycle, forKey: "Cycle")
             }
         }
         // Untarget, unprotect, and enables all players
@@ -48,6 +48,9 @@ class PauseViewController: UIViewController {
             player.save()
             player.enablePlayer()
         }
+        savedMasterArray = masterPlayerArray
+        let data = NSKeyedArchiver.archivedData(withRootObject: savedMasterArray)
+        UserDefaults.standard.set(data, forKey: "savedMasterArray")
         performSegue(withIdentifier: "PauseToHome", sender: self)
     }
     

@@ -23,7 +23,12 @@ class _NightViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         isDay = false
+        UserDefaults.standard.set(isDay, forKey: "isDay")
         
+        savedMasterArray = masterPlayerArray
+        let data = NSKeyedArchiver.archivedData(withRootObject: savedMasterArray)
+        UserDefaults.standard.set(data, forKey: "savedMasterArray")
+
         print("NightViewController")
         print("Cycle is \(cycle)")
         print("Part is \(part)")

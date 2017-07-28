@@ -23,6 +23,39 @@ class HomeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // Load sound defaults
+        if let enableDirections = UserDefaults.standard.object(forKey: "EnableDirections") as? Bool {
+            optionsParameters.enableDirections = enableDirections
+        }
+        if let enableStory = UserDefaults.standard.object(forKey: "EnableStory") as? Bool {
+            optionsParameters.enableStory = enableStory
+        }
+        if let musicVol = UserDefaults.standard.object(forKey: "MusicVol") as? Float {
+            optionsParameters.musicVol = musicVol
+        }
+        if let soundEffectsVol = UserDefaults.standard.object(forKey: "SEVol") as? Float {
+            optionsParameters.soundEffectsVol = soundEffectsVol
+        }
+        
+        // Load game defaults
+        if let day = UserDefaults.standard.object(forKey: "isDay") as? Bool {
+            isDay = day
+        }
+        if let gameFinished = UserDefaults.standard.object(forKey: "CurrentGameFinished") as? Bool {
+            currentGameFinished = gameFinished
+        }
+        if let data = UserDefaults.standard.object(forKey: "savedMasterArray") as? Data {
+            let masterArray = NSKeyedUnarchiver.unarchiveObject(with: data)
+            savedMasterArray = masterArray as! Array<Player>
+        }
+        if let Cycle = UserDefaults.standard.object(forKey: "Cycle") as? Int {
+            cycle = Cycle
+        }
+        
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -37,6 +70,7 @@ class HomeViewController: UIViewController {
     // Continue Button
     @IBAction func pushContinue(_ sender: Any) {
         if !currentGameFinished {
+            cycle = cycle - 1
             if !isDay {
                 part = 1
                 performSegue(withIdentifier: "ContinueToNight", sender: savedMasterArray)
