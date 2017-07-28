@@ -22,6 +22,7 @@ class _DayViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        isDay = true
         
         print("DayViewController")
         print("Cycle is \(cycle)")

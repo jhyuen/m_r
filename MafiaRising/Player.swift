@@ -91,6 +91,11 @@ class Player {
         _isProtected = false
     }
     
+    func revive() {
+        _isDead = false
+        self._pictureView.layer.borderWidth = 0
+    }
+    
     func murder() {
         _isDead = true
         _isTargeted = false

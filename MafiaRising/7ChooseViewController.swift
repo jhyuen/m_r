@@ -14,6 +14,7 @@ import UIKit
 var conclusion: Int = 0
 var policeAreAlive = false
 var doctorsAreAlive = false
+var recentlyMurdered: Int = -1
 
 class _ChooseViewController: UIViewController {
     
@@ -96,6 +97,7 @@ class _ChooseViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        recentlyMurdered = -1
         
         print("ChooseViewController")
         print("Cycle is \(cycle)")
@@ -135,6 +137,7 @@ class _ChooseViewController: UIViewController {
     
     // Pause Button
     @IBAction func pauseBtnPressed(_ sender: Any) {
+        removeBorderAndIndicator(reset: true)
         performSegue(withIdentifier: "ChooseToPause", sender: masterPlayerArray)
     }
     
@@ -150,7 +153,7 @@ class _ChooseViewController: UIViewController {
     @IBAction func goToNextScreen(_ sender: Any) {
         
         if selectedPlayerIndex >= 0 || (roleLbl.text == "DOCTOR" && !doctorsAreAlive) || (roleLbl.text == "POLICE" && !policeAreAlive) {
-            removeBorderAndIndicator()
+            removeBorderAndIndicator(reset: false)
             
             policeAreAlive = false
             doctorsAreAlive = false
@@ -264,6 +267,7 @@ class _ChooseViewController: UIViewController {
                 
                 // update masterPlayerArray with decisions
                 masterPlayerArray[selectedPlayerIndex].murder()
+                recentlyMurdered = selectedPlayerIndex
                 
                 if checkForEndGame(players: masterPlayerArray) {
                     part = part + 1
@@ -445,7 +449,8 @@ class _ChooseViewController: UIViewController {
     }
     
     // Remove thumbsUp or thumbsDown from collectionView cell
-    func removeBorderAndIndicator() {
+    // if reset is true selectedPlayerIndex will be reset
+    func removeBorderAndIndicator(reset: Bool) {
         if selectedPlayerIndex >= 0 {
             // Has effect of untinting the currently selected button
             masterPlayerArray[selectedPlayerIndex].pictureView.layer.borderWidth = 0
@@ -454,6 +459,9 @@ class _ChooseViewController: UIViewController {
                 masterPlayerArray[selectedPlayerIndex].pictureView.viewWithTag(30)?.removeFromSuperview()
             } else {
                 masterPlayerArray[selectedPlayerIndex].pictureView.viewWithTag(31)?.removeFromSuperview()
+            }
+            if reset {
+                selectedPlayerIndex = -1
             }
         }
     }
@@ -509,7 +517,7 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
     func selectPlayer(sender: UIButton) {
         let borderSize = 10
         
-        removeBorderAndIndicator()
+        removeBorderAndIndicator(reset: true)
      
         if sender.tag > 0 {
             // Police Select

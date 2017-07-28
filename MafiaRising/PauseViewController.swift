@@ -36,7 +36,18 @@ class PauseViewController: UIViewController {
     
     // Home Button
     @IBAction func homeBtnPressed(_ sender: Any) {
-        // !!! possibly change sender depending on how we do continue
+        // Undo murder that occurred
+        if recentlyMurdered >= 0 {
+            if masterPlayerArray[recentlyMurdered].isDead{
+                masterPlayerArray[recentlyMurdered].revive()
+                cycle = cycle - 1
+            }
+        }
+        // Untarget, unprotect, and enables all players
+        for player in masterPlayerArray {
+            player.save()
+            player.enablePlayer()
+        }
         performSegue(withIdentifier: "PauseToHome", sender: self)
     }
     

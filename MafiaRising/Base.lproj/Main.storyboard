@@ -134,6 +134,9 @@
                         <segue destination="3B4-aq-i8L" kind="show" identifier="HomeToPlayers" id="RLX-xd-W8t"/>
                         <segue destination="Uxu-yi-Eea" kind="show" identifier="HomeToRules" id="jGj-z5-JdE"/>
                         <segue destination="9nD-tn-Rq4" kind="show" identifier="HomeToOptions" id="bB7-vs-abW"/>
+                        <segue destination="q0j-zv-644" kind="show" identifier="ContinueToReady" id="nwm-Dp-aeN"/>
+                        <segue destination="QpL-Dl-0m0" kind="show" identifier="ContinueToDay" id="YkS-pf-4aO"/>
+                        <segue destination="x6I-ks-Nig" kind="show" identifier="ContinueToNight" id="SvW-si-1fZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zua-Ax-IX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -6909,8 +6912,11 @@ be a jerk ;)</string>
         <segue reference="t2K-qO-woi"/>
         <segue reference="nFz-PG-5cK"/>
         <segue reference="Y5H-lc-M15"/>
-        <segue reference="dhy-OQ-mIy"/>
-        <segue reference="jGj-z5-JdE"/>
         <segue reference="bB7-vs-abW"/>
+        <segue reference="SvW-si-1fZ"/>
+        <segue reference="nwm-Dp-aeN"/>
+        <segue reference="YkS-pf-4aO"/>
+        <segue reference="jGj-z5-JdE"/>
+        <segue reference="TDa-wu-gPe"/>
     </inferredMetricsTieBreakers>
 </document>

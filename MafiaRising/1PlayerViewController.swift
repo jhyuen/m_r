@@ -18,7 +18,7 @@ class _PlayerViewController: UIViewController {
     // Constants
     let minimumPlayers = 5
     let maximumPlayers = 30
-
+    
     var masterPlayerArray: Array<Player> = []
     
     override func viewDidLoad() {
@@ -26,8 +26,10 @@ class _PlayerViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        // Reset game status
-        currentGameFinished = false
+        // Reset globals
+        passedReady = false
+        currentGameFinished = true;
+        isDay = false;
         
         errorLabel.isHidden = true
         numPlayerField.text = ""

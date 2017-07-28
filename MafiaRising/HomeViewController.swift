@@ -10,7 +10,11 @@ import UIKit
 
 var tutorialProgress = 0;
 var scriptProgress = 0;
-var currentGameFinished = false;
+var currentGameFinished = true;
+var isDay = false;
+var passedReady = false;
+var savedMasterArray: Array<Player> = []
+
 
 class HomeViewController: UIViewController {
 
@@ -33,7 +37,13 @@ class HomeViewController: UIViewController {
     // Continue Button
     @IBAction func pushContinue(_ sender: Any) {
         if !currentGameFinished {
-            
+            if !isDay {
+                part = 1
+                performSegue(withIdentifier: "ContinueToNight", sender: savedMasterArray)
+            } else {
+                part = 3
+                performSegue(withIdentifier: "ContinueToDay", sender: savedMasterArray)
+            }
         }
     }
     
@@ -46,5 +56,22 @@ class HomeViewController: UIViewController {
     @IBAction func pushRules(_ sender: Any) {
         performSegue(withIdentifier: "HomeToRules", sender: self)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ContinueToNight" {
+            if let selectedVC = segue.destination as? _NightViewController {
+                if let thePlayerArray = sender as? Array<Player> {
+                    selectedVC.masterPlayerArray.removeAll()
+                    selectedVC.masterPlayerArray.append(contentsOf: thePlayerArray)
+                }
+            }
+        } else  if segue.identifier == "ContinueToDay" {
+            if let selectedVC = segue.destination as? _DayViewController {
+                if let thePlayerArray = sender as? Array<Player> {
+                    selectedVC.masterPlayerArray.removeAll()
+                    selectedVC.masterPlayerArray.append(contentsOf: thePlayerArray)
+                }
+            }
+        }
+    }
 }

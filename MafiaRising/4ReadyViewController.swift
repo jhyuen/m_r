@@ -38,6 +38,13 @@ class _ReadyViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        // Reset game status
+        currentGameFinished = false
+        savedMasterArray.removeAll()
+        savedMasterArray.append(contentsOf: masterPlayerArray)
+    }
+    
     // Pause Button
     @IBAction func pauseBtnPressed(_ sender: Any) {
         performSegue(withIdentifier: "ReadyToPause", sender: masterPlayerArray)
@@ -45,8 +52,7 @@ class _ReadyViewController: UIViewController {
     
     // Proceed Button
     @IBAction func goToStory(_ sender: Any) {
-        
-        // Reset cycle
+       // Reset cycle
         cycle = 1
         part = 0
         
