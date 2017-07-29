@@ -64,6 +64,7 @@ class _VictoryViewController: UIViewController {
     // Proceed Button
     @IBAction func goToEnd(_ sender: Any) {
         part = part + 1
+        UserDefaults.standard.set(part, forKey: "Part")
         performSegue(withIdentifier: "VictoryToEnd", sender: masterPlayerArray)
     }
     

@@ -49,16 +49,6 @@ class _StoryViewController: UIViewController {
         print("StoryViewController")
         print("Cycle is \(cycle)")
         print("Part is \(part)")
-        print("\(masterPlayerArray[0].isDead)")
-        print("\(masterPlayerArray[1].isDead)")
-        print("\(masterPlayerArray[2].isDead)")
-        print("\(masterPlayerArray[3].isDead)")
-        print("\(masterPlayerArray[4].isDead)")
-        print("\(masterPlayerArray[0].role)")
-        print("\(masterPlayerArray[1].role)")
-        print("\(masterPlayerArray[2].role)")
-        print("\(masterPlayerArray[3].role)")
-        print("\(masterPlayerArray[4].role)")
         
         // Set main title to correct wording
         if cycle == 1 && part == 0 {
@@ -143,6 +133,7 @@ class _StoryViewController: UIViewController {
             
             // Increase Part
             part = part + 1
+            UserDefaults.standard.set(part, forKey: "Part")
             
             performSegue(withIdentifier: "StoryToNight", sender: masterPlayerArray)
         }
@@ -151,6 +142,7 @@ class _StoryViewController: UIViewController {
             
             // Increase Part
             part = part + 1
+            UserDefaults.standard.set(part, forKey: "Part")
             
             performSegue(withIdentifier: "StoryToChoose", sender: masterPlayerArray)
         }

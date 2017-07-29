@@ -53,7 +53,9 @@ class HomeViewController: UIViewController {
         if let Cycle = UserDefaults.standard.object(forKey: "Cycle") as? Int {
             cycle = Cycle
         }
-        
+        if let Part = UserDefaults.standard.object(forKey: "Part") as? Int {
+            part = Part
+        }
         
     }
 
@@ -70,11 +72,13 @@ class HomeViewController: UIViewController {
     // Continue Button
     @IBAction func pushContinue(_ sender: Any) {
         if !currentGameFinished {
-            cycle = cycle - 1
             if !isDay {
                 part = 1
                 performSegue(withIdentifier: "ContinueToNight", sender: savedMasterArray)
             } else {
+                if part == 0 {
+                    cycle = cycle - 1
+                }
                 part = 3
                 performSegue(withIdentifier: "ContinueToDay", sender: savedMasterArray)
             }

@@ -32,16 +32,6 @@ class _DayViewController: UIViewController {
         print("DayViewController")
         print("Cycle is \(cycle)")
         print("Part is \(part)")
-        print("\(masterPlayerArray[0].isDead)")
-        print("\(masterPlayerArray[1].isDead)")
-        print("\(masterPlayerArray[2].isDead)")
-        print("\(masterPlayerArray[3].isDead)")
-        print("\(masterPlayerArray[4].isDead)")
-        print("\(masterPlayerArray[0].role)")
-        print("\(masterPlayerArray[1].role)")
-        print("\(masterPlayerArray[2].role)")
-        print("\(masterPlayerArray[3].role)")
-        print("\(masterPlayerArray[4].role)")
         
         dayNum.text = "\(cycle)"
     }
@@ -53,6 +43,7 @@ class _DayViewController: UIViewController {
             
             // Increase part
             part = part + 1
+            UserDefaults.standard.set(part, forKey: "Part")
             
             performSegue(withIdentifier: "DayToStory", sender: masterPlayerArray)
             

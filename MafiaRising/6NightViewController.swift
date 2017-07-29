@@ -32,17 +32,7 @@ class _NightViewController: UIViewController {
         print("NightViewController")
         print("Cycle is \(cycle)")
         print("Part is \(part)")
-        print("\(masterPlayerArray[0].isDead)")
-        print("\(masterPlayerArray[1].isDead)")
-        print("\(masterPlayerArray[2].isDead)")
-        print("\(masterPlayerArray[3].isDead)")
-        print("\(masterPlayerArray[4].isDead)")
-        print("\(masterPlayerArray[0].role)")
-        print("\(masterPlayerArray[1].role)")
-        print("\(masterPlayerArray[2].role)")
-        print("\(masterPlayerArray[3].role)")
-        print("\(masterPlayerArray[4].role)")
-        
+
         nightNum.text = "\(cycle)"
     }
     
@@ -53,6 +43,7 @@ class _NightViewController: UIViewController {
             
             // Increase part
             part = part + 1
+            UserDefaults.standard.set(part, forKey: "Part")
         
             performSegue(withIdentifier: "NightToChoose", sender: masterPlayerArray)
             

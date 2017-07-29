@@ -102,16 +102,6 @@ class _ChooseViewController: UIViewController {
         print("ChooseViewController")
         print("Cycle is \(cycle)")
         print("Part is \(part)")
-        print("\(masterPlayerArray[0].isDead)")
-        print("\(masterPlayerArray[1].isDead)")
-        print("\(masterPlayerArray[2].isDead)")
-        print("\(masterPlayerArray[3].isDead)")
-        print("\(masterPlayerArray[4].isDead)")
-        print("\(masterPlayerArray[0].role)")
-        print("\(masterPlayerArray[1].role)")
-        print("\(masterPlayerArray[2].role)")
-        print("\(masterPlayerArray[3].role)")
-        print("\(masterPlayerArray[4].role)")
         
         // Reset subPart
         subPart = 1
@@ -198,11 +188,13 @@ class _ChooseViewController: UIViewController {
                     
                     if checkForEndGame(players: masterPlayerArray) {
                         part = part + 1
+                        UserDefaults.standard.set(part, forKey: "Part")
                         currentGameFinished = true
                         UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
                         performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
                     } else {
                         part = part + 1
+                        UserDefaults.standard.set(part, forKey: "Part")
                         performSegue(withIdentifier: "ChooseToDay", sender: masterPlayerArray)
                     }
                 }
@@ -228,11 +220,13 @@ class _ChooseViewController: UIViewController {
                     
                     if checkForEndGame(players: masterPlayerArray) {
                         part = part + 1
+                        UserDefaults.standard.set(part, forKey: "Part")
                         currentGameFinished = true
                         UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
                         performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
                     } else {
                         part = part + 1
+                        UserDefaults.standard.set(part, forKey: "Part")
                         performSegue(withIdentifier: "ChooseToDay", sender: masterPlayerArray)
                     }
                 }
@@ -257,11 +251,13 @@ class _ChooseViewController: UIViewController {
                 
                 if checkForEndGame(players: masterPlayerArray) {
                     part = part + 1
+                    UserDefaults.standard.set(part, forKey: "Part")
                     currentGameFinished = true
                     UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
                     performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
                 } else {
                     part = part + 1
+                    UserDefaults.standard.set(part, forKey: "Part")
                     performSegue(withIdentifier: "ChooseToDay", sender: masterPlayerArray)
                 }
                 
@@ -274,6 +270,7 @@ class _ChooseViewController: UIViewController {
                 
                 if checkForEndGame(players: masterPlayerArray) {
                     part = part + 1
+                    UserDefaults.standard.set(part, forKey: "Part")
                     currentGameFinished = true
                     UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
                     performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
@@ -281,6 +278,7 @@ class _ChooseViewController: UIViewController {
                     cycle = cycle + 1
                     UserDefaults.standard.set(cycle, forKey: "Cycle")
                     part = 0
+                    UserDefaults.standard.set(part, forKey: "Part")
                     performSegue(withIdentifier: "ChooseToStory", sender: masterPlayerArray)
                 }
             }
