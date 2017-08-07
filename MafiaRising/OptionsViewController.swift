@@ -11,8 +11,8 @@ import UIKit
 struct optionsParameters {
     static var enableDirections: Bool = true
     static var enableStory: Bool = true
-    static var soundEffectsVol: Float = 8
-    static var musicVol: Float = 8
+    static var soundEffectsVol: Float = 1
+    static var musicVol: Float = 1
 }
 
 class OptionsViewController: UIViewController {
@@ -69,10 +69,12 @@ class OptionsViewController: UIViewController {
     // Sound Effects Slider Changed
     @IBAction func soundEffectsSlider(_ sender: UISlider) {
         optionsParameters.soundEffectsVol = sender.value
+        musicPlayer.volume = optionsParameters.musicVol
     }
     
     // Music Slider Changed
     @IBAction func musicSlider(_ sender: UISlider) {
         optionsParameters.musicVol = sender.value
+        musicPlayer.volume = optionsParameters.musicVol
     }
 }

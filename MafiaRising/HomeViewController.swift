@@ -15,18 +15,32 @@ var currentGameFinished = true;
 var isDay = false;
 var passedReady = false;
 var savedMasterArray: Array<Player> = []
+var musicPlayer = AVAudioPlayer()
 
 // Profile Weird Noises Array
 var profileNoisesNames: Array<String> = ["Agh god", "Agh-2", "Agh-3", "Agh", "Ah my face", "Are you enjoying this", "Aw thank you thank you", "Can you stop please", "Do you enjoy this", "Eh", "Ha", "Haha", "Hands off my face", "Hands off", "Hey(1)", "Hey", "Hi", "I don’t even have any words anymore", "I hope you enjoy a restraining order", "I keep saying things", "If you touch me one more time", "My masculinity", "No stop", "Oh come on really the face", "Oh my ugh", "Oh no", "Oi", "Oof-2", "Oof-3", "Oof", "Ooh (1)", "Ooh", "Oomph", "Ouch", "Ow (1)", "Ow-2", "Ow-3", "Ow-4", "Ow", "Please no", "Roar", "Stop that", "Stop touching me", "That’s my face man", "Ugh (1)", "Ugh the burn feel it ugh", "Ugh", "Will you ever learn", "Yeah keep pressing the face please", "Yeah", "You like that", "You’re gonna mess up my hair"]
-
-var audioPlayer = AVAudioPlayer()
 
 class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let trackTitle = "Main Menu"
+        if let sound = NSDataAsset(name: trackTitle) {
+            // Do any additional setup after loading the view, typically from a nib.
+            do {
+                musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                musicPlayer.numberOfLoops = -1
+                
+                // !!! STOP PLAYER
+                musicPlayer.volume = optionsParameters.musicVol
+                musicPlayer.prepareToPlay()
+                musicPlayer.play()
+                
+            } catch {
+                print(error)
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,24 +75,6 @@ class HomeViewController: UIViewController {
         }
         if let Part = UserDefaults.standard.object(forKey: "Part") as? Int {
             part = Part
-        }
-        
-        let trackTitle = "Main Menu"
-        if let sound = NSDataAsset(name: trackTitle) {
-            // Do any additional setup after loading the view, typically from a nib.
-            do {
-                audioPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
-                //audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: trackTitle, ofType: "mp3")!))
-                
-                audioPlayer.numberOfLoops = -1
-                
-                // !!! STOP PLAYER
-                audioPlayer.prepareToPlay()
-                audioPlayer.play()
-                
-            } catch {
-                print(error)
-            }
         }
         
     }
