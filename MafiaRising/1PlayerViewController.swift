@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class _PlayerViewController: UIViewController {
 
@@ -18,6 +19,8 @@ class _PlayerViewController: UIViewController {
     // Constants
     let minimumPlayers = 5
     let maximumPlayers = 30
+    
+    var audioPlayer = AVAudioPlayer()
     
     var masterPlayerArray: Array<Player> = []
     

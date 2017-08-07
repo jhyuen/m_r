@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class _StoryViewController: UIViewController {
 
@@ -36,8 +37,7 @@ class _StoryViewController: UIViewController {
     // Random Number
     var randNum: Int = 0
     
-    // Profile Weird Noises Array
-    var profileNoisesNames: Array<String> = []
+    var audioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -156,9 +156,27 @@ class _StoryViewController: UIViewController {
     }
     
     func touchPortrait() {
-        // randNum = Int(arc4random_uniform(UInt32(profileNoisesNames.count)))
-        // play profileNoisesNames[randNum]
+       let randNum = Int(arc4random_uniform(UInt32(profileNoisesNames.count)))
         print("You hit a button")
+        
+        let trackTitle = profileNoisesNames[randNum]
+        if let sound = NSDataAsset(name: trackTitle) {
+            // Do any additional setup after loading the view, typically from a nib.
+            do {
+                audioPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                //audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: trackTitle, ofType: "mp3")!))
+                
+                if audioPlayer.isPlaying {
+                    audioPlayer.stop()
+                }
+                
+                audioPlayer.play()
+                
+            } catch {
+                print(error)
+            }
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
