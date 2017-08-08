@@ -135,70 +135,58 @@ class _ChooseViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let basicSoundEffectsArray: Array<SoundEffect> = [accent1, accent2, accent3, bell, clock, cough, creak1, creak2, crickets, door, giggle, glass, leaves1, pianoAccent1, pianoAccent2, scratch, wind]
         
-        let tribunalSoundEffectsArray: Array<SoundEffect> = [angryMob1, angryMob2, angryMob3, boo, clapping, flappingBirds, freedom, ivat1, ivat2, ivat3, nay, raven, rooster, weeping, yay]
+        // Determines the number of roles in the game, MUST BE UPDATED IF ROLES ARE ADDED
+        var numOfRoles: Int = 0
         
-
-        print(basicSoundEffectsArray.count)
-        print(tribunalSoundEffectsArray.count)
-        
-        
-        
-//        
-//        // Generate button index array
-//        var potentialIndex = [Int](repeating: 0, count: numPlayers)
-//        
-//        // Loop through number of special roles
-//        for role in 0..<possibleSpecialRoles {
-//            
-//            var nextIndex: Int
-//            
-//            repeat {
-//                nextIndex = Int(arc4random_uniform(UInt32(numPlayers)))
-//            } while potentialIndex[nextIndex] != 0
-//            
-//            // Set mafia index
-//            if role < numMafia {
-//                potentialIndex[nextIndex] = 1
-//            }
-//            
-//            // Set police index
-//            if role == numMafia {
-//                potentialIndex[nextIndex] = 2
-//            }
-//            
-//            // Set doctor index
-//            if role == numMafia + 1 {
-//                potentialIndex[nextIndex] = 3
-//            }
-//            
-//        }
-//
+        if policeExist && !doctorExist {
+            numOfRoles = 2
+        } else if doctorExist && !policeExist {
+            numOfRoles = 2
+        } else if doctorExist && policeExist {
+            numOfRoles = 3
+        } else {
+            numOfRoles = 1
+        }
         
         recentlyMurdered = -1
         
         print("ChooseViewController")
         print("Cycle is \(cycle)")
         print("Part is \(part)")
+        print("Subpart is \(subPart)")
         
-        // Reset subPart
-        subPart = 1
+        // Checks if subPart is 1 greater than the number of roles, to determine if all roles have played turn
+        if subPart == numOfRoles + 1 {
+            // Reset subPart
+            subPart = 1
+        }
         
         // Remember to Call This
         setupCollectionView()
         
         if part == 2 {
             
-            // Update title
-            roleLbl.text = "MAFIA"
+            // Update title, MUST BE UPDATED IF ROLES ARE ADDED
+            if subPart == 1 {
+                roleLbl.text = "MAFIA"
+                generateBasicButtons()
+            } else if subPart == 2 && !policeExist {
+                roleLbl.text = "DOCTOR"
+            } else if subPart == 3 {
+                roleLbl.text = "DOCTOR"
+            } else {
+                roleLbl.text = "POLICE"		
+            }
             // updateSounds(arrayType: nightSoundEffectsArray)
             
         } else if part == 5 {
             
             // Update title
             roleLbl.text = "TRIBUNAL"
-            
+            if subPart == 1 {
+                generateTribunalButtons()
+            }
             // updateSounds(arrayType: tribunalSoundEffectsArray)
         }
         
@@ -329,12 +317,14 @@ class _ChooseViewController: UIViewController {
                 }
                 
                 if checkForEndGame(players: masterPlayerArray) {
+                    subPart = subPart + 1
                     part = part + 1
                     UserDefaults.standard.set(part, forKey: "Part")
                     currentGameFinished = true
                     UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
                     performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
                 } else {
+                    subPart = subPart + 1
                     part = part + 1
                     UserDefaults.standard.set(part, forKey: "Part")
                     performSegue(withIdentifier: "ChooseToDay", sender: masterPlayerArray)
@@ -388,22 +378,26 @@ class _ChooseViewController: UIViewController {
     }
     
     // Sound Effect Buttons
-    @IBAction func pressSoundEffectBtn1(_ sender: Any) {
+    @IBAction func pressSoundEffectBtn1(_ sender: UIButton) {
         // play
         print("\(sE1)")
+        print(sender.tag - 1)
     }
     // Sound Effect Buttons
-    @IBAction func pressSoundEffectBtn2(_ sender: Any) {
+    @IBAction func pressSoundEffectBtn2(_ sender: UIButton) {
         // play
         print("\(sE2)")
+        print(sender.tag - 1)
     }
-    @IBAction func pressSoundEffectBtn3(_ sender: Any) {
+    @IBAction func pressSoundEffectBtn3(_ sender: UIButton) {
         // play
         print("\(sE3)")
+        print(sender.tag - 1)
     }
-    @IBAction func pressSoundEffectBtn4(_ sender: Any) {
+    @IBAction func pressSoundEffectBtn4(_ sender: UIButton) {
         // play
         print("\(sE4)")
+        print(sender.tag - 1)
     }
     
     
@@ -665,4 +659,85 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
             }
         }
     }
+    
+    func generateBasicButtons() {
+        // Generate sound effects array
+        let basicSoundEffectsArray: Array<SoundEffect> = [accent1, accent2, accent3, bell, clock, cough, creak1, creak2, crickets, door, giggle, glass, leaves1, pianoAccent1, pianoAccent2, scratch, wind]
+        
+        // Generate button index array
+        var potentialIndex: Array<Int> = []
+        
+        // Loop through number of sound effect buttons
+        potentialIndex.removeAll()
+        print(potentialIndex)
+        
+        for _ in 1...4 {
+            var nextIndex: Int
+            
+            repeat {
+                nextIndex = Int(arc4random_uniform(UInt32(basicSoundEffectsArray.count)))
+            } while potentialIndex.contains(nextIndex)
+            
+            potentialIndex.append(nextIndex)
+        }
+        print(potentialIndex)
+        
+        // Setup buttons
+        soundEffectBtn1.setImage(UIImage(named: basicSoundEffectsArray[potentialIndex[0]].picture), for: .normal)
+        // Make tag, the index the basicSoundEffectsArray + 1, to avoid tag of 0
+        soundEffectBtn1.tag = potentialIndex[0] + 1
+        
+        soundEffectBtn2.setImage(UIImage(named: basicSoundEffectsArray[potentialIndex[1]].picture), for: .normal)
+        // Make tag, the index the basicSoundEffectsArray + 1, to avoid tag of 0
+        soundEffectBtn2.tag = potentialIndex[1] + 1
+        
+        soundEffectBtn3.setImage(UIImage(named: basicSoundEffectsArray[potentialIndex[2]].picture), for: .normal)
+        // Make tag, the index the basicSoundEffectsArray + 1, to avoid tag of 0
+        soundEffectBtn3.tag = potentialIndex[2] + 1
+        
+        soundEffectBtn4.setImage(UIImage(named: basicSoundEffectsArray[potentialIndex[3]].picture), for: .normal)
+        // Make tag, the index the basicSoundEffectsArray + 1, to avoid tag of 0
+        soundEffectBtn4.tag = potentialIndex[3] + 1
+    }
+    
+    func generateTribunalButtons() {
+        // Generate sound effects array
+        let tribunalSoundEffectsArray: Array<SoundEffect> = [angryMob1, angryMob2, angryMob3, boo, clapping, flappingBirds, freedom, ivat1, ivat2, ivat3, nay, raven, rooster, weeping, yay]
+        
+        // Generate button index array
+        var potentialIndex: Array<Int> = []
+        
+        // Loop through number of sound effect buttons
+        potentialIndex.removeAll()
+        print(potentialIndex)
+        
+        for _ in 1...4 {
+            var nextIndex: Int
+            
+            repeat {
+                nextIndex = Int(arc4random_uniform(UInt32(tribunalSoundEffectsArray.count)))
+            } while potentialIndex.contains(nextIndex)
+            
+            potentialIndex.append(nextIndex)
+        }
+        print(potentialIndex)
+        
+        // Setup buttons
+        soundEffectBtn1.setImage(UIImage(named: tribunalSoundEffectsArray[potentialIndex[0]].picture), for: .normal)
+        // Make tag, the index the basicSoundEffectsArray + 1, to avoid tag of 0
+        soundEffectBtn1.tag = potentialIndex[0] + 1
+        
+        soundEffectBtn2.setImage(UIImage(named: tribunalSoundEffectsArray[potentialIndex[1]].picture), for: .normal)
+        // Make tag, the index the basicSoundEffectsArray + 1, to avoid tag of 0
+        soundEffectBtn2.tag = potentialIndex[1] + 1
+        
+        soundEffectBtn3.setImage(UIImage(named: tribunalSoundEffectsArray[potentialIndex[2]].picture), for: .normal)
+        // Make tag, the index the basicSoundEffectsArray + 1, to avoid tag of 0
+        soundEffectBtn3.tag = potentialIndex[2] + 1
+        
+        soundEffectBtn4.setImage(UIImage(named: tribunalSoundEffectsArray[potentialIndex[3]].picture), for: .normal)
+        // Make tag, the index the basicSoundEffectsArray + 1, to avoid tag of 0
+        soundEffectBtn4.tag = potentialIndex[3] + 1
+    }
+
 }

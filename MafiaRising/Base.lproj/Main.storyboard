@@ -1448,7 +1448,7 @@ close their eyes</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal ScriptC04" translatesAutoresizingMaskIntoConstraints="NO" id="owT-9f-1He">
-                                                <rect key="frame" x="58" y="0.0" width="189" height="266"/>
+                                                <rect key="frame" x="59" y="0.0" width="187" height="266"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="owT-9f-1He" secondAttribute="height" multiplier="166:235" id="0O4-Ue-GOK"/>
                                                 </constraints>
@@ -1608,7 +1608,7 @@ kill/investigate/save?"</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECTION 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-0X-QQS">
-                                        <rect key="frame" x="20" y="25" width="335" height="84"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1646,13 +1646,13 @@ kill/investigate/save?"</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal ScriptC05" translatesAutoresizingMaskIntoConstraints="NO" id="gEq-vr-Gmn">
-                                                <rect key="frame" x="49" y="0.0" width="207" height="294"/>
+                                                <rect key="frame" x="49" y="0.0" width="207" height="293"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="gEq-vr-Gmn" secondAttribute="height" multiplier="166:235" id="CI7-or-zWQ"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the player's target and ask them to close their eyes once again" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="m5D-4R-nh8" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="0.0" y="319" width="305" height="138"/>
+                                                <rect key="frame" x="8" y="318" width="289" height="139"/>
                                                 <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1720,7 +1720,7 @@ kill/investigate/save?"</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXAMPLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Paq-o8-14s">
-                                        <rect key="frame" x="20" y="25" width="335" height="84"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1909,7 +1909,7 @@ have been called</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="6eu-NB-zgD">
-                                        <rect key="frame" x="20" y="25" width="335" height="84"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1947,13 +1947,13 @@ have been called</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal ScriptDay" translatesAutoresizingMaskIntoConstraints="NO" id="mpR-2O-15B">
-                                                <rect key="frame" x="38" y="0.0" width="229" height="323"/>
+                                                <rect key="frame" x="39" y="0.0" width="227" height="321"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="mpR-2O-15B" secondAttribute="height" multiplier="166:235" id="N5n-9C-pWT"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="AgV-AO-65v" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="52" y="348" width="202" height="109"/>
+                                                <rect key="frame" x="17" y="346" width="272" height="111"/>
                                                 <string key="text">Ask all players 
 to wake up</string>
                                                 <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="30"/>
@@ -4091,35 +4091,39 @@ of Players</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j3f-06-DTM">
                                 <rect key="frame" x="0.0" y="567" width="375" height="100"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="X5W-TO-XiN">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lSc-eN-lUh">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="X5W-TO-XiN">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpC-4i-Lpb">
-                                                <rect key="frame" x="0.0" y="0.0" width="94" height="100"/>
-                                                <state key="normal" title="Button" image="MRFinal ReadyC2"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="93" height="100"/>
+                                                <color key="backgroundColor" red="0.57112640142440796" green="0.077838368713855743" blue="0.021155845373868942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="pressSoundEffectBtn1:" destination="kEY-wj-tGy" eventType="touchUpInside" id="bRr-UM-hk0"/>
+                                                    <action selector="pressSoundEffectBtn1:" destination="kEY-wj-tGy" eventType="touchUpInside" id="8rv-QD-Tqf"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APn-t6-4Jl">
-                                                <rect key="frame" x="94" y="0.0" width="94" height="100"/>
-                                                <state key="normal" title="Button" image="MRFinal ReadyC1"/>
+                                                <rect key="frame" x="94" y="0.0" width="93" height="100"/>
+                                                <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
-                                                    <action selector="pressSoundEffectBtn2:" destination="kEY-wj-tGy" eventType="touchUpInside" id="B0S-bp-Wap"/>
+                                                    <action selector="pressSoundEffectBtn2:" destination="kEY-wj-tGy" eventType="touchUpInside" id="Jz1-wG-E7p"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VyX-Lg-MZx">
                                                 <rect key="frame" x="188" y="0.0" width="93" height="100"/>
-                                                <state key="normal" title="Button" image="MRFinal ReadyC1"/>
+                                                <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
-                                                    <action selector="pressSoundEffectBtn3:" destination="kEY-wj-tGy" eventType="touchUpInside" id="XNN-Cw-RQ6"/>
+                                                    <action selector="pressSoundEffectBtn3:" destination="kEY-wj-tGy" eventType="touchUpInside" id="RA1-HL-wOL"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Glf-kc-3hI">
-                                                <rect key="frame" x="281" y="0.0" width="94" height="100"/>
-                                                <state key="normal" title="Button" image="MRFinal PauseRolesC2"/>
+                                                <rect key="frame" x="282" y="0.0" width="93" height="100"/>
+                                                <color key="backgroundColor" red="0.57112640142440796" green="0.077838368713855743" blue="0.021155845373868942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="pressSoundEffectBtn4:" destination="kEY-wj-tGy" eventType="touchUpInside" id="eI4-gw-p9p"/>
+                                                    <action selector="pressSoundEffectBtn4:" destination="kEY-wj-tGy" eventType="touchUpInside" id="Ehl-9r-tp6"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -4136,8 +4140,12 @@ of Players</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="5Kg-Rr-Ngq"/>
                                     <constraint firstAttribute="bottom" secondItem="X5W-TO-XiN" secondAttribute="bottom" id="CVA-tU-qXo"/>
+                                    <constraint firstAttribute="trailing" secondItem="lSc-eN-lUh" secondAttribute="trailing" id="IdG-cK-e1d"/>
+                                    <constraint firstItem="lSc-eN-lUh" firstAttribute="height" secondItem="X5W-TO-XiN" secondAttribute="height" id="Tow-qh-j17"/>
                                     <constraint firstAttribute="trailing" secondItem="X5W-TO-XiN" secondAttribute="trailing" id="Ylo-1x-qt6"/>
+                                    <constraint firstItem="lSc-eN-lUh" firstAttribute="leading" secondItem="j3f-06-DTM" secondAttribute="leading" id="ZYN-gA-N0A"/>
                                     <constraint firstItem="X5W-TO-XiN" firstAttribute="top" secondItem="j3f-06-DTM" secondAttribute="top" id="lMM-Uq-Rt8"/>
+                                    <constraint firstAttribute="bottom" secondItem="lSc-eN-lUh" secondAttribute="bottom" id="vVj-MK-PvM"/>
                                     <constraint firstItem="X5W-TO-XiN" firstAttribute="leading" secondItem="j3f-06-DTM" secondAttribute="leading" id="zgd-gb-POG"/>
                                 </constraints>
                             </view>
@@ -4183,10 +4191,10 @@ of Players</string>
                     <connections>
                         <outlet property="collectionView" destination="7NJ-Bu-miy" id="5dP-1Q-YiW"/>
                         <outlet property="roleLbl" destination="9A4-1K-mif" id="ULf-Ac-7K4"/>
-                        <outlet property="soundEffectBtn1" destination="wpC-4i-Lpb" id="KrS-gt-0YU"/>
-                        <outlet property="soundEffectBtn2" destination="wpC-4i-Lpb" id="sX9-M7-OkU"/>
-                        <outlet property="soundEffectBtn3" destination="VyX-Lg-MZx" id="ozG-iH-IFT"/>
-                        <outlet property="soundEffectBtn4" destination="Glf-kc-3hI" id="p5I-Ln-qCW"/>
+                        <outlet property="soundEffectBtn1" destination="wpC-4i-Lpb" id="XoB-mD-Zrz"/>
+                        <outlet property="soundEffectBtn2" destination="APn-t6-4Jl" id="Pvg-Xs-0Jr"/>
+                        <outlet property="soundEffectBtn3" destination="VyX-Lg-MZx" id="3XI-i7-02S"/>
+                        <outlet property="soundEffectBtn4" destination="Glf-kc-3hI" id="3vY-fl-mo8"/>
                         <segue destination="QpL-Dl-0m0" kind="show" identifier="ChooseToDay" id="Xxf-v6-6cj"/>
                         <segue destination="MAm-3Z-Idg" kind="show" identifier="ChooseToStory" id="Y5H-lc-M15"/>
                         <segue destination="Mzs-IF-RIf" kind="show" identifier="ChooseToVictory" id="HeH-F8-GWu"/>
@@ -5371,7 +5379,7 @@ for descriptions</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal TutorialC4" translatesAutoresizingMaskIntoConstraints="NO" id="XCa-KR-WLq">
-                                                <rect key="frame" x="46" y="0.0" width="213" height="303"/>
+                                                <rect key="frame" x="45" y="0.0" width="215" height="303"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="XCa-KR-WLq" secondAttribute="height" multiplier="166:235" id="5Cl-LT-dwY"/>
                                                 </constraints>
@@ -5467,7 +5475,7 @@ picture and find out their role</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal TutorialC5" translatesAutoresizingMaskIntoConstraints="NO" id="dNR-pi-Hoh">
-                                                <rect key="frame" x="39" y="0.0" width="227" height="323"/>
+                                                <rect key="frame" x="38" y="0.0" width="229" height="323"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="dNR-pi-Hoh" secondAttribute="height" multiplier="166:235" id="j4U-9S-yk1"/>
                                                 </constraints>
@@ -5561,7 +5569,7 @@ immersed in your game</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal TutorialC6" translatesAutoresizingMaskIntoConstraints="NO" id="d5A-PT-oz3">
-                                                <rect key="frame" x="39" y="0.0" width="227" height="323"/>
+                                                <rect key="frame" x="38" y="0.0" width="229" height="323"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="d5A-PT-oz3" secondAttribute="height" multiplier="166:235" id="Hm3-ta-P7P"/>
                                                 </constraints>
@@ -5858,7 +5866,7 @@ characters of the game</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal TutorialC7" translatesAutoresizingMaskIntoConstraints="NO" id="RRe-Tb-8Ez">
-                                                <rect key="frame" x="46" y="0.0" width="213" height="303"/>
+                                                <rect key="frame" x="45" y="0.0" width="215" height="303"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="RRe-Tb-8Ez" secondAttribute="height" multiplier="166:235" id="k0J-67-I2i"/>
                                                 </constraints>
@@ -6045,7 +6053,7 @@ It could be a fatal mistake...</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal TutorialC9" translatesAutoresizingMaskIntoConstraints="NO" id="Swq-KC-ZR0">
-                                                <rect key="frame" x="39" y="0.0" width="227" height="323"/>
+                                                <rect key="frame" x="38" y="0.0" width="229" height="323"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Swq-KC-ZR0" secondAttribute="height" multiplier="166:235" id="51G-tu-e7Z"/>
                                                 </constraints>
@@ -6235,7 +6243,7 @@ face the day</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal TutorialC11" translatesAutoresizingMaskIntoConstraints="NO" id="tvz-9v-2fI">
-                                                <rect key="frame" x="39" y="0.0" width="227" height="323"/>
+                                                <rect key="frame" x="38" y="0.0" width="229" height="323"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="tvz-9v-2fI" secondAttribute="height" multiplier="166:235" id="dzu-9w-pbn"/>
                                                 </constraints>
@@ -6309,7 +6317,7 @@ night before</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="5ni-46-Wuj">
-                                        <rect key="frame" x="20" y="25" width="335" height="84"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -6330,13 +6338,13 @@ night before</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal TutorialC12" translatesAutoresizingMaskIntoConstraints="NO" id="IaC-R4-M7z">
-                                                <rect key="frame" x="57" y="0.0" width="191" height="269"/>
+                                                <rect key="frame" x="58" y="0.0" width="189" height="267"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="IaC-R4-M7z" secondAttribute="height" multiplier="166:235" id="3NR-98-IjE"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jls-Bz-hgu" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="14" y="294" width="278" height="163"/>
+                                                <rect key="frame" x="2" y="292" width="302" height="165"/>
                                                 <string key="text">The town must execute 
 one person...
 
@@ -6407,7 +6415,7 @@ who must be killed</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="END" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="pbp-pD-Lqj">
-                                        <rect key="frame" x="20" y="25" width="335" height="84"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -6428,7 +6436,7 @@ who must be killed</string>
                                         <rect key="frame" x="20" y="30" width="335" height="447"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="x8B-wW-uPU">
-                                                <rect key="frame" x="0.0" y="0.0" width="210" height="217"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="296" height="217"/>
                                                 <string key="text">If the citizens
 kill all the
 mafia[s], then
@@ -6438,7 +6446,7 @@ citizens win</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="av4-rR-aus">
-                                                <rect key="frame" x="0.0" y="227" width="230" height="220"/>
+                                                <rect key="frame" x="0.0" y="227" width="280" height="220"/>
                                                 <string key="text">If the mafia
 outnumber the
 citizens, the
@@ -6599,7 +6607,7 @@ scenario occurs</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOod Luck!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="0lc-lT-d2O">
-                                        <rect key="frame" x="20" y="25" width="335" height="84"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -6623,7 +6631,7 @@ scenario occurs</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="qHH-NG-DmZ" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="20" y="0.0" width="266" height="457"/>
+                                                <rect key="frame" x="3" y="0.0" width="300" height="457"/>
                                                 <string key="text">Now that you understand the 
 basic rules of mafia Rising,
 enter into a world where 
@@ -6920,14 +6928,14 @@ be a jerk ;)</string>
         <image name="portraitFiller" width="433" height="653"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="t2K-qO-woi"/>
+        <segue reference="Xxf-v6-6cj"/>
         <segue reference="nFz-PG-5cK"/>
         <segue reference="Y5H-lc-M15"/>
+        <segue reference="wNd-ep-vfX"/>
+        <segue reference="t2K-qO-woi"/>
         <segue reference="bB7-vs-abW"/>
-        <segue reference="SvW-si-1fZ"/>
-        <segue reference="nwm-Dp-aeN"/>
-        <segue reference="YkS-pf-4aO"/>
         <segue reference="jGj-z5-JdE"/>
-        <segue reference="TDa-wu-gPe"/>
+        <segue reference="nwm-Dp-aeN"/>
+        <segue reference="SvW-si-1fZ"/>
     </inferredMetricsTieBreakers>
 </document>
