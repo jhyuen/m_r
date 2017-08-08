@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class GameRolesViewController: UIViewController, UIScrollViewDelegate {
     
@@ -16,8 +17,8 @@ class GameRolesViewController: UIViewController, UIScrollViewDelegate {
     // Transfer Array
     var masterPlayerArray: Array<Player> = []
     
-    // Profile Weird Noises Array
-    var profileNoisesNames: Array<String> = []
+    // Initialize and AudioPlayer
+    var audioPlayer = AVAudioPlayer()
     
     // ScrollView Constants
     let WIDTH: CGFloat = 90
@@ -33,6 +34,7 @@ class GameRolesViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
         
         // don't worry about this recognizer code... I was trying
         // to make an image view a button... didn't exactly work the way I wanted
@@ -109,10 +111,28 @@ class GameRolesViewController: UIViewController, UIScrollViewDelegate {
     }
     
     // Touch Portrait
-    func touchPortrait(sender: AnyObject) {
-        // randNum = Int(arc4random_uniform(UInt32(profileNoisesNames.count)))
-        // play profileNoisesNames[randNum]
+    func touchPortrait() {
+        let randNum = Int(arc4random_uniform(UInt32(profileNoisesNames.count)))
+        print("randNum is \(randNum)")
         print("You hit a button")
+        
+        let trackTitle = profileNoisesNames[randNum]
+        if let sound = NSDataAsset(name: trackTitle) {
+            // Do any additional setup after loading the view, typically from a nib.
+            do {
+                audioPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                //audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: trackTitle, ofType: "mp3")!))
+                
+                if audioPlayer.isPlaying {
+                    audioPlayer.stop()
+                }
+                
+                audioPlayer.play()
+                
+            } catch {
+                print(error)
+            }
+        }
     }
     
     // Need for Solely Vertical Scrolling

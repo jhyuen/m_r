@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 // 0 = Continue
 // 1 = Mafia Defeat
@@ -31,10 +32,46 @@ class _ChooseViewController: UIViewController {
     // Collection View
     @IBOutlet weak var collectionView: UICollectionView!
     
-    // Sound Effect Lists
-    // !!! maybe make another sound effect array for tribunal sounds, not just night phase !!!
-    var nightSoundEffectsArray: Array<SoundEffect> = []
-    var tribunalSoundEffectsArray: Array<SoundEffect> = []
+    // Sound Effect List
+    // Basic Sound Effects
+    var accent1 = SoundEffect(effect: "Accent 1", picture: "Accent.png")
+    let accent2 = SoundEffect(effect: "Accent 2", picture: "Accent2.png")
+    let accent3 = SoundEffect(effect: "Accent 3", picture: "Accent2.png")
+    let bell = SoundEffect(effect: "Bell", picture: "BellB.png")
+    let clock = SoundEffect(effect: "Clock", picture: "ClockB.png")
+    let cough = SoundEffect(effect: "Cough", picture: "Cough.png")
+    let creak1 = SoundEffect(effect: "Creak 1", picture: "Creak.png")
+    let creak2 = SoundEffect(effect: "Creak 2", picture: "Creak.png")
+    let crickets = SoundEffect(effect: "Crickets", picture: "Crickets.png")
+    let door = SoundEffect(effect: "Door", picture: "Door.png")
+    let giggle = SoundEffect(effect: "Giggle", picture: "Giggle.png")
+    let glass = SoundEffect(effect: "Glass", picture: "Glass.png")
+    let leaves1 = SoundEffect(effect: "Leaves 1", picture: "LeavesB.png")
+    let pianoAccent1 = SoundEffect(effect: "Piano Accent 1", picture: "PianoAccent.png")
+    let pianoAccent2 = SoundEffect(effect: "Piano Accent 2", picture: "PianoAccent.png")
+    let pianoAccent3 = SoundEffect(effect: "Piano Accent 3", picture: "PianoAccent.png")
+    let scratch = SoundEffect(effect: "Scratch", picture: "Scratch.png")
+    let wind = SoundEffect(effect: "Wind", picture: "Wind.png")
+    
+    // Tribunal Sound Effects
+    // for multiple potentially add array instead of single String
+    // and randomize for each picture the multiple sound effects
+    // BUT table until update
+    let angryMob1 = SoundEffect(effect: "Angry Mob 1", picture: "AngryMob.png")
+    let angryMob2 = SoundEffect(effect: "Angry Mob 2", picture: "AngryMob.png")
+    let angryMob3 = SoundEffect(effect: "Angry Mob 3", picture: "AngryMob.png")
+    let boo = SoundEffect(effect: "Boo", picture: "Boo.png")
+    let clapping = SoundEffect(effect: "Clapping", picture: "PeopleClap.png")
+    let flappingBirds = SoundEffect(effect: "Flapping Birds", picture: "FlappingWings.png")
+    let freedom = SoundEffect(effect: "Freedom", picture: "Freedom.png")
+    let ivat1 = SoundEffect(effect: "IVAT 1", picture: "IVolunteer.png")
+    let ivat2 = SoundEffect(effect: "IVAT 2", picture: "IVolunteer.png")
+    let ivat3 = SoundEffect(effect: "IVAT 3", picture: "IVolunteer.png")
+    let nay = SoundEffect(effect: "Nay", picture: "Nay.png")
+    let raven = SoundEffect(effect: "Raven", picture: "Raven.png")
+    let rooster = SoundEffect(effect: "Rooster", picture: "RoosterCrow.png")
+    let weeping = SoundEffect(effect: "Weeping", picture: "Weeping.png")
+    let yay = SoundEffect(effect: "Yay", picture: "Yay.png")
     
     // Sound Effect Button Sounds
     var sE1: String = "se1"
@@ -97,6 +134,48 @@ class _ChooseViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        let basicSoundEffectsArray: Array<SoundEffect> = [accent1, accent2, accent3, bell, clock, cough, creak1, creak2, crickets, door, giggle, glass, leaves1, pianoAccent1, pianoAccent2, scratch, wind]
+        
+        let tribunalSoundEffectsArray: Array<SoundEffect> = [angryMob1, angryMob2, angryMob3, boo, clapping, flappingBirds, freedom, ivat1, ivat2, ivat3, nay, raven, rooster, weeping, yay]
+        
+
+        print(basicSoundEffectsArray.count)
+        print(tribunalSoundEffectsArray.count)
+        
+        
+        
+//        
+//        // Generate button index array
+//        var potentialIndex = [Int](repeating: 0, count: numPlayers)
+//        
+//        // Loop through number of special roles
+//        for role in 0..<possibleSpecialRoles {
+//            
+//            var nextIndex: Int
+//            
+//            repeat {
+//                nextIndex = Int(arc4random_uniform(UInt32(numPlayers)))
+//            } while potentialIndex[nextIndex] != 0
+//            
+//            // Set mafia index
+//            if role < numMafia {
+//                potentialIndex[nextIndex] = 1
+//            }
+//            
+//            // Set police index
+//            if role == numMafia {
+//                potentialIndex[nextIndex] = 2
+//            }
+//            
+//            // Set doctor index
+//            if role == numMafia + 1 {
+//                potentialIndex[nextIndex] = 3
+//            }
+//            
+//        }
+//
+        
         recentlyMurdered = -1
         
         print("ChooseViewController")
@@ -279,6 +358,25 @@ class _ChooseViewController: UIViewController {
                     UserDefaults.standard.set(cycle, forKey: "Cycle")
                     part = 0
                     UserDefaults.standard.set(part, forKey: "Part")
+                    
+                    // Play background music for next screen
+                    let trackTitle = "Day Story"
+                    musicPlayer.stop()
+                    if let sound = NSDataAsset(name: trackTitle) {
+                        // Do any additional setup after loading the view, typically from a nib.
+                        do {
+                            musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                            musicPlayer.numberOfLoops = -1
+                            
+                            // !!! STOP PLAYER
+                            musicPlayer.volume = optionsParameters.musicVol
+                            musicPlayer.prepareToPlay()
+                            musicPlayer.play()
+                            
+                        } catch {
+                            print(error)
+                        }
+                    }
                     performSegue(withIdentifier: "ChooseToStory", sender: masterPlayerArray)
                 }
             }

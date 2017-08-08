@@ -37,12 +37,13 @@ class _StoryViewController: UIViewController {
     // Random Number
     var randNum: Int = 0
     
+    // Initialize AudioPlayer for sound effects
     var audioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -52,13 +53,8 @@ class _StoryViewController: UIViewController {
         
         // Set main title to correct wording
         if cycle == 1 && part == 0 {
+            // Story Intro
             mainTitle.text = "STORY"
-            
-            /*
-             randNum = Int(arc4random_uniform(UInt32(introPictureNames.count)))
-             mainPicture.image = UIImage(named: introPictureNames[randNum])
-             */
-            
         } else if cycle > 1 && part == 0 {
             mainTitle.text = "DAY \(cycle - 1)"
             
@@ -74,7 +70,6 @@ class _StoryViewController: UIViewController {
              randNum = Int(arc4random_uniform(UInt32(murderPictureNames.count)))
              mainPicture.image = UIImage(named: introPictureNames[randNum])
              */
-            
         }
         
         // Add player portaits to ScrollView
@@ -135,6 +130,7 @@ class _StoryViewController: UIViewController {
             part = part + 1
             UserDefaults.standard.set(part, forKey: "Part")
             
+            musicPlayer.stop()
             performSegue(withIdentifier: "StoryToNight", sender: masterPlayerArray)
         }
         
@@ -144,6 +140,24 @@ class _StoryViewController: UIViewController {
             part = part + 1
             UserDefaults.standard.set(part, forKey: "Part")
             
+            let trackTitle = "Night"
+            musicPlayer.stop()
+            if let sound = NSDataAsset(name: trackTitle) {
+                // Do any additional setup after loading the view, typically from a nib.
+                do {
+                    musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                    musicPlayer.numberOfLoops = -1
+                    
+                    // !!! STOP PLAYER
+                    musicPlayer.volume = optionsParameters.musicVol
+                    musicPlayer.prepareToPlay()
+                    musicPlayer.play()
+                    
+                } catch {
+                    print(error)
+                }
+            }
+
             performSegue(withIdentifier: "StoryToChoose", sender: masterPlayerArray)
         }
     }
@@ -156,7 +170,8 @@ class _StoryViewController: UIViewController {
     }
     
     func touchPortrait() {
-       let randNum = Int(arc4random_uniform(UInt32(profileNoisesNames.count)))
+        let randNum = Int(arc4random_uniform(UInt32(profileNoisesNames.count)))
+        print("randNum is \(randNum)")
         print("You hit a button")
         
         let trackTitle = profileNoisesNames[randNum]
@@ -176,7 +191,6 @@ class _StoryViewController: UIViewController {
                 print(error)
             }
         }
-        
     }
     
     override func didReceiveMemoryWarning() {

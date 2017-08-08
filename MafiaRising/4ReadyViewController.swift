@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 var cycle: Int = 1
 var part: Int = 0
@@ -42,6 +43,11 @@ class _ReadyViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         // Reset game status
         // Reset cycle
+        conclusion = 0
+        policeAreAlive = false
+        doctorsAreAlive = false
+        recentlyMurdered = -1
+        
         cycle = 1
         UserDefaults.standard.set(cycle, forKey: "Cycle")
         part = 0
@@ -61,9 +67,27 @@ class _ReadyViewController: UIViewController {
     
     // Proceed Button
     @IBAction func goToStory(_ sender: Any) {
+        // Play background music for next screen
+        musicPlayer.stop()
+        let trackTitle = "Intro Story"
+        if let sound = NSDataAsset(name: trackTitle) {
+            // Do any additional setup after loading the view, typically from a nib.
+            do {
+                musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                musicPlayer.numberOfLoops = -1
+                
+                // !!! STOP PLAYER
+                musicPlayer.volume = optionsParameters.musicVol
+                musicPlayer.prepareToPlay()
+                musicPlayer.play()
+                
+            } catch {
+                print(error)
+            }
+        }
         performSegue(withIdentifier: "ReadyToStory", sender: masterPlayerArray)
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

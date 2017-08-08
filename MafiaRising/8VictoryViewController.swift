@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 // Conclusion Key
 // 0 = Continue
@@ -47,12 +48,50 @@ class _VictoryViewController: UIViewController {
             dot.image = UIImage(named: "MRFinal CitzensWinC2")
             btmLbl.textColor = blackColor
             
+            musicPlayer.stop()
+            // Play background music
+            let trackTitle = "Civilians Win"
+            if let sound = NSDataAsset(name: trackTitle) {
+                // Do any additional setup after loading the view, typically from a nib.
+                do {
+                    musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                    musicPlayer.numberOfLoops = -1
+                    
+                    // !!! STOP PLAYER
+                    musicPlayer.volume = optionsParameters.musicVol
+                    musicPlayer.prepareToPlay()
+                    musicPlayer.play()
+                    
+                } catch {
+                    print(error)
+                }
+            }
+            
         case 2:
             
             backgroundView.backgroundColor = blackColor
             winnerImage.image = UIImage(named: "MRFinal MafiaWinC1")
             dot.image = UIImage(named: "MRFinal MafiaWinC2")
             btmLbl.textColor = whiteColor
+            
+            // Play background music
+            let trackTitle = "Mafia Win"
+            if let sound = NSDataAsset(name: trackTitle) {
+                // Do any additional setup after loading the view, typically from a nib.
+                do {
+                    musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                    musicPlayer.numberOfLoops = -1
+                    
+                    // !!! STOP PLAYER
+                    musicPlayer.volume = optionsParameters.musicVol
+                    musicPlayer.prepareToPlay()
+                    musicPlayer.play()
+                    
+                } catch {
+                    print(error)
+                }
+            }
+
             
         default:
             

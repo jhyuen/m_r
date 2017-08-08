@@ -9,15 +9,22 @@
 import UIKit
 import  AVFoundation
 
+// Sequence number of tutorial
 var tutorialProgress = 0;
+// Sequence number of script
 var scriptProgress = 0;
+// Indicates track of if the game has been completed
 var currentGameFinished = true;
+// Indicated whether the current cycle is a day cycle
 var isDay = false;
+// Idicated whether the user has progressed past the ready screen
 var passedReady = false;
+// Copy of the master player array
 var savedMasterArray: Array<Player> = []
+// Initialize AudioPlayer for background music
 var musicPlayer = AVAudioPlayer()
 
-// Profile Weird Noises Array
+// Profile sound effect names
 var profileNoisesNames: Array<String> = ["Agh god", "Agh-2", "Agh-3", "Agh", "Ah my face", "Are you enjoying this", "Aw thank you thank you", "Can you stop please", "Do you enjoy this", "Eh", "Ha", "Haha", "Hands off my face", "Hands off", "Hey(1)", "Hey", "Hi", "I don’t even have any words anymore", "I hope you enjoy a restraining order", "I keep saying things", "If you touch me one more time", "My masculinity", "No stop", "Oh come on really the face", "Oh my ugh", "Oh no", "Oi", "Oof-2", "Oof-3", "Oof", "Ooh (1)", "Ooh", "Oomph", "Ouch", "Ow (1)", "Ow-2", "Ow-3", "Ow-4", "Ow", "Please no", "Roar", "Stop that", "Stop touching me", "That’s my face man", "Ugh (1)", "Ugh the burn feel it ugh", "Ugh", "Will you ever learn", "Yeah keep pressing the face please", "Yeah", "You like that", "You’re gonna mess up my hair"]
 
 class HomeViewController: UIViewController {

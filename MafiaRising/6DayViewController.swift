@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class _DayViewController: UIViewController {
 
@@ -18,6 +19,23 @@ class _DayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let trackTitle = "Day Transition"
+        if let sound = NSDataAsset(name: trackTitle) {
+            // Do any additional setup after loading the view, typically from a nib.
+            do {
+                musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                musicPlayer.numberOfLoops = -1
+                
+                // !!! STOP PLAYER
+                musicPlayer.volume = optionsParameters.musicVol
+                musicPlayer.prepareToPlay()
+                musicPlayer.play()
+                
+            } catch {
+                print(error)
+            }
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -44,6 +62,24 @@ class _DayViewController: UIViewController {
             // Increase part
             part = part + 1
             UserDefaults.standard.set(part, forKey: "Part")
+            
+            let trackTitle = "Day Story"
+            musicPlayer.stop()
+            if let sound = NSDataAsset(name: trackTitle) {
+                // Do any additional setup after loading the view, typically from a nib.
+                do {
+                    musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                    musicPlayer.numberOfLoops = -1
+                    
+                    // !!! STOP PLAYER
+                    musicPlayer.volume = optionsParameters.musicVol
+                    musicPlayer.prepareToPlay()
+                    musicPlayer.play()
+                    
+                } catch {
+                    print(error)
+                }
+            }
             
             performSegue(withIdentifier: "DayToStory", sender: masterPlayerArray)
             
