@@ -16,10 +16,7 @@ class _EndViewController: UIViewController, UIScrollViewDelegate {
     
     // Transfer Array
     var masterPlayerArray: Array<Player> = []
-    
-    // Initialize an AudioPlayer for sound effects
-    var audioPlayer = AVAudioPlayer()
-    
+
     // ScrollView Constants
     let WIDTH: CGFloat = 90
     let HEIGHT: CGFloat = 135
@@ -88,13 +85,14 @@ class _EndViewController: UIViewController, UIScrollViewDelegate {
             
             if masterPlayerArray[player].isDead {
                 applyFilter(imageView: imgView)
+            } else {
+                // Set button functionality
+                btnView.addTarget(self, action: #selector(touchPortrait), for: .touchUpInside)
             }
             
             // set label font
             roleLbl.font = UIFont(name: "Kefa", size: FONTSIZE)
             
-            // Set button functionality
-            btnView.addTarget(self, action: #selector(touchPortrait), for: .touchUpInside)
             //imgView.addTarget(self, action: #selector(touchPortrait), for: .touchUpInside)
             
             // don't worry about this
@@ -114,29 +112,33 @@ class _EndViewController: UIViewController, UIScrollViewDelegate {
         performSegue(withIdentifier: "EndToHome", sender: self)
     }
     
+    // Touch Portrait
     func touchPortrait() {
         let randNum = Int(arc4random_uniform(UInt32(profileNoisesNames.count)))
+        print("randNum is \(randNum)")
         print("You hit a button")
         
         let trackTitle = profileNoisesNames[randNum]
         if let sound = NSDataAsset(name: trackTitle) {
             // Do any additional setup after loading the view, typically from a nib.
             do {
-                audioPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                soundEffectPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
                 //audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: trackTitle, ofType: "mp3")!))
                 
-                if audioPlayer.isPlaying {
-                    audioPlayer.stop()
+                if soundEffectPlayer.isPlaying {
+                    soundEffectPlayer.stop()
                 }
                 
-                audioPlayer.play()
+                soundEffectPlayer.volume = optionsParameters.soundEffectsVol
+                soundEffectPlayer.prepareToPlay()
+                soundEffectPlayer.play()
                 
             } catch {
                 print(error)
             }
         }
-        
     }
+
     
     // Need for Solely Vertical Scrolling
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

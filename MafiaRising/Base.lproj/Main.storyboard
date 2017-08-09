@@ -131,12 +131,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="3B4-aq-i8L" kind="show" identifier="HomeToPlayers" id="RLX-xd-W8t"/>
+                        <segue destination="3B4-aq-i8L" kind="show" identifier="HomeToPlayers" customClass="ScaleSegue" customModule="MafiaRising" customModuleProvider="target" id="RLX-xd-W8t"/>
                         <segue destination="Uxu-yi-Eea" kind="show" identifier="HomeToRules" id="jGj-z5-JdE"/>
                         <segue destination="9nD-tn-Rq4" kind="show" identifier="HomeToOptions" id="bB7-vs-abW"/>
                         <segue destination="q0j-zv-644" kind="show" identifier="ContinueToReady" id="nwm-Dp-aeN"/>
-                        <segue destination="QpL-Dl-0m0" kind="show" identifier="ContinueToDay" id="YkS-pf-4aO"/>
-                        <segue destination="x6I-ks-Nig" kind="show" identifier="ContinueToNight" id="SvW-si-1fZ"/>
+                        <segue destination="QpL-Dl-0m0" kind="show" identifier="ContinueToDay" customClass="ScaleSegue" customModule="MafiaRising" customModuleProvider="target" id="YkS-pf-4aO"/>
+                        <segue destination="x6I-ks-Nig" kind="show" identifier="ContinueToNight" customClass="ScaleSegue" customModule="MafiaRising" customModuleProvider="target" id="SvW-si-1fZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zua-Ax-IX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -650,7 +650,7 @@ Swipe right to learn more!</string>
                     </view>
                     <connections>
                         <outlet property="nightNum" destination="3Gj-vT-1E7" id="bmS-0E-ZMD"/>
-                        <segue destination="kEY-wj-tGy" kind="show" identifier="NightToChoose" id="DTs-jA-27W"/>
+                        <segue destination="kEY-wj-tGy" kind="show" identifier="NightToChoose" customClass="UnwindScaleSegue" customModule="MafiaRising" customModuleProvider="target" id="DTs-jA-27W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aJA-iM-fTQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3181,7 +3181,7 @@ The end..."</string>
                     <connections>
                         <outlet property="rolesBtn" destination="1Pr-Fv-ppd" id="96h-2h-al2"/>
                         <segue destination="9nD-tn-Rq4" kind="show" identifier="PauseToOptions" id="xw3-iS-S4C"/>
-                        <segue destination="TBE-rj-uHk" kind="show" identifier="PauseToHome" id="93s-S6-tCw"/>
+                        <segue destination="TBE-rj-uHk" kind="show" identifier="PauseToHome" customClass="UnwindScaleSegue" customModule="MafiaRising" customModuleProvider="target" id="93s-S6-tCw"/>
                         <segue destination="Uxu-yi-Eea" kind="show" identifier="PauseToRules" id="I53-ci-Nq8"/>
                         <segue destination="3SB-Ud-paO" kind="show" identifier="PauseToRoles" id="c66-br-zBn"/>
                     </connections>
@@ -3487,7 +3487,7 @@ of Players</string>
                     <connections>
                         <outlet property="isDoctor" destination="QMv-vd-Lw1" id="byd-UX-CHf"/>
                         <outlet property="isPolice" destination="WcW-4r-gEs" id="ehb-vr-dUn"/>
-                        <segue destination="JET-0x-enT" kind="show" identifier="RolesToCards" id="bun-w4-Bvq"/>
+                        <segue destination="JET-0x-enT" kind="show" identifier="RolesToCards" animates="NO" id="bun-w4-Bvq"/>
                         <segue destination="MMk-s6-MBe" kind="show" identifier="RolesToInfo" id="5DK-wl-vuS"/>
                     </connections>
                 </viewController>
@@ -3779,7 +3779,7 @@ of Players</string>
                     </view>
                     <connections>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="ReadyToPause" id="TDa-wu-gPe"/>
-                        <segue destination="MAm-3Z-Idg" kind="show" identifier="ReadyToStory" id="kkV-ey-5fO"/>
+                        <segue destination="MAm-3Z-Idg" kind="show" identifier="ReadyToStory" animates="NO" id="kkV-ey-5fO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTE-F1-sMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3924,8 +3924,8 @@ of Players</string>
                         <outlet property="mainTitle" destination="AsO-4H-IUz" id="nVM-sj-wPN"/>
                         <outlet property="scrollView" destination="Twh-X9-WTE" id="60X-q5-5st"/>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="StoryToPause" id="dhy-OQ-mIy"/>
-                        <segue destination="x6I-ks-Nig" kind="show" identifier="StoryToNight" id="XfW-qg-n7e"/>
-                        <segue destination="kEY-wj-tGy" kind="show" identifier="StoryToChoose" id="nFz-PG-5cK"/>
+                        <segue destination="x6I-ks-Nig" kind="show" identifier="StoryToNight" customClass="ScaleSegue" customModule="MafiaRising" customModuleProvider="target" id="XfW-qg-n7e"/>
+                        <segue destination="kEY-wj-tGy" kind="show" identifier="StoryToChoose" animates="NO" id="nFz-PG-5cK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uCi-wI-uQT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3989,7 +3989,7 @@ of Players</string>
                     </view>
                     <connections>
                         <outlet property="dayNum" destination="FK6-EW-Tci" id="S13-vT-qb3"/>
-                        <segue destination="MAm-3Z-Idg" kind="show" identifier="DayToStory" id="Jyo-Dw-ayh"/>
+                        <segue destination="MAm-3Z-Idg" kind="show" identifier="DayToStory" customClass="UnwindScaleSegue" customModule="MafiaRising" customModuleProvider="target" id="Jyo-Dw-ayh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QNp-ku-F01" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4102,28 +4102,28 @@ of Players</string>
                                                 <rect key="frame" x="0.0" y="0.0" width="93" height="100"/>
                                                 <color key="backgroundColor" red="0.57112640142440796" green="0.077838368713855743" blue="0.021155845373868942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="pressSoundEffectBtn1:" destination="kEY-wj-tGy" eventType="touchUpInside" id="8rv-QD-Tqf"/>
+                                                    <action selector="pressSoundEffectBtn:" destination="kEY-wj-tGy" eventType="touchUpInside" id="hTF-QU-wpU"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APn-t6-4Jl">
                                                 <rect key="frame" x="94" y="0.0" width="93" height="100"/>
                                                 <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
-                                                    <action selector="pressSoundEffectBtn2:" destination="kEY-wj-tGy" eventType="touchUpInside" id="Jz1-wG-E7p"/>
+                                                    <action selector="pressSoundEffectBtn:" destination="kEY-wj-tGy" eventType="touchUpInside" id="FQx-aH-KtX"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VyX-Lg-MZx">
                                                 <rect key="frame" x="188" y="0.0" width="93" height="100"/>
                                                 <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
-                                                    <action selector="pressSoundEffectBtn3:" destination="kEY-wj-tGy" eventType="touchUpInside" id="RA1-HL-wOL"/>
+                                                    <action selector="pressSoundEffectBtn:" destination="kEY-wj-tGy" eventType="touchUpInside" id="Q7F-lj-5B4"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Glf-kc-3hI">
                                                 <rect key="frame" x="282" y="0.0" width="93" height="100"/>
                                                 <color key="backgroundColor" red="0.57112640142440796" green="0.077838368713855743" blue="0.021155845373868942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="pressSoundEffectBtn4:" destination="kEY-wj-tGy" eventType="touchUpInside" id="Ehl-9r-tp6"/>
+                                                    <action selector="pressSoundEffectBtn:" destination="kEY-wj-tGy" eventType="touchUpInside" id="YwY-4M-5Pt"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -4195,9 +4195,9 @@ of Players</string>
                         <outlet property="soundEffectBtn2" destination="APn-t6-4Jl" id="Pvg-Xs-0Jr"/>
                         <outlet property="soundEffectBtn3" destination="VyX-Lg-MZx" id="3XI-i7-02S"/>
                         <outlet property="soundEffectBtn4" destination="Glf-kc-3hI" id="3vY-fl-mo8"/>
-                        <segue destination="QpL-Dl-0m0" kind="show" identifier="ChooseToDay" id="Xxf-v6-6cj"/>
-                        <segue destination="MAm-3Z-Idg" kind="show" identifier="ChooseToStory" id="Y5H-lc-M15"/>
-                        <segue destination="Mzs-IF-RIf" kind="show" identifier="ChooseToVictory" id="HeH-F8-GWu"/>
+                        <segue destination="QpL-Dl-0m0" kind="show" identifier="ChooseToDay" customClass="ScaleSegue" customModule="MafiaRising" customModuleProvider="target" id="Xxf-v6-6cj"/>
+                        <segue destination="MAm-3Z-Idg" kind="show" identifier="ChooseToStory" animates="NO" id="Y5H-lc-M15"/>
+                        <segue destination="Mzs-IF-RIf" kind="show" identifier="ChooseToVictory" animates="NO" id="HeH-F8-GWu"/>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="ChooseToPause" id="wNd-ep-vfX"/>
                     </connections>
                 </viewController>
@@ -4267,7 +4267,7 @@ of Players</string>
                         <outlet property="btmLbl" destination="2Yx-cc-pz3" id="0EL-lq-JPw"/>
                         <outlet property="dot" destination="L7T-g4-1CY" id="IpH-56-oEX"/>
                         <outlet property="winnerImage" destination="wni-xX-whe" id="1xE-0a-JI3"/>
-                        <segue destination="e96-xE-FgR" kind="show" identifier="VictoryToEnd" id="GtG-eL-rWC"/>
+                        <segue destination="e96-xE-FgR" kind="show" identifier="VictoryToEnd" animates="NO" id="GtG-eL-rWC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SId-vD-l1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -6928,14 +6928,14 @@ be a jerk ;)</string>
         <image name="portraitFiller" width="433" height="653"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Xxf-v6-6cj"/>
-        <segue reference="nFz-PG-5cK"/>
-        <segue reference="Y5H-lc-M15"/>
+        <segue reference="93s-S6-tCw"/>
         <segue reference="wNd-ep-vfX"/>
-        <segue reference="t2K-qO-woi"/>
+        <segue reference="DTs-jA-27W"/>
+        <segue reference="XfW-qg-n7e"/>
+        <segue reference="Y5H-lc-M15"/>
+        <segue reference="Xxf-v6-6cj"/>
         <segue reference="bB7-vs-abW"/>
         <segue reference="jGj-z5-JdE"/>
         <segue reference="nwm-Dp-aeN"/>
-        <segue reference="SvW-si-1fZ"/>
     </inferredMetricsTieBreakers>
 </document>

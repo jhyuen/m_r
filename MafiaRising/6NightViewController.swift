@@ -79,10 +79,26 @@ class _NightViewController: UIViewController {
                     print(error)
                 }
             }
-            
+            generateBasicButtonSelection()
             performSegue(withIdentifier: "NightToChoose", sender: masterPlayerArray)
             
         }
+    }
+    
+    func generateBasicButtonSelection() {
+        // Loop through number of sound effect buttons
+        potentialIndex.removeAll()
+
+        for _ in 1...4 {
+            var nextIndex: Int
+            
+            repeat {
+                nextIndex = Int(arc4random_uniform(UInt32(basicSoundEffectsArray.count)))
+            } while potentialIndex.contains(nextIndex)
+            
+            potentialIndex.append(nextIndex)
+        }
+        print(potentialIndex)
     }
 
     override func didReceiveMemoryWarning() {

@@ -86,6 +86,7 @@
 		2BFEDE021EC4C2E600AB18BD /* MafiaRisingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEDE011EC4C2E600AB18BD /* MafiaRisingTests.swift */; };
 		2BFEDE0D1EC4C2E700AB18BD /* MafiaRisingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEDE0C1EC4C2E700AB18BD /* MafiaRisingUITests.swift */; };
 		2BFEDE1B1EC4C7CE00AB18BD /* Kefa.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 2BFEDE1A1EC4C7CE00AB18BD /* Kefa.ttc */; };
+		843E18E61F3BAA0900C4C222 /* UnwindScaleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E18E51F3BAA0900C4C222 /* UnwindScaleSegue.swift */; };
 		84A3C3511EE9D19A00C802E6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3C3501EE9D19A00C802E6 /* Constants.swift */; };
 		84A3C3531EE9DD6900C802E6 /* ScaleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3C3521EE9DD6900C802E6 /* ScaleSegue.swift */; };
 		84AF22671EE7A12F006D0EA5 /* TutorialPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF22661EE7A12F006D0EA5 /* TutorialPageVC.swift */; };
@@ -209,6 +210,7 @@
 		2BFEDE0C1EC4C2E700AB18BD /* MafiaRisingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MafiaRisingUITests.swift; sourceTree = "<group>"; };
 		2BFEDE0E1EC4C2E700AB18BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BFEDE1A1EC4C7CE00AB18BD /* Kefa.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Kefa.ttc; sourceTree = "<group>"; };
+		843E18E51F3BAA0900C4C222 /* UnwindScaleSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindScaleSegue.swift; sourceTree = "<group>"; };
 		84A3C3501EE9D19A00C802E6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		84A3C3521EE9DD6900C802E6 /* ScaleSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleSegue.swift; sourceTree = "<group>"; };
 		84AF22661EE7A12F006D0EA5 /* TutorialPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageVC.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				2B764D131EF9E9BC005BC32B /* SoundEffect.swift */,
 				2B5CC8EE1F0C0496002A04B4 /* ChooseCollectionViewController.swift */,
 				2B5CC8F21F0C3483002A04B4 /* PlayerCollectionViewCell.swift */,
+				843E18E51F3BAA0900C4C222 /* UnwindScaleSegue.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -692,6 +695,7 @@
 				2BB18CE61EDFE268005E8515 /* OptionsInfoViewController.swift in Sources */,
 				84AF226B1EE7A291006D0EA5 /* TutorialPageVCVert2.swift in Sources */,
 				2B488F0C1ED3675800A27479 /* RulesMenuViewController.swift in Sources */,
+				843E18E61F3BAA0900C4C222 /* UnwindScaleSegue.swift in Sources */,
 				2B0042381EE1E46400A747BA /* Tutorial7ViewController.swift in Sources */,
 				84AF22761EE7BD0C006D0EA5 /* ScriptPageVCVert3.swift in Sources */,
 				2BC4AC211ED89A200075D142 /* Script8AViewController.swift in Sources */,

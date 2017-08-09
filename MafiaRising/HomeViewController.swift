@@ -23,6 +23,8 @@ var passedReady = false;
 var savedMasterArray: Array<Player> = []
 // Initialize AudioPlayer for background music
 var musicPlayer = AVAudioPlayer()
+// Initialize AudioPlayer for sound effects
+var soundEffectPlayer = AVAudioPlayer()
 
 // Profile sound effect names
 var profileNoisesNames: Array<String> = ["Agh god", "Agh-2", "Agh-3", "Agh", "Ah my face", "Are you enjoying this", "Aw thank you thank you", "Can you stop please", "Do you enjoy this", "Eh", "Ha", "Haha", "Hands off my face", "Hands off", "Hey(1)", "Hey", "Hi", "I don’t even have any words anymore", "I hope you enjoy a restraining order", "I keep saying things", "If you touch me one more time", "My masculinity", "No stop", "Oh come on really the face", "Oh my ugh", "Oh no", "Oi", "Oof-2", "Oof-3", "Oof", "Ooh (1)", "Ooh", "Oomph", "Ouch", "Ow (1)", "Ow-2", "Ow-3", "Ow-4", "Ow", "Please no", "Roar", "Stop that", "Stop touching me", "That’s my face man", "Ugh (1)", "Ugh the burn feel it ugh", "Ugh", "Will you ever learn", "Yeah keep pressing the face please", "Yeah", "You like that", "You’re gonna mess up my hair"]
@@ -51,8 +53,7 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
-        // Load sound defaults
+       // Load sound defaults
         if let enableDirections = UserDefaults.standard.object(forKey: "EnableDirections") as? Bool {
             optionsParameters.enableDirections = enableDirections
         }

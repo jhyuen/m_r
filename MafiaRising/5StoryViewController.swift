@@ -9,6 +9,9 @@
 import UIKit
 import AVFoundation
 
+// Initialize button index array
+var potentialIndex: Array<Int> = []
+
 class _StoryViewController: UIViewController {
 
     // UI Outlet
@@ -36,10 +39,7 @@ class _StoryViewController: UIViewController {
     
     // Random Number
     var randNum: Int = 0
-    
-    // Initialize AudioPlayer for sound effects
-    var audioPlayer = AVAudioPlayer()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -157,7 +157,7 @@ class _StoryViewController: UIViewController {
                     print(error)
                 }
             }
-
+            generateTribunalButtonSelection()
             performSegue(withIdentifier: "StoryToChoose", sender: masterPlayerArray)
         }
     }
@@ -169,6 +169,7 @@ class _StoryViewController: UIViewController {
         imageView.addSubview(overlay)
     }
     
+    // Touch Portrait
     func touchPortrait() {
         let randNum = Int(arc4random_uniform(UInt32(profileNoisesNames.count)))
         print("randNum is \(randNum)")
@@ -178,20 +179,41 @@ class _StoryViewController: UIViewController {
         if let sound = NSDataAsset(name: trackTitle) {
             // Do any additional setup after loading the view, typically from a nib.
             do {
-                audioPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                soundEffectPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
                 //audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: trackTitle, ofType: "mp3")!))
                 
-                if audioPlayer.isPlaying {
-                    audioPlayer.stop()
+                if soundEffectPlayer.isPlaying {
+                    soundEffectPlayer.stop()
                 }
                 
-                audioPlayer.play()
+                soundEffectPlayer.volume = optionsParameters.soundEffectsVol
+                soundEffectPlayer.prepareToPlay()
+                soundEffectPlayer.play()
                 
             } catch {
                 print(error)
             }
         }
     }
+    
+    // Choose 4 random unique sound effect buttons
+    func generateTribunalButtonSelection() {
+        // Loop through number of sound effect buttons
+        potentialIndex.removeAll()
+        
+        for _ in 1...4 {
+            var nextIndex: Int
+            
+            repeat {
+                nextIndex = Int(arc4random_uniform(UInt32(tribunalSoundEffectsArray.count)))
+            } while potentialIndex.contains(nextIndex)
+            
+            potentialIndex.append(nextIndex)
+        }
+        
+        print(potentialIndex)
+}
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -218,5 +240,4 @@ class _StoryViewController: UIViewController {
             }
         }
     }
-    
 }
