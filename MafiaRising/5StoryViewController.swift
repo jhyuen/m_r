@@ -111,6 +111,12 @@ class _StoryViewController: UIViewController {
         scrollView.contentSize = CGSize(width: WIDTH*CGFloat(masterPlayerArray.count), height: scrollView.frame.size.height)
     }
     
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(false)
+//        self.dismiss(animated: false, completion: nil)
+//        print("Story Disappearing")
+//    }
+    
     // Pause Button
     @IBAction func pauseBtnPressed(_ sender: Any) {
         performSegue(withIdentifier: "StoryToPause", sender: masterPlayerArray)
@@ -131,6 +137,15 @@ class _StoryViewController: UIViewController {
             UserDefaults.standard.set(part, forKey: "Part")
             
             musicPlayer.stop()
+            
+            // Update Data for NightViewController
+            isDay = false
+            UserDefaults.standard.set(isDay, forKey: "isDay")
+            
+            savedMasterArray = masterPlayerArray
+            let data = NSKeyedArchiver.archivedData(withRootObject: savedMasterArray)
+            UserDefaults.standard.set(data, forKey: "savedMasterArray")
+            
             performSegue(withIdentifier: "StoryToNight", sender: masterPlayerArray)
         }
         
@@ -158,6 +173,9 @@ class _StoryViewController: UIViewController {
                 }
             }
             generateTribunalButtonSelection()
+            
+            // Reset recentlyMurdered variable
+            recentlyMurdered = -1
             performSegue(withIdentifier: "StoryToChoose", sender: masterPlayerArray)
         }
     }

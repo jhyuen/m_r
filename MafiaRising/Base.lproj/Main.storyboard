@@ -3181,12 +3181,13 @@ The end..."</string>
                     <connections>
                         <outlet property="rolesBtn" destination="1Pr-Fv-ppd" id="96h-2h-al2"/>
                         <segue destination="9nD-tn-Rq4" kind="show" identifier="PauseToOptions" id="xw3-iS-S4C"/>
-                        <segue destination="TBE-rj-uHk" kind="show" identifier="PauseToHome" customClass="UnwindScaleSegue" customModule="MafiaRising" customModuleProvider="target" id="93s-S6-tCw"/>
                         <segue destination="Uxu-yi-Eea" kind="show" identifier="PauseToRules" id="I53-ci-Nq8"/>
                         <segue destination="3SB-Ud-paO" kind="show" identifier="PauseToRoles" id="c66-br-zBn"/>
+                        <segue destination="ecz-e7-bwO" kind="unwind" identifier="PauseToHome" unwindAction="unwindToHomeVCWithSegue:" id="fxs-Zp-5I4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayX-T1-lyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ecz-e7-bwO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="356" y="779"/>
         </scene>
@@ -3240,7 +3241,7 @@ The end..."</string>
                                     <action selector="goToPlayerInfo:" destination="3B4-aq-i8L" eventType="touchUpInside" id="605-nw-SfG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0m-tX-ykc" userLabel="Back">
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0m-tX-ykc" userLabel="Proceed">
                                 <rect key="frame" x="317" y="68" width="42" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="J3U-Er-AEa"/>
@@ -3324,9 +3325,9 @@ of Players</string>
                         <outlet property="errorLabel" destination="ClL-mv-6MZ" id="ppK-oD-rA3"/>
                         <outlet property="numPlayerField" destination="vtC-Cg-A6j" id="96q-5k-GNj"/>
                         <outlet property="toolBar" destination="Kl9-lF-JOS" id="dPm-QW-JUs"/>
-                        <segue destination="2Ec-qL-fxS" kind="show" identifier="PlayersToRoleSetUp" animates="NO" id="AGl-PN-oUX"/>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="PlayersToPause" id="IiT-7w-mNC"/>
                         <segue destination="lcA-mS-A5M" kind="show" identifier="PlayersToInfo" id="nbH-fj-q58"/>
+                        <segue destination="2Ec-qL-fxS" kind="show" identifier="PlayersToRoleSetUp" animates="NO" id="4Im-KK-ClF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JvO-E4-Sae" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3405,7 +3406,7 @@ of Players</string>
                                     <action selector="goBackToPlayer:" destination="2Ec-qL-fxS" eventType="touchUpInside" id="6bp-yd-5EP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4w-tR-aAv" userLabel="Back">
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4w-tR-aAv" userLabel="Proceed">
                                 <rect key="frame" x="317" y="68" width="42" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="XIc-pt-0WY"/>
@@ -4369,10 +4370,11 @@ of Players</string>
                     <connections>
                         <outlet property="rolesScrollView" destination="fCd-Vz-N3P" id="ynX-tx-FJw"/>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="EndToPause" id="QFZ-Cg-Yd8"/>
-                        <segue destination="TBE-rj-uHk" kind="show" identifier="EndToHome" id="t2K-qO-woi"/>
+                        <segue destination="VHi-e9-hcc" kind="unwind" identifier="EndToHome" animates="NO" unwindAction="unwindToHomeVCWithSegue:" id="SYz-qt-f8X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9p-ge-hZ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="VHi-e9-hcc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="8007" y="-575"/>
         </scene>
@@ -6928,14 +6930,13 @@ be a jerk ;)</string>
         <image name="portraitFiller" width="433" height="653"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="93s-S6-tCw"/>
-        <segue reference="wNd-ep-vfX"/>
-        <segue reference="DTs-jA-27W"/>
-        <segue reference="XfW-qg-n7e"/>
         <segue reference="Y5H-lc-M15"/>
-        <segue reference="Xxf-v6-6cj"/>
-        <segue reference="bB7-vs-abW"/>
-        <segue reference="jGj-z5-JdE"/>
+        <segue reference="nFz-PG-5cK"/>
+        <segue reference="QFZ-Cg-Yd8"/>
+        <segue reference="xw3-iS-S4C"/>
+        <segue reference="I53-ci-Nq8"/>
         <segue reference="nwm-Dp-aeN"/>
+        <segue reference="YkS-pf-4aO"/>
+        <segue reference="XfW-qg-n7e"/>
     </inferredMetricsTieBreakers>
 </document>

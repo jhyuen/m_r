@@ -24,10 +24,6 @@ class _RoleSetUpViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
     // Back Button
     @IBAction func goBackToPlayer(_ sender: Any) {
         dismiss(animated: false, completion: nil )
@@ -59,7 +55,7 @@ class _RoleSetUpViewController: UIViewController {
     
         performSegue(withIdentifier: "RolesToCards", sender: masterIndex)
     }
-    
+
     // Create Master Index
     func setRoleIndex(numMafia: Int, possibleSpecialRoles: Int) -> Array<Int>{
         

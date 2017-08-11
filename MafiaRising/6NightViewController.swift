@@ -39,13 +39,7 @@ class _NightViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        isDay = false
-        UserDefaults.standard.set(isDay, forKey: "isDay")
         
-        savedMasterArray = masterPlayerArray
-        let data = NSKeyedArchiver.archivedData(withRootObject: savedMasterArray)
-        UserDefaults.standard.set(data, forKey: "savedMasterArray")
-
         print("NightViewController")
         print("Cycle is \(cycle)")
         print("Part is \(part)")
@@ -55,7 +49,6 @@ class _NightViewController: UIViewController {
     
     // Proceed Button
     @IBAction func goToChoose(_ sender: Any) {
-        
         if part == 1 {
             
             // Increase part
@@ -80,6 +73,9 @@ class _NightViewController: UIViewController {
                 }
             }
             generateBasicButtonSelection()
+            // Reset recentlyMurdered variable
+            recentlyMurdered = -1
+            
             performSegue(withIdentifier: "NightToChoose", sender: masterPlayerArray)
             
         }

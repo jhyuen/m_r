@@ -40,26 +40,6 @@ class _ReadyViewController: UIViewController {
 //        }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        // Reset game status
-        // Reset cycle
-        conclusion = 0
-        policeAreAlive = false
-        doctorsAreAlive = false
-        recentlyMurdered = -1
-        
-        cycle = 1
-        UserDefaults.standard.set(cycle, forKey: "Cycle")
-        part = 0
-        UserDefaults.standard.set(part, forKey: "Part")
-        currentGameFinished = false
-        UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
-        
-        savedMasterArray = masterPlayerArray
-        let data = NSKeyedArchiver.archivedData(withRootObject: savedMasterArray)
-        UserDefaults.standard.set(data, forKey: "savedMasterArray")
-    }
-    
     // Pause Button
     @IBAction func pauseBtnPressed(_ sender: Any) {
         performSegue(withIdentifier: "ReadyToPause", sender: masterPlayerArray)

@@ -29,12 +29,7 @@ class _PlayerViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        // Reset globals
-        passedReady = false
-        currentGameFinished = true;
-        UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
-        isDay = false;
-        UserDefaults.standard.set(isDay, forKey: "isDay")
+        print("Player View Controller")
         
         errorLabel.isHidden = true
         numPlayerField.text = ""
@@ -126,7 +121,8 @@ class _PlayerViewController: UIViewController {
                     selectedVC.numPlayers = theNumPlayers
                 }
             }
-        } else if segue.identifier == "PlayersToPause" {
+        } else 
+        if segue.identifier == "PlayersToPause" {
             if let selectedVC = segue.destination as? PauseViewController {
                 if let theArray = sender as? Array<Player> {
                     selectedVC.masterPlayerArray = theArray
@@ -134,5 +130,4 @@ class _PlayerViewController: UIViewController {
             }
         }
     }
-
 }

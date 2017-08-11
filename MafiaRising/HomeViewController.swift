@@ -94,11 +94,23 @@ class HomeViewController: UIViewController {
     
     // New Game Button
     @IBAction func pushNewGame(_ sender: Any) {
+        // Reset globals
+        passedReady = false
+        currentGameFinished = true;
+        UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
+        isDay = false;
+        UserDefaults.standard.set(isDay, forKey: "isDay")
+        
         performSegue(withIdentifier: "HomeToPlayers", sender: self)
     }
     
     // Continue Button
     @IBAction func pushContinue(_ sender: Any) {
+        print("Continue Pressed")
+        print(isDay)
+        print(part)
+        print(currentGameFinished)
+            
         if !currentGameFinished {
             if !isDay {
                 part = 1
@@ -139,5 +151,10 @@ class HomeViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    // Similar to prepare for segue, necessary for unwinding segue
+    @IBAction func unwindToHomeVC(segue: UIStoryboardSegue) {
+        // May take action before segue occurs
     }
 }

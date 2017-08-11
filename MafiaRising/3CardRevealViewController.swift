@@ -61,8 +61,31 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         updateRoleLbl()
         updateNumberLbl()
         
+        
         // Set up camera feed
         let deviceSession = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInDualCamera,.builtInTelephotoCamera, .builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .unspecified)
+        
+        let cameraMediaType = AVMediaTypeVideo
+        let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(forMediaType: cameraMediaType)
+        
+        switch cameraAuthorizationStatus {
+        case .denied:
+            // create alert to ask user to enable camera
+            createCameraAlert(title: "Please enable your camera.", message: "Additional Message")
+        case .authorized: break
+        // restricted, normally won't happen
+        case .restricted: break
+            
+        case .notDetermined:
+            // Prompting user for the permission to use the camera.
+            AVCaptureDevice.requestAccess(forMediaType: cameraMediaType) { granted in
+                if granted {
+                    print("Granted access to \(cameraMediaType)")
+                } else {
+                    print("Denied access to \(cameraMediaType)")
+                }
+            }
+        }
         
         for device in (deviceSession?.devices)!{
             if device.position == AVCaptureDevicePosition.front {
@@ -115,6 +138,24 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
             // End capture session
             captureSession.stopRunning()
             previewLayer.removeFromSuperlayer()
+            
+            // Reset game status
+            // Reset cycle
+            conclusion = 0
+            policeAreAlive = false
+            doctorsAreAlive = false
+            recentlyMurdered = -1
+            
+            cycle = 1
+            UserDefaults.standard.set(cycle, forKey: "Cycle")
+            part = 0
+            UserDefaults.standard.set(part, forKey: "Part")
+            currentGameFinished = false
+            UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
+            
+            savedMasterArray = masterPlayerArray
+            let data = NSKeyedArchiver.archivedData(withRootObject: savedMasterArray)
+            UserDefaults.standard.set(data, forKey: "savedMasterArray")
             
             performSegue(withIdentifier: "CardsToReady", sender: masterPlayerArray)
             
@@ -237,6 +278,24 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         masterPlayerArray.append(Player(picture: picture, role: role))
     }
     
+    func createCameraAlert (title:String, message:String)
+    {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        //Add buttons and actions
+        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            print ("Okay")
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            print("Cancel")
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -258,6 +317,23 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     }
  // !!! REMOVE FROM FINAL PRODUCT, FOR TESTING ONLY
     @IBAction func bypassPressed(_ sender: Any) {
+        // Reset game status
+        // Reset cycle
+        conclusion = 0
+        policeAreAlive = false
+        doctorsAreAlive = false
+        recentlyMurdered = -1
+        
+        cycle = 1
+        UserDefaults.standard.set(cycle, forKey: "Cycle")
+        part = 0
+        UserDefaults.standard.set(part, forKey: "Part")
+        currentGameFinished = false
+        UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
+        
+        savedMasterArray = masterPlayerArray
+        let data = NSKeyedArchiver.archivedData(withRootObject: savedMasterArray)
+        UserDefaults.standard.set(data, forKey: "savedMasterArray")
         
         // !!! populating the master array for testing
         let citImage = UIImage(named: "MRFinal RolesCitizen")

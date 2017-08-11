@@ -40,13 +40,7 @@ class _DayViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        isDay = true
-        UserDefaults.standard.set(isDay, forKey: "isDay")
         
-        savedMasterArray = masterPlayerArray
-        let data = NSKeyedArchiver.archivedData(withRootObject: savedMasterArray)
-        UserDefaults.standard.set(data, forKey: "savedMasterArray")
-
         print("DayViewController")
         print("Cycle is \(cycle)")
         print("Part is \(part)")

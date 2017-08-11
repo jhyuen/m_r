@@ -108,8 +108,6 @@ class _ChooseViewController: UIViewController {
             numOfRoles = 1
         }
         
-        recentlyMurdered = -1
-        
         print("ChooseViewController")
         print("Cycle is \(cycle)")
         print("Part is \(part)")
@@ -221,6 +219,15 @@ class _ChooseViewController: UIViewController {
                     } else {
                         part = part + 1
                         UserDefaults.standard.set(part, forKey: "Part")
+                        
+                        // Setup data for DayViewController
+                        isDay = true
+                        UserDefaults.standard.set(isDay, forKey: "isDay")
+                        
+                        savedMasterArray = masterPlayerArray
+                        let data = NSKeyedArchiver.archivedData(withRootObject: savedMasterArray)
+                        UserDefaults.standard.set(data, forKey: "savedMasterArray")
+                        
                         performSegue(withIdentifier: "ChooseToDay", sender: masterPlayerArray)
                     }
                 }
@@ -253,6 +260,15 @@ class _ChooseViewController: UIViewController {
                     } else {
                         part = part + 1
                         UserDefaults.standard.set(part, forKey: "Part")
+                        
+                        // Setup data for DayViewController
+                        isDay = true
+                        UserDefaults.standard.set(isDay, forKey: "isDay")
+                        
+                        savedMasterArray = masterPlayerArray
+                        let data = NSKeyedArchiver.archivedData(withRootObject: savedMasterArray)
+                        UserDefaults.standard.set(data, forKey: "savedMasterArray")
+                        
                         performSegue(withIdentifier: "ChooseToDay", sender: masterPlayerArray)
                     }
                 }
@@ -286,6 +302,15 @@ class _ChooseViewController: UIViewController {
                     subPart = subPart + 1
                     part = part + 1
                     UserDefaults.standard.set(part, forKey: "Part")
+                    
+                    // Setup data for DayViewController
+                    isDay = true
+                    UserDefaults.standard.set(isDay, forKey: "isDay")
+                    
+                    savedMasterArray = masterPlayerArray
+                    let data = NSKeyedArchiver.archivedData(withRootObject: savedMasterArray)
+                    UserDefaults.standard.set(data, forKey: "savedMasterArray")
+                    
                     performSegue(withIdentifier: "ChooseToDay", sender: masterPlayerArray)
                 }
                 
