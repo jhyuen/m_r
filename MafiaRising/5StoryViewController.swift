@@ -12,7 +12,9 @@ import AVFoundation
 // Initialize button index array
 var potentialIndex: Array<Int> = []
 
-class _StoryViewController: UIViewController {
+var storyIntroTrackNum: Int = 0
+
+class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
 
     // UI Outlet
     // may turn into button if showing words
@@ -37,6 +39,9 @@ class _StoryViewController: UIViewController {
     // Murder Pictures Array
     var murderPictureNames: Array<String> = []
     
+    // 
+    var storyIntroOrder: Array<String> = []
+    
     // Random Number
     var randNum: Int = 0
 
@@ -55,6 +60,10 @@ class _StoryViewController: UIViewController {
         if cycle == 1 && part == 0 {
             // Story Intro
             mainTitle.text = "STORY"
+            if optionsParameters.enableStory && !narrationStarted {
+                storyIntroOrder.removeAll()
+                generateStoryIntro()
+            }
         } else if cycle > 1 && part == 0 {
             mainTitle.text = "DAY \(cycle - 1)"
             
@@ -125,10 +134,20 @@ class _StoryViewController: UIViewController {
     // Repeat Voice Button
     @IBAction func repeatVoice(_ sender: Any) {
         print("You hit the repeat button")
+        if cycle == 1 && part == 0 {
+            // Story Intro
+            narrationPlayer.stop()
+            print(storyIntroOrder[0])
+            playNarrationQueue(trackTitle: storyIntroOrder[0])
+            storyIntroTrackNum = storyIntroTrackNum + 1
+        }
+        
     }
     
     // Proceed Button
     @IBAction func goToNextScreen(_ sender: Any) {
+        narrationPlayer.stop()
+        narrationStarted = false
         
         if part == 0 {
             
@@ -145,6 +164,9 @@ class _StoryViewController: UIViewController {
             savedMasterArray = masterPlayerArray
             let data = NSKeyedArchiver.archivedData(withRootObject: savedMasterArray)
             UserDefaults.standard.set(data, forKey: "savedMasterArray")
+            
+            narrationPlayer.stop()
+            narrationStarted = false
             
             performSegue(withIdentifier: "StoryToNight", sender: masterPlayerArray)
         }
@@ -176,6 +198,10 @@ class _StoryViewController: UIViewController {
             
             // Reset recentlyMurdered variable
             recentlyMurdered = -1
+            
+            narrationPlayer.stop()
+            narrationStarted = false
+
             performSegue(withIdentifier: "StoryToChoose", sender: masterPlayerArray)
         }
     }
@@ -230,8 +256,59 @@ class _StoryViewController: UIViewController {
         }
         
         print(potentialIndex)
-}
+    }
+    
+    func generateStoryIntro() {
+        let firstParagraph = msiFirstParagraph[Int(arc4random_uniform(UInt32(msiFirstParagraph.count)))]
+        let secondParagraph = msiSecondParagraph[Int(arc4random_uniform(UInt32(msiSecondParagraph.count)))]
+        let thirdParagraph = msiThirdParagraph[Int(arc4random_uniform(UInt32(msiThirdParagraph.count)))]
+        
+        storyIntroOrder.append(firstParagraph)
+        storyIntroOrder.append(secondParagraph)
+        storyIntroOrder.append(thirdParagraph)
+        
+        // Play first paragraph
+        print(firstParagraph)
+        playNarrationQueue(trackTitle: firstParagraph)
+        storyIntroTrackNum = storyIntroTrackNum + 1
+    }
 
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        print("finished playing")
+        if flag == true {
+            if storyIntroTrackNum == 1 {
+                // Play second paragraph
+                print(storyIntroOrder[1])
+                narrationPlayer.stop()
+                playNarrationQueue(trackTitle: storyIntroOrder[1])
+                storyIntroTrackNum = storyIntroTrackNum + 1
+            } else if storyIntroTrackNum == 2 {
+                // Play third paragraph
+                print(storyIntroOrder[2])
+                narrationPlayer.stop()
+                playNarrationQueue(trackTitle: storyIntroOrder[2])
+                storyIntroTrackNum = 0
+            }
+        }
+    }
+    
+    // Given an mp3 file name, play file
+    func playNarrationQueue(trackTitle: String) {
+        if let sound = NSDataAsset(name: trackTitle) {
+            // Do any additional setup after loading the view, typically from a nib.
+            do {
+                narrationPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                
+                narrationPlayer.delegate = self
+                narrationPlayer.prepareToPlay()
+                narrationPlayer.play()
+                
+            } catch {
+                print(error)
+            }
+        }
+        narrationStarted = true
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

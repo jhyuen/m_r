@@ -9,6 +9,8 @@
 import UIKit
 import AVFoundation
 
+var firstTimeNight: Bool = false
+
 class _NightViewController: UIViewController {
 
     // UI Outlets
@@ -45,6 +47,21 @@ class _NightViewController: UIViewController {
         print("Part is \(part)")
 
         nightNum.text = "\(cycle)"
+        
+        if optionsParameters.enableDirections {
+            if firstTimeNight {
+                print("First time night")
+                // Begin narration after 1 second
+                    print("S_N_B_01")
+                    playNarration(trackTitle: "S_N_B_01")
+            } else {
+                print("Not first time night")
+                // Begin narration after 1 second
+                    print("S_T_B_02")
+                    playNarration(trackTitle: "S_T_B_02")
+            }
+        }
+        firstTimeNight = false
     }
     
     // Proceed Button
@@ -76,6 +93,8 @@ class _NightViewController: UIViewController {
             // Reset recentlyMurdered variable
             recentlyMurdered = -1
             
+            narrationPlayer.stop()
+            narrationStarted = false
             performSegue(withIdentifier: "NightToChoose", sender: masterPlayerArray)
             
         }

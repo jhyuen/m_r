@@ -9,6 +9,8 @@
 import UIKit
 import AVFoundation
 
+var firstTimeDay: Bool = false
+
 class _DayViewController: UIViewController {
 
     // UI Outlets
@@ -46,6 +48,18 @@ class _DayViewController: UIViewController {
         print("Part is \(part)")
         
         dayNum.text = "\(cycle)"
+        
+        if optionsParameters.enableDirections {
+            if firstTimeDay {
+                    print("S_D_R_01")
+                    playNarration(trackTitle: "S_D_R_01")
+            } else {
+                    print("S_D_B_01")
+                    playNarration(trackTitle: "S_D_B_01")
+            }
+        }
+        firstTimeDay = false
+
     }
 
     // Proceed Button
@@ -75,6 +89,8 @@ class _DayViewController: UIViewController {
                 }
             }
             
+            narrationPlayer.stop()
+            narrationStarted = false
             performSegue(withIdentifier: "DayToStory", sender: masterPlayerArray)
             
         }

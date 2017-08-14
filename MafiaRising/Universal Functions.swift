@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 let animateSegues: Bool = true
 
@@ -55,6 +56,128 @@ let yay = SoundEffect(effect: "Yay", picture: "Yay.png")
 let basicSoundEffectsArray: Array<SoundEffect> = [accent1, accent2, accent3, bell, clock, cough, creak1, creak2, crickets, door, giggle, glass, leaves1, pianoAccent1, pianoAccent2, scratch, wind]
 let tribunalSoundEffectsArray: Array<SoundEffect> = [angryMob1, angryMob2, angryMob3, boo, clapping, flappingBirds, freedom, ivat1, ivat2, ivat3, nay, raven, rooster, weeping, yay]
 
+var msiFirstParagraph: Array<String> = []
+var msiSecondParagraph: Array<String> = []
+var msiThirdParagraph: Array<String> = []
+var dayIntro: Array<String> = []
+var dayDeath: Array<String> = []
+var tribunalTime: Array<String> = []
+var tribunalGeneral: Array<String> = []
+var tribunalExecution: Array<String> = []
+var tribunalExplanation: Array<String> = []
+var noneDie: Array<String> = []
+var endVictory: Array<String> = []
+var endDefeat: Array<String> = []
+
+// Populates arrays the hold narration file names
+func generateNarrationArrays() {
+    // First Paragraph
+    for number in 1...30 {
+        if (number<10) {
+            msiFirstParagraph.append("CL_MSI_P1_0\(number)")
+        } else {
+            msiFirstParagraph.append("CL_MSI_P1_\(number)")
+        }
+    }
+    
+    // Second Paragraph
+    for number in 1...30 {
+        if (number<10) {
+            msiSecondParagraph.append("CL_MSI_P2_0\(number)")
+        } else {
+            msiSecondParagraph.append("CL_MSI_P2_\(number)")
+        }
+    }
+    
+    // Third Paragraph
+    for number in 1...30 {
+        if (number<10) {
+            msiThirdParagraph.append("CL_MSI_P3_0\(number)")
+        } else {
+            msiThirdParagraph.append("CL_MSI_P3_\(number)")
+        }
+    }
+    
+    // Day - Intro
+    for number in 1...9 {
+        dayIntro.append("CL_D_I_0\(number)")
+    }
+    for number in 10...29 {
+        dayIntro.append("CL_D_I_\(number)")
+    }
+    
+    // Day - Death
+    for number in 1...9 {
+        dayDeath.append("CL_D_D_0\(number)")
+    }
+    for number in 10...44 {
+        dayDeath.append("CL_D_D_\(number)")
+    }
+    
+    // Tribunal - Time
+    for number in 1...9 {
+        tribunalTime.append("CL_T_T_0\(number)")
+    }
+    for number in 10...15 {
+        tribunalTime.append("CL_T_T_\(number)")
+    }
+    
+    // Tribunal - General
+    tribunalGeneral.append("CL_T_G_01")
+    
+    // Tribunal - Execution
+    for number in 1...9 {
+        tribunalExecution.append("CL_T_Exe_0\(number)")
+    }
+    for number in 10...30 {
+        tribunalExecution.append("CL_T_Exe_\(number)")
+    }
+    
+    // Tribunal - Explanation
+        for number in 1...9 {
+        tribunalExplanation.append("CL_T_Exp_0\(number)")
+    }
+    for number in 10...30 {
+        tribunalExplanation.append("CL_T_Exp_\(number)")
+    }
+    
+    // Special Saying Only if someone was saved
+    noneDie.append("NoneDie")
+    
+    // End - Victory
+    for number in 1...9 {
+        endVictory.append("CL_E_V_0\(number)")
+    }
+    for number in 10...11 {
+        endVictory.append("CL_E_V_\(number)")
+    }
+    
+    // End - Defeat
+    for number in 1...9 {
+        endDefeat.append("CL_E_D_0\(number)")
+    }
+    for number in 10...24 {
+        endDefeat.append("CL_E_D_\(number)")
+    }
+
+}
+
+// Given an mp3 file name, play file
+func playNarration(trackTitle: String) {
+    if let sound = NSDataAsset(name: trackTitle) {
+        // Do any additional setup after loading the view, typically from a nib.
+        do {
+            narrationPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+        
+            narrationPlayer.prepareToPlay()
+            narrationPlayer.play()
+            
+        } catch {
+            print(error)
+        }
+    }
+    narrationStarted = true
+}
 
 func dismissLeftToRight (theVC: UIViewController) {
     let transition: CATransition = CATransition()

@@ -42,7 +42,7 @@ class _VictoryViewController: UIViewController {
         switch conclusion {
             
         case 1:
-            
+            // Citizens Win
             backgroundView.backgroundColor = whiteColor
             winnerImage.image = UIImage(named: "MRFinal CitizensWinC1")
             dot.image = UIImage(named: "MRFinal CitzensWinC2")
@@ -66,9 +66,13 @@ class _VictoryViewController: UIViewController {
                     print(error)
                 }
             }
+            if optionsParameters.enableStory {
+                let trackNum = Int(arc4random_uniform(UInt32(endVictory.count)))
+                playNarration(trackTitle: endVictory[trackNum])
+            }
             
         case 2:
-            
+            // Mafia Wins
             backgroundView.backgroundColor = blackColor
             winnerImage.image = UIImage(named: "MRFinal MafiaWinC1")
             dot.image = UIImage(named: "MRFinal MafiaWinC2")
@@ -82,7 +86,6 @@ class _VictoryViewController: UIViewController {
                     musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
                     musicPlayer.numberOfLoops = -1
                     
-                    // !!! STOP PLAYER
                     musicPlayer.volume = optionsParameters.musicVol
                     musicPlayer.prepareToPlay()
                     musicPlayer.play()
@@ -91,7 +94,10 @@ class _VictoryViewController: UIViewController {
                     print(error)
                 }
             }
-
+            if optionsParameters.enableStory {
+                let trackNum = Int(arc4random_uniform(UInt32(endDefeat.count)))
+                playNarration(trackTitle: endDefeat[trackNum])
+            }
             
         default:
             
@@ -104,6 +110,8 @@ class _VictoryViewController: UIViewController {
     @IBAction func goToEnd(_ sender: Any) {
         part = part + 1
         UserDefaults.standard.set(part, forKey: "Part")
+        narrationPlayer.stop()
+        narrationStarted = false
         performSegue(withIdentifier: "VictoryToEnd", sender: masterPlayerArray)
     }
     

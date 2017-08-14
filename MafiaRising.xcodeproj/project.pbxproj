@@ -35,7 +35,6 @@
 		2B488F0C1ED3675800A27479 /* RulesMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F0B1ED3675800A27479 /* RulesMenuViewController.swift */; };
 		2B488F0E1ED3684100A27479 /* Tutorial1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F0D1ED3684100A27479 /* Tutorial1ViewController.swift */; };
 		2B488F121ED3688C00A27479 /* RolesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F111ED3688C00A27479 /* RolesViewController.swift */; };
-		2B488F1A1ED3697300A27479 /* 1PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F191ED3697300A27479 /* 1PlayerViewController.swift */; };
 		2B488F1C1ED3698600A27479 /* 2RoleSetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F1B1ED3698600A27479 /* 2RoleSetUpViewController.swift */; };
 		2B488F1E1ED3699400A27479 /* 3CardRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F1D1ED3699400A27479 /* 3CardRevealViewController.swift */; };
 		2B488F201ED369A100A27479 /* 4ReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F1F1ED369A100A27479 /* 4ReadyViewController.swift */; };
@@ -87,7 +86,7 @@
 		2BFEDE0D1EC4C2E700AB18BD /* MafiaRisingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEDE0C1EC4C2E700AB18BD /* MafiaRisingUITests.swift */; };
 		2BFEDE1B1EC4C7CE00AB18BD /* Kefa.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 2BFEDE1A1EC4C7CE00AB18BD /* Kefa.ttc */; };
 		843E18E61F3BAA0900C4C222 /* UnwindScaleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E18E51F3BAA0900C4C222 /* UnwindScaleSegue.swift */; };
-		84A3C3511EE9D19A00C802E6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3C3501EE9D19A00C802E6 /* Constants.swift */; };
+		84A3C3511EE9D19A00C802E6 /* Universal Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3C3501EE9D19A00C802E6 /* Universal Functions.swift */; };
 		84A3C3531EE9DD6900C802E6 /* ScaleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3C3521EE9DD6900C802E6 /* ScaleSegue.swift */; };
 		84AF22671EE7A12F006D0EA5 /* TutorialPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF22661EE7A12F006D0EA5 /* TutorialPageVC.swift */; };
 		84AF22691EE7A224006D0EA5 /* TutorialPageVCVert1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF22681EE7A224006D0EA5 /* TutorialPageVCVert1.swift */; };
@@ -105,6 +104,9 @@
 		84AF22821EE7BD3E006D0EA5 /* ScriptPageVCVert9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF22811EE7BD3E006D0EA5 /* ScriptPageVCVert9.swift */; };
 		84CF2CDA1EF05304008A7052 /* RoleImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF2CD91EF05304008A7052 /* RoleImg.swift */; };
 		84D5BFDA1EE864CB0094390A /* ScriptMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5BFD91EE864CB0094390A /* ScriptMainVC.swift */; };
+		84D8E3BD1F41FA1000172221 /* Intro1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D8E3BC1F41FA1000172221 /* Intro1ViewController.swift */; };
+		84D8E3BF1F41FA2000172221 /* Intro2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D8E3BE1F41FA2000172221 /* Intro2ViewController.swift */; };
+		84D8E3C11F42433600172221 /* 1PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D8E3C01F42433600172221 /* 1PlayersViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,7 +155,6 @@
 		2B488F0B1ED3675800A27479 /* RulesMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesMenuViewController.swift; sourceTree = "<group>"; };
 		2B488F0D1ED3684100A27479 /* Tutorial1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial1ViewController.swift; sourceTree = "<group>"; };
 		2B488F111ED3688C00A27479 /* RolesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RolesViewController.swift; sourceTree = "<group>"; };
-		2B488F191ED3697300A27479 /* 1PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 1PlayerViewController.swift; sourceTree = "<group>"; };
 		2B488F1B1ED3698600A27479 /* 2RoleSetUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 2RoleSetUpViewController.swift; sourceTree = "<group>"; };
 		2B488F1D1ED3699400A27479 /* 3CardRevealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 3CardRevealViewController.swift; sourceTree = "<group>"; };
 		2B488F1F1ED369A100A27479 /* 4ReadyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 4ReadyViewController.swift; sourceTree = "<group>"; };
@@ -211,7 +212,7 @@
 		2BFEDE0E1EC4C2E700AB18BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BFEDE1A1EC4C7CE00AB18BD /* Kefa.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Kefa.ttc; sourceTree = "<group>"; };
 		843E18E51F3BAA0900C4C222 /* UnwindScaleSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindScaleSegue.swift; sourceTree = "<group>"; };
-		84A3C3501EE9D19A00C802E6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		84A3C3501EE9D19A00C802E6 /* Universal Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Universal Functions.swift"; sourceTree = "<group>"; };
 		84A3C3521EE9DD6900C802E6 /* ScaleSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleSegue.swift; sourceTree = "<group>"; };
 		84AF22661EE7A12F006D0EA5 /* TutorialPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageVC.swift; sourceTree = "<group>"; };
 		84AF22681EE7A224006D0EA5 /* TutorialPageVCVert1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageVCVert1.swift; sourceTree = "<group>"; };
@@ -229,6 +230,9 @@
 		84AF22811EE7BD3E006D0EA5 /* ScriptPageVCVert9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptPageVCVert9.swift; sourceTree = "<group>"; };
 		84CF2CD91EF05304008A7052 /* RoleImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleImg.swift; sourceTree = "<group>"; };
 		84D5BFD91EE864CB0094390A /* ScriptMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptMainVC.swift; sourceTree = "<group>"; };
+		84D8E3BC1F41FA1000172221 /* Intro1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Intro1ViewController.swift; sourceTree = "<group>"; };
+		84D8E3BE1F41FA2000172221 /* Intro2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Intro2ViewController.swift; sourceTree = "<group>"; };
+		84D8E3C01F42433600172221 /* 1PlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 1PlayersViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +272,7 @@
 		2B488F061ED3668F00A27479 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				84D8E3BB1F41F9F000172221 /* Intro Screens */,
 				2BB18CE21EDFE220005E8515 /* InfoCards */,
 				2B488F031ED3653700A27479 /* HomeViewController.swift */,
 				2B488F151ED368D000A27479 /* Rules */,
@@ -284,7 +289,7 @@
 			children = (
 				2B406E7B1EE896360099A0B8 /* CheckBox.swift */,
 				84CF2CD91EF05304008A7052 /* RoleImg.swift */,
-				84A3C3501EE9D19A00C802E6 /* Constants.swift */,
+				84A3C3501EE9D19A00C802E6 /* Universal Functions.swift */,
 				84A3C3521EE9DD6900C802E6 /* ScaleSegue.swift */,
 				2B764C631EF5C37F005BC32B /* Player.swift */,
 				2B764D131EF9E9BC005BC32B /* SoundEffect.swift */,
@@ -307,7 +312,7 @@
 		2B488F131ED368BB00A27479 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				2B488F191ED3697300A27479 /* 1PlayerViewController.swift */,
+				84D8E3C01F42433600172221 /* 1PlayersViewController.swift */,
 				2B488F1B1ED3698600A27479 /* 2RoleSetUpViewController.swift */,
 				2B488F1D1ED3699400A27479 /* 3CardRevealViewController.swift */,
 				2B488F1F1ED369A100A27479 /* 4ReadyViewController.swift */,
@@ -494,6 +499,15 @@
 			name = PageVCs;
 			sourceTree = "<group>";
 		};
+		84D8E3BB1F41F9F000172221 /* Intro Screens */ = {
+			isa = PBXGroup;
+			children = (
+				84D8E3BC1F41FA1000172221 /* Intro1ViewController.swift */,
+				84D8E3BE1F41FA2000172221 /* Intro2ViewController.swift */,
+			);
+			name = "Intro Screens";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -648,13 +662,12 @@
 				2B488F371ED3AFBC00A27479 /* RoleInformationViewController.swift in Sources */,
 				2BC4AC1B1ED899FD0075D142 /* Script4AViewController.swift in Sources */,
 				2B488F291ED36A0200A27479 /* 7ChooseViewController.swift in Sources */,
-				84A3C3511EE9D19A00C802E6 /* Constants.swift in Sources */,
+				84A3C3511EE9D19A00C802E6 /* Universal Functions.swift in Sources */,
 				2BB18CE81EDFE277005E8515 /* CardsInfoViewController.swift in Sources */,
 				2BC4ABFF1ED888D00075D142 /* Script2ViewController.swift in Sources */,
 				2B00422E1EE1E41900A747BA /* Tutorial2ViewController.swift in Sources */,
 				2B488F1E1ED3699400A27479 /* 3CardRevealViewController.swift in Sources */,
 				2BFEDDED1EC4C2E600AB18BD /* AppDelegate.swift in Sources */,
-				2B488F1A1ED3697300A27479 /* 1PlayerViewController.swift in Sources */,
 				84AF226F1EE7B91D006D0EA5 /* ScriptPageVC.swift in Sources */,
 				2B00423E1EE1E47F00A747BA /* Tutorial10ViewController.swift in Sources */,
 				2B0042401EE1E48800A747BA /* Tutorial11ViewController.swift in Sources */,
@@ -705,6 +718,7 @@
 				84AF22761EE7BD0C006D0EA5 /* ScriptPageVCVert3.swift in Sources */,
 				2BC4AC211ED89A200075D142 /* Script8AViewController.swift in Sources */,
 				84CF2CDA1EF05304008A7052 /* RoleImg.swift in Sources */,
+				84D8E3BD1F41FA1000172221 /* Intro1ViewController.swift in Sources */,
 				84AF227C1EE7BD26006D0EA5 /* ScriptPageVCVert6.swift in Sources */,
 				2B0042541EE1E50A00A747BA /* Tutorial12AViewController.swift in Sources */,
 				84A3C3531EE9DD6900C802E6 /* ScaleSegue.swift in Sources */,
@@ -722,8 +736,10 @@
 				2B488F351ED3AEBC00A27479 /* GameRolesViewController.swift in Sources */,
 				2B488F331ED3A32700A27479 /* PauseViewController.swift in Sources */,
 				84AF22781EE7BD14006D0EA5 /* ScriptPageVCVert4.swift in Sources */,
+				84D8E3C11F42433600172221 /* 1PlayersViewController.swift in Sources */,
 				2B488F2B1ED36A3900A27479 /* 8VictoryViewController.swift in Sources */,
 				2B488F201ED369A100A27479 /* 4ReadyViewController.swift in Sources */,
+				84D8E3BF1F41FA2000172221 /* Intro2ViewController.swift in Sources */,
 				2B0042421EE1E49800A747BA /* Tutorial12ViewController.swift in Sources */,
 				2B0042301EE1E43B00A747BA /* Tutorial3ViewController.swift in Sources */,
 				2BC4AC1D1ED89A090075D142 /* Script5AViewController.swift in Sources */,

@@ -24,8 +24,18 @@ class _RoleSetUpViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        // Begin narration after 1 second
+        if optionsParameters.enableDirections && !narrationStarted {
+                print("S_SU_02")
+                playNarration(trackTitle: "S_SU_02")
+        }
+    }
+    
     // Back Button
     @IBAction func goBackToPlayer(_ sender: Any) {
+        narrationPlayer.stop()
+        narrationStarted = false
         dismiss(animated: false, completion: nil )
     }
     
@@ -53,6 +63,8 @@ class _RoleSetUpViewController: UIViewController {
         
         masterIndex = refineRoleIndex(index: masterIndex)
     
+        narrationPlayer.stop()
+        narrationStarted = false
         performSegue(withIdentifier: "RolesToCards", sender: masterIndex)
     }
 

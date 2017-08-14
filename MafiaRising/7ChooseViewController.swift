@@ -16,6 +16,10 @@ var conclusion: Int = 0
 var policeAreAlive = false
 var doctorsAreAlive = false
 var recentlyMurdered: Int = -1
+var firstTimeMafia: Bool = false
+var firstTimePolice: Bool = false
+var firstTimeDoctor: Bool = false
+var firstTimeTribunal: Bool = false
 
 class _ChooseViewController: UIViewController {
     
@@ -128,12 +132,26 @@ class _ChooseViewController: UIViewController {
             if subPart == 1 {
                 roleLbl.text = "MAFIA"
                 generateBasicButtons()
+                
+                if optionsParameters.enableDirections && !narrationStarted {
+                    narrationStarted = true
+                    print("S_N_B_04")
+                    playNarration(trackTitle: "S_N_B_04")
+                    
+                    if firstTimeMafia {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                            print("S_N_R_02")
+                            playNarration(trackTitle: "S_N_R_02")
+                        })
+                    }
+                }
+                firstTimeMafia = false
             } else if subPart == 2 && !policeExist {
                 roleLbl.text = "DOCTOR"
             } else if subPart == 3 {
                 roleLbl.text = "DOCTOR"
             } else {
-                roleLbl.text = "POLICE"		
+                roleLbl.text = "POLICE"
             }
             // updateSounds(arrayType: nightSoundEffectsArray)
             
@@ -144,6 +162,27 @@ class _ChooseViewController: UIViewController {
             if subPart == 1 {
                 generateTribunalButtons()
             }
+            
+            if optionsParameters.enableDirections && !narrationStarted {
+                narrationStarted = true
+                
+                if firstTimeTribunal {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                        print("S_T_R_01")
+                        playNarration(trackTitle: "S_T_R_01")
+                    })
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                        print("S_T_R_02")
+                        playNarration(trackTitle: "S_T_R_02")
+                    })
+                } else {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                        print("S_T_B_01")
+                        playNarration(trackTitle: "S_T_B_01")
+                    })
+                }
+            }
+            firstTimeTribunal = false
             // updateSounds(arrayType: tribunalSoundEffectsArray)
         }
         
@@ -165,6 +204,8 @@ class _ChooseViewController: UIViewController {
     
     // Proceed Button
     @IBAction func goToNextScreen(_ sender: Any) {
+        narrationPlayer.stop()
+        narrationStarted = false
         
         if selectedPlayerIndex >= 0 || (roleLbl.text == "DOCTOR" && !doctorsAreAlive) || (roleLbl.text == "POLICE" && !policeAreAlive) {
             removeBorderAndIndicator(reset: false)
@@ -187,6 +228,10 @@ class _ChooseViewController: UIViewController {
             // Finish Mafia Selection
             if part == 2 && subPart == 1 {
                 
+                if optionsParameters.enableDirections {
+                    playNarration(trackTitle: "S_N_B_05")
+                    print("S_N_B_05")
+                }
                 // checked box is targeted
                 // selectedPlayer.attemptMurder
                 masterPlayerArray[selectedPlayerIndex].attemptMurder()
@@ -199,12 +244,40 @@ class _ChooseViewController: UIViewController {
                     if !policeAreAlive {
                         disableAll()
                     }
+                    if optionsParameters.enableDirections {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                            print("S_N_B_06")
+                            playNarration(trackTitle: "S_N_B_06")
+                        })
+                        
+                        if firstTimePolice {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                                print("S_N_R_03")
+                                playNarration(trackTitle: "S_N_R_03")
+                            })
+                        }
+                    }
+                    firstTimePolice = false
                 } else if doctorExist {
                     subPart = subPart + 2
                     roleLbl.text = "DOCTOR"
                     if !doctorsAreAlive {
                         disableAll()
                     }
+                    if optionsParameters.enableDirections {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                            print("S_N_B_08")
+                            playNarration(trackTitle: "S_N_B_08")
+                        })
+                        
+                        if firstTimeDoctor {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                                print("S_N_R_04")
+                                playNarration(trackTitle: "S_N_R_04")
+                            })
+                        }
+                    }
+                    firstTimeDoctor = false
                 } else {
                     
                     // update masterPlayerArray with decisions
@@ -240,6 +313,10 @@ class _ChooseViewController: UIViewController {
                 // put thumbs up } else { thumbs down}
                 
                 // uncheck all boxes
+                if optionsParameters.enableDirections {
+                    playNarration(trackTitle: "S_N_B_07")
+                    print("S_N_B_07")
+                }
                 
                 if doctorExist {
                     subPart = subPart + 1
@@ -247,6 +324,21 @@ class _ChooseViewController: UIViewController {
                     if !doctorsAreAlive {
                         disableAll()
                     }
+                    if optionsParameters.enableDirections {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                            print("S_N_B_08")
+                            playNarration(trackTitle: "S_N_B_08")
+                        })
+                        
+                        if firstTimeDoctor {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                                print("S_N_R_04")
+                                playNarration(trackTitle: "S_N_R_04")
+                            })
+                        }
+                    }
+                    firstTimeDoctor = false
+                    
                 } else {
                     
                     // update masterPlayerArray with decisions
@@ -275,6 +367,10 @@ class _ChooseViewController: UIViewController {
                 
                 // Finish Doctor Selection
             } else if part == 2 && subPart == 3 {
+                if optionsParameters.enableDirections {
+                    playNarration(trackTitle: "S_N_B_09")
+                    print("S_N_B_09")
+                }
                 
                 // checked box is targetted
                 // selectedPlayer.protect
@@ -356,7 +452,7 @@ class _ChooseViewController: UIViewController {
             }
             // reset collectionView to first column
             collectionView.contentOffset.x = 0
-             // reset selectedPlayerIndex
+            // reset selectedPlayerIndex
             selectedPlayerIndex = -1
         }
     }
@@ -365,13 +461,13 @@ class _ChooseViewController: UIViewController {
     @IBAction func pressSoundEffectBtn(_ sender: UIButton) {
         // play
         if part == 5 {
-            // tribunal sound effect 
+            // tribunal sound effect
             let trackTitle = tribunalSoundEffectsArray[(sender.tag - 1)].effect
             if let sound = NSDataAsset(name: trackTitle) {
                 // Do any additional setup after loading the view, typically from a nib.
                 do {
                     soundEffectPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
-    
+                    
                     if soundEffectPlayer.isPlaying {
                         soundEffectPlayer.stop()
                     }
@@ -384,23 +480,23 @@ class _ChooseViewController: UIViewController {
                 }
             }
         } else {
-                // basic sound effect
-                let trackTitle = basicSoundEffectsArray[(sender.tag - 1)].effect
-                if let sound = NSDataAsset(name: trackTitle) {
-                    // Do any additional setup after loading the view, typically from a nib.
-                    do {
-                        soundEffectPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
-                        
-                        if soundEffectPlayer.isPlaying {
-                            soundEffectPlayer.stop()
-                        }
-                        soundEffectPlayer.volume = optionsParameters.soundEffectsVol
-                        soundEffectPlayer.prepareToPlay()
-                        soundEffectPlayer.play()
-                        
-                    } catch {
-                        print(error)
+            // basic sound effect
+            let trackTitle = basicSoundEffectsArray[(sender.tag - 1)].effect
+            if let sound = NSDataAsset(name: trackTitle) {
+                // Do any additional setup after loading the view, typically from a nib.
+                do {
+                    soundEffectPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                    
+                    if soundEffectPlayer.isPlaying {
+                        soundEffectPlayer.stop()
                     }
+                    soundEffectPlayer.volume = optionsParameters.soundEffectsVol
+                    soundEffectPlayer.prepareToPlay()
+                    soundEffectPlayer.play()
+                    
+                } catch {
+                    print(error)
+                }
             }
         }
     }
@@ -620,7 +716,7 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
         let borderSize = 10
         
         removeBorderAndIndicator(reset: true)
-     
+        
         if sender.tag > 0 {
             // Police Select
             if roleLbl.text == "POLICE" {
@@ -664,7 +760,7 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
         }
     }
     
-    func generateBasicButtons() {        
+    func generateBasicButtons() {
         // Setup buttons
         soundEffectBtn1.setImage(UIImage(named: basicSoundEffectsArray[potentialIndex[0]].picture), for: .normal)
         // Make tag, the index the basicSoundEffectsArray + 1, to avoid tag of 0
@@ -701,5 +797,5 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
         // Make tag, the index the basicSoundEffectsArray + 1, to avoid tag of 0
         soundEffectBtn4.tag = potentialIndex[3] + 1
     }
-
+    
 }

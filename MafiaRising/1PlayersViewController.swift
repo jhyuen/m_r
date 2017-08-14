@@ -1,5 +1,5 @@
 //
-//  1PlayerViewController.swift
+//  1PlayersViewController.swift
 //  MafiaRising
 //
 //  Created by Joseph Yuen on 5/22/17.
@@ -9,13 +9,13 @@
 import UIKit
 import AVFoundation
 
-class _PlayerVC: UIViewController, AVAudioPlayerDelegate {
-
+class _PlayersViewController: UIViewController, AVAudioPlayerDelegate {
+    
     // UI Outlets
     @IBOutlet weak var numPlayerField: UITextField!
     @IBOutlet weak var toolBar: UIToolbar!
     @IBOutlet weak var errorLabel: UILabel!
-
+    
     // Constants
     let minimumPlayers = 5
     let maximumPlayers = 30
@@ -34,11 +34,11 @@ class _PlayerVC: UIViewController, AVAudioPlayerDelegate {
         errorLabel.isHidden = true
         numPlayerField.text = ""
         
-        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(_PlayerVC.dismissKeyboard)))
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(_PlayersViewController.dismissKeyboard)))
         
         // Notifications that allow view to be pushed up when keyboard appears
-        NotificationCenter.default.addObserver(self, selector: #selector(_PlayerVC.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(_PlayerVC.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(_PlayersViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(_PlayersViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
         // Setup keyboard toolbar
         let toolBar = UIToolbar()
@@ -54,10 +54,8 @@ class _PlayerVC: UIViewController, AVAudioPlayerDelegate {
         
         // Begin narration after 1 second
         if optionsParameters.enableDirections && !narrationStarted {
-          //  DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-                print("S_SU_01")
-                playNarration(trackTitle: "S_SU_01")
-           // })
+            print("S_SU_01")
+            playNarration(trackTitle: "S_SU_01")
         }
     }
     
@@ -65,7 +63,7 @@ class _PlayerVC: UIViewController, AVAudioPlayerDelegate {
     @IBAction func pauseBtnPressed(_ sender: Any) {
         performSegue(withIdentifier: "PlayersToPause", sender: masterPlayerArray)
     }
-
+    
     // Proceed Arrow
     @IBAction func goToRoleSetUp(_ sender: Any) {
         
@@ -135,13 +133,13 @@ class _PlayerVC: UIViewController, AVAudioPlayerDelegate {
                     selectedVC.numPlayers = theNumPlayers
                 }
             }
-        } else 
-        if segue.identifier == "PlayersToPause" {
-            if let selectedVC = segue.destination as? PauseViewController {
-                if let theArray = sender as? Array<Player> {
-                    selectedVC.masterPlayerArray = theArray
+        } else
+            if segue.identifier == "PlayersToPause" {
+                if let selectedVC = segue.destination as? PauseViewController {
+                    if let theArray = sender as? Array<Player> {
+                        selectedVC.masterPlayerArray = theArray
+                    }
                 }
-            }
         }
     }
 }

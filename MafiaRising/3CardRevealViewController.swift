@@ -72,7 +72,12 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         case .denied:
             // create alert to ask user to enable camera
             createCameraAlert(title: "Please enable your camera.", message: "Additional Message")
-        case .authorized: break
+        case .authorized:
+            // Begin narration after 1 second
+            if optionsParameters.enableDirections && !narrationStarted {
+                    print("S_SU_03")
+                    playNarration(trackTitle: "S_SU_03")
+            }
         // restricted, normally won't happen
         case .restricted: break
             
@@ -145,6 +150,13 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
             policeAreAlive = false
             doctorsAreAlive = false
             recentlyMurdered = -1
+            firstTimeNight = true
+            firstTimeMafia = true
+            firstTimePolice = true
+            firstTimeDoctor = true
+            firstTimeDay = true
+            firstTimeTribunal = true
+            storyIntroTrackNum = 0
             
             cycle = 1
             UserDefaults.standard.set(cycle, forKey: "Cycle")
@@ -157,6 +169,8 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
             let data = NSKeyedArchiver.archivedData(withRootObject: savedMasterArray)
             UserDefaults.standard.set(data, forKey: "savedMasterArray")
             
+            narrationPlayer.stop()
+            narrationStarted = false
             performSegue(withIdentifier: "CardsToReady", sender: masterPlayerArray)
             
         } else {
@@ -205,6 +219,12 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         
         settings.previewPhotoFormat = previewFormat
         sessionOutput.capturePhoto(with: settings, delegate: self)
+        
+        // Begin narration after 1 second
+        if !narrationStarted {
+            print("S_SU_04")
+            playNarration(trackTitle: "S_SU_04")
+        }
     }
     
     // Process picture
