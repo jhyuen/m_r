@@ -68,6 +68,7 @@ var tribunalExplanation: Array<String> = []
 var noneDie: Array<String> = []
 var endVictory: Array<String> = []
 var endDefeat: Array<String> = []
+var whoDied: Array<String> = []
 
 // Populates arrays the hold narration file names
 func generateNarrationArrays() {
@@ -159,7 +160,9 @@ func generateNarrationArrays() {
     for number in 10...24 {
         endDefeat.append("CL_E_D_\(number)")
     }
-
+    
+    // Line indicating who died
+    whoDied.append("CL_D_W_01")
 }
 
 // Given an mp3 file name, play file

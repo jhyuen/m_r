@@ -13,9 +13,11 @@ import AVFoundation
 var potentialIndex: Array<Int> = []
 
 var storyIntroTrackNum: Int = 0
+var dayStoryTrackNum: Int = 0
+var tribunalTrackNum: Int = 0
 
 class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
-
+    
     // UI Outlet
     // may turn into button if showing words
     @IBOutlet weak var mainPicture: UIImageView!
@@ -39,12 +41,18 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
     // Murder Pictures Array
     var murderPictureNames: Array<String> = []
     
-    // 
+    // Track names of story intro paragraphs
     var storyIntroOrder: Array<String> = []
+    
+    // Track names of day story
+    var dayStoryOrder: Array<String> = []
+    
+    // Track names of tribunal story
+    var tribunalStoryOrder: Array<String> = []
     
     // Random Number
     var randNum: Int = 0
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -66,6 +74,13 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
             }
         } else if cycle > 1 && part == 0 {
             mainTitle.text = "DAY \(cycle - 1)"
+            // Tribunal recap
+            print("Tribunal recap")
+            
+            if optionsParameters.enableStory && !narrationStarted {
+                tribunalStoryOrder.removeAll()
+                generateTribunalNarration()
+            }
             
             /*
              randNum = Int(arc4random_uniform(UInt32(executionPictureNames.count)))
@@ -74,11 +89,28 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
             
         } else if cycle >= 1 && part > 0 {
             mainTitle.text = "DAY \(cycle)"
+            // Night recap
+            print("Night recap")
+            
+            if optionsParameters.enableStory && !narrationStarted {
+                dayStoryOrder.removeAll()
+                generateDayNarration()
+            }
             
             /*
              randNum = Int(arc4random_uniform(UInt32(murderPictureNames.count)))
              mainPicture.image = UIImage(named: introPictureNames[randNum])
              */
+        }
+        
+        if mafiaSelected == docSelected && mafiaSelected != -1 {
+            // Player Saved
+            print("Saved")
+            mainPicture.image = masterPlayerArray[docSelected].picture
+        } else if mafiaSelected != docSelected && mafiaSelected != -1 {
+            // Player Murdered
+            print("Murdered")
+            mainPicture.image = masterPlayerArray[mafiaSelected].picture
         }
         
         // Add player portaits to ScrollView
@@ -113,18 +145,18 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
             } else {
                 applyFilter(imageView: imgView)
             }
-        
+            
         }
         
         // Set frame of ScrollView
         scrollView.contentSize = CGSize(width: WIDTH*CGFloat(masterPlayerArray.count), height: scrollView.frame.size.height)
     }
     
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(false)
-//        self.dismiss(animated: false, completion: nil)
-//        print("Story Disappearing")
-//    }
+    //    override func viewWillDisappear(_ animated: Bool) {
+    //        super.viewWillDisappear(false)
+    //        self.dismiss(animated: false, completion: nil)
+    //        print("Story Disappearing")
+    //    }
     
     // Pause Button
     @IBAction func pauseBtnPressed(_ sender: Any) {
@@ -134,20 +166,38 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
     // Repeat Voice Button
     @IBAction func repeatVoice(_ sender: Any) {
         print("You hit the repeat button")
-        if cycle == 1 && part == 0 {
-            // Story Intro
-            narrationPlayer.stop()
-            print(storyIntroOrder[0])
-            playNarrationQueue(trackTitle: storyIntroOrder[0])
-            storyIntroTrackNum = storyIntroTrackNum + 1
+        if optionsParameters.enableStory {
+            if cycle == 1 && part == 0 {
+                // Story Intro
+                narrationPlayer.stop()
+                print(storyIntroOrder[0])
+                playNarrationQueue(trackTitle: storyIntroOrder[0])
+                storyIntroTrackNum = 1
+            } else if cycle > 1 && part == 0 {
+                // Tribunal recap
+                narrationPlayer.stop()
+                print(tribunalStoryOrder[0])
+                playNarrationQueue(trackTitle: tribunalStoryOrder[0])
+                dayStoryTrackNum = 1
+            } else if cycle >= 1 && part > 0 {
+                // Night recap
+                narrationPlayer.stop()
+                print(dayStoryOrder[0])
+                playNarrationQueue(trackTitle: dayStoryOrder[0])
+                dayStoryTrackNum = 1
+            }
         }
-        
     }
     
     // Proceed Button
     @IBAction func goToNextScreen(_ sender: Any) {
         narrationPlayer.stop()
         narrationStarted = false
+        mafiaSelected = -1
+        docSelected = -1
+        dayStoryTrackNum = 0
+        storyIntroTrackNum = 0
+        tribunalTrackNum = 0
         
         if part == 0 {
             
@@ -201,7 +251,7 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
             
             narrationPlayer.stop()
             narrationStarted = false
-
+            
             performSegue(withIdentifier: "StoryToChoose", sender: masterPlayerArray)
         }
     }
@@ -258,6 +308,7 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
         print(potentialIndex)
     }
     
+    // Generates 3 paragraphs of narration for the story introduction
     func generateStoryIntro() {
         let firstParagraph = msiFirstParagraph[Int(arc4random_uniform(UInt32(msiFirstParagraph.count)))]
         let secondParagraph = msiSecondParagraph[Int(arc4random_uniform(UInt32(msiSecondParagraph.count)))]
@@ -271,29 +322,112 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
         if optionsParameters.enableStory {
             print(firstParagraph)
             playNarrationQueue(trackTitle: firstParagraph)
-            storyIntroTrackNum = storyIntroTrackNum + 1
+            storyIntroTrackNum = 1
         }
     }
     
-    func generateDayNarration() {
+    // Generate narration lines for tribunal recap
+    func generateTribunalNarration() {
+        let time = tribunalTime[Int(arc4random_uniform(UInt32(msiFirstParagraph.count)))]
+        let setLine = tribunalGeneral[Int(arc4random_uniform(UInt32(msiFirstParagraph.count)))]
+        let execution = tribunalExecution[Int(arc4random_uniform(UInt32(msiFirstParagraph.count)))]
+        let explaination = tribunalExplanation[Int(arc4random_uniform(UInt32(msiFirstParagraph.count)))]
+        
+        tribunalStoryOrder.append(time)
+        tribunalStoryOrder.append(setLine)
+        tribunalStoryOrder.append(execution)
+        tribunalStoryOrder.append(explaination)
+        
+        // Play first paragraph
+        if optionsParameters.enableStory {
+            print(time)
+            playNarrationQueue(trackTitle: time)
+            tribunalTrackNum = 1
+        }
         
     }
-
+    
+    // Generate narration lines for night recap
+    func generateDayNarration() {
+        if mafiaSelected == docSelected && mafiaSelected != -1 {
+            // Player Saved
+            let trackTitle = noneDie[Int(arc4random_uniform(UInt32(noneDie.count)))]
+            playNarration(trackTitle: trackTitle)
+        } else {
+            let intro = dayIntro[Int(arc4random_uniform(UInt32(dayIntro.count)))]
+            let death = dayDeath[Int(arc4random_uniform(UInt32(dayDeath.count)))]
+            let who = whoDied[Int(arc4random_uniform(UInt32(whoDied.count)))]
+            
+            dayStoryOrder.append(intro)
+            dayStoryOrder.append(death)
+            dayStoryOrder.append(who)
+            
+            // Play first paragraph
+            if optionsParameters.enableStory {
+                print(intro)
+                playNarrationQueue(trackTitle: intro)
+                dayStoryTrackNum = 1
+            }
+        }
+    }
+    
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         print("finished playing")
         if flag == true {
-            if storyIntroTrackNum == 1 && optionsParameters.enableStory {
-                // Play second paragraph
-                print(storyIntroOrder[1])
-                narrationPlayer.stop()
-                playNarrationQueue(trackTitle: storyIntroOrder[1])
-                storyIntroTrackNum = storyIntroTrackNum + 1
-            } else if storyIntroTrackNum == 2 && optionsParameters.enableStory {
-                // Play third paragraph
-                print(storyIntroOrder[2])
-                narrationPlayer.stop()
-                playNarrationQueue(trackTitle: storyIntroOrder[2])
-                storyIntroTrackNum = 0
+            // Story Intro Management
+            if cycle == 1 && part == 0 {
+                if storyIntroTrackNum == 1 && optionsParameters.enableStory {
+                    // Play second paragraph
+                    print(storyIntroOrder[1])
+                    narrationPlayer.stop()
+                    playNarrationQueue(trackTitle: storyIntroOrder[1])
+                    storyIntroTrackNum = 2
+                } else if storyIntroTrackNum == 2 && optionsParameters.enableStory {
+                    // Play third paragraph
+                    print(storyIntroOrder[2])
+                    narrationPlayer.stop()
+                    playNarrationQueue(trackTitle: storyIntroOrder[2])
+                    storyIntroTrackNum = 0
+                }
+                // Day Story Management
+            } else if cycle > 1 && part == 0 {
+                // Tribunal recap
+                if tribunalTrackNum == 1 && optionsParameters.enableStory {
+                    // Play second paragraph
+                    print(tribunalStoryOrder[1])
+                    narrationPlayer.stop()
+                    playNarrationQueue(trackTitle: tribunalStoryOrder[1])
+                    tribunalTrackNum = 2
+                } else if tribunalTrackNum == 2 && optionsParameters.enableStory {
+                    // Play third paragraph
+                    print(tribunalStoryOrder[2])
+                    narrationPlayer.stop()
+                    playNarrationQueue(trackTitle: tribunalStoryOrder[2])
+                    tribunalTrackNum = 3
+                } else if tribunalTrackNum == 3 && optionsParameters.enableStory {
+                    // Play third paragraph
+                    print(tribunalStoryOrder[3])
+                    narrationPlayer.stop()
+                    playNarrationQueue(trackTitle: tribunalStoryOrder[3])
+                    tribunalTrackNum = 0
+                }
+            } else if cycle >= 1 && part > 0 {
+                // Night recap
+                if mafiaSelected != docSelected && mafiaSelected != -1 {
+                    if dayStoryTrackNum == 1 && optionsParameters.enableStory {
+                        // Play second paragraph
+                        print(dayStoryOrder[1])
+                        narrationPlayer.stop()
+                        playNarrationQueue(trackTitle: dayStoryOrder[1])
+                        dayStoryTrackNum = 2
+                    } else if dayStoryTrackNum == 2 && optionsParameters.enableStory {
+                        // Play third paragraph
+                        print(dayStoryOrder[2])
+                        narrationPlayer.stop()
+                        playNarrationQueue(trackTitle: dayStoryOrder[2])
+                        dayStoryTrackNum = 0
+                    }
+                }
             }
         }
     }

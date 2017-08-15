@@ -20,6 +20,9 @@ var firstTimeMafia: Bool = false
 var firstTimePolice: Bool = false
 var firstTimeDoctor: Bool = false
 var firstTimeTribunal: Bool = false
+var mafiaSelected: Int =  -1
+var docSelected: Int =  -1
+
 
 class _ChooseViewController: UIViewController {
     
@@ -235,6 +238,7 @@ class _ChooseViewController: UIViewController {
                 // checked box is targeted
                 // selectedPlayer.attemptMurder
                 masterPlayerArray[selectedPlayerIndex].attemptMurder()
+                mafiaSelected = selectedPlayerIndex
                 
                 // uncheck all boxes
                 
@@ -376,6 +380,7 @@ class _ChooseViewController: UIViewController {
                 // selectedPlayer.protect
                 if doctorsAreAlive {
                     masterPlayerArray[selectedPlayerIndex].protect()
+                    docSelected = selectedPlayerIndex
                 }
                 // uncheck all boxes
                 

@@ -75,16 +75,21 @@ class HomeViewController: UIViewController {
         print(currentGameFinished)
         
         if !currentGameFinished {
+            // Reset variables that may not have been reset
+            storyIntroTrackNum = 0
+            dayStoryTrackNum = 0
+            tribunalTrackNum = 0
+            docSelected = -1
+            mafiaSelected = -1
+            narrationStarted = false
             if !isDay {
                 part = 1
-                narrationStarted = false
                 performSegue(withIdentifier: "ContinueToNight", sender: savedMasterArray)
             } else {
                 if part == 0 {
                     cycle = cycle - 1
                 }
                 part = 3
-                narrationStarted = false
                 performSegue(withIdentifier: "ContinueToDay", sender: savedMasterArray)
             }
         }

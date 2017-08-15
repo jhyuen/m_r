@@ -157,6 +157,10 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
             firstTimeDay = true
             firstTimeTribunal = true
             storyIntroTrackNum = 0
+            dayStoryTrackNum = 0
+            tribunalTrackNum = 0
+            mafiaSelected = -1
+            docSelected = -1
             
             cycle = 1
             UserDefaults.standard.set(cycle, forKey: "Cycle")
