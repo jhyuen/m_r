@@ -268,21 +268,27 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
         storyIntroOrder.append(thirdParagraph)
         
         // Play first paragraph
-        print(firstParagraph)
-        playNarrationQueue(trackTitle: firstParagraph)
-        storyIntroTrackNum = storyIntroTrackNum + 1
+        if optionsParameters.enableStory {
+            print(firstParagraph)
+            playNarrationQueue(trackTitle: firstParagraph)
+            storyIntroTrackNum = storyIntroTrackNum + 1
+        }
+    }
+    
+    func generateDayNarration() {
+        
     }
 
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         print("finished playing")
         if flag == true {
-            if storyIntroTrackNum == 1 {
+            if storyIntroTrackNum == 1 && optionsParameters.enableStory {
                 // Play second paragraph
                 print(storyIntroOrder[1])
                 narrationPlayer.stop()
                 playNarrationQueue(trackTitle: storyIntroOrder[1])
                 storyIntroTrackNum = storyIntroTrackNum + 1
-            } else if storyIntroTrackNum == 2 {
+            } else if storyIntroTrackNum == 2 && optionsParameters.enableStory {
                 // Play third paragraph
                 print(storyIntroOrder[2])
                 narrationPlayer.stop()

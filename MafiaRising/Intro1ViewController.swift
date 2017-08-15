@@ -12,7 +12,7 @@ class Intro1ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        perform(#selector(segue), with: nil, afterDelay: 1)
+        perform(#selector(segue), with: nil, afterDelay: 1.5)
 
         // Do any additional setup after loading the view.
     }

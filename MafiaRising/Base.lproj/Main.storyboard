@@ -33,17 +33,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1U-y8-T2Y">
-                                <rect key="frame" x="183" y="323" width="8" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IllumCircleC" translatesAutoresizingMaskIntoConstraints="NO" id="lhX-y2-aPG">
+                                <rect key="frame" x="87" y="-167" width="200" height="1000"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="SRX-0x-vKK"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="T1U-y8-T2Y" firstAttribute="centerY" secondItem="45j-JM-JhL" secondAttribute="centerY" id="No8-77-VrX"/>
-                            <constraint firstItem="T1U-y8-T2Y" firstAttribute="centerX" secondItem="45j-JM-JhL" secondAttribute="centerX" id="bOG-tk-ooO"/>
+                            <constraint firstItem="lhX-y2-aPG" firstAttribute="centerY" secondItem="45j-JM-JhL" secondAttribute="centerY" id="6MG-Hu-Ioj"/>
+                            <constraint firstItem="lhX-y2-aPG" firstAttribute="centerX" secondItem="45j-JM-JhL" secondAttribute="centerX" id="z24-Lf-e4k"/>
                         </constraints>
                     </view>
                     <connections>
@@ -66,15 +66,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gV-xb-wav">
-                                <rect key="frame" x="183" y="323" width="10" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gV-xb-wav">
+                                <rect key="frame" x="20" y="310" width="335" height="47"/>
+                                <string key="text">please turn up speaker
+volume for best experience</string>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
+                                <color key="textColor" red="0.51172542572021484" green="0.053735978901386261" blue="0.0028699073009192944" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5gV-xb-wav" secondAttribute="trailing" constant="20" id="2jN-wu-gbe"/>
+                            <constraint firstItem="5gV-xb-wav" firstAttribute="leading" secondItem="G2K-zc-WFr" secondAttribute="leading" constant="20" id="6Sk-FN-hOF"/>
                             <constraint firstItem="5gV-xb-wav" firstAttribute="centerX" secondItem="G2K-zc-WFr" secondAttribute="centerX" id="h2x-tx-D3d"/>
                             <constraint firstItem="5gV-xb-wav" firstAttribute="centerY" secondItem="G2K-zc-WFr" secondAttribute="centerY" id="qLy-o2-5Lt"/>
                         </constraints>
@@ -199,7 +203,7 @@
                     <connections>
                         <segue destination="3B4-aq-i8L" kind="show" identifier="HomeToPlayers" customClass="ScaleSegue" customModule="MafiaRising" customModuleProvider="target" id="RLX-xd-W8t"/>
                         <segue destination="Uxu-yi-Eea" kind="show" identifier="HomeToRules" id="jGj-z5-JdE"/>
-                        <segue destination="9nD-tn-Rq4" kind="show" identifier="HomeToOptions" id="bB7-vs-abW"/>
+                        <segue destination="9nD-tn-Rq4" kind="show" identifier="HomeToOptions" action="showDetailViewController:sender:" id="bB7-vs-abW"/>
                         <segue destination="q0j-zv-644" kind="show" identifier="ContinueToReady" id="nwm-Dp-aeN"/>
                         <segue destination="QpL-Dl-0m0" kind="show" identifier="ContinueToDay" customClass="ScaleSegue" customModule="MafiaRising" customModuleProvider="target" id="YkS-pf-4aO"/>
                         <segue destination="x6I-ks-Nig" kind="show" identifier="ContinueToNight" customClass="ScaleSegue" customModule="MafiaRising" customModuleProvider="target" id="SvW-si-1fZ"/>
@@ -4158,22 +4162,18 @@ of Players</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j3f-06-DTM">
                                 <rect key="frame" x="0.0" y="567" width="375" height="100"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lSc-eN-lUh">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="X5W-TO-XiN">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="X5W-TO-XiN">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpC-4i-Lpb">
-                                                <rect key="frame" x="0.0" y="0.0" width="93" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="100"/>
                                                 <color key="backgroundColor" red="0.57112640142440796" green="0.077838368713855743" blue="0.021155845373868942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="pressSoundEffectBtn:" destination="kEY-wj-tGy" eventType="touchUpInside" id="hTF-QU-wpU"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APn-t6-4Jl">
-                                                <rect key="frame" x="94" y="0.0" width="93" height="100"/>
+                                                <rect key="frame" x="94" y="0.0" width="94" height="100"/>
                                                 <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="pressSoundEffectBtn:" destination="kEY-wj-tGy" eventType="touchUpInside" id="FQx-aH-KtX"/>
@@ -4181,14 +4181,14 @@ of Players</string>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VyX-Lg-MZx">
                                                 <rect key="frame" x="188" y="0.0" width="93" height="100"/>
-                                                <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.57111865282058716" green="0.080035187304019928" blue="0.017216935753822327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="pressSoundEffectBtn:" destination="kEY-wj-tGy" eventType="touchUpInside" id="Q7F-lj-5B4"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Glf-kc-3hI">
-                                                <rect key="frame" x="282" y="0.0" width="93" height="100"/>
-                                                <color key="backgroundColor" red="0.57112640142440796" green="0.077838368713855743" blue="0.021155845373868942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="281" y="0.0" width="94" height="100"/>
+                                                <color key="backgroundColor" red="0.75288265943527222" green="0.75297415256500244" blue="0.75285154581069946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="pressSoundEffectBtn:" destination="kEY-wj-tGy" eventType="touchUpInside" id="YwY-4M-5Pt"/>
                                                 </connections>
@@ -4207,12 +4207,8 @@ of Players</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="5Kg-Rr-Ngq"/>
                                     <constraint firstAttribute="bottom" secondItem="X5W-TO-XiN" secondAttribute="bottom" id="CVA-tU-qXo"/>
-                                    <constraint firstAttribute="trailing" secondItem="lSc-eN-lUh" secondAttribute="trailing" id="IdG-cK-e1d"/>
-                                    <constraint firstItem="lSc-eN-lUh" firstAttribute="height" secondItem="X5W-TO-XiN" secondAttribute="height" id="Tow-qh-j17"/>
                                     <constraint firstAttribute="trailing" secondItem="X5W-TO-XiN" secondAttribute="trailing" id="Ylo-1x-qt6"/>
-                                    <constraint firstItem="lSc-eN-lUh" firstAttribute="leading" secondItem="j3f-06-DTM" secondAttribute="leading" id="ZYN-gA-N0A"/>
                                     <constraint firstItem="X5W-TO-XiN" firstAttribute="top" secondItem="j3f-06-DTM" secondAttribute="top" id="lMM-Uq-Rt8"/>
-                                    <constraint firstAttribute="bottom" secondItem="lSc-eN-lUh" secondAttribute="bottom" id="vVj-MK-PvM"/>
                                     <constraint firstItem="X5W-TO-XiN" firstAttribute="leading" secondItem="j3f-06-DTM" secondAttribute="leading" id="zgd-gb-POG"/>
                                 </constraints>
                             </view>
@@ -6948,6 +6944,7 @@ be a jerk ;)</string>
         </scene>
     </scenes>
     <resources>
+        <image name="IllumCircleC" width="1000" height="1000"/>
         <image name="MRBackButton" width="92" height="52"/>
         <image name="MRDivider" width="415" height="6"/>
         <image name="MRFinal CardC1" width="297" height="70"/>
@@ -6996,13 +6993,13 @@ be a jerk ;)</string>
         <image name="portraitFiller" width="433" height="653"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YkS-pf-4aO"/>
-        <segue reference="nwm-Dp-aeN"/>
-        <segue reference="IiT-7w-mNC"/>
-        <segue reference="xw3-iS-S4C"/>
-        <segue reference="I53-ci-Nq8"/>
-        <segue reference="Y5H-lc-M15"/>
         <segue reference="nFz-PG-5cK"/>
+        <segue reference="Y5H-lc-M15"/>
         <segue reference="XfW-qg-n7e"/>
+        <segue reference="Xxf-v6-6cj"/>
+        <segue reference="wNd-ep-vfX"/>
+        <segue reference="I53-ci-Nq8"/>
+        <segue reference="nwm-Dp-aeN"/>
+        <segue reference="bB7-vs-abW"/>
     </inferredMetricsTieBreakers>
 </document>
