@@ -23,6 +23,7 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var mainPicture: UIImageView!
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var victimImage: UIImageView!
     
     // ScrollView Constants
     let WIDTH: CGFloat = 90
@@ -58,9 +59,7 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print("FTN: \(firstTimeNight)")
-        
+        super.viewWillAppear(animated)        
         
         print("StoryViewController")
         print("Cycle is \(cycle)")
@@ -108,11 +107,11 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
         if mafiaSelected == docSelected && mafiaSelected != -1 {
             // Player Saved
             print("Saved")
-            mainPicture.image = masterPlayerArray[docSelected].picture
+            victimImage.image = masterPlayerArray[docSelected].picture
         } else if mafiaSelected != docSelected && mafiaSelected != -1 {
             // Player Murdered
             print("Murdered")
-            mainPicture.image = masterPlayerArray[mafiaSelected].picture
+            victimImage.image = masterPlayerArray[mafiaSelected].picture
         }
         
         // Add player portaits to ScrollView
@@ -335,10 +334,10 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
     
     // Generate narration lines for tribunal recap
     func generateTribunalNarration() {
-        let time = tribunalTime[Int(arc4random_uniform(UInt32(msiFirstParagraph.count)))]
-        let setLine = tribunalGeneral[Int(arc4random_uniform(UInt32(msiFirstParagraph.count)))]
-        let execution = tribunalExecution[Int(arc4random_uniform(UInt32(msiFirstParagraph.count)))]
-        let explaination = tribunalExplanation[Int(arc4random_uniform(UInt32(msiFirstParagraph.count)))]
+        let time = tribunalTime[Int(arc4random_uniform(UInt32(tribunalTime.count)))]
+        let setLine = tribunalGeneral[Int(arc4random_uniform(UInt32(tribunalGeneral.count)))]
+        let execution = tribunalExecution[Int(arc4random_uniform(UInt32(tribunalExecution.count)))]
+        let explaination = tribunalExplanation[Int(arc4random_uniform(UInt32(tribunalExplanation.count)))]
         
         tribunalStoryOrder.append(time)
         tribunalStoryOrder.append(setLine)

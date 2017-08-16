@@ -163,6 +163,7 @@ class _ChooseViewController: UIViewController {
             
             // Update title
             roleLbl.text = "TRIBUNAL"
+            proceedBtn.isHidden = true
             if subPart == 1 {
                 generateTribunalButtons()
             }
@@ -191,31 +192,40 @@ class _ChooseViewController: UIViewController {
     
     // Repeat Button
     @IBAction func repeatDirections(_ sender: Any) {
-        
+        narrationPlayer.stop()
         print("You hit the repeat button")
-        if subPart == 1 {
-            // Mafia
-            if optionsParameters.enableDirections {
-                print("S_N_B_04")
-                playNarration(trackTitle: "S_N_B_04")
+        if part == 2 {
+            if subPart == 1 {
+                // Mafia
+                if optionsParameters.enableDirections {
+                    print("S_N_B_04")
+                    playNarration(trackTitle: "S_N_B_04")
+                }
+            } else if subPart == 2 && !policeExist {
+                // Doctor
+                if optionsParameters.enableDirections {
+                    print("S_N_B_08")
+                    playNarration(trackTitle: "S_N_B_08")
+                }
+            } else if subPart == 3 {
+                // Doctor
+                if optionsParameters.enableDirections {
+                    print("S_N_B_08")
+                    playNarration(trackTitle: "S_N_B_08")
+                }
+            } else {
+                // Police
+                if optionsParameters.enableDirections {
+                    print("S_N_B_06")
+                    playNarration(trackTitle: "S_N_B_06")
+                }
             }
-        } else if subPart == 2 && !policeExist {
-           // Doctor
-            if optionsParameters.enableDirections {
-                print("S_N_B_08")
-                playNarration(trackTitle: "S_N_B_08")
-            }
-        } else if subPart == 3 {
-            // Doctor
-            if optionsParameters.enableDirections {
-                print("S_N_B_08")
-                playNarration(trackTitle: "S_N_B_08")
-            }
-        } else {
-            // Police
-            if optionsParameters.enableDirections {
-                print("S_N_B_06")
-                playNarration(trackTitle: "S_N_B_06")
+        } else if part == 5 && subPart == 1 {
+            // Tribunal
+            if firstTimeTribunal {
+                playNarration(trackTitle: "S_T_R_01")
+            } else {
+                playNarration(trackTitle: "S_T_B_01")
             }
         }
     }
@@ -230,6 +240,7 @@ class _ChooseViewController: UIViewController {
             
             policeAreAlive = false
             doctorsAreAlive = false
+            proceedBtn.isHidden = true
             
             // reenables all players and check police and doctor status
             for player in masterPlayerArray {
@@ -249,7 +260,6 @@ class _ChooseViewController: UIViewController {
                 if optionsParameters.enableDirections {
                     playNarration(trackTitle: "S_N_B_05")
                     print("S_N_B_05")
-                    proceedBtn.isHidden = true
                     sleep(2)
                     narrationPlayer.stop()
                 }
@@ -319,7 +329,6 @@ class _ChooseViewController: UIViewController {
                 if optionsParameters.enableDirections {
                     playNarration(trackTitle: "S_N_B_07")
                     print("S_N_B_07")
-                    proceedBtn.isHidden = true
                     sleep(2)
                     narrationPlayer.stop()
                 }

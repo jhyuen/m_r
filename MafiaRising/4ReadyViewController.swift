@@ -28,10 +28,29 @@ class _ReadyViewController: UIViewController {
     
     // Proceed Button
     @IBAction func goToStory(_ sender: Any) {
+        // Play soundEffect
+        if let sound = NSDataAsset(name: "Gunshot2") {
+            // Do any additional setup after loading the view, typically from a nib.
+            do {
+                soundEffectPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                //audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: trackTitle, ofType: "mp3")!))
+                
+                if soundEffectPlayer.isPlaying {
+                    soundEffectPlayer.stop()
+                }
+                
+                soundEffectPlayer.volume = optionsParameters.soundEffectsVol
+                soundEffectPlayer.prepareToPlay()
+                soundEffectPlayer.play()
+                
+            } catch {
+                print(error)
+            }
+        }
+        
         // Play background music for next screen
         musicPlayer.stop()
-        let trackTitle = "Intro Story"
-        if let sound = NSDataAsset(name: trackTitle) {
+        if let sound = NSDataAsset(name: "Intro Story") {
             // Do any additional setup after loading the view, typically from a nib.
             do {
                 musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)

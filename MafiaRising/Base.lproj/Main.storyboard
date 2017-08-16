@@ -3488,7 +3488,7 @@ of Players</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="OIN-Pa-qwo">
-                                <rect key="frame" x="72.5" y="169" width="231.5" height="133"/>
+                                <rect key="frame" x="72" y="169" width="231.5" height="133"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Jcf-M7-l50">
                                         <rect key="frame" x="0.0" y="0.0" width="231.5" height="54"/>
@@ -3614,7 +3614,7 @@ of Players</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wkj-F9-U7c">
-                                <rect key="frame" x="150.5" y="607" width="75" height="35"/>
+                                <rect key="frame" x="150" y="607" width="75" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Uws-ho-uL6"/>
                                 </constraints>
@@ -3894,7 +3894,7 @@ of Players</string>
                                             <constraint firstAttribute="width" constant="240" id="YZU-UT-szB"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="200" verticalCompressionResistancePriority="780" image="DayRecapBackground" translatesAutoresizingMaskIntoConstraints="NO" id="cOx-Mb-5cZ">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="200" verticalCompressionResistancePriority="780" image="DayRecapBackground" translatesAutoresizingMaskIntoConstraints="NO" id="cOx-Mb-5cZ">
                                         <rect key="frame" x="0.0" y="36" width="323" height="295"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="cOx-Mb-5cZ" secondAttribute="height" multiplier="335:306" id="fhD-Gq-wIv"/>
@@ -3909,6 +3909,9 @@ of Players</string>
                                     </imageView>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LIw-Ra-Mbb" userLabel="Victim Image">
+                                <rect key="frame" x="47" y="193" width="92" height="222"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lcy-Wd-LcD" userLabel="Back">
                                 <rect key="frame" x="317" y="70" width="42" height="24"/>
                                 <constraints>
@@ -3968,15 +3971,18 @@ of Players</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7nA-ad-vvF" firstAttribute="leading" secondItem="oFQ-jJ-QIM" secondAttribute="leadingMargin" id="1Wy-Zc-Mml"/>
+                            <constraint firstItem="LIw-Ra-Mbb" firstAttribute="leading" secondItem="oFQ-jJ-QIM" secondAttribute="leadingMargin" constant="31" id="3zl-UN-qs6"/>
                             <constraint firstItem="pUr-b2-F1F" firstAttribute="leading" secondItem="oFQ-jJ-QIM" secondAttribute="leadingMargin" constant="10" id="5oK-wG-vIf"/>
                             <constraint firstItem="ytv-hC-p9v" firstAttribute="leading" secondItem="oFQ-jJ-QIM" secondAttribute="leading" id="66N-4f-OWV"/>
                             <constraint firstItem="ytv-hC-p9v" firstAttribute="top" secondItem="oFQ-jJ-QIM" secondAttribute="top" id="7rO-gw-jf2"/>
                             <constraint firstItem="pUr-b2-F1F" firstAttribute="centerX" secondItem="oFQ-jJ-QIM" secondAttribute="centerX" id="83u-eH-VWS"/>
                             <constraint firstItem="pUr-b2-F1F" firstAttribute="top" secondItem="AsO-4H-IUz" secondAttribute="bottom" constant="15" id="9D4-mS-BEX"/>
+                            <constraint firstItem="Twh-X9-WTE" firstAttribute="top" secondItem="LIw-Ra-Mbb" secondAttribute="bottom" constant="117" id="CWj-IM-49S"/>
                             <constraint firstItem="Lcy-Wd-LcD" firstAttribute="trailing" secondItem="oFQ-jJ-QIM" secondAttribute="trailingMargin" id="EeM-Ng-S86"/>
                             <constraint firstItem="xtC-lB-Ka1" firstAttribute="top" secondItem="wzt-Dq-xme" secondAttribute="bottom" id="FyQ-qW-0UL"/>
                             <constraint firstItem="09D-aU-LRa" firstAttribute="top" secondItem="pUr-b2-F1F" secondAttribute="bottom" constant="10" id="I4G-wf-NjB"/>
                             <constraint firstItem="AsO-4H-IUz" firstAttribute="centerY" secondItem="7nA-ad-vvF" secondAttribute="centerY" id="NsX-18-Wej"/>
+                            <constraint firstItem="LIw-Ra-Mbb" firstAttribute="top" secondItem="AsO-4H-IUz" secondAttribute="bottom" constant="88" id="NvQ-gd-qz2"/>
                             <constraint firstItem="Twh-X9-WTE" firstAttribute="top" secondItem="09D-aU-LRa" secondAttribute="bottom" constant="15" id="VGg-kd-ql3"/>
                             <constraint firstItem="wzt-Dq-xme" firstAttribute="top" secondItem="Uxu-lI-nfT" secondAttribute="bottom" id="VbZ-y4-8Ph"/>
                             <constraint firstItem="AsO-4H-IUz" firstAttribute="top" secondItem="Uxu-lI-nfT" secondAttribute="bottom" constant="40" id="WgP-bG-lUc"/>
@@ -3986,6 +3992,7 @@ of Players</string>
                             <constraint firstItem="AsO-4H-IUz" firstAttribute="centerX" secondItem="oFQ-jJ-QIM" secondAttribute="centerX" id="cuJ-D4-poR"/>
                             <constraint firstAttribute="trailing" secondItem="wzt-Dq-xme" secondAttribute="trailing" id="dmD-ie-bGI"/>
                             <constraint firstItem="Twh-X9-WTE" firstAttribute="leading" secondItem="oFQ-jJ-QIM" secondAttribute="leading" id="dyE-AG-Z1b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LIw-Ra-Mbb" secondAttribute="trailing" constant="220" id="eE7-9N-VUv"/>
                             <constraint firstAttribute="trailing" secondItem="ytv-hC-p9v" secondAttribute="trailing" id="g8h-p3-9rt"/>
                             <constraint firstItem="Lcy-Wd-LcD" firstAttribute="centerY" secondItem="AsO-4H-IUz" secondAttribute="centerY" id="st8-w9-Cr4"/>
                             <constraint firstItem="09D-aU-LRa" firstAttribute="centerX" secondItem="oFQ-jJ-QIM" secondAttribute="centerX" id="tKa-gP-GkP"/>
@@ -3996,6 +4003,7 @@ of Players</string>
                         <outlet property="mainPicture" destination="cOx-Mb-5cZ" id="9hb-p9-Zhz"/>
                         <outlet property="mainTitle" destination="AsO-4H-IUz" id="nVM-sj-wPN"/>
                         <outlet property="scrollView" destination="Twh-X9-WTE" id="60X-q5-5st"/>
+                        <outlet property="victimImage" destination="LIw-Ra-Mbb" id="VEr-f7-S3k"/>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="StoryToPause" id="dhy-OQ-mIy"/>
                         <segue destination="x6I-ks-Nig" kind="show" identifier="StoryToNight" id="XfW-qg-n7e"/>
                         <segue destination="kEY-wj-tGy" kind="show" identifier="StoryToChoose" animates="NO" id="nFz-PG-5cK"/>
@@ -6998,13 +7006,13 @@ be a jerk ;)</string>
         <image name="portraitFiller" width="433" height="653"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oaV-mC-QWl"/>
-        <segue reference="5oF-XY-W7M"/>
-        <segue reference="xw3-iS-S4C"/>
-        <segue reference="I53-ci-Nq8"/>
-        <segue reference="Xxf-v6-6cj"/>
-        <segue reference="DTs-jA-27W"/>
-        <segue reference="XfW-qg-n7e"/>
+        <segue reference="nFz-PG-5cK"/>
         <segue reference="Y5H-lc-M15"/>
+        <segue reference="dhy-OQ-mIy"/>
+        <segue reference="XfW-qg-n7e"/>
+        <segue reference="I53-ci-Nq8"/>
+        <segue reference="xw3-iS-S4C"/>
+        <segue reference="Xxf-v6-6cj"/>
+        <segue reference="oaV-mC-QWl"/>
     </inferredMetricsTieBreakers>
 </document>
