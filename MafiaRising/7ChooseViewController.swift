@@ -43,6 +43,7 @@ class _ChooseViewController: UIViewController {
     var sE1: String = "se1"
     var sE2: String = "se2"
     var sE3: String = "se3"
+    @IBOutlet weak var proceedBtn: UIButton!
     var sE4: String = "se4"
     
     // Subpart Instantiation
@@ -100,8 +101,7 @@ class _ChooseViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        
+        print("FTM: \(firstTimeMafia)")
         // Determines the number of roles in the game, MUST BE UPDATED IF ROLES ARE ADDED
         var numOfRoles: Int = 0
         
@@ -135,26 +135,27 @@ class _ChooseViewController: UIViewController {
             if subPart == 1 {
                 roleLbl.text = "MAFIA"
                 generateBasicButtons()
-                
+                proceedBtn.isHidden = true
                 if optionsParameters.enableDirections && !narrationStarted {
-                    narrationStarted = true
                     print("S_N_B_04")
-                    playNarration(trackTitle: "S_N_B_04")
-                    
-                    if firstTimeMafia {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-                            print("S_N_R_02")
-                            playNarration(trackTitle: "S_N_R_02")
-                        })
-                    }
+                    playNarrationQueue(trackTitle: "S_N_B_04")
                 }
                 firstTimeMafia = false
             } else if subPart == 2 && !policeExist {
                 roleLbl.text = "DOCTOR"
+                if !doctorsAreAlive {
+                    proceedBtn.isHidden = false
+                }
             } else if subPart == 3 {
                 roleLbl.text = "DOCTOR"
+                if !doctorsAreAlive {
+                    proceedBtn.isHidden = false
+                }
             } else {
                 roleLbl.text = "POLICE"
+                if !policeAreAlive {
+                    proceedBtn.isHidden = false
+                }
             }
             // updateSounds(arrayType: nightSoundEffectsArray)
             
@@ -170,22 +171,13 @@ class _ChooseViewController: UIViewController {
                 narrationStarted = true
                 
                 if firstTimeTribunal {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-                        print("S_T_R_01")
-                        playNarration(trackTitle: "S_T_R_01")
-                    })
-                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-                        print("S_T_R_02")
-                        playNarration(trackTitle: "S_T_R_02")
-                    })
+                    print("S_T_R_01")
+                    playNarrationQueue(trackTitle: "S_T_R_01")
                 } else {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-                        print("S_T_B_01")
-                        playNarration(trackTitle: "S_T_B_01")
-                    })
+                    print("S_T_B_01")
+                    playNarration(trackTitle: "S_T_B_01")
                 }
             }
-            firstTimeTribunal = false
             // updateSounds(arrayType: tribunalSoundEffectsArray)
         }
         
@@ -201,8 +193,31 @@ class _ChooseViewController: UIViewController {
     @IBAction func repeatDirections(_ sender: Any) {
         
         print("You hit the repeat button")
-        // depending on subpart and cycle
-        // remember to load different files
+        if subPart == 1 {
+            // Mafia
+            if optionsParameters.enableDirections {
+                print("S_N_B_04")
+                playNarration(trackTitle: "S_N_B_04")
+            }
+        } else if subPart == 2 && !policeExist {
+           // Doctor
+            if optionsParameters.enableDirections {
+                print("S_N_B_08")
+                playNarration(trackTitle: "S_N_B_08")
+            }
+        } else if subPart == 3 {
+            // Doctor
+            if optionsParameters.enableDirections {
+                print("S_N_B_08")
+                playNarration(trackTitle: "S_N_B_08")
+            }
+        } else {
+            // Police
+            if optionsParameters.enableDirections {
+                print("S_N_B_06")
+                playNarration(trackTitle: "S_N_B_06")
+            }
+        }
     }
     
     // Proceed Button
@@ -230,10 +245,13 @@ class _ChooseViewController: UIViewController {
             
             // Finish Mafia Selection
             if part == 2 && subPart == 1 {
-                
+                firstTimeMafia = false
                 if optionsParameters.enableDirections {
                     playNarration(trackTitle: "S_N_B_05")
                     print("S_N_B_05")
+                    proceedBtn.isHidden = true
+                    sleep(2)
+                    narrationPlayer.stop()
                 }
                 // checked box is targeted
                 // selectedPlayer.attemptMurder
@@ -249,19 +267,9 @@ class _ChooseViewController: UIViewController {
                         disableAll()
                     }
                     if optionsParameters.enableDirections {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
                             print("S_N_B_06")
-                            playNarration(trackTitle: "S_N_B_06")
-                        })
-                        
-                        if firstTimePolice {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-                                print("S_N_R_03")
-                                playNarration(trackTitle: "S_N_R_03")
-                            })
-                        }
+                            playNarrationQueue(trackTitle: "S_N_B_06")
                     }
-                    firstTimePolice = false
                 } else if doctorExist {
                     subPart = subPart + 2
                     roleLbl.text = "DOCTOR"
@@ -269,19 +277,9 @@ class _ChooseViewController: UIViewController {
                         disableAll()
                     }
                     if optionsParameters.enableDirections {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
                             print("S_N_B_08")
-                            playNarration(trackTitle: "S_N_B_08")
-                        })
-                        
-                        if firstTimeDoctor {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-                                print("S_N_R_04")
-                                playNarration(trackTitle: "S_N_R_04")
-                            })
+                            playNarrationQueue(trackTitle: "S_N_B_08")
                         }
-                    }
-                    firstTimeDoctor = false
                 } else {
                     
                     // update masterPlayerArray with decisions
@@ -292,6 +290,7 @@ class _ChooseViewController: UIViewController {
                         UserDefaults.standard.set(part, forKey: "Part")
                         currentGameFinished = true
                         UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
+                        narrationPlayer.stop()
                         performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
                     } else {
                         part = part + 1
@@ -304,14 +303,14 @@ class _ChooseViewController: UIViewController {
                         savedMasterArray = masterPlayerArray
                         let data = NSKeyedArchiver.archivedData(withRootObject: savedMasterArray)
                         UserDefaults.standard.set(data, forKey: "savedMasterArray")
-                        
+                        narrationPlayer.stop()
                         performSegue(withIdentifier: "ChooseToDay", sender: masterPlayerArray)
                     }
                 }
                 
                 // Finish Police Selection
             } else if part == 2 && subPart == 2 {
-                
+                firstTimePolice = false
                 // checked box is targetted
                 // if selectedPlayer.role == "MAFIA" {
                 // put thumbs up } else { thumbs down}
@@ -320,6 +319,9 @@ class _ChooseViewController: UIViewController {
                 if optionsParameters.enableDirections {
                     playNarration(trackTitle: "S_N_B_07")
                     print("S_N_B_07")
+                    proceedBtn.isHidden = true
+                    sleep(2)
+                    narrationPlayer.stop()
                 }
                 
                 if doctorExist {
@@ -329,20 +331,10 @@ class _ChooseViewController: UIViewController {
                         disableAll()
                     }
                     if optionsParameters.enableDirections {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-                            print("S_N_B_08")
-                            playNarration(trackTitle: "S_N_B_08")
-                        })
+                        print("S_N_B_08")
+                        playNarration(trackTitle: "S_N_B_08")
                         
-                        if firstTimeDoctor {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-                                print("S_N_R_04")
-                                playNarration(trackTitle: "S_N_R_04")
-                            })
-                        }
                     }
-                    firstTimeDoctor = false
-                    
                 } else {
                     
                     // update masterPlayerArray with decisions
@@ -352,6 +344,7 @@ class _ChooseViewController: UIViewController {
                         UserDefaults.standard.set(part, forKey: "Part")
                         currentGameFinished = true
                         UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
+                        narrationPlayer.stop()
                         performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
                     } else {
                         part = part + 1
@@ -364,16 +357,18 @@ class _ChooseViewController: UIViewController {
                         savedMasterArray = masterPlayerArray
                         let data = NSKeyedArchiver.archivedData(withRootObject: savedMasterArray)
                         UserDefaults.standard.set(data, forKey: "savedMasterArray")
-                        
+                        narrationPlayer.stop()
                         performSegue(withIdentifier: "ChooseToDay", sender: masterPlayerArray)
                     }
                 }
                 
                 // Finish Doctor Selection
             } else if part == 2 && subPart == 3 {
+                firstTimeDoctor = false
                 if optionsParameters.enableDirections {
                     playNarration(trackTitle: "S_N_B_09")
                     print("S_N_B_09")
+                    sleep(2)
                 }
                 
                 // checked box is targetted
@@ -398,6 +393,7 @@ class _ChooseViewController: UIViewController {
                     UserDefaults.standard.set(part, forKey: "Part")
                     currentGameFinished = true
                     UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
+                    narrationPlayer.stop()
                     performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
                 } else {
                     subPart = subPart + 1
@@ -411,13 +407,13 @@ class _ChooseViewController: UIViewController {
                     savedMasterArray = masterPlayerArray
                     let data = NSKeyedArchiver.archivedData(withRootObject: savedMasterArray)
                     UserDefaults.standard.set(data, forKey: "savedMasterArray")
-                    
+                    narrationPlayer.stop()
                     performSegue(withIdentifier: "ChooseToDay", sender: masterPlayerArray)
                 }
                 
                 // Finish Tribunal Selection
             } else if part == 5 {
-                
+                firstTimeTribunal = false
                 // update masterPlayerArray with decisions
                 masterPlayerArray[selectedPlayerIndex].murder()
                 recentlyMurdered = selectedPlayerIndex
@@ -427,6 +423,7 @@ class _ChooseViewController: UIViewController {
                     UserDefaults.standard.set(part, forKey: "Part")
                     currentGameFinished = true
                     UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
+                    narrationPlayer.stop()
                     performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
                 } else {
                     cycle = cycle + 1
@@ -452,6 +449,7 @@ class _ChooseViewController: UIViewController {
                             print(error)
                         }
                     }
+                    narrationPlayer.stop()
                     performSegue(withIdentifier: "ChooseToStory", sender: masterPlayerArray)
                 }
             }
@@ -665,9 +663,57 @@ class _ChooseViewController: UIViewController {
             }
         }
     }
+    
+    // Given an mp3 file name, play file
+    func playNarrationQueue(trackTitle: String) {
+        if let sound = NSDataAsset(name: trackTitle) {
+            // Do any additional setup after loading the view, typically from a nib.
+            do {
+                narrationPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                
+                narrationPlayer.delegate = self
+                narrationPlayer.prepareToPlay()
+                narrationPlayer.play()
+                
+            } catch {
+                print(error)
+            }
+        }
+        narrationStarted = true
+    }
 }
 
-extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, AVAudioPlayerDelegate {
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        print("Finished playing")
+        if flag {
+            if optionsParameters.enableStory {
+                if firstTimeMafia && subPart == 1 {
+                    // Mafia
+                    if optionsParameters.enableDirections {
+                        print("S_N_R_02")
+                        playNarration(trackTitle: "S_N_R_02")
+                    }
+                } else if subPart == 2 && !policeExist && firstTimeDoctor {
+                    // Doctor
+                    print("S_N_R_04")
+                    playNarration(trackTitle: "S_N_R_04")
+                } else if subPart == 3 && firstTimeDoctor {
+                    // Doctor
+                    print("S_N_R_04")
+                    playNarration(trackTitle: "S_N_R_04")
+                } else if subPart == 2 && policeExist && firstTimePolice {
+                    // Police
+                    print("S_N_R_03")
+                    playNarration(trackTitle: "S_N_R_03")
+                } else if subPart == 5 && firstTimeTribunal {
+                    print("S_T_R_02")
+                    playNarration(trackTitle: "S_T_R_02")
+                }
+            }
+        }
+    }
     
     // Specifying the number of sections in the collectionView
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -763,6 +809,7 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
                 print("selecting person")
             }
         }
+        proceedBtn.isHidden = false
     }
     
     func generateBasicButtons() {

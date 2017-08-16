@@ -41,6 +41,7 @@ class _NightViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        print("FTN: \(firstTimeNight)")
         
         print("NightViewController")
         print("Cycle is \(cycle)")
@@ -61,11 +62,11 @@ class _NightViewController: UIViewController {
                     playNarration(trackTitle: "S_T_B_02")
             }
         }
-        firstTimeNight = false
     }
     
     // Proceed Button
     @IBAction func goToChoose(_ sender: Any) {
+        firstTimeNight = false
         if part == 1 {
             
             // Increase part

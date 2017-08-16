@@ -59,6 +59,8 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        print("FTN: \(firstTimeNight)")
+        
         
         print("StoryViewController")
         print("Cycle is \(cycle)")
@@ -182,9 +184,14 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
             } else if cycle >= 1 && part > 0 {
                 // Night recap
                 narrationPlayer.stop()
-                print(dayStoryOrder[0])
-                playNarrationQueue(trackTitle: dayStoryOrder[0])
-                dayStoryTrackNum = 1
+                if mafiaSelected == docSelected && mafiaSelected != -1 {
+                    // Saved player, update for expansion
+                    playNarration(trackTitle: noneDie[0])
+                } else {
+                    print(dayStoryOrder[0])
+                    playNarrationQueue(trackTitle: dayStoryOrder[0])
+                    dayStoryTrackNum = 1
+                }
             }
         }
     }

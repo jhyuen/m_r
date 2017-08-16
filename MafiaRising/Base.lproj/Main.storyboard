@@ -201,12 +201,12 @@ volume for best experience</string>
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="3B4-aq-i8L" kind="show" identifier="HomeToPlayers" customClass="ScaleSegue" customModule="MafiaRising" customModuleProvider="target" id="RLX-xd-W8t"/>
+                        <segue destination="3B4-aq-i8L" kind="show" identifier="HomeToPlayers" id="RLX-xd-W8t"/>
                         <segue destination="Uxu-yi-Eea" kind="show" identifier="HomeToRules" id="jGj-z5-JdE"/>
                         <segue destination="9nD-tn-Rq4" kind="show" identifier="HomeToOptions" action="showDetailViewController:sender:" id="bB7-vs-abW"/>
                         <segue destination="q0j-zv-644" kind="show" identifier="ContinueToReady" id="nwm-Dp-aeN"/>
-                        <segue destination="QpL-Dl-0m0" kind="show" identifier="ContinueToDay" customClass="ScaleSegue" customModule="MafiaRising" customModuleProvider="target" id="YkS-pf-4aO"/>
-                        <segue destination="x6I-ks-Nig" kind="show" identifier="ContinueToNight" customClass="ScaleSegue" customModule="MafiaRising" customModuleProvider="target" id="SvW-si-1fZ"/>
+                        <segue destination="QpL-Dl-0m0" kind="show" identifier="ContinueToDay" id="YkS-pf-4aO"/>
+                        <segue destination="x6I-ks-Nig" kind="show" identifier="ContinueToNight" id="SvW-si-1fZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zua-Ax-IX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -519,9 +519,9 @@ volume for best experience</string>
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="XFl-YP-TYn" kind="show" identifier="RulesToTut" customClass="ScaleSegue" customModule="MafiaRising" customModuleProvider="target" id="mcV-tc-pkP"/>
-                        <segue destination="mhI-wP-5BT" kind="show" identifier="RulesToScript" customClass="ScaleSegue" customModule="MafiaRising" customModuleProvider="target" id="yqx-8T-zyb"/>
-                        <segue destination="TVh-SV-JGu" kind="show" identifier="RulesToRoles" customClass="ScaleSegue" customModule="MafiaRising" customModuleProvider="target" id="8wV-LJ-1eU"/>
+                        <segue destination="XFl-YP-TYn" kind="show" identifier="RulesToTut" id="mcV-tc-pkP"/>
+                        <segue destination="mhI-wP-5BT" kind="show" identifier="RulesToScript" id="yqx-8T-zyb"/>
+                        <segue destination="TVh-SV-JGu" kind="show" identifier="RulesToRoles" id="8wV-LJ-1eU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7X2-x6-R6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -720,7 +720,7 @@ Swipe right to learn more!</string>
                     </view>
                     <connections>
                         <outlet property="nightNum" destination="3Gj-vT-1E7" id="bmS-0E-ZMD"/>
-                        <segue destination="kEY-wj-tGy" kind="show" identifier="NightToChoose" customClass="UnwindScaleSegue" customModule="MafiaRising" customModuleProvider="target" id="DTs-jA-27W"/>
+                        <segue destination="kEY-wj-tGy" kind="show" identifier="NightToChoose" id="DTs-jA-27W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aJA-iM-fTQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3770,9 +3770,11 @@ of Players</string>
                         <segue destination="TZg-g4-ZaJ" kind="show" identifier="CardsToInfo" id="dH3-a9-kdI"/>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="CardsToPause" id="5oF-XY-W7M"/>
                         <segue destination="q0j-zv-644" kind="show" identifier="CardsToReady" animates="NO" id="oaV-mC-QWl"/>
+                        <segue destination="MWT-pF-ud1" kind="unwind" identifier="CardsToHome" animates="NO" unwindAction="unwindToHomeVCWithSegue:" id="FdP-Jh-Fac"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cil-kS-y4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MWT-pF-ud1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2789.5999999999999" y="-575.26236881559225"/>
         </scene>
@@ -3995,7 +3997,7 @@ of Players</string>
                         <outlet property="mainTitle" destination="AsO-4H-IUz" id="nVM-sj-wPN"/>
                         <outlet property="scrollView" destination="Twh-X9-WTE" id="60X-q5-5st"/>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="StoryToPause" id="dhy-OQ-mIy"/>
-                        <segue destination="x6I-ks-Nig" kind="show" identifier="StoryToNight" customClass="ScaleSegue" customModule="MafiaRising" customModuleProvider="target" id="XfW-qg-n7e"/>
+                        <segue destination="x6I-ks-Nig" kind="show" identifier="StoryToNight" id="XfW-qg-n7e"/>
                         <segue destination="kEY-wj-tGy" kind="show" identifier="StoryToChoose" animates="NO" id="nFz-PG-5cK"/>
                     </connections>
                 </viewController>
@@ -4060,7 +4062,7 @@ of Players</string>
                     </view>
                     <connections>
                         <outlet property="dayNum" destination="FK6-EW-Tci" id="S13-vT-qb3"/>
-                        <segue destination="MAm-3Z-Idg" kind="show" identifier="DayToStory" customClass="UnwindScaleSegue" customModule="MafiaRising" customModuleProvider="target" id="Jyo-Dw-ayh"/>
+                        <segue destination="MAm-3Z-Idg" kind="show" identifier="DayToStory" id="Jyo-Dw-ayh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QNp-ku-F01" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4253,12 +4255,13 @@ of Players</string>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="7NJ-Bu-miy" id="5dP-1Q-YiW"/>
+                        <outlet property="proceedBtn" destination="1ab-1d-dbe" id="QXC-Cm-H4F"/>
                         <outlet property="roleLbl" destination="9A4-1K-mif" id="ULf-Ac-7K4"/>
                         <outlet property="soundEffectBtn1" destination="wpC-4i-Lpb" id="XoB-mD-Zrz"/>
                         <outlet property="soundEffectBtn2" destination="APn-t6-4Jl" id="Pvg-Xs-0Jr"/>
                         <outlet property="soundEffectBtn3" destination="VyX-Lg-MZx" id="3XI-i7-02S"/>
                         <outlet property="soundEffectBtn4" destination="Glf-kc-3hI" id="3vY-fl-mo8"/>
-                        <segue destination="QpL-Dl-0m0" kind="show" identifier="ChooseToDay" customClass="ScaleSegue" customModule="MafiaRising" customModuleProvider="target" id="Xxf-v6-6cj"/>
+                        <segue destination="QpL-Dl-0m0" kind="show" identifier="ChooseToDay" id="Xxf-v6-6cj"/>
                         <segue destination="MAm-3Z-Idg" kind="show" identifier="ChooseToStory" animates="NO" id="Y5H-lc-M15"/>
                         <segue destination="Mzs-IF-RIf" kind="show" identifier="ChooseToVictory" animates="NO" id="HeH-F8-GWu"/>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="ChooseToPause" id="wNd-ep-vfX"/>
@@ -6995,13 +6998,13 @@ be a jerk ;)</string>
         <image name="portraitFiller" width="433" height="653"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bB7-vs-abW"/>
-        <segue reference="nwm-Dp-aeN"/>
+        <segue reference="oaV-mC-QWl"/>
+        <segue reference="5oF-XY-W7M"/>
+        <segue reference="xw3-iS-S4C"/>
         <segue reference="I53-ci-Nq8"/>
-        <segue reference="dhy-OQ-mIy"/>
-        <segue reference="Y5H-lc-M15"/>
-        <segue reference="nFz-PG-5cK"/>
         <segue reference="Xxf-v6-6cj"/>
+        <segue reference="DTs-jA-27W"/>
         <segue reference="XfW-qg-n7e"/>
+        <segue reference="Y5H-lc-M15"/>
     </inferredMetricsTieBreakers>
 </document>

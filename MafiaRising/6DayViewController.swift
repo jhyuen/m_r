@@ -58,13 +58,11 @@ class _DayViewController: UIViewController {
                     playNarration(trackTitle: "S_D_B_01")
             }
         }
-        firstTimeDay = false
-
     }
 
     // Proceed Button
     @IBAction func goToStory(_ sender: Any) {
-       
+        firstTimeDay = false
         if part == 3 {
             
             // Increase part
