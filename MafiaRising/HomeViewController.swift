@@ -27,6 +27,9 @@ var musicPlayer = AVAudioPlayer()
 var soundEffectPlayer = AVAudioPlayer()
 // Initialize AudioPlayer for narration
 var narrationPlayer = AVAudioPlayer()
+// Initialize AudioPlayer for basic button sounds
+var clickPlayer = AVAudioPlayer()
+
 // Indicated whether or not a narration has begun playing
 var narrationStarted: Bool = false
 
@@ -58,11 +61,14 @@ class HomeViewController: UIViewController {
     @IBAction func pushNewGame(_ sender: Any) {
         // Reset globals
         passedReady = false
-        currentGameFinished = true;
+        currentGameFinished = true
         UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
-        isDay = false;
+        isDay = false
         UserDefaults.standard.set(isDay, forKey: "isDay")
         narrationStarted = false
+        
+        // Play button click sound effect
+        playClick()
         
         performSegue(withIdentifier: "HomeToPlayers", sender: self)
     }
@@ -73,6 +79,9 @@ class HomeViewController: UIViewController {
         print(isDay)
         print(part)
         print(currentGameFinished)
+        
+        // Play button click sound effect
+        playClick()
         
         if !currentGameFinished {
             // Reset variables that may not have been reset
@@ -97,11 +106,15 @@ class HomeViewController: UIViewController {
     
     // Options Button
     @IBAction func pushOptions(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         performSegue(withIdentifier: "HomeToOptions", sender: self)
     }
     
     // Rules Button
     @IBAction func pushRules(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         performSegue(withIdentifier: "HomeToRules", sender: self)
     }
     

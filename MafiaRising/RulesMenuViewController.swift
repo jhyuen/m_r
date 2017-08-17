@@ -23,21 +23,29 @@ class RulesMenuViewController: UIViewController {
     
     // Back Button
     @IBAction func backBtnPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         dismiss(animated: true, completion: nil)
     }
     
     // Tutorial Button
     @IBAction func tutorialBtnPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         performSegue(withIdentifier: "RulesToTut", sender: self)
     }
     
     // Script Button
     @IBAction func scriptBtnPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         performSegue(withIdentifier: "RulesToScript", sender: self)
     }
     
     // Roles Button
     @IBAction func rolesBtnPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         performSegue(withIdentifier: "RulesToRoles", sender: self)
     }
     

@@ -36,11 +36,15 @@ class _RoleSetUpViewController: UIViewController {
     @IBAction func goBackToPlayer(_ sender: Any) {
         narrationPlayer.stop()
         narrationStarted = false
+        // Play button click sound effect
+        playClick()
         dismiss(animated: false, completion: nil )
     }
     
     // Info Button
     @IBAction func goToRoleInfo (_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         performSegue(withIdentifier: "RolesToInfo", sender: self)
     }
     
@@ -65,6 +69,8 @@ class _RoleSetUpViewController: UIViewController {
     
         narrationPlayer.stop()
         narrationStarted = false
+        // Play button click sound effect
+        playClick()
         performSegue(withIdentifier: "RolesToCards", sender: masterIndex)
     }
 

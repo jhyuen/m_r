@@ -36,6 +36,8 @@ class RoleInformationViewController: UIViewController {
     
     // Back Button
     @IBAction func backBtnPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         dismiss(animated: true, completion: nil)
     }
     

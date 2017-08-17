@@ -58,11 +58,15 @@ class OptionsViewController: UIViewController {
         print(optionsParameters.soundEffectsVol)
         print(optionsParameters.musicVol)
         
+        // Play button click sound effect
+        playClick()
         dismiss(animated: true, completion: nil)
     }
     
     // Info Button
     @IBAction func goToOptionInfo(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         performSegue(withIdentifier: "OptionToInfo", sender: self)
     }
     

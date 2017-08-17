@@ -167,6 +167,8 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
     // Repeat Voice Button
     @IBAction func repeatVoice(_ sender: Any) {
         print("You hit the repeat button")
+        // Play button click sound effect
+        playClick()
         if optionsParameters.enableStory {
             if cycle == 1 && part == 0 {
                 // Story Intro
@@ -205,6 +207,8 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
         storyIntroTrackNum = 0
         tribunalTrackNum = 0
         
+        // Play button click sound effect
+        playClick()
         if part == 0 {
             
             // Increase Part

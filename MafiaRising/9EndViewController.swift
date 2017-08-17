@@ -104,11 +104,15 @@ class _EndViewController: UIViewController, UIScrollViewDelegate {
 
     // Pause Button
     @IBAction func pauseBtnPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         performSegue(withIdentifier: "EndToPause", sender: masterPlayerArray)
     }
     
     // Proceed Button
     @IBAction func goToHome(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         performSegue(withIdentifier: "EndToHome", sender: self)
     }
     

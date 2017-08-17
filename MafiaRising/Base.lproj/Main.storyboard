@@ -3488,7 +3488,7 @@ of Players</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="OIN-Pa-qwo">
-                                <rect key="frame" x="72" y="169" width="231.5" height="133"/>
+                                <rect key="frame" x="72.5" y="169" width="231.5" height="133"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Jcf-M7-l50">
                                         <rect key="frame" x="0.0" y="0.0" width="231.5" height="54"/>
@@ -3614,7 +3614,7 @@ of Players</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wkj-F9-U7c">
-                                <rect key="frame" x="150" y="607" width="75" height="35"/>
+                                <rect key="frame" x="150.5" y="607" width="75" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Uws-ho-uL6"/>
                                 </constraints>
@@ -4178,6 +4178,7 @@ of Players</string>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpC-4i-Lpb">
                                                 <rect key="frame" x="0.0" y="0.0" width="94" height="100"/>
                                                 <color key="backgroundColor" red="0.57112640142440796" green="0.077838368713855743" blue="0.021155845373868942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="ClockBW"/>
                                                 <connections>
                                                     <action selector="pressSoundEffectBtn:" destination="kEY-wj-tGy" eventType="touchUpInside" id="hTF-QU-wpU"/>
                                                 </connections>
@@ -6955,6 +6956,7 @@ be a jerk ;)</string>
         </scene>
     </scenes>
     <resources>
+        <image name="ClockBW" width="900" height="900"/>
         <image name="DayRecapBackground" width="800" height="400"/>
         <image name="IllumCircleC" width="1000" height="1000"/>
         <image name="MRBackButton" width="92" height="52"/>
@@ -7006,13 +7008,13 @@ be a jerk ;)</string>
         <image name="portraitFiller" width="433" height="653"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="I53-ci-Nq8"/>
+        <segue reference="wNd-ep-vfX"/>
         <segue reference="nFz-PG-5cK"/>
         <segue reference="Y5H-lc-M15"/>
-        <segue reference="dhy-OQ-mIy"/>
         <segue reference="XfW-qg-n7e"/>
-        <segue reference="I53-ci-Nq8"/>
-        <segue reference="xw3-iS-S4C"/>
         <segue reference="Xxf-v6-6cj"/>
+        <segue reference="xw3-iS-S4C"/>
         <segue reference="oaV-mC-QWl"/>
     </inferredMetricsTieBreakers>
 </document>

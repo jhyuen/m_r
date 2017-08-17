@@ -123,16 +123,22 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     
     // Pause Button
     @IBAction func pauseBtnPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         performSegue(withIdentifier: "CardsToPause", sender: fakeMasterPlayerArray)
     }
 
     // Info Button
     @IBAction func goToCardInfo (_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         performSegue(withIdentifier: "CardsToInfo", sender: self)
     }
     
     // Proceed Button
     @IBAction func revealNextCard(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         
         addPlayer(picture: playerImage.image!, role: roleLbl.text!)
         
@@ -216,7 +222,6 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     
     // Camera Button
     @IBAction func takePhoto(_ sender: Any) {
-        
         let settings = AVCapturePhotoSettings()
         let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
         let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String : previewPixelType, kCVPixelBufferWidthKey as String : 160, kCVPixelBufferHeightKey as String : 160]

@@ -22,6 +22,8 @@ class OptionsInfoViewController: UIViewController {
     }
     
     @IBAction func goBackToOptions(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         dismiss(animated: true, completion: nil)
     }
 

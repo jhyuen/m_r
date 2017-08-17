@@ -23,6 +23,8 @@ class _ReadyViewController: UIViewController {
     
     // Pause Button
     @IBAction func pauseBtnPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         performSegue(withIdentifier: "ReadyToPause", sender: masterPlayerArray)
     }
     

@@ -20,6 +20,8 @@ class RolesViewController: UIViewController {
     
     // Back Button
     @IBAction func backBtnPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         dismiss(animated: true, completion: nil)
     }
     
@@ -33,6 +35,8 @@ class RolesViewController: UIViewController {
     
     // Role Buttons
     @IBAction func onRoleBtnTapped(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         if let btnTapped: Int = (sender as AnyObject).tag {
             performSegue(withIdentifier: "RolesToRoleInformation", sender: btnTapped)
         }

@@ -61,6 +61,8 @@ class _PlayersViewController: UIViewController, AVAudioPlayerDelegate {
     
     // Pause Button
     @IBAction func pauseBtnPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         performSegue(withIdentifier: "PlayersToPause", sender: masterPlayerArray)
     }
     
@@ -74,6 +76,8 @@ class _PlayersViewController: UIViewController, AVAudioPlayerDelegate {
                 if let numPlayers: Int = (Int(numPlayerField.text!)) {
                     narrationPlayer.stop()
                     narrationStarted = false
+                    // Play button click sound effect
+                    playClick()
                     performSegue(withIdentifier: "PlayersToRoleSetUp", sender: numPlayers)
                     errorLabel.isHidden = true
                 }
@@ -90,6 +94,8 @@ class _PlayersViewController: UIViewController, AVAudioPlayerDelegate {
     
     // Info Button
     @IBAction func goToPlayerInfo(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         performSegue(withIdentifier: "PlayersToInfo", sender: self)
     }
     

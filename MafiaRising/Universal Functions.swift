@@ -13,44 +13,44 @@ let animateSegues: Bool = true
 
 // Sound Effect List
 // Basic Sound Effects
-var accent1 = SoundEffect(effect: "Accent 1", picture: "Accent.png")
-let accent2 = SoundEffect(effect: "Accent 2", picture: "Accent2.png")
-let accent3 = SoundEffect(effect: "Accent 3", picture: "Accent2.png")
-let bell = SoundEffect(effect: "Bell", picture: "BellB.png")
-let clock = SoundEffect(effect: "Clock", picture: "ClockB.png")
-let cough = SoundEffect(effect: "Cough", picture: "Cough.png")
-let creak1 = SoundEffect(effect: "Creak 1", picture: "Creak.png")
-let creak2 = SoundEffect(effect: "Creak 2", picture: "Creak.png")
-let crickets = SoundEffect(effect: "Crickets", picture: "Crickets.png")
-let door = SoundEffect(effect: "Door", picture: "Door.png")
-let giggle = SoundEffect(effect: "Giggle", picture: "Giggle.png")
-let glass = SoundEffect(effect: "Glass", picture: "Glass.png")
-let leaves1 = SoundEffect(effect: "Leaves 1", picture: "LeavesB.png")
-let pianoAccent1 = SoundEffect(effect: "Piano Accent 1", picture: "PianoAccent.png")
-let pianoAccent2 = SoundEffect(effect: "Piano Accent 2", picture: "PianoAccent.png")
-let pianoAccent3 = SoundEffect(effect: "Piano Accent 3", picture: "PianoAccent.png")
-let scratch = SoundEffect(effect: "Scratch", picture: "Scratch.png")
-let wind = SoundEffect(effect: "Wind", picture: "Wind.png")
+var accent1 = SoundEffect(effect: "Accent 1", picture: "AccentW.png")
+let accent2 = SoundEffect(effect: "Accent 2", picture: "Accent2W.png")
+let accent3 = SoundEffect(effect: "Accent 3", picture: "Accent2W.png")
+let bell = SoundEffect(effect: "Bell", picture: "BellBW.png")
+let clock = SoundEffect(effect: "Clock", picture: "ClockBW.png")
+let cough = SoundEffect(effect: "Cough", picture: "CoughW.png")
+let creak1 = SoundEffect(effect: "Creak 1", picture: "CreakW.png")
+let creak2 = SoundEffect(effect: "Creak 2", picture: "CreakW.png")
+let crickets = SoundEffect(effect: "Crickets", picture: "CricketsW.png")
+let door = SoundEffect(effect: "Door", picture: "DoorW.png")
+let giggle = SoundEffect(effect: "Giggle", picture: "GiggleW.png")
+let glass = SoundEffect(effect: "Glass", picture: "GlassW.png")
+let leaves1 = SoundEffect(effect: "Leaves 1", picture: "LeavesBW.png")
+let pianoAccent1 = SoundEffect(effect: "Piano Accent 1", picture: "PianoAccentW.png")
+let pianoAccent2 = SoundEffect(effect: "Piano Accent 2", picture: "PianoAccentW.png")
+let pianoAccent3 = SoundEffect(effect: "Piano Accent 3", picture: "PianoAccentW.png")
+let scratch = SoundEffect(effect: "Scratch", picture: "ScratchW.png")
+let wind = SoundEffect(effect: "Wind", picture: "WindW.png")
 
 // Tribunal Sound Effects
 // for multiple potentially add array instead of single String
 // and randomize for each picture the multiple sound effects
 // BUT table until update
-let angryMob1 = SoundEffect(effect: "Angry Mob 1", picture: "AngryMob.png")
-let angryMob2 = SoundEffect(effect: "Angry Mob 2", picture: "AngryMob.png")
-let angryMob3 = SoundEffect(effect: "Angry Mob 3", picture: "AngryMob.png")
-let boo = SoundEffect(effect: "Boo", picture: "Boo.png")
-let clapping = SoundEffect(effect: "Clapping", picture: "PeopleClap.png")
-let flappingBirds = SoundEffect(effect: "Flapping Birds", picture: "FlappingWings.png")
-let freedom = SoundEffect(effect: "Freedom", picture: "Freedom.png")
-let ivat1 = SoundEffect(effect: "IVAT 1", picture: "IVolunteer.png")
-let ivat2 = SoundEffect(effect: "IVAT 2", picture: "IVolunteer.png")
-let ivat3 = SoundEffect(effect: "IVAT 3", picture: "IVolunteer.png")
-let nay = SoundEffect(effect: "Nay", picture: "Nay.png")
-let raven = SoundEffect(effect: "Raven", picture: "Raven.png")
-let rooster = SoundEffect(effect: "Rooster", picture: "RoosterCrow.png")
-let weeping = SoundEffect(effect: "Weeping", picture: "Weeping.png")
-let yay = SoundEffect(effect: "Yay", picture: "Yay.png")
+let angryMob1 = SoundEffect(effect: "Angry Mob 1", picture: "AngryMobW.png")
+let angryMob2 = SoundEffect(effect: "Angry Mob 2", picture: "AngryMobW.png")
+let angryMob3 = SoundEffect(effect: "Angry Mob 3", picture: "AngryMobW.png")
+let boo = SoundEffect(effect: "Boo", picture: "BooW.png")
+let clapping = SoundEffect(effect: "Clapping", picture: "PeopleClapW.png")
+let flappingBirds = SoundEffect(effect: "Flapping Birds", picture: "FlappingWingsW.png")
+let freedom = SoundEffect(effect: "Freedom", picture: "FreedomW.png")
+let ivat1 = SoundEffect(effect: "IVAT 1", picture: "IVolunteerW.png")
+let ivat2 = SoundEffect(effect: "IVAT 2", picture: "IVolunteerW.png")
+let ivat3 = SoundEffect(effect: "IVAT 3", picture: "IVolunteerW.png")
+let nay = SoundEffect(effect: "Nay", picture: "NayW.png")
+let raven = SoundEffect(effect: "Raven", picture: "RavenW.png")
+let rooster = SoundEffect(effect: "Rooster", picture: "RoosterCrowW.png")
+let weeping = SoundEffect(effect: "Weeping", picture: "WeepingW.png")
+let yay = SoundEffect(effect: "Yay", picture: "YayW.png")
 
 // Generate sound effects arrays
 let basicSoundEffectsArray: Array<SoundEffect> = [accent1, accent2, accent3, bell, clock, cough, creak1, creak2, crickets, door, giggle, glass, leaves1, pianoAccent1, pianoAccent2, scratch, wind]
@@ -180,6 +180,22 @@ func playNarration(trackTitle: String) {
         }
     }
     narrationStarted = true
+}
+
+// Plays click sound effect
+func playClick() {
+    if let sound = NSDataAsset(name: "Click") {
+        // Do any additional setup after loading the view, typically from a nib.
+        do {
+            narrationPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+            
+            narrationPlayer.prepareToPlay()
+            narrationPlayer.play()
+            
+        } catch {
+            print(error)
+        }
+    }
 }
 
 func dismissLeftToRight (theVC: UIViewController) {

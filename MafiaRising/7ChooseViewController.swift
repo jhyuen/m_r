@@ -193,6 +193,8 @@ class _ChooseViewController: UIViewController {
     // Repeat Button
     @IBAction func repeatDirections(_ sender: Any) {
         narrationPlayer.stop()
+        // Play button click sound effect
+        playClick()
         print("You hit the repeat button")
         if part == 2 {
             if subPart == 1 {
@@ -234,13 +236,15 @@ class _ChooseViewController: UIViewController {
     @IBAction func goToNextScreen(_ sender: Any) {
         narrationPlayer.stop()
         narrationStarted = false
+        print("proceed pressed")
         
         if selectedPlayerIndex >= 0 || (roleLbl.text == "DOCTOR" && !doctorsAreAlive) || (roleLbl.text == "POLICE" && !policeAreAlive) {
             removeBorderAndIndicator(reset: false)
             
             policeAreAlive = false
             doctorsAreAlive = false
-            proceedBtn.isHidden = true
+            // Play button click sound effect
+            playClick()
             
             // reenables all players and check police and doctor status
             for player in masterPlayerArray {
