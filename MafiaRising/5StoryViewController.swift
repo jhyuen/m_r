@@ -161,6 +161,8 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
     
     // Pause Button
     @IBAction func pauseBtnPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         performSegue(withIdentifier: "StoryToPause", sender: masterPlayerArray)
     }
     

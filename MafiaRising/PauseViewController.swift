@@ -33,11 +33,15 @@ class PauseViewController: UIViewController {
     
     // Back Button
     @IBAction func backBtnPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         dismiss(animated: true, completion: nil)
     }
     
     // Home Button
     @IBAction func homeBtnPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         // Undo murder that occurred
         if recentlyMurdered >= 0 {
             if masterPlayerArray[recentlyMurdered].isDead{
@@ -77,6 +81,8 @@ class PauseViewController: UIViewController {
     
     // Roles Button
     @IBAction func rolesBtnPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         performSegue(withIdentifier: "PauseToRoles", sender: masterPlayerArray)
     }
     // Add segue
@@ -84,11 +90,15 @@ class PauseViewController: UIViewController {
     
     // Options Button
     @IBAction func optionsBtnPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         performSegue(withIdentifier: "PauseToOptions", sender: self)
     }
     
     // Rules Button
     @IBAction func rulesBtnPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         performSegue(withIdentifier: "PauseToRules", sender: self)
     }
     

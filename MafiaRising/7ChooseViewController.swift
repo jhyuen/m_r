@@ -187,6 +187,8 @@ class _ChooseViewController: UIViewController {
     // Pause Button
     @IBAction func pauseBtnPressed(_ sender: Any) {
         removeBorderAndIndicator(reset: true)
+        // Play button click sound effect
+        playClick()
         performSegue(withIdentifier: "ChooseToPause", sender: masterPlayerArray)
     }
     

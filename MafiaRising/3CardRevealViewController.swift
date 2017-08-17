@@ -205,7 +205,8 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     
     // Retake picture
     @IBAction func retakePicture(_ sender: Any) {
-        
+        // Play button click sound effect
+        playClick()
         // Reset views
         cameraView.isHidden = false
         cameraBtn.isHidden = false
@@ -222,6 +223,8 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     
     // Camera Button
     @IBAction func takePhoto(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         let settings = AVCapturePhotoSettings()
         let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
         let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String : previewPixelType, kCVPixelBufferWidthKey as String : 160, kCVPixelBufferHeightKey as String : 160]
