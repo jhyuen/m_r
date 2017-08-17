@@ -259,13 +259,13 @@ volume for best experience</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Directions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8a-TW-LFc">
-                                <rect key="frame" x="96" y="189" width="115.5" height="29"/>
+                                <rect key="frame" x="96" y="189" width="116" height="29"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y46-hZ-wN3">
-                                <rect key="frame" x="96" y="230" width="60.5" height="29"/>
+                                <rect key="frame" x="96" y="230" width="61" height="29"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -281,7 +281,7 @@ volume for best experience</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5f0-Q6-52K">
-                                <rect key="frame" x="44" y="363" width="78.5" height="35"/>
+                                <rect key="frame" x="44" y="363" width="79" height="35"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -570,7 +570,7 @@ volume for best experience</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INTRO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="rsH-bz-9vz">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -682,7 +682,7 @@ Swipe right to learn more!</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Gj-vT-1E7">
-                                <rect key="frame" x="173.5" y="310" width="27.5" height="53"/>
+                                <rect key="frame" x="173" y="310" width="28" height="53"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="45"/>
                                 <color key="textColor" red="0.53297722339999998" green="0.13033376629999999" blue="0.066634103659999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -773,7 +773,7 @@ Swipe right to learn more!</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nf-Rw-Za1">
-                                        <rect key="frame" x="0.0" y="97" width="200" height="76.5"/>
+                                        <rect key="frame" x="0.0" y="97" width="200" height="77"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="kyc-Iw-rHz"/>
                                         </constraints>
@@ -786,7 +786,7 @@ Swipe right to learn more!</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1E-KJ-Pnf">
-                                        <rect key="frame" x="0.0" y="193.5" width="200" height="77"/>
+                                        <rect key="frame" x="0.0" y="194" width="200" height="76"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="WMT-he-8iG"/>
                                         </constraints>
@@ -799,7 +799,7 @@ Swipe right to learn more!</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyW-pX-uYY">
-                                        <rect key="frame" x="0.0" y="290.5" width="200" height="76.5"/>
+                                        <rect key="frame" x="0.0" y="290" width="200" height="77"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="8VY-iQ-Svc"/>
                                         </constraints>
@@ -1026,7 +1026,7 @@ Swipe right to learn more!</string>
                                 <rect key="frame" x="68" y="157" width="240" height="490"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="270" verticalCompressionResistancePriority="630" image="MRFinal RolesMafia" translatesAutoresizingMaskIntoConstraints="NO" id="naG-Hl-V7v">
-                                        <rect key="frame" x="2.5" y="0.0" width="235" height="235"/>
+                                        <rect key="frame" x="3" y="0.0" width="235" height="235"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="naG-Hl-V7v" secondAttribute="height" multiplier="1:1" id="OfX-9j-Jxk"/>
                                         </constraints>
@@ -1101,7 +1101,7 @@ Swipe right to learn more!</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STORY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="k5T-sa-8Hr">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1195,7 +1195,7 @@ Swipe right to learn more!</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXAMPLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="xMt-v0-PP9">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1286,7 +1286,7 @@ When they entered the room, some of them were changed. They were no longer the s
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NIGHT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="1nI-vm-UMV">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1324,13 +1324,13 @@ When they entered the room, some of them were changed. They were no longer the s
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal ScriptNight" translatesAutoresizingMaskIntoConstraints="NO" id="Hzs-fe-LvP">
-                                                <rect key="frame" x="38" y="0.0" width="229" height="324"/>
+                                                <rect key="frame" x="38" y="0.0" width="229" height="323"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Hzs-fe-LvP" secondAttribute="height" multiplier="166:235" id="WEp-vp-hS2"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="bzJ-a6-uQk" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="17.5" y="349" width="270" height="108"/>
+                                                <rect key="frame" x="18" y="348" width="270" height="109"/>
                                                 <string key="text">Tell your party to
 close their eyes</string>
                                                 <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="30"/>
@@ -1400,7 +1400,7 @@ close their eyes</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXAMPLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="clw-qe-aI7">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1480,7 +1480,7 @@ close their eyes</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECTION 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="8iJ-Ml-BYm">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1518,13 +1518,13 @@ close their eyes</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal ScriptC04" translatesAutoresizingMaskIntoConstraints="NO" id="owT-9f-1He">
-                                                <rect key="frame" x="58.5" y="0.0" width="188" height="267"/>
+                                                <rect key="frame" x="59" y="0.0" width="187" height="266"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="owT-9f-1He" secondAttribute="height" multiplier="166:235" id="0O4-Ue-GOK"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="While everyone's eyes are closed, call the role at the top of the screen to wake up and select a target" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="wcY-PF-e1t" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="4.5" y="292" width="296.5" height="165"/>
+                                                <rect key="frame" x="4" y="291" width="297" height="166"/>
                                                 <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1592,7 +1592,7 @@ close their eyes</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXAMPLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="igx-9A-MiS">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1678,7 +1678,7 @@ kill/investigate/save?"</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECTION 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-0X-QQS">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1716,13 +1716,13 @@ kill/investigate/save?"</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal ScriptC05" translatesAutoresizingMaskIntoConstraints="NO" id="gEq-vr-Gmn">
-                                                <rect key="frame" x="49" y="0.0" width="207" height="292.5"/>
+                                                <rect key="frame" x="49" y="0.0" width="207" height="293"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="gEq-vr-Gmn" secondAttribute="height" multiplier="166:235" id="CI7-or-zWQ"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the player's target and ask them to close their eyes once again" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="m5D-4R-nh8" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="8" y="317.5" width="289" height="139.5"/>
+                                                <rect key="frame" x="8" y="318" width="289" height="139"/>
                                                 <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1790,7 +1790,7 @@ kill/investigate/save?"</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXAMPLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Paq-o8-14s">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1870,7 +1870,7 @@ kill/investigate/save?"</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selection 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="lba-8N-VT5">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1979,7 +1979,7 @@ have been called</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="6eu-NB-zgD">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2017,13 +2017,13 @@ have been called</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal ScriptDay" translatesAutoresizingMaskIntoConstraints="NO" id="mpR-2O-15B">
-                                                <rect key="frame" x="38.5" y="0.0" width="228" height="322"/>
+                                                <rect key="frame" x="39" y="0.0" width="227" height="321"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="mpR-2O-15B" secondAttribute="height" multiplier="166:235" id="N5n-9C-pWT"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="AgV-AO-65v" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="16.5" y="347" width="272" height="110"/>
+                                                <rect key="frame" x="17" y="346" width="272" height="111"/>
                                                 <string key="text">Ask all players 
 to wake up</string>
                                                 <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="30"/>
@@ -2093,7 +2093,7 @@ to wake up</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXAMPLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Hmv-4c-hs5">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2175,7 +2175,7 @@ open your eyes."</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="PnM-Jd-J9Y">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2213,13 +2213,13 @@ open your eyes."</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal ScriptC07" translatesAutoresizingMaskIntoConstraints="NO" id="XoM-qf-nRA">
-                                                <rect key="frame" x="49" y="0.0" width="207" height="292.5"/>
+                                                <rect key="frame" x="49" y="0.0" width="207" height="293"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="XoM-qf-nRA" secondAttribute="height" multiplier="166:235" id="aZH-F6-8v2"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="3ZI-rX-bvq" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="6.5" y="317.5" width="292.5" height="139.5"/>
+                                                <rect key="frame" x="6" y="318" width="293" height="139"/>
                                                 <string key="text">Tell a story
 about who died 
 and how they died</string>
@@ -2290,7 +2290,7 @@ and how they died</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXAMPLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="gEk-ae-pEo">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2380,7 +2380,7 @@ but he was saved."</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tribunal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Gkc-EK-myw">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2418,13 +2418,13 @@ but he was saved."</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal ScriptC08" translatesAutoresizingMaskIntoConstraints="NO" id="8PQ-RQ-bBq">
-                                                <rect key="frame" x="72.5" y="0.0" width="160" height="226.5"/>
+                                                <rect key="frame" x="72" y="0.0" width="161" height="227"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="8PQ-RQ-bBq" secondAttribute="height" multiplier="166:235" id="tfh-lg-Kz2"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Pq7-tz-ehV" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="12" y="251.5" width="281.5" height="205.5"/>
+                                                <rect key="frame" x="12" y="252" width="282" height="205"/>
                                                 <string key="text">Tell your remaining party members to discuss and choose a member to kill
 
 Only then can there be a chance to kill the mafia</string>
@@ -2495,7 +2495,7 @@ Only then can there be a chance to kill the mafia</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXAMPLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="F4h-dG-rVu">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2582,7 +2582,7 @@ Yes, we must choose someone."</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recap Again" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="c96-aY-9hU">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2620,13 +2620,13 @@ Yes, we must choose someone."</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal ScriptC09" translatesAutoresizingMaskIntoConstraints="NO" id="GVp-T7-VWs">
-                                                <rect key="frame" x="49" y="0.0" width="207" height="292.5"/>
+                                                <rect key="frame" x="49" y="0.0" width="207" height="293"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="GVp-T7-VWs" secondAttribute="height" multiplier="166:235" id="AXQ-DL-41Q"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="zTc-4T-rsP" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="0.0" y="317.5" width="305" height="139.5"/>
+                                                <rect key="frame" x="0.0" y="318" width="305" height="139"/>
                                                 <string key="text">Notify your party who was killed
 in the tribunal as well as those
  who have died in previous rounds</string>
@@ -2697,7 +2697,7 @@ in the tribunal as well as those
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXAMPLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Mae-ce-IDF">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2790,7 +2790,7 @@ will lead to peace."</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="P3q-k4-wGh">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2880,7 +2880,7 @@ night and day cycles until the citizens of mafia have won</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="JKm-RR-Pau">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2975,7 +2975,7 @@ wrap up the game</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXAMPLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="bek-6j-Rlg">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -3062,7 +3062,7 @@ The end..."</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The End" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="M3x-1i-wek">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -3488,19 +3488,19 @@ of Players</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="OIN-Pa-qwo">
-                                <rect key="frame" x="72.5" y="169" width="231.5" height="133"/>
+                                <rect key="frame" x="72" y="169" width="232" height="133"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Jcf-M7-l50">
-                                        <rect key="frame" x="0.0" y="0.0" width="231.5" height="54"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="232" height="54"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doctor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGe-Gr-NDS">
-                                                <rect key="frame" x="0.0" y="0.0" width="135.5" height="54"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="136" height="54"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="45"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMv-vd-Lw1" customClass="CheckBox" customModule="MafiaRising" customModuleProvider="target">
-                                                <rect key="frame" x="175.5" y="0.0" width="56" height="54"/>
+                                                <rect key="frame" x="176" y="0.0" width="56" height="54"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="54" id="3VA-ZQ-xyh"/>
                                                     <constraint firstAttribute="width" constant="56" id="v1t-33-Ups"/>
@@ -3510,16 +3510,16 @@ of Players</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="7LJ-0Q-UdI">
-                                        <rect key="frame" x="0.0" y="79" width="231.5" height="54"/>
+                                        <rect key="frame" x="0.0" y="79" width="232" height="54"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Police" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcW-xN-BYT">
-                                                <rect key="frame" x="0.0" y="0.0" width="135.5" height="54"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="136" height="54"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="45"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcW-4r-gEs" customClass="CheckBox" customModule="MafiaRising" customModuleProvider="target">
-                                                <rect key="frame" x="175.5" y="0.0" width="56" height="54"/>
+                                                <rect key="frame" x="176" y="0.0" width="56" height="54"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="56" id="275-PD-I6Y"/>
                                                     <constraint firstAttribute="height" constant="54" id="rfo-M4-Ywh"/>
@@ -3614,7 +3614,7 @@ of Players</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wkj-F9-U7c">
-                                <rect key="frame" x="150.5" y="607" width="75" height="35"/>
+                                <rect key="frame" x="150" y="607" width="75" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Uws-ho-uL6"/>
                                 </constraints>
@@ -3888,20 +3888,20 @@ of Players</string>
                                 <rect key="frame" x="26" y="120" width="323" height="367"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MRDivider" translatesAutoresizingMaskIntoConstraints="NO" id="5BJ-qt-ggL">
-                                        <rect key="frame" x="41.5" y="0.0" width="240" height="13"/>
+                                        <rect key="frame" x="42" y="0.0" width="240" height="13"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="13" id="60a-PH-tfB"/>
                                             <constraint firstAttribute="width" constant="240" id="YZU-UT-szB"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="200" verticalCompressionResistancePriority="780" image="DayRecapBackground" translatesAutoresizingMaskIntoConstraints="NO" id="cOx-Mb-5cZ">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="200" verticalCompressionResistancePriority="780" image="TribunalRecapBackgroundFinal" translatesAutoresizingMaskIntoConstraints="NO" id="cOx-Mb-5cZ">
                                         <rect key="frame" x="0.0" y="36" width="323" height="295"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="cOx-Mb-5cZ" secondAttribute="height" multiplier="335:306" id="fhD-Gq-wIv"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MRDivider" translatesAutoresizingMaskIntoConstraints="NO" id="sVL-lc-I3o">
-                                        <rect key="frame" x="41.5" y="354" width="240" height="13"/>
+                                        <rect key="frame" x="42" y="354" width="240" height="13"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="0pm-52-WhP"/>
                                             <constraint firstAttribute="height" constant="13" id="ynK-7H-tQK"/>
@@ -3909,8 +3909,11 @@ of Players</string>
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LIw-Ra-Mbb" userLabel="Victim Image">
-                                <rect key="frame" x="47" y="193" width="92" height="222"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LIw-Ra-Mbb" userLabel="Mafia Victim">
+                                <rect key="frame" x="48" y="261" width="111" height="159"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LIw-Ra-Mbb" secondAttribute="height" multiplier="37:53" id="eNS-uX-dIi"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lcy-Wd-LcD" userLabel="Back">
                                 <rect key="frame" x="317" y="70" width="42" height="24"/>
@@ -3967,22 +3970,25 @@ of Players</string>
                                     <action selector="repeatVoice:" destination="MAm-3Z-Idg" eventType="touchUpInside" id="4O5-QY-7Yx"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XoH-SM-kP5" userLabel="Tribunal Victim">
+                                <rect key="frame" x="54" y="250" width="79" height="108"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XoH-SM-kP5" secondAttribute="height" multiplier="79:108" id="Ino-EP-XZm"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7nA-ad-vvF" firstAttribute="leading" secondItem="oFQ-jJ-QIM" secondAttribute="leadingMargin" id="1Wy-Zc-Mml"/>
-                            <constraint firstItem="LIw-Ra-Mbb" firstAttribute="leading" secondItem="oFQ-jJ-QIM" secondAttribute="leadingMargin" constant="31" id="3zl-UN-qs6"/>
                             <constraint firstItem="pUr-b2-F1F" firstAttribute="leading" secondItem="oFQ-jJ-QIM" secondAttribute="leadingMargin" constant="10" id="5oK-wG-vIf"/>
                             <constraint firstItem="ytv-hC-p9v" firstAttribute="leading" secondItem="oFQ-jJ-QIM" secondAttribute="leading" id="66N-4f-OWV"/>
                             <constraint firstItem="ytv-hC-p9v" firstAttribute="top" secondItem="oFQ-jJ-QIM" secondAttribute="top" id="7rO-gw-jf2"/>
                             <constraint firstItem="pUr-b2-F1F" firstAttribute="centerX" secondItem="oFQ-jJ-QIM" secondAttribute="centerX" id="83u-eH-VWS"/>
                             <constraint firstItem="pUr-b2-F1F" firstAttribute="top" secondItem="AsO-4H-IUz" secondAttribute="bottom" constant="15" id="9D4-mS-BEX"/>
-                            <constraint firstItem="Twh-X9-WTE" firstAttribute="top" secondItem="LIw-Ra-Mbb" secondAttribute="bottom" constant="117" id="CWj-IM-49S"/>
                             <constraint firstItem="Lcy-Wd-LcD" firstAttribute="trailing" secondItem="oFQ-jJ-QIM" secondAttribute="trailingMargin" id="EeM-Ng-S86"/>
                             <constraint firstItem="xtC-lB-Ka1" firstAttribute="top" secondItem="wzt-Dq-xme" secondAttribute="bottom" id="FyQ-qW-0UL"/>
                             <constraint firstItem="09D-aU-LRa" firstAttribute="top" secondItem="pUr-b2-F1F" secondAttribute="bottom" constant="10" id="I4G-wf-NjB"/>
                             <constraint firstItem="AsO-4H-IUz" firstAttribute="centerY" secondItem="7nA-ad-vvF" secondAttribute="centerY" id="NsX-18-Wej"/>
-                            <constraint firstItem="LIw-Ra-Mbb" firstAttribute="top" secondItem="AsO-4H-IUz" secondAttribute="bottom" constant="88" id="NvQ-gd-qz2"/>
                             <constraint firstItem="Twh-X9-WTE" firstAttribute="top" secondItem="09D-aU-LRa" secondAttribute="bottom" constant="15" id="VGg-kd-ql3"/>
                             <constraint firstItem="wzt-Dq-xme" firstAttribute="top" secondItem="Uxu-lI-nfT" secondAttribute="bottom" id="VbZ-y4-8Ph"/>
                             <constraint firstItem="AsO-4H-IUz" firstAttribute="top" secondItem="Uxu-lI-nfT" secondAttribute="bottom" constant="40" id="WgP-bG-lUc"/>
@@ -3992,7 +3998,6 @@ of Players</string>
                             <constraint firstItem="AsO-4H-IUz" firstAttribute="centerX" secondItem="oFQ-jJ-QIM" secondAttribute="centerX" id="cuJ-D4-poR"/>
                             <constraint firstAttribute="trailing" secondItem="wzt-Dq-xme" secondAttribute="trailing" id="dmD-ie-bGI"/>
                             <constraint firstItem="Twh-X9-WTE" firstAttribute="leading" secondItem="oFQ-jJ-QIM" secondAttribute="leading" id="dyE-AG-Z1b"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="LIw-Ra-Mbb" secondAttribute="trailing" constant="220" id="eE7-9N-VUv"/>
                             <constraint firstAttribute="trailing" secondItem="ytv-hC-p9v" secondAttribute="trailing" id="g8h-p3-9rt"/>
                             <constraint firstItem="Lcy-Wd-LcD" firstAttribute="centerY" secondItem="AsO-4H-IUz" secondAttribute="centerY" id="st8-w9-Cr4"/>
                             <constraint firstItem="09D-aU-LRa" firstAttribute="centerX" secondItem="oFQ-jJ-QIM" secondAttribute="centerX" id="tKa-gP-GkP"/>
@@ -4000,10 +4005,11 @@ of Players</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mafiaVictim" destination="LIw-Ra-Mbb" id="OQe-cq-APc"/>
                         <outlet property="mainPicture" destination="cOx-Mb-5cZ" id="9hb-p9-Zhz"/>
                         <outlet property="mainTitle" destination="AsO-4H-IUz" id="nVM-sj-wPN"/>
                         <outlet property="scrollView" destination="Twh-X9-WTE" id="60X-q5-5st"/>
-                        <outlet property="victimImage" destination="LIw-Ra-Mbb" id="VEr-f7-S3k"/>
+                        <outlet property="tribunalVictim" destination="XoH-SM-kP5" id="F92-vR-zk9"/>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="StoryToPause" id="dhy-OQ-mIy"/>
                         <segue destination="x6I-ks-Nig" kind="show" identifier="StoryToNight" id="XfW-qg-n7e"/>
                         <segue destination="kEY-wj-tGy" kind="show" identifier="StoryToChoose" animates="NO" id="nFz-PG-5cK"/>
@@ -4032,7 +4038,7 @@ of Players</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FK6-EW-Tci">
-                                <rect key="frame" x="173.5" y="310" width="27.5" height="53"/>
+                                <rect key="frame" x="173" y="310" width="28" height="53"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="45"/>
                                 <color key="textColor" red="0.53297722339999998" green="0.13033376629999999" blue="0.066634103659999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -4178,27 +4184,26 @@ of Players</string>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpC-4i-Lpb">
                                                 <rect key="frame" x="0.0" y="0.0" width="94" height="100"/>
                                                 <color key="backgroundColor" red="0.57112640142440796" green="0.077838368713855743" blue="0.021155845373868942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" image="ClockBW"/>
                                                 <connections>
                                                     <action selector="pressSoundEffectBtn:" destination="kEY-wj-tGy" eventType="touchUpInside" id="hTF-QU-wpU"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APn-t6-4Jl">
-                                                <rect key="frame" x="94" y="0.0" width="93.5" height="100"/>
+                                                <rect key="frame" x="94" y="0.0" width="94" height="100"/>
                                                 <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="pressSoundEffectBtn:" destination="kEY-wj-tGy" eventType="touchUpInside" id="FQx-aH-KtX"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VyX-Lg-MZx">
-                                                <rect key="frame" x="187.5" y="0.0" width="94" height="100"/>
+                                                <rect key="frame" x="188" y="0.0" width="93" height="100"/>
                                                 <color key="backgroundColor" red="0.57111865282058716" green="0.080035187304019928" blue="0.017216935753822327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="pressSoundEffectBtn:" destination="kEY-wj-tGy" eventType="touchUpInside" id="Q7F-lj-5B4"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Glf-kc-3hI">
-                                                <rect key="frame" x="281.5" y="0.0" width="93.5" height="100"/>
+                                                <rect key="frame" x="281" y="0.0" width="94" height="100"/>
                                                 <color key="backgroundColor" red="0.75288265943527222" green="0.75297415256500244" blue="0.75285154581069946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="pressSoundEffectBtn:" destination="kEY-wj-tGy" eventType="touchUpInside" id="YwY-4M-5Pt"/>
@@ -4500,19 +4505,19 @@ of Players</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vFu-h3-lLm">
-                                <rect key="frame" x="46" y="164" width="283" height="243.5"/>
+                                <rect key="frame" x="46" y="164" width="283" height="246"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="vtt-xz-Ni9">
-                                        <rect key="frame" x="0.0" y="0.0" width="225.5" height="89.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="226" height="90"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHv-dS-q7K">
-                                                <rect key="frame" x="0.0" y="0.0" width="161" height="40.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="161" height="41"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Bold" family="Kefa" pointSize="35"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="hHb-pA-Z8S">
-                                                <rect key="frame" x="0.0" y="40.5" width="225.5" height="49"/>
+                                                <rect key="frame" x="0.0" y="41" width="226" height="49"/>
                                                 <string key="text">Choose whether to use automated
 voice for directions and a randomly 
 generated story or not at all</string>
@@ -4523,16 +4528,16 @@ generated story or not at all</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="D7T-Sv-g3v">
-                                        <rect key="frame" x="0.0" y="109.5" width="247.5" height="57"/>
+                                        <rect key="frame" x="0.0" y="110" width="248" height="58"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound Effects" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CkO-Sw-WTe">
-                                                <rect key="frame" x="0.0" y="0.0" width="227" height="40.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="227" height="41"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Bold" family="Kefa" pointSize="35"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change the volume of the sound effects" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="AFZ-pc-fGE">
-                                                <rect key="frame" x="0.0" y="40.5" width="247.5" height="16.5"/>
+                                                <rect key="frame" x="0.0" y="41" width="248" height="17"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -4540,16 +4545,16 @@ generated story or not at all</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Pb3-I5-q53">
-                                        <rect key="frame" x="0.0" y="186.5" width="277.5" height="57"/>
+                                        <rect key="frame" x="0.0" y="188" width="278" height="58"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Is5-si-zgz">
-                                                <rect key="frame" x="0.0" y="0.0" width="96.5" height="40.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="97" height="41"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Bold" family="Kefa" pointSize="35"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change the volume of the background music" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="S2K-LB-qW2">
-                                                <rect key="frame" x="0.0" y="40.5" width="277.5" height="16.5"/>
+                                                <rect key="frame" x="0.0" y="41" width="278" height="17"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -4630,19 +4635,19 @@ generated story or not at all</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fR0-en-hHU">
-                                <rect key="frame" x="46" y="164" width="283" height="274"/>
+                                <rect key="frame" x="46" y="164" width="283" height="278"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="eUc-u0-UKw">
-                                        <rect key="frame" x="0.0" y="0.0" width="226" height="73"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="226" height="74"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msN-Tg-P7m">
-                                                <rect key="frame" x="0.0" y="0.0" width="123.5" height="40.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="124" height="41"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Bold" family="Kefa" pointSize="35"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="bLO-eQ-Kyf">
-                                                <rect key="frame" x="0.0" y="40.5" width="226" height="32.5"/>
+                                                <rect key="frame" x="0.0" y="41" width="226" height="33"/>
                                                 <string key="text">Set the number of players in your
 party excluding the moderator (you)</string>
                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
@@ -4652,16 +4657,16 @@ party excluding the moderator (you)</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Osd-GX-yyb">
-                                        <rect key="frame" x="0.0" y="83" width="190.5" height="57"/>
+                                        <rect key="frame" x="0.0" y="84" width="191" height="58"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mafia Ratio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCW-4N-Wf6">
-                                                <rect key="frame" x="0.0" y="0.0" width="190.5" height="40.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="191" height="41"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Bold" family="Kefa" pointSize="35"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Townspeople: 1 Mafia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="LHJ-Fo-Ki4">
-                                                <rect key="frame" x="0.0" y="40.5" width="149.5" height="16.5"/>
+                                                <rect key="frame" x="0.0" y="41" width="150" height="17"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -4669,16 +4674,16 @@ party excluding the moderator (you)</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="3K3-52-VjI">
-                                        <rect key="frame" x="0.0" y="150" width="196" height="57"/>
+                                        <rect key="frame" x="0.0" y="152" width="196" height="58"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min Players" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDQ-Ds-Vmy">
-                                                <rect key="frame" x="0.0" y="0.0" width="196" height="40.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="196" height="41"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Bold" family="Kefa" pointSize="35"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 People" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Kdx-aJ-34B">
-                                                <rect key="frame" x="0.0" y="40.5" width="54" height="16.5"/>
+                                                <rect key="frame" x="0.0" y="41" width="54" height="17"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -4686,16 +4691,16 @@ party excluding the moderator (you)</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Kci-Ii-nVo">
-                                        <rect key="frame" x="0.0" y="217" width="202" height="57"/>
+                                        <rect key="frame" x="0.0" y="220" width="202" height="58"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Players" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLI-Ra-3YP">
-                                                <rect key="frame" x="0.0" y="0.0" width="202" height="40.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="202" height="41"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Bold" family="Kefa" pointSize="35"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 People" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="yiL-Sg-VCu">
-                                                <rect key="frame" x="0.0" y="40.5" width="62" height="16.5"/>
+                                                <rect key="frame" x="0.0" y="41" width="62" height="17"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -4776,19 +4781,19 @@ party excluding the moderator (you)</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1X2-Sz-he5">
-                                <rect key="frame" x="46" y="164" width="283" height="243.5"/>
+                                <rect key="frame" x="46" y="164" width="283" height="246"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="IX5-bZ-PNi">
-                                        <rect key="frame" x="0.0" y="0.0" width="217" height="57"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="217" height="58"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Circle Button" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXl-FH-uIS">
-                                                <rect key="frame" x="0.0" y="0.0" width="217" height="40.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="217" height="41"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Bold" family="Kefa" pointSize="35"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press to take your picture" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="jA3-jN-mG1">
-                                                <rect key="frame" x="0.0" y="40.5" width="161.5" height="16.5"/>
+                                                <rect key="frame" x="0.0" y="41" width="162" height="17"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -4796,16 +4801,16 @@ party excluding the moderator (you)</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="rdZ-Re-Nmd">
-                                        <rect key="frame" x="0.0" y="77" width="258.5" height="57"/>
+                                        <rect key="frame" x="0.0" y="78" width="259" height="58"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retake" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXg-wY-y0f">
-                                                <rect key="frame" x="0.0" y="0.0" width="115" height="40.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="115" height="41"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Bold" family="Kefa" pointSize="35"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press your portrait to retake your picture" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="XMW-Tr-HjT">
-                                                <rect key="frame" x="0.0" y="40.5" width="258.5" height="16.5"/>
+                                                <rect key="frame" x="0.0" y="41" width="259" height="17"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -4813,16 +4818,16 @@ party excluding the moderator (you)</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="nQb-QV-Nh6">
-                                        <rect key="frame" x="0.0" y="154" width="215.5" height="89.5"/>
+                                        <rect key="frame" x="0.0" y="156" width="216" height="90"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tips" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="les-9v-qEl">
-                                                <rect key="frame" x="0.0" y="0.0" width="71" height="40.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="71" height="41"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Bold" family="Kefa" pointSize="35"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="hz7-tm-YMr">
-                                                <rect key="frame" x="0.0" y="40.5" width="215.5" height="49"/>
+                                                <rect key="frame" x="0.0" y="41" width="216" height="49"/>
                                                 <string key="text">- Take a picture of your entire face
 - Remember your role
 - Don't reveal your role</string>
@@ -4884,7 +4889,7 @@ party excluding the moderator (you)</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INTRO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="2jW-xg-emM">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -4972,7 +4977,7 @@ to learn more!</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONCEPT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Sit-tM-Hhq">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -5062,7 +5067,7 @@ Before it's too late...</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="sAQ-J7-1JE">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -5080,10 +5085,10 @@ Before it's too late...</string>
                                 <rect key="frame" x="0.0" y="160" width="375" height="507"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Dem-Hb-FgV">
-                                        <rect key="frame" x="20" y="120.5" width="335" height="267.5"/>
+                                        <rect key="frame" x="20" y="120" width="335" height="268"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="R5c-gw-F3G">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="142.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="143"/>
                                                 <string key="text">Mafia:
 Outnumber the
 citizens</string>
@@ -5092,7 +5097,7 @@ citizens</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="f64-pI-S8z">
-                                                <rect key="frame" x="0.0" y="172.5" width="320" height="95"/>
+                                                <rect key="frame" x="0.0" y="173" width="320" height="95"/>
                                                 <string key="text">CITIZENS:
 Kill the mafia</string>
                                                 <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="40"/>
@@ -5157,7 +5162,7 @@ Kill the mafia</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set-UP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="BaV-ew-0F6">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -5242,7 +5247,7 @@ some information</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SET-UP 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="DRV-Lh-lmu">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -5263,13 +5268,13 @@ some information</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal TutorialC2" translatesAutoresizingMaskIntoConstraints="NO" id="nMM-pW-SwQ">
-                                                <rect key="frame" x="49" y="0.0" width="207" height="292.5"/>
+                                                <rect key="frame" x="49" y="0.0" width="207" height="293"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="nMM-pW-SwQ" secondAttribute="height" multiplier="166:235" id="hBg-CJ-iOw"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ezl-0W-k3R" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="3.5" y="317.5" width="298.5" height="139.5"/>
+                                                <rect key="frame" x="3" y="318" width="299" height="139"/>
                                                 <string key="text">Enter the number 
 of Players in 
 your party</string>
@@ -5337,7 +5342,7 @@ your party</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SET-UP 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="MhI-Ng-sh4">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -5358,13 +5363,13 @@ your party</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal TutorialC3" translatesAutoresizingMaskIntoConstraints="NO" id="8TN-oo-RlX">
-                                                <rect key="frame" x="52.5" y="0.0" width="200" height="283.5"/>
+                                                <rect key="frame" x="53" y="0.0" width="199" height="283"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="8TN-oo-RlX" secondAttribute="height" multiplier="166:235" id="jhA-sU-BJc"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="b2M-Vk-rSo" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="17.5" y="308.5" width="270" height="148.5"/>
+                                                <rect key="frame" x="18" y="308" width="270" height="149"/>
                                                 <string key="text">Use or don't use special
 Characters in your game
 
@@ -5434,7 +5439,7 @@ for descriptions</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SET-UP 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Eme-vW-99W">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -5455,13 +5460,13 @@ for descriptions</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal TutorialC4" translatesAutoresizingMaskIntoConstraints="NO" id="XCa-KR-WLq">
-                                                <rect key="frame" x="45.5" y="0.0" width="214" height="302.5"/>
+                                                <rect key="frame" x="45" y="0.0" width="215" height="303"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="XCa-KR-WLq" secondAttribute="height" multiplier="166:235" id="5Cl-LT-dwY"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="OZe-1u-TRy" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="8" y="327.5" width="289" height="129.5"/>
+                                                <rect key="frame" x="8" y="328" width="289" height="129"/>
                                                 <string key="text">Pass your device to each player
 
 Have them set up a profile
@@ -5530,7 +5535,7 @@ picture and find out their role</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="G9N-LO-ojt">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -5551,13 +5556,13 @@ picture and find out their role</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal TutorialC5" translatesAutoresizingMaskIntoConstraints="NO" id="dNR-pi-Hoh">
-                                                <rect key="frame" x="38" y="0.0" width="229" height="324"/>
+                                                <rect key="frame" x="38" y="0.0" width="229" height="323"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="dNR-pi-Hoh" secondAttribute="height" multiplier="166:235" id="j4U-9S-yk1"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="xR9-eN-5T5" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="0.5" y="349" width="304" height="108"/>
+                                                <rect key="frame" x="1" y="348" width="304" height="109"/>
                                                 <string key="text">Listen to the randomly generated story to become 
 immersed in your game</string>
                                                 <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="20"/>
@@ -5624,7 +5629,7 @@ immersed in your game</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Night" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="6Dj-kx-AoF">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -5645,13 +5650,13 @@ immersed in your game</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal TutorialC6" translatesAutoresizingMaskIntoConstraints="NO" id="d5A-PT-oz3">
-                                                <rect key="frame" x="38" y="0.0" width="229" height="324"/>
+                                                <rect key="frame" x="38" y="0.0" width="229" height="323"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="d5A-PT-oz3" secondAttribute="height" multiplier="166:235" id="Hm3-ta-P7P"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Div-OW-LaI" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="44.5" y="349" width="216.5" height="108"/>
+                                                <rect key="frame" x="44" y="348" width="217" height="109"/>
                                                 <string key="text">Night has fallen. 
 Now is the time for
 the Mafia to strike</string>
@@ -5719,7 +5724,7 @@ the Mafia to strike</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Night 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Kmx-4Q-Ipb">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -5740,13 +5745,13 @@ the Mafia to strike</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal TutorialC6" translatesAutoresizingMaskIntoConstraints="NO" id="YGe-Ft-0fy">
-                                                <rect key="frame" x="45.5" y="0.0" width="214" height="302.5"/>
+                                                <rect key="frame" x="45" y="0.0" width="215" height="303"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="YGe-Ft-0fy" secondAttribute="height" multiplier="166:235" id="Ej3-TC-RrW"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ThD-u3-9jU" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="23" y="327.5" width="259" height="129.5"/>
+                                                <rect key="frame" x="23" y="328" width="259" height="129"/>
                                                 <string key="text">During the night phase,
 everyone should close
 their eyes, except for
@@ -5815,7 +5820,7 @@ the moderator</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Night 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="p8g-sm-9Ck">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -5836,13 +5841,13 @@ the moderator</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal TutorialC7" translatesAutoresizingMaskIntoConstraints="NO" id="gQB-VH-kHd">
-                                                <rect key="frame" x="38" y="0.0" width="229" height="324"/>
+                                                <rect key="frame" x="38" y="0.0" width="229" height="323"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="gQB-VH-kHd" secondAttribute="height" multiplier="166:235" id="PEo-am-TcD"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="YWu-8M-XQb" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="23" y="349" width="259" height="108"/>
+                                                <rect key="frame" x="23" y="348" width="259" height="109"/>
                                                 <string key="text">Your device will 
 call upon the special
 characters of the game</string>
@@ -5918,7 +5923,7 @@ characters of the game</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Night 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ReR-Bh-KCP">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -5942,13 +5947,13 @@ characters of the game</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal TutorialC7" translatesAutoresizingMaskIntoConstraints="NO" id="RRe-Tb-8Ez">
-                                                <rect key="frame" x="45.5" y="0.0" width="214" height="302.5"/>
+                                                <rect key="frame" x="45" y="0.0" width="215" height="303"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="RRe-Tb-8Ez" secondAttribute="height" multiplier="166:235" id="k0J-67-I2i"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Hbq-3F-3Sk" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="10.5" y="327.5" width="284" height="129.5"/>
+                                                <rect key="frame" x="11" y="328" width="284" height="129"/>
                                                 <string key="text">The specified person
 should open their eyes
 and notify the moderator
@@ -6023,7 +6028,7 @@ of their target</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="J5n-pz-r20">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -6108,7 +6113,7 @@ It could be a fatal mistake...</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Night 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="jWx-KN-RE7">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -6129,13 +6134,13 @@ It could be a fatal mistake...</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal TutorialC9" translatesAutoresizingMaskIntoConstraints="NO" id="Swq-KC-ZR0">
-                                                <rect key="frame" x="38" y="0.0" width="229" height="324"/>
+                                                <rect key="frame" x="38" y="0.0" width="229" height="323"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Swq-KC-ZR0" secondAttribute="height" multiplier="166:235" id="51G-tu-e7Z"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="q4K-3g-P7h" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="64" y="349" width="177.5" height="108"/>
+                                                <rect key="frame" x="64" y="348" width="178" height="109"/>
                                                 <string key="text">Mark the target
 on the screen 
 and confirm</string>
@@ -6203,7 +6208,7 @@ and confirm</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="R26-yv-4QE">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -6224,13 +6229,13 @@ and confirm</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal TutorialC10" translatesAutoresizingMaskIntoConstraints="NO" id="1om-BH-ZnK">
-                                                <rect key="frame" x="38.5" y="0.0" width="228" height="322"/>
+                                                <rect key="frame" x="39" y="0.0" width="227" height="321"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="1om-BH-ZnK" secondAttribute="height" multiplier="166:235" id="xpU-iY-JL0"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Knj-V0-UUe" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="55.5" y="347" width="194" height="110"/>
+                                                <rect key="frame" x="56" y="346" width="194" height="111"/>
                                                 <string key="text">The night is over,
 but now you must
 face the day</string>
@@ -6298,7 +6303,7 @@ face the day</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="kCt-qx-XDB">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -6319,13 +6324,13 @@ face the day</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal TutorialC11" translatesAutoresizingMaskIntoConstraints="NO" id="tvz-9v-2fI">
-                                                <rect key="frame" x="38" y="0.0" width="229" height="324"/>
+                                                <rect key="frame" x="38" y="0.0" width="229" height="323"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="tvz-9v-2fI" secondAttribute="height" multiplier="166:235" id="dzu-9w-pbn"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="z6b-94-737" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="68" y="349" width="169" height="108"/>
+                                                <rect key="frame" x="68" y="348" width="169" height="109"/>
                                                 <string key="text">Discover who 
 was killed the 
 night before</string>
@@ -6393,7 +6398,7 @@ night before</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="5ni-46-Wuj">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -6414,13 +6419,13 @@ night before</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal TutorialC12" translatesAutoresizingMaskIntoConstraints="NO" id="IaC-R4-M7z">
-                                                <rect key="frame" x="58" y="0.0" width="189" height="267.5"/>
+                                                <rect key="frame" x="58" y="0.0" width="189" height="267"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="IaC-R4-M7z" secondAttribute="height" multiplier="166:235" id="3NR-98-IjE"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jls-Bz-hgu" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="2" y="292.5" width="301.5" height="164.5"/>
+                                                <rect key="frame" x="2" y="292" width="302" height="165"/>
                                                 <string key="text">The town must execute 
 one person...
 
@@ -6491,7 +6496,7 @@ who must be killed</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="END" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="pbp-pD-Lqj">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -6512,7 +6517,7 @@ who must be killed</string>
                                         <rect key="frame" x="20" y="30" width="335" height="447"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="x8B-wW-uPU">
-                                                <rect key="frame" x="0.0" y="0.0" width="295.5" height="217"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="296" height="217"/>
                                                 <string key="text">If the citizens
 kill all the
 mafia[s], then
@@ -6591,7 +6596,7 @@ mafia wins</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ymd-3f-hmM">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -6683,7 +6688,7 @@ scenario occurs</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOod Luck!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="0lc-lT-d2O">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -6707,7 +6712,7 @@ scenario occurs</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="qHH-NG-DmZ" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="2.5" y="0.0" width="300" height="457"/>
+                                                <rect key="frame" x="3" y="0.0" width="300" height="457"/>
                                                 <string key="text">Now that you understand the 
 basic rules of mafia Rising,
 enter into a world where 
@@ -6784,7 +6789,7 @@ may not appear as they seem</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="o2S-ez-Quo">
-                                        <rect key="frame" x="20" y="25" width="335" height="85.5"/>
+                                        <rect key="frame" x="20" y="25" width="335" height="86"/>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -6890,19 +6895,19 @@ be a jerk ;)</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="P6S-a6-eZj">
-                                <rect key="frame" x="46" y="164" width="283" height="215"/>
+                                <rect key="frame" x="46" y="164" width="283" height="216"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="2Yi-de-L5i">
-                                        <rect key="frame" x="0.0" y="0.0" width="278.5" height="89.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="279" height="90"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doctor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwL-S0-BsY">
-                                                <rect key="frame" x="0.0" y="0.0" width="110.5" height="40.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="111" height="41"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Bold" family="Kefa" pointSize="35"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="alx-7l-uyu">
-                                                <rect key="frame" x="0.0" y="40.5" width="278.5" height="49"/>
+                                                <rect key="frame" x="0.0" y="41" width="279" height="49"/>
                                                 <string key="text">A doctor protects one player every night. The protected member cannot be killed by the mafia that night but can be executed at the tribunal.</string>
                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
                                                 <nil key="textColor"/>
@@ -6911,16 +6916,16 @@ be a jerk ;)</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="MvD-Cc-RCF">
-                                        <rect key="frame" x="0.0" y="109.5" width="278" height="105.5"/>
+                                        <rect key="frame" x="0.0" y="110" width="278" height="106"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Police" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORS-vf-EnX">
-                                                <rect key="frame" x="0.0" y="0.0" width="98.5" height="40.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="99" height="41"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Bold" family="Kefa" pointSize="35"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qqk-bg-YWs">
-                                                <rect key="frame" x="0.0" y="40.5" width="278" height="65"/>
+                                                <rect key="frame" x="0.0" y="41" width="278" height="65"/>
                                                 <string key="text">The police is allowed to investigate one player every night. If his accusations are correct, the moderator affirms the police with a nod or dismisses with a shake of the head.</string>
                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
                                                 <nil key="textColor"/>
@@ -6956,8 +6961,6 @@ be a jerk ;)</string>
         </scene>
     </scenes>
     <resources>
-        <image name="ClockBW" width="900" height="900"/>
-        <image name="DayRecapBackground" width="800" height="400"/>
         <image name="IllumCircleC" width="1000" height="1000"/>
         <image name="MRBackButton" width="92" height="52"/>
         <image name="MRDivider" width="415" height="6"/>
@@ -7004,16 +7007,17 @@ be a jerk ;)</string>
         <image name="MRGeneralButton" width="321" height="98"/>
         <image name="MRInfoButton" width="60" height="60"/>
         <image name="MRPauseButton" width="46" height="49"/>
+        <image name="TribunalRecapBackgroundFinal" width="1000" height="863"/>
         <image name="m" width="523" height="486"/>
         <image name="portraitFiller" width="433" height="653"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="I53-ci-Nq8"/>
-        <segue reference="wNd-ep-vfX"/>
-        <segue reference="nFz-PG-5cK"/>
+        <segue reference="dhy-OQ-mIy"/>
         <segue reference="Y5H-lc-M15"/>
-        <segue reference="XfW-qg-n7e"/>
+        <segue reference="nFz-PG-5cK"/>
         <segue reference="Xxf-v6-6cj"/>
+        <segue reference="XfW-qg-n7e"/>
         <segue reference="xw3-iS-S4C"/>
         <segue reference="oaV-mC-QWl"/>
     </inferredMetricsTieBreakers>

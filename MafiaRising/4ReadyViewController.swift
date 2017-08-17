@@ -16,6 +16,9 @@ class _ReadyViewController: UIViewController {
     
     // Transfer Array
     var masterPlayerArray: Array<Player> = []
+    
+    // Array that holds names to intro story images
+    var introStoryImages: Array<String> = ["Field.png", "HouseDay.png", "HouseNight.png", "Inn.jpg", "ShadowFigure.png", "Stocks.jpg", "Town.jpg", "Town2.jpg"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +34,7 @@ class _ReadyViewController: UIViewController {
     // Proceed Button
     @IBAction func goToStory(_ sender: Any) {
         // Play soundEffect
+        storyIntroImage =  UIImage(named: introStoryImages[Int(arc4random_uniform(UInt32(introStoryImages.count)))])!
         if let sound = NSDataAsset(name: "Gunshot2") {
             // Do any additional setup after loading the view, typically from a nib.
             do {

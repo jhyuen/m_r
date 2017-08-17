@@ -15,6 +15,7 @@ var potentialIndex: Array<Int> = []
 var storyIntroTrackNum: Int = 0
 var dayStoryTrackNum: Int = 0
 var tribunalTrackNum: Int = 0
+var storyIntroImage: UIImage = UIImage(named: "Field.png")!
 
 class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
     
@@ -23,11 +24,13 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var mainPicture: UIImageView!
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var victimImage: UIImageView!
+    @IBOutlet weak var mafiaVictim: UIImageView!
+    @IBOutlet weak var tribunalVictim: UIImageView!
     
     // ScrollView Constants
     let WIDTH: CGFloat = 90
     let HEIGHT: CGFloat = 135
+    
     
     // Transfer Array
     var masterPlayerArray: Array<Player> = []
@@ -59,7 +62,7 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)        
+        super.viewWillAppear(animated)
         
         print("StoryViewController")
         print("Cycle is \(cycle)")
@@ -69,6 +72,7 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
         if cycle == 1 && part == 0 {
             // Story Intro
             mainTitle.text = "STORY"
+            mainPicture.image = storyIntroImage
             if optionsParameters.enableStory && !narrationStarted {
                 storyIntroOrder.removeAll()
                 generateStoryIntro()
@@ -107,11 +111,11 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
         if mafiaSelected == docSelected && mafiaSelected != -1 {
             // Player Saved
             print("Saved")
-            victimImage.image = masterPlayerArray[docSelected].picture
+            mafiaVictim.image = masterPlayerArray[docSelected].picture
         } else if mafiaSelected != docSelected && mafiaSelected != -1 {
             // Player Murdered
             print("Murdered")
-            victimImage.image = masterPlayerArray[mafiaSelected].picture
+            mafiaVictim.image = masterPlayerArray[mafiaSelected].picture
         }
         
         // Add player portaits to ScrollView
