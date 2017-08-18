@@ -226,10 +226,12 @@ class _ChooseViewController: UIViewController {
             }
         } else if part == 5 && subPart == 1 {
             // Tribunal
-            if firstTimeTribunal {
-                playNarration(trackTitle: "S_T_R_01")
-            } else {
-                playNarration(trackTitle: "S_T_B_01")
+            if optionsParameters.enableDirections {
+                if firstTimeTribunal {
+                    playNarration(trackTitle: "S_T_R_01")
+                } else {
+                    playNarration(trackTitle: "S_T_B_01")
+                }
             }
         }
     }
@@ -348,7 +350,6 @@ class _ChooseViewController: UIViewController {
                     if optionsParameters.enableDirections {
                         print("S_N_B_08")
                         playNarration(trackTitle: "S_N_B_08")
-                        
                     }
                 } else {
                     
