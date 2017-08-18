@@ -23,7 +23,6 @@ var firstTimeTribunal: Bool = false
 var mafiaSelected: Int =  -1
 var docSelected: Int =  -1
 
-
 class _ChooseViewController: UIViewController {
     
     // UI Outlets

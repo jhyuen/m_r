@@ -16,10 +16,10 @@ class CreditsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Set frame of ScrollView
-        creditScrollView.contentSize = CGSize(width: creditScrollView.frame.size.width, height: 3000)
+        creditScrollView.contentSize = CGSize(width: creditScrollView.frame.size.width, height: 1490)
         
         // Generate Content
-        let thanksLbl = UILabel()
+        //let thanksLbl = UILabel()
         let madeByLbl = UILabel()
         let narrationByLbl = UILabel()
         let soundEffectsTitleLbl = UILabel()
@@ -27,7 +27,7 @@ class CreditsViewController: UIViewController {
         let soundEffectsByLbl = UILabel()
         
         // Add Content to ScrollView
-        creditScrollView.addSubview(thanksLbl)
+        //creditScrollView.addSubview(thanksLbl)
         creditScrollView.addSubview(madeByLbl)
         creditScrollView.addSubview(narrationByLbl)
         creditScrollView.addSubview(soundEffectsTitleLbl)
@@ -35,24 +35,24 @@ class CreditsViewController: UIViewController {
         creditScrollView.addSubview(soundEffectsByLbl)
         
         // Set frame of label
-        thanksLbl.frame = CGRect(x: 0, y: 0, width: creditScrollView.frame.width, height: 50)
-        madeByLbl.frame = CGRect(x: 0, y: 50, width: creditScrollView.frame.width, height: 50)
-        narrationByLbl.frame = CGRect(x: 0, y: 100, width: creditScrollView.frame.width, height: 50)
-        soundEffectsTitleLbl.frame = CGRect(x: 0, y: 175, width: creditScrollView.frame.width, height: 50)
-        soundEffectsNoteLbl.frame = CGRect(x: 0, y: 225, width: creditScrollView.frame.width, height: 50)
-        soundEffectsByLbl.frame = CGRect(x: 0, y: 175, width: creditScrollView.frame.width, height: 1500)
+        //thanksLbl.frame = CGRect(x: 0, y: 0, width: creditScrollView.frame.width, height: 50)
+        madeByLbl.frame = CGRect(x: 0, y: 0, width: creditScrollView.frame.width, height: 50)
+        narrationByLbl.frame = CGRect(x: 0, y: 50, width: creditScrollView.frame.width, height: 50)
+        soundEffectsTitleLbl.frame = CGRect(x: 0, y: 110, width: creditScrollView.frame.width, height: 50)
+        soundEffectsNoteLbl.frame = CGRect(x: 0, y: 160, width: creditScrollView.frame.width, height: 50)
+        soundEffectsByLbl.frame = CGRect(x: 0, y: 220, width: creditScrollView.frame.width, height: 1250)
         
         // Set label font
-        thanksLbl.font = UIFont(name: "Kefa-Bold", size: 25)
+        //thanksLbl.font = UIFont(name: “Kefa-Bold”, size: 25)
         //thanksLbl.font = UIFont.boldSystemFont(ofSize: 20.0)
-        madeByLbl.font = UIFont(name: "Kefa", size: 20)
+        madeByLbl.font = UIFont(name: "Kefa-Bold", size: 30)
         narrationByLbl.font = UIFont(name: "Kefa", size: 20)
-        soundEffectsTitleLbl.font = UIFont(name: "Kefa-Bold", size: 25)
+        soundEffectsTitleLbl.font = UIFont(name: "Kefa-Bold", size: 30)
         soundEffectsNoteLbl.font = UIFont(name: "Kefa", size: 20)
         soundEffectsByLbl.font = UIFont(name: "Kefa", size: 10)
         
         // Set label color
-        thanksLbl.textColor = UIColor.black
+      //  thanksLbl.textColor = UIColor.black
         madeByLbl.textColor = UIColor.black
         narrationByLbl.textColor = UIColor.black
         soundEffectsTitleLbl.textColor = UIColor.black
@@ -61,7 +61,7 @@ class CreditsViewController: UIViewController {
         
         
         // Set label allignment
-        thanksLbl.textAlignment = NSTextAlignment.center
+      //  thanksLbl.textAlignment = NSTextAlignment.center
         madeByLbl.textAlignment = NSTextAlignment.center
         narrationByLbl.textAlignment = NSTextAlignment.center
         soundEffectsTitleLbl.textAlignment = NSTextAlignment.center
@@ -69,7 +69,7 @@ class CreditsViewController: UIViewController {
         soundEffectsByLbl.textAlignment = NSTextAlignment.center
         
         // Set number of lines
-        thanksLbl.numberOfLines = 1
+      // thanksLbl.numberOfLines = 1
         madeByLbl.numberOfLines = 1
         narrationByLbl.numberOfLines = 2
         soundEffectsTitleLbl.numberOfLines = 1
@@ -77,7 +77,7 @@ class CreditsViewController: UIViewController {
         soundEffectsByLbl.numberOfLines = 107
         
         // Set label content
-        thanksLbl.text = "Thank you for playing!"
+       // thanksLbl.text = "Thank you for playing!"
         madeByLbl.text = "Made by Illum"
         narrationByLbl.text = "Narration by David Burke\ndotherobot2199@gmail.com"
         soundEffectsTitleLbl.text = "Sound Effects"

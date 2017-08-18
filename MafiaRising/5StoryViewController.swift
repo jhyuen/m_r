@@ -24,8 +24,9 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var mainPicture: UIImageView!
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var mafiaVictim: UIImageView!
     @IBOutlet weak var tribunalVictim: UIImageView!
+    @IBOutlet weak var nightVictim: UIImageView!
+    @IBOutlet weak var mainView: UIView!
     
     // ScrollView Constants
     let WIDTH: CGFloat = 90
@@ -103,6 +104,9 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
             // Tribunal recap
             print("Tribunal recap")
             
+            mainPicture.image = UIImage(named: "TribunalRecapBackgroundFinal")
+            tribunalVictim.image = masterPlayerArray[recentlyMurdered].picture
+            
             if optionsParameters.enableStory && !narrationStarted {
                 tribunalStoryOrder.removeAll()
                 generateTribunalNarration()
@@ -123,21 +127,19 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
                 generateDayNarration()
             }
             
-            /*
-             randNum = Int(arc4random_uniform(UInt32(murderPictureNames.count)))
-             mainPicture.image = UIImage(named: introPictureNames[randNum])
-             */
+            if mafiaSelected == docSelected && mafiaSelected != -1 {
+                // Player Saved
+                print("Saved")
+                mainPicture.image = UIImage(named: "DayRecapBackgroundSaveFinal")
+                nightVictim.image = masterPlayerArray[docSelected].picture
+            } else if mafiaSelected != docSelected && mafiaSelected != -1 {
+                // Player Murdered
+                print("Murdered")
+                mainPicture.image = UIImage(named: "DayRecapBackgroundFinal")
+                nightVictim.image = masterPlayerArray[mafiaSelected].picture
+            }
         }
         
-        if mafiaSelected == docSelected && mafiaSelected != -1 {
-            // Player Saved
-            print("Saved")
-            mafiaVictim.image = masterPlayerArray[docSelected].picture
-        } else if mafiaSelected != docSelected && mafiaSelected != -1 {
-            // Player Murdered
-            print("Murdered")
-            mafiaVictim.image = masterPlayerArray[mafiaSelected].picture
-        }
         
         // Add player portaits to ScrollView
         for player in 0..<masterPlayerArray.count {
