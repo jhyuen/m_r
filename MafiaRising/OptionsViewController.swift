@@ -70,6 +70,13 @@ class OptionsViewController: UIViewController {
         performSegue(withIdentifier: "OptionToInfo", sender: self)
     }
     
+    // Credits Button
+    @IBAction func creditsBtnPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
+        performSegue(withIdentifier: "OptionsToCredits", sender: self)
+    }
+    
     // Checkbox Buttons
     @IBAction func checkBoxPressed(_ sender: Any) {
         // Play button click sound effect

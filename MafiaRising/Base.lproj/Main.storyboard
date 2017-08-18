@@ -330,6 +330,17 @@ volume for best experience</string>
                                 </constraints>
                                 <state key="normal" image="MRFinal OptionsC4"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icq-cv-LAQ">
+                                <rect key="frame" x="300" y="168" width="30" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="65A-nE-F8M"/>
+                                    <constraint firstAttribute="width" constant="30" id="pEz-RK-mUn"/>
+                                </constraints>
+                                <state key="normal" image="m"/>
+                                <connections>
+                                    <action selector="creditsBtnPressed:" destination="9nD-tn-Rq4" eventType="touchUpInside" id="zge-Nn-b5E"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -337,11 +348,13 @@ volume for best experience</string>
                             <constraint firstItem="Y46-hZ-wN3" firstAttribute="top" secondItem="r8a-TW-LFc" secondAttribute="bottom" constant="12" id="1Wt-7c-mJc"/>
                             <constraint firstItem="r8a-TW-LFc" firstAttribute="top" secondItem="MA5-DC-Hj9" secondAttribute="bottom" constant="12" id="2e8-NG-vGD"/>
                             <constraint firstItem="9cZ-g2-raz" firstAttribute="top" secondItem="YyI-cr-CeW" secondAttribute="top" id="2tK-Zh-phY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="icq-cv-LAQ" secondAttribute="trailing" constant="29" id="3KL-zL-SCw"/>
                             <constraint firstItem="r8a-TW-LFc" firstAttribute="centerY" secondItem="Xod-P0-8L3" secondAttribute="centerY" id="4Vj-Vr-kU9"/>
                             <constraint firstItem="odX-CE-iNp" firstAttribute="centerX" secondItem="YyI-cr-CeW" secondAttribute="centerX" id="4YO-o4-ORz"/>
                             <constraint firstItem="g0T-nO-qbW" firstAttribute="centerX" secondItem="YyI-cr-CeW" secondAttribute="centerX" id="6Tq-iS-ZAU"/>
                             <constraint firstItem="Q77-Q7-qP2" firstAttribute="leading" secondItem="MA5-DC-Hj9" secondAttribute="leading" id="DoR-j9-oqH"/>
                             <constraint firstItem="g0T-nO-qbW" firstAttribute="top" secondItem="VZe-R4-PJu" secondAttribute="bottom" constant="20" id="EeL-gX-hwK"/>
+                            <constraint firstItem="icq-cv-LAQ" firstAttribute="top" secondItem="Xod-P0-8L3" secondAttribute="top" id="Efd-4Q-sqG"/>
                             <constraint firstItem="bv6-cE-oQK" firstAttribute="leading" secondItem="MA5-DC-Hj9" secondAttribute="leading" id="GeT-CA-Ajo"/>
                             <constraint firstItem="g0T-nO-qbW" firstAttribute="centerY" secondItem="8YO-WX-dZY" secondAttribute="centerY" id="J9k-1R-4Rv"/>
                             <constraint firstItem="GoL-f7-Zw3" firstAttribute="top" secondItem="fxn-JP-cLp" secondAttribute="bottom" constant="10" id="NHM-jf-UIv"/>
@@ -372,11 +385,12 @@ volume for best experience</string>
                         <outlet property="soundEffectsSlider" destination="Fhb-Il-Ccn" id="aa9-dm-MWQ"/>
                         <outlet property="storyBtn" destination="gHa-AV-2WO" id="8PE-7J-aVM"/>
                         <segue destination="qYQ-O0-7Ps" kind="show" identifier="OptionToInfo" id="Dhz-4l-jf7"/>
+                        <segue destination="vsY-WA-PP5" kind="show" identifier="OptionsToCredits" id="ayv-OV-Led"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kam-R4-WNR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1102" y="120"/>
+            <point key="canvasLocation" x="1101.5999999999999" y="119.1904047976012"/>
         </scene>
         <!--Rules Menu View Controller-->
         <scene sceneID="TJo-uP-FAv">
@@ -3477,7 +3491,7 @@ of Players</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="OIN-Pa-qwo">
-                                <rect key="frame" x="72" y="149" width="231.5" height="133"/>
+                                <rect key="frame" x="72.5" y="149" width="231.5" height="133"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Jcf-M7-l50">
                                         <rect key="frame" x="0.0" y="0.0" width="231.5" height="54"/>
@@ -3596,7 +3610,7 @@ of Players</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wkj-F9-U7c">
-                                <rect key="frame" x="150" y="607" width="75" height="35"/>
+                                <rect key="frame" x="150.5" y="607" width="75" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Uws-ho-uL6"/>
                                 </constraints>
@@ -3752,6 +3766,7 @@ of Players</string>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="CardsToPause" id="5oF-XY-W7M"/>
                         <segue destination="q0j-zv-644" kind="show" identifier="CardsToReady" animates="NO" id="oaV-mC-QWl"/>
                         <segue destination="MWT-pF-ud1" kind="unwind" identifier="CardsToHome" animates="NO" unwindAction="unwindToHomeVCWithSegue:" id="FdP-Jh-Fac"/>
+                        <segue destination="TBE-rj-uHk" kind="show" identifier="CardsToHome" animates="NO" id="Jpp-ob-yFi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cil-kS-y4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -6636,17 +6651,18 @@ be a jerk ;)</string>
         <image name="MRTutorialSpecialArrow2" width="52" height="92"/>
         <image name="MRTutorialSpecialArrow3" width="52" height="92"/>
         <image name="MRTutorialSpecialArrow4" width="52" height="92"/>
+        <image name="m" width="523" height="486"/>
         <image name="portraitFiller" width="433" height="653"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5oF-XY-W7M"/>
-        <segue reference="RsP-pv-hyJ"/>
+        <segue reference="Jpp-ob-yFi"/>
         <segue reference="bB7-vs-abW"/>
-        <segue reference="jGj-z5-JdE"/>
         <segue reference="YkS-pf-4aO"/>
+        <segue reference="SvW-si-1fZ"/>
+        <segue reference="jGj-z5-JdE"/>
         <segue reference="oaV-mC-QWl"/>
         <segue reference="kkV-ey-5fO"/>
-        <segue reference="XfW-qg-n7e"/>
         <segue reference="nFz-PG-5cK"/>
     </inferredMetricsTieBreakers>
 </document>

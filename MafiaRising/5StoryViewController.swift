@@ -95,6 +95,36 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
 //            mainPicture.layer.backgroundColor = UIColor.black.cgColor
 //            mainPicture.layer.borderWidth = 3
             
+//            let imageRatio = (mainPicture.image?.size.width)! / (mainPicture.image?.size.height)!
+//
+//            let viewRatio = mainPicture.frame.size.width / mainPicture.frame.size.height
+//            
+//            if(imageRatio < viewRatio) {
+//                let scale = mainPicture.frame.size.height / (mainPicture.image?.size.height)!
+//                
+//                let width = scale * (mainPicture.image?.size.width)!
+//                
+//                let topLeftX = (mainPicture.frame.size.width - width) * 0.5
+//                
+//                let frame = CGRect(x: topLeftX, y: 0, width: width, height: mainPicture.frame.size.height)
+//                mainPicture.frame = frame
+//                mainPicture.layer.backgroundColor = UIColor.black.cgColor
+//                mainPicture.layer.borderWidth = 3
+//                
+//            } else {
+//                let scale = mainPicture.frame.size.width / (mainPicture.image?.size.width)!
+//                
+//                let height = scale * (mainPicture.image?.size.height)!
+//                
+//                let topLeftY = (mainPicture.frame.size.height - height) * 0.5
+//                
+//                let frame = CGRect(x: 0, y: topLeftY, width: mainPicture.frame.size.width, height: height)
+//                mainPicture.frame = frame
+//                mainPicture.layer.backgroundColor = UIColor.black.cgColor
+//                mainPicture.layer.borderWidth = 3
+//            
+//            }            
+            
             if optionsParameters.enableStory && !narrationStarted {
                 storyIntroOrder.removeAll()
                 generateStoryIntro()

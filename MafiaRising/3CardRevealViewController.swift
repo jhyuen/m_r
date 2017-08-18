@@ -61,30 +61,30 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         updateRoleLbl()
         updateNumberLbl()
         
-        let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo)
-        switch cameraAuthorizationStatus {
-        case .denied:
-            // create alert to ask user to enable camera
-            createCameraAlert(title: "Please enable your camera.", message: "Additional Message")
-        case .authorized:
-            // Begin narration after 1 second
-            if optionsParameters.enableDirections && !narrationStarted {
-                print("S_SU_03")
-                playNarration(trackTitle: "S_SU_03")
-            }
-        // restricted, normally won't happen
-        case .restricted: break
-            
-        case .notDetermined:
-            // Prompting user for the permission to use the camera.
-            AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo) { granted in
-                if granted {
-                    print("Granted access to \(AVMediaTypeVideo)")
-                } else {
-                    print("Denied access to \(AVMediaTypeVideo)")
-                }
-            }
-        }
+//        let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo)
+//        switch cameraAuthorizationStatus {
+//        case .denied:
+//            // create alert to ask user to enable camera
+//            createCameraAlert(title: "Please enable your camera.", message: "Additional Message")
+//        case .authorized:
+//            // Begin narration after 1 second
+//            if optionsParameters.enableDirections && !narrationStarted {
+//                print("S_SU_03")
+//                playNarration(trackTitle: "S_SU_03")
+//            }
+//        // restricted, normally won't happen
+//        case .restricted: break
+//            
+//        case .notDetermined:
+//            // Prompting user for the permission to use the camera.
+//            AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo) { granted in
+//                if granted {
+//                    print("Granted access to \(AVMediaTypeVideo)")
+//                } else {
+//                    print("Denied access to \(AVMediaTypeVideo)")
+//                }
+//            }
+//        }
         
         // Set up camera feed
         let deviceSession = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInDualCamera,.builtInTelephotoCamera, .builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .unspecified)
@@ -220,19 +220,24 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     
     // Camera Button
     @IBAction func takePhoto(_ sender: Any) {
-        // Play button click sound effect
-        playClick()
-        let settings = AVCapturePhotoSettings()
-        let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
-        let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String : previewPixelType, kCVPixelBufferWidthKey as String : 160, kCVPixelBufferHeightKey as String : 160]
-        
-        settings.previewPhotoFormat = previewFormat
-        sessionOutput.capturePhoto(with: settings, delegate: self)
-        
-        // Begin narration after 1 second
-        if !narrationStarted {
-            print("S_SU_04")
-            playNarration(trackTitle: "S_SU_04")
+        let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo)
+        if cameraAuthorizationStatus != .authorized {
+            createCameraAlert(title: "Please enable your camera.", message: "Additional Message")
+        } else {
+            // Play button click sound effect
+            playClick()
+            let settings = AVCapturePhotoSettings()
+            let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
+            let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String : previewPixelType, kCVPixelBufferWidthKey as String : 160, kCVPixelBufferHeightKey as String : 160]
+            
+            settings.previewPhotoFormat = previewFormat
+            sessionOutput.capturePhoto(with: settings, delegate: self)
+            
+            // Begin narration after 1 second
+            if !narrationStarted {
+                print("S_SU_04")
+                playNarration(trackTitle: "S_SU_04")
+            }
         }
     }
     
@@ -312,18 +317,21 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         
         //Add buttons and actions
-        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: { (action) in
+        alert.addAction(UIAlertAction(title: "Settings", style: UIAlertActionStyle.default, handler: { (action) in
             alert.dismiss(animated: true, completion: nil)
-            print ("Okay")
+            print ("Settings")
+            UIApplication.shared.open(URL(string: "App-Prefs:root=Privacy&path=CAMERA")!)
         }))
         
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: { (action) in
+        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: { (action) in
             alert.dismiss(animated: true, completion: nil)
-            print("Cancel")
+            print("Okay")
+            self.performSegue(withIdentifier: "CardsToHome", sender: self)
         }))
         
         self.present(alert, animated: true, completion: nil)
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
