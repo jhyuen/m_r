@@ -61,10 +61,6 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         updateRoleLbl()
         updateNumberLbl()
         
-        
-        // Set up camera feed
-        let deviceSession = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInDualCamera,.builtInTelephotoCamera, .builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .unspecified)
-        
         let cameraMediaType = AVMediaTypeVideo
         let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(forMediaType: cameraMediaType)
         
@@ -75,8 +71,8 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         case .authorized:
             // Begin narration after 1 second
             if optionsParameters.enableDirections && !narrationStarted {
-                    print("S_SU_03")
-                    playNarration(trackTitle: "S_SU_03")
+                print("S_SU_03")
+                playNarration(trackTitle: "S_SU_03")
             }
         // restricted, normally won't happen
         case .restricted: break
@@ -92,6 +88,9 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
             }
         }
         
+        // Set up camera feed
+        let deviceSession = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInDualCamera,.builtInTelephotoCamera, .builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .unspecified)
+
         for device in (deviceSession?.devices)!{
             if device.position == AVCaptureDevicePosition.front {
                 do {
