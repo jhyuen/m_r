@@ -286,7 +286,7 @@ volume for best experience</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fhb-Il-Ccn">
+                            <slider opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.050000000000000003" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fhb-Il-Ccn">
                                 <rect key="frame" x="42" y="318" width="187" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="AHa-Fw-E4d"/>
@@ -299,7 +299,7 @@ volume for best experience</string>
                                     <action selector="soundEffectsSlider:" destination="9nD-tn-Rq4" eventType="valueChanged" id="AFT-LK-vco"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q77-Q7-qP2">
+                            <slider opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.050000000000000003" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q77-Q7-qP2">
                                 <rect key="frame" x="42" y="393" width="187" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ZNu-lF-scu"/>

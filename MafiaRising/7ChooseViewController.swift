@@ -783,6 +783,8 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
         removeBorderAndIndicator(reset: true)
         
         if sender.tag > 0 {
+            // Play button click sound effect
+            playClick()
             // Police Select
             if roleLbl.text == "POLICE" {
                 var role: UIImageView

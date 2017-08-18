@@ -77,11 +77,11 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
             
         case .notDetermined:
             // Prompting user for the permission to use the camera.
-            AVCaptureDevice.requestAccess(forMediaType: cameraMediaType) { granted in
+            AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo) { granted in
                 if granted {
-                    print("Granted access to \(cameraMediaType)")
+                    print("Granted access to \(AVMediaTypeVideo)")
                 } else {
-                    print("Denied access to \(cameraMediaType)")
+                    print("Denied access to \(AVMediaTypeVideo)")
                 }
             }
         }
