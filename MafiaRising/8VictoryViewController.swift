@@ -112,6 +112,7 @@ class _VictoryViewController: UIViewController {
         UserDefaults.standard.set(part, forKey: "Part")
         narrationPlayer.stop()
         narrationStarted = false
+        musicPlayer.stop()
         performSegue(withIdentifier: "VictoryToEnd", sender: masterPlayerArray)
     }
     
