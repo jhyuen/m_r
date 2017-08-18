@@ -30,6 +30,7 @@
 		2B280F001ED8859700EF6EE1 /* Manteka.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B280EFF1ED8859700EF6EE1 /* Manteka.ttf */; };
 		2B406E7A1EE8820C0099A0B8 /* RoleInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B406E791EE8820C0099A0B8 /* RoleInfoViewController.swift */; };
 		2B406E7C1EE896360099A0B8 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B406E7B1EE896360099A0B8 /* CheckBox.swift */; };
+		2B47C16A1F473A2A00820478 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B47C1691F473A2A00820478 /* CreditsViewController.swift */; };
 		2B488F041ED3653700A27479 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F031ED3653700A27479 /* HomeViewController.swift */; };
 		2B488F0A1ED366F400A27479 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F091ED366F400A27479 /* OptionsViewController.swift */; };
 		2B488F0C1ED3675800A27479 /* RulesMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F0B1ED3675800A27479 /* RulesMenuViewController.swift */; };
@@ -148,6 +149,7 @@
 		2B280EFF1ED8859700EF6EE1 /* Manteka.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Manteka.ttf; sourceTree = "<group>"; };
 		2B406E791EE8820C0099A0B8 /* RoleInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleInfoViewController.swift; sourceTree = "<group>"; };
 		2B406E7B1EE896360099A0B8 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		2B47C1691F473A2A00820478 /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		2B488F031ED3653700A27479 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2B488F091ED366F400A27479 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		2B488F0B1ED3675800A27479 /* RulesMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesMenuViewController.swift; sourceTree = "<group>"; };
@@ -256,6 +258,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B47C16B1F473A5800820478 /* Credits */ = {
+			isa = PBXGroup;
+			children = (
+				2B47C1691F473A2A00820478 /* CreditsViewController.swift */,
+			);
+			name = Credits;
+			sourceTree = "<group>";
+		};
 		2B488F051ED3668900A27479 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +278,7 @@
 		2B488F061ED3668F00A27479 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2B47C16B1F473A5800820478 /* Credits */,
 				84D8E3BB1F41F9F000172221 /* Intro Screens */,
 				2BB18CE21EDFE220005E8515 /* InfoCards */,
 				2B488F031ED3653700A27479 /* HomeViewController.swift */,
@@ -651,6 +662,7 @@
 				2B0042441EE1E4A100A747BA /* Tutorial13ViewController.swift in Sources */,
 				2B00423C1EE1E47800A747BA /* Tutorial9ViewController.swift in Sources */,
 				84AF22801EE7BD36006D0EA5 /* ScriptPageVCVert8.swift in Sources */,
+				2B47C16A1F473A2A00820478 /* CreditsViewController.swift in Sources */,
 				84AF22741EE7BD01006D0EA5 /* ScriptPageVCVert2.swift in Sources */,
 				2B488F0A1ED366F400A27479 /* OptionsViewController.swift in Sources */,
 				2B488F371ED3AFBC00A27479 /* RoleInformationViewController.swift in Sources */,
