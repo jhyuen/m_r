@@ -271,7 +271,7 @@ volume for best experience</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound Effects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bv6-cE-oQK">
-                                <rect key="frame" x="44" y="271" width="227" height="47"/>
+                                <rect key="frame" x="44" y="270" width="227" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="227" id="3YJ-vS-YMs"/>
                                     <constraint firstAttribute="height" constant="47" id="ERE-jv-kio"/>
@@ -281,13 +281,13 @@ volume for best experience</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5f0-Q6-52K">
-                                <rect key="frame" x="44" y="364" width="79" height="35"/>
+                                <rect key="frame" x="44" y="363" width="79" height="35"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fhb-Il-Ccn">
-                                <rect key="frame" x="42" y="319" width="187" height="31"/>
+                                <rect key="frame" x="42" y="318" width="187" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="AHa-Fw-E4d"/>
                                     <constraint firstAttribute="width" constant="183" id="vaj-nf-Rgx"/>
@@ -300,7 +300,7 @@ volume for best experience</string>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q77-Q7-qP2">
-                                <rect key="frame" x="42" y="394" width="187" height="31"/>
+                                <rect key="frame" x="42" y="393" width="187" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ZNu-lF-scu"/>
                                     <constraint firstAttribute="width" constant="183" id="xQh-t5-RWf"/>
@@ -335,7 +335,7 @@ volume for best experience</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xod-P0-8L3" customClass="CheckBox" customModule="MafiaRising" customModuleProvider="target">
-                                <rect key="frame" x="44" y="189" width="30" height="31"/>
+                                <rect key="frame" x="44" y="188" width="30" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="DsE-pB-jwC"/>
                                     <constraint firstAttribute="width" constant="30" id="kiH-Bx-azI"/>
@@ -343,7 +343,7 @@ volume for best experience</string>
                                 <state key="normal" image="MRFinal OptionsC4"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHa-AV-2WO" customClass="CheckBox" customModule="MafiaRising" customModuleProvider="target">
-                                <rect key="frame" x="44" y="230" width="30" height="31"/>
+                                <rect key="frame" x="44" y="229" width="30" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="DcX-zb-Bxi"/>
                                     <constraint firstAttribute="width" constant="30" id="lBI-LK-wlv"/>
@@ -3597,7 +3597,7 @@ of Players</string>
                                     <constraint firstAttribute="height" constant="41" id="nh2-tV-ZIR"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="200" verticalCompressionResistancePriority="780" image="m" translatesAutoresizingMaskIntoConstraints="NO" id="WRw-TF-cN3">
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="200" verticalCompressionResistancePriority="780" translatesAutoresizingMaskIntoConstraints="NO" id="WRw-TF-cN3">
                                 <rect key="frame" x="57" y="151" width="261" height="391"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="WRw-TF-cN3" secondAttribute="height" multiplier="2:3" id="XfZ-fu-vG1"/>
@@ -3613,7 +3613,7 @@ of Players</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wkj-F9-U7c">
-                                <rect key="frame" x="151" y="607" width="75" height="35"/>
+                                <rect key="frame" x="150" y="607" width="75" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Uws-ho-uL6"/>
                                 </constraints>
@@ -3893,7 +3893,7 @@ of Players</string>
                                             <constraint firstAttribute="width" constant="240" id="YZU-UT-szB"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="200" verticalCompressionResistancePriority="780" image="TribunalRecapBackgroundFinal" translatesAutoresizingMaskIntoConstraints="NO" id="cOx-Mb-5cZ">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="200" verticalCompressionResistancePriority="780" image="TribunalRecapBackgroundFinal" translatesAutoresizingMaskIntoConstraints="NO" id="cOx-Mb-5cZ">
                                         <rect key="frame" x="0.0" y="36" width="323" height="295"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="cOx-Mb-5cZ" secondAttribute="height" multiplier="335:306" id="fhD-Gq-wIv"/>
@@ -7006,18 +7006,17 @@ be a jerk ;)</string>
         <image name="MRInfoButton" width="60" height="60"/>
         <image name="MRPauseButton" width="46" height="49"/>
         <image name="TribunalRecapBackgroundFinal" width="1000" height="863"/>
-        <image name="m" width="523" height="486"/>
         <image name="portraitFiller" width="433" height="653"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yK5-p8-VUz"/>
         <segue reference="nFz-PG-5cK"/>
         <segue reference="Y5H-lc-M15"/>
+        <segue reference="dhy-OQ-mIy"/>
         <segue reference="XfW-qg-n7e"/>
-        <segue reference="Xxf-v6-6cj"/>
-        <segue reference="QFZ-Cg-Yd8"/>
         <segue reference="xw3-iS-S4C"/>
         <segue reference="I53-ci-Nq8"/>
+        <segue reference="Xxf-v6-6cj"/>
+        <segue reference="yK5-p8-VUz"/>
         <segue reference="oaV-mC-QWl"/>
     </inferredMetricsTieBreakers>
 </document>

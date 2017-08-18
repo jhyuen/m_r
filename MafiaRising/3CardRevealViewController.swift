@@ -61,9 +61,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         updateRoleLbl()
         updateNumberLbl()
         
-        let cameraMediaType = AVMediaTypeVideo
-        let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(forMediaType: cameraMediaType)
-        
+        let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo)
         switch cameraAuthorizationStatus {
         case .denied:
             // create alert to ask user to enable camera
