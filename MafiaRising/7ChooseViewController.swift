@@ -268,7 +268,7 @@ class _ChooseViewController: UIViewController {
                 if optionsParameters.enableDirections {
                     playNarration(trackTitle: "S_N_B_05")
                     print("S_N_B_05")
-                    sleep(1)
+                    sleep(2)
                     narrationPlayer.stop()
                 }
                 // checked box is targeted
@@ -337,7 +337,7 @@ class _ChooseViewController: UIViewController {
                 if optionsParameters.enableDirections {
                     playNarration(trackTitle: "S_N_B_07")
                     print("S_N_B_07")
-                    sleep(1)
+                    sleep(2)
                     narrationPlayer.stop()
                 }
                 
@@ -384,7 +384,7 @@ class _ChooseViewController: UIViewController {
                 if optionsParameters.enableDirections {
                     playNarration(trackTitle: "S_N_B_09")
                     print("S_N_B_09")
-                    sleep(1)
+                    sleep(2)
                 }
                 
                 // checked box is targetted
