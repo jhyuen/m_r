@@ -27,8 +27,7 @@ class _DayViewController: UIViewController {
             // Do any additional setup after loading the view, typically from a nib.
             do {
                 musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
-                musicPlayer.numberOfLoops = -1
-                
+
                 // !!! STOP PLAYER
                 musicPlayer.volume = optionsParameters.musicVol
                 musicPlayer.prepareToPlay()
