@@ -703,13 +703,11 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         print("Finished playing")
         if flag {
-            if optionsParameters.enableStory {
+            if optionsParameters.enableDirections {
                 if firstTimeMafia && subPart == 1 {
                     // Mafia
-                    if optionsParameters.enableDirections {
-                        print("S_N_R_02")
-                        playNarration(trackTitle: "S_N_R_02")
-                    }
+                    print("S_N_R_02")
+                    playNarration(trackTitle: "S_N_R_02")
                 } else if subPart == 2 && !policeExist && firstTimeDoctor {
                     // Doctor
                     print("S_N_R_04")

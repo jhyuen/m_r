@@ -171,7 +171,8 @@ func playNarration(trackTitle: String) {
         // Do any additional setup after loading the view, typically from a nib.
         do {
             narrationPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
-        
+            
+            narrationPlayer.volume = 1.0
             narrationPlayer.prepareToPlay()
             narrationPlayer.play()
             
@@ -187,10 +188,11 @@ func playClick() {
     if let sound = NSDataAsset(name: "Click") {
         // Do any additional setup after loading the view, typically from a nib.
         do {
-            narrationPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+            clickPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
             
-            narrationPlayer.prepareToPlay()
-            narrationPlayer.play()
+            clickPlayer.volume = optionsParameters.soundEffectsVol
+            clickPlayer.prepareToPlay()
+            clickPlayer.play()
             
         } catch {
             print(error)
