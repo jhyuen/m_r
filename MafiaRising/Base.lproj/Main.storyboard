@@ -4448,7 +4448,7 @@ of Players</string>
                     <connections>
                         <outlet property="rolesScrollView" destination="fCd-Vz-N3P" id="ynX-tx-FJw"/>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="EndToPause" id="QFZ-Cg-Yd8"/>
-                        <segue destination="TBE-rj-uHk" kind="show" identifier="PauseToHome" animates="NO" id="yK5-p8-VUz"/>
+                        <segue destination="TBE-rj-uHk" kind="show" identifier="EndToHome" animates="NO" id="yK5-p8-VUz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9p-ge-hZ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
