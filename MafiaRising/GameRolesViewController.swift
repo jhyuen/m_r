@@ -84,15 +84,16 @@ class GameRolesViewController: UIViewController, UIScrollViewDelegate {
             btnView.contentMode = .scaleToFill
             imgView.contentMode = .scaleToFill
             
-            if masterPlayerArray[player].isDead {
-                applyFilter(imageView: imgView)
-            }
-            
             // set label font
             roleLbl.font = UIFont(name: "Kefa", size: FONTSIZE)
             
-            // Set button functionality
-            btnView.addTarget(self, action: #selector(touchPortrait), for: .touchUpInside)
+            if masterPlayerArray[player].isDead {
+                applyFilter(imageView: imgView)
+            } else {
+                // Set button functionality
+                btnView.addTarget(self, action: #selector(touchPortrait), for: .touchUpInside)
+            }
+            
             //imgView.addTarget(self, action: #selector(touchPortrait), for: .touchUpInside)
             
             // don't worry about this
