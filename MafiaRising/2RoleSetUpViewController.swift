@@ -73,6 +73,12 @@ class _RoleSetUpViewController: UIViewController {
         playClick()
         performSegue(withIdentifier: "RolesToCards", sender: masterIndex)
     }
+    
+    // Checkbox Buttons
+    @IBAction func checkBoxPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
+    }
 
     // Create Master Index
     func setRoleIndex(numMafia: Int, possibleSpecialRoles: Int) -> Array<Int>{

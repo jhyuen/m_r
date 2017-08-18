@@ -70,6 +70,12 @@ class OptionsViewController: UIViewController {
         performSegue(withIdentifier: "OptionToInfo", sender: self)
     }
     
+    // Checkbox Buttons
+    @IBAction func checkBoxPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
+    }
+    
     // Sound Effects Slider Changed
     @IBAction func soundEffectsSlider(_ sender: UISlider) {
         optionsParameters.soundEffectsVol = sender.value
