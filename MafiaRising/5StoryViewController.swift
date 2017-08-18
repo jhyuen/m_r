@@ -73,6 +73,27 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
             // Story Intro
             mainTitle.text = "STORY"
             mainPicture.image = storyIntroImage
+            
+//            let hfactor = (mainPicture.image?.size.width)! / mainPicture.frame.size.width
+//            let vfactor = (mainPicture.image?.size.height)! / mainPicture.frame.size.height
+//            
+//            let factor = fmax(hfactor, vfactor)
+//            
+//            // Divide the size by the greater of the vertical or horizontal shrinkage factor
+//            let newWidth = (mainPicture.image?.size.width)! / vfactor
+//            let newHeight = (mainPicture.image?.size.height)! / hfactor
+//            
+//            // Then figure out if you need to offset it to center vertically or horizontally
+//            let leftOffset = (mainPicture.frame.size.width - newWidth) / 2
+//            let topOffset = (mainPicture.frame.size.height - newHeight) / 2
+//            
+//            let frame = CGRect(x: leftOffset, y: topOffset, width: newWidth, height: newHeight)
+//            
+//            let imageViewFrame = CGRect(x: mainPicture.frame.origin.x + frame.origin.x, y: mainPicture.frame.origin.y + frame.origin.y, width: frame.size.width, height: frame.size.height)
+//            mainPicture.frame = imageViewFrame
+//            mainPicture.layer.backgroundColor = UIColor.black.cgColor
+//            mainPicture.layer.borderWidth = 3
+            
             if optionsParameters.enableStory && !narrationStarted {
                 storyIntroOrder.removeAll()
                 generateStoryIntro()

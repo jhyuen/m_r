@@ -3903,7 +3903,7 @@ of Players</string>
                                             <constraint firstAttribute="width" constant="240" id="YZU-UT-szB"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="200" verticalCompressionResistancePriority="780" image="TribunalRecapBackgroundFinal" translatesAutoresizingMaskIntoConstraints="NO" id="cOx-Mb-5cZ">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="200" verticalCompressionResistancePriority="780" image="DayRecapBackgroundFinal" translatesAutoresizingMaskIntoConstraints="NO" id="cOx-Mb-5cZ">
                                         <rect key="frame" x="0.0" y="36" width="323" height="295"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="cOx-Mb-5cZ" secondAttribute="height" multiplier="335:306" id="fhD-Gq-wIv"/>
@@ -6969,6 +6969,7 @@ be a jerk ;)</string>
         </scene>
     </scenes>
     <resources>
+        <image name="DayRecapBackgroundFinal" width="1000" height="863"/>
         <image name="IllumCircleC" width="1000" height="1000"/>
         <image name="MRBackButton" width="92" height="52"/>
         <image name="MRDivider" width="415" height="6"/>
@@ -7015,18 +7016,17 @@ be a jerk ;)</string>
         <image name="MRGeneralButton" width="321" height="98"/>
         <image name="MRInfoButton" width="60" height="60"/>
         <image name="MRPauseButton" width="46" height="49"/>
-        <image name="TribunalRecapBackgroundFinal" width="1000" height="863"/>
         <image name="portraitFiller" width="433" height="653"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5oF-XY-W7M"/>
         <segue reference="0DV-6h-Xny"/>
-        <segue reference="oaV-mC-QWl"/>
-        <segue reference="xw3-iS-S4C"/>
-        <segue reference="I53-ci-Nq8"/>
-        <segue reference="nFz-PG-5cK"/>
+        <segue reference="dhy-OQ-mIy"/>
         <segue reference="Y5H-lc-M15"/>
-        <segue reference="XfW-qg-n7e"/>
+        <segue reference="nFz-PG-5cK"/>
         <segue reference="Xxf-v6-6cj"/>
+        <segue reference="XfW-qg-n7e"/>
+        <segue reference="I53-ci-Nq8"/>
+        <segue reference="xw3-iS-S4C"/>
+        <segue reference="oaV-mC-QWl"/>
     </inferredMetricsTieBreakers>
 </document>
