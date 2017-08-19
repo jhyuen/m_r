@@ -331,10 +331,10 @@ volume for best experience</string>
                                 <state key="normal" image="MRFinal OptionsC4"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icq-cv-LAQ">
-                                <rect key="frame" x="300" y="168" width="30" height="31"/>
+                                <rect key="frame" x="319" y="40.5" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="65A-nE-F8M"/>
-                                    <constraint firstAttribute="width" constant="30" id="pEz-RK-mUn"/>
+                                    <constraint firstAttribute="height" constant="40" id="65A-nE-F8M"/>
+                                    <constraint firstAttribute="width" constant="40" id="pEz-RK-mUn"/>
                                 </constraints>
                                 <state key="normal" image="m"/>
                                 <connections>
@@ -348,18 +348,18 @@ volume for best experience</string>
                             <constraint firstItem="Y46-hZ-wN3" firstAttribute="top" secondItem="r8a-TW-LFc" secondAttribute="bottom" constant="12" id="1Wt-7c-mJc"/>
                             <constraint firstItem="r8a-TW-LFc" firstAttribute="top" secondItem="MA5-DC-Hj9" secondAttribute="bottom" constant="12" id="2e8-NG-vGD"/>
                             <constraint firstItem="9cZ-g2-raz" firstAttribute="top" secondItem="YyI-cr-CeW" secondAttribute="top" id="2tK-Zh-phY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="icq-cv-LAQ" secondAttribute="trailing" constant="29" id="3KL-zL-SCw"/>
                             <constraint firstItem="r8a-TW-LFc" firstAttribute="centerY" secondItem="Xod-P0-8L3" secondAttribute="centerY" id="4Vj-Vr-kU9"/>
                             <constraint firstItem="odX-CE-iNp" firstAttribute="centerX" secondItem="YyI-cr-CeW" secondAttribute="centerX" id="4YO-o4-ORz"/>
                             <constraint firstItem="g0T-nO-qbW" firstAttribute="centerX" secondItem="YyI-cr-CeW" secondAttribute="centerX" id="6Tq-iS-ZAU"/>
+                            <constraint firstItem="icq-cv-LAQ" firstAttribute="centerY" secondItem="g0T-nO-qbW" secondAttribute="centerY" id="Cp5-2C-5xp"/>
                             <constraint firstItem="Q77-Q7-qP2" firstAttribute="leading" secondItem="MA5-DC-Hj9" secondAttribute="leading" id="DoR-j9-oqH"/>
                             <constraint firstItem="g0T-nO-qbW" firstAttribute="top" secondItem="VZe-R4-PJu" secondAttribute="bottom" constant="20" id="EeL-gX-hwK"/>
-                            <constraint firstItem="icq-cv-LAQ" firstAttribute="top" secondItem="Xod-P0-8L3" secondAttribute="top" id="Efd-4Q-sqG"/>
                             <constraint firstItem="bv6-cE-oQK" firstAttribute="leading" secondItem="MA5-DC-Hj9" secondAttribute="leading" id="GeT-CA-Ajo"/>
                             <constraint firstItem="g0T-nO-qbW" firstAttribute="centerY" secondItem="8YO-WX-dZY" secondAttribute="centerY" id="J9k-1R-4Rv"/>
                             <constraint firstItem="GoL-f7-Zw3" firstAttribute="top" secondItem="fxn-JP-cLp" secondAttribute="bottom" constant="10" id="NHM-jf-UIv"/>
                             <constraint firstAttribute="trailing" secondItem="9cZ-g2-raz" secondAttribute="trailing" id="QWG-1B-W37"/>
                             <constraint firstItem="5f0-Q6-52K" firstAttribute="top" secondItem="Fhb-Il-Ccn" secondAttribute="bottom" constant="15" id="SuQ-bG-xuD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="icq-cv-LAQ" secondAttribute="trailing" id="Th5-oh-MEi"/>
                             <constraint firstItem="Fhb-Il-Ccn" firstAttribute="top" secondItem="bv6-cE-oQK" secondAttribute="bottom" constant="1" id="V1A-Ah-nr8"/>
                             <constraint firstItem="MA5-DC-Hj9" firstAttribute="leading" secondItem="YyI-cr-CeW" secondAttribute="leadingMargin" constant="28" id="Wjv-s8-nQm"/>
                             <constraint firstItem="Y46-hZ-wN3" firstAttribute="centerY" secondItem="gHa-AV-2WO" secondAttribute="centerY" id="YyD-sP-1Hv"/>
@@ -380,6 +380,7 @@ volume for best experience</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="creditsBtn" destination="icq-cv-LAQ" id="Nqv-Ox-eEb"/>
                         <outlet property="directionsBtn" destination="Xod-P0-8L3" id="Esh-dh-6N1"/>
                         <outlet property="musicSlider" destination="Q77-Q7-qP2" id="xga-Ld-SIW"/>
                         <outlet property="soundEffectsSlider" destination="Fhb-Il-Ccn" id="aa9-dm-MWQ"/>
@@ -3491,7 +3492,7 @@ of Players</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="OIN-Pa-qwo">
-                                <rect key="frame" x="72.5" y="149" width="231.5" height="133"/>
+                                <rect key="frame" x="72" y="149" width="231.5" height="133"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Jcf-M7-l50">
                                         <rect key="frame" x="0.0" y="0.0" width="231.5" height="54"/>
@@ -3610,7 +3611,7 @@ of Players</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wkj-F9-U7c">
-                                <rect key="frame" x="150.5" y="607" width="75" height="35"/>
+                                <rect key="frame" x="151" y="607" width="75" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Uws-ho-uL6"/>
                                 </constraints>
@@ -6655,13 +6656,13 @@ be a jerk ;)</string>
         <image name="portraitFiller" width="433" height="653"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5oF-XY-W7M"/>
+        <segue reference="nwm-Dp-aeN"/>
         <segue reference="Jpp-ob-yFi"/>
-        <segue reference="bB7-vs-abW"/>
+        <segue reference="5oF-XY-W7M"/>
         <segue reference="YkS-pf-4aO"/>
+        <segue reference="bB7-vs-abW"/>
         <segue reference="SvW-si-1fZ"/>
         <segue reference="jGj-z5-JdE"/>
-        <segue reference="oaV-mC-QWl"/>
         <segue reference="kkV-ey-5fO"/>
         <segue reference="nFz-PG-5cK"/>
     </inferredMetricsTieBreakers>

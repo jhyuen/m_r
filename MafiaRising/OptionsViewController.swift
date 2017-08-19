@@ -21,6 +21,7 @@ class OptionsViewController: UIViewController {
     @IBOutlet weak var musicSlider: UISlider!
     @IBOutlet weak var directionsBtn: CheckBox!
     @IBOutlet weak var storyBtn: CheckBox!
+    @IBOutlet weak var creditsBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
