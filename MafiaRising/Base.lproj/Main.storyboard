@@ -573,7 +573,7 @@ volume for best experience</string>
 Well, it's not that easy...
  But we can help you!!!
 
-Swipe right to learn more!</string>
+Swipe Left to learn more!</string>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="29"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -4815,7 +4815,7 @@ party excluding the moderator (you)</string>
 
 No worries...
 
-Swipe right
+Swipe Left
 to learn more!</string>
                                         <fontDescription key="fontDescription" name="Manteka" family="Manteka" pointSize="38"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
