@@ -47,7 +47,7 @@ class _VictoryViewController: UIViewController {
             winnerImage.image = UIImage(named: "MRFinal CitizensWinC1")
             dot.image = UIImage(named: "MRFinal CitzensWinC2")
             btmLbl.textColor = blackColor
-            
+            /*
             musicPlayer.stop()
             // Play background music
             let trackTitle = "Civilians Win"
@@ -70,6 +70,7 @@ class _VictoryViewController: UIViewController {
                 let trackNum = Int(arc4random_uniform(UInt32(endVictory.count)))
                 playNarration(trackTitle: endVictory[trackNum])
             }
+             */
             
         case 2:
             // Mafia Wins
@@ -77,7 +78,7 @@ class _VictoryViewController: UIViewController {
             winnerImage.image = UIImage(named: "MRFinal MafiaWinC1")
             dot.image = UIImage(named: "MRFinal MafiaWinC2")
             btmLbl.textColor = whiteColor
-            
+            /*
             // Play background music
             let trackTitle = "Mafia Win"
             if let sound = NSDataAsset(name: trackTitle) {
@@ -98,6 +99,7 @@ class _VictoryViewController: UIViewController {
                 let trackNum = Int(arc4random_uniform(UInt32(endDefeat.count)))
                 playNarration(trackTitle: endDefeat[trackNum])
             }
+             */
             
         default:
             

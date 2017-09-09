@@ -308,6 +308,7 @@ class _ChooseViewController: UIViewController {
                         currentGameFinished = true
                         UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
                         narrationPlayer.stop()
+                        playEndMusic()
                         performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
                     } else {
                         part = part + 1
@@ -360,6 +361,7 @@ class _ChooseViewController: UIViewController {
                         currentGameFinished = true
                         UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
                         narrationPlayer.stop()
+                        playEndMusic()
                         performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
                     } else {
                         part = part + 1
@@ -409,6 +411,7 @@ class _ChooseViewController: UIViewController {
                     currentGameFinished = true
                     UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
                     narrationPlayer.stop()
+                    playEndMusic()
                     performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
                 } else {
                     subPart = subPart + 1
@@ -439,6 +442,7 @@ class _ChooseViewController: UIViewController {
                     currentGameFinished = true
                     UserDefaults.standard.set(currentGameFinished, forKey: "CurrentGameFinished")
                     narrationPlayer.stop()
+                    playEndMusic()
                     performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
                 } else {
                     cycle = cycle + 1
@@ -863,6 +867,66 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
         soundEffectBtn4.setImage(UIImage(named: tribunalSoundEffectsArray[potentialIndex[3]].picture), for: .normal)
         // Make tag, the index the basicSoundEffectsArray + 1, to avoid tag of 0
         soundEffectBtn4.tag = potentialIndex[3] + 1
+    }
+    
+    func playEndMusic() {
+        
+        switch conclusion {
+            
+        case 1:
+            // Citizens Win
+            musicPlayer.stop()
+            // Play background music
+            let trackTitle = "Civilians Win"
+            if let sound = NSDataAsset(name: trackTitle) {
+                // Do any additional setup after loading the view, typically from a nib.
+                do {
+                    musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                    musicPlayer.numberOfLoops = -1
+                    
+                    // !!! STOP PLAYER
+                    musicPlayer.volume = optionsParameters.musicVol
+                    musicPlayer.prepareToPlay()
+                    musicPlayer.play()
+                    
+                } catch {
+                    print(error)
+                }
+            }
+            if optionsParameters.enableStory {
+                let trackNum = Int(arc4random_uniform(UInt32(endVictory.count)))
+                playNarration(trackTitle: endVictory[trackNum])
+            }
+            
+        case 2:
+            
+            // Play background music
+            let trackTitle = "Mafia Win"
+            if let sound = NSDataAsset(name: trackTitle) {
+                // Do any additional setup after loading the view, typically from a nib.
+                do {
+                    musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                    musicPlayer.numberOfLoops = -1
+                    
+                    musicPlayer.volume = optionsParameters.musicVol
+                    musicPlayer.prepareToPlay()
+                    musicPlayer.play()
+                    
+                } catch {
+                    print(error)
+                }
+            }
+          
+            if optionsParameters.enableStory {
+                let trackNum = Int(arc4random_uniform(UInt32(endDefeat.count)))
+                playNarration(trackTitle: endDefeat[trackNum])
+            }
+            
+        default:
+            
+            print("You found a bug!!! Congrats!!!")
+            
+        }
     }
     
 }

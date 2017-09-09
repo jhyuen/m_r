@@ -20,6 +20,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     @IBOutlet weak var repeatPictureBtn: UIButton!
     @IBOutlet weak var proceedBtn: UIButton!
     @IBOutlet weak var preNumLbl: UILabel!
+    @IBOutlet weak var bypassBtn: UIButton!
     
     // may delete if stupid
     @IBOutlet weak var portraitHelper: UIImageView!
@@ -48,11 +49,76 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bypassBtn.isHidden = false;
+        
+        // test previous segue and global variables
+        print("\(masterIndexArray)")
+        print("\(policeExist)")
+        print("\(doctorExist)")
+        
+        updateRoleLbl()
+        updateNumberLbl()
+        
+        //        let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo)
+        //        switch cameraAuthorizationStatus {
+        //        case .denied:
+        //            // create alert to ask user to enable camera
+        //            createCameraAlert(title: "Please enable your camera.", message: "Additional Message")
+        //        case .authorized:
+        //            // Begin narration after 1 second
+        //            if optionsParameters.enableDirections && !narrationStarted {
+        //                print("S_SU_03")
+        //                playNarration(trackTitle: "S_SU_03")
+        //            }
+        //        // restricted, normally won't happen
+        //        case .restricted: break
+        //
+        //        case .notDetermined:
+        //            // Prompting user for the permission to use the camera.
+        //            AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo) { granted in
+        //                if granted {
+        //                    print("Granted access to \(AVMediaTypeVideo)")
+        //                } else {
+        //                    print("Denied access to \(AVMediaTypeVideo)")
+        //                }
+        //            }
+        //        }
+        
+        // Set up camera feed
+        let deviceSession = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInDualCamera,.builtInTelephotoCamera, .builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .unspecified)
+        
+        for device in (deviceSession?.devices)!{
+            if device.position == AVCaptureDevicePosition.front {
+                do {
+                    let input = try AVCaptureDeviceInput(device: device)
+                    if captureSession.canAddInput(input) {
+                        captureSession.addInput(input)
+                        
+                        if captureSession.canAddOutput(sessionOutput) {
+                            captureSession.addOutput(sessionOutput)
+                            
+                            previewLayer = AVCaptureVideoPreviewLayer(session:captureSession)
+                            previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+                            previewLayer.connection.videoOrientation = .portrait
+                            
+                            cameraView.layer.addSublayer(previewLayer)
+                            
+                            // Set up location of camera view
+                            previewLayer.position = CGPoint(x: self.cameraView.frame.width/2, y: self.cameraView.frame.height/2)
+                            
+                            captureSession.startRunning()
+                        }
+                    }
+                } catch let avError {
+                    print (avError)
+                }
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+      /*
         // test previous segue and global variables
         print("\(masterIndexArray)")
         print("\(policeExist)")
@@ -116,6 +182,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
                 }
             }
         }
+         */
     }
     
     // Pause Button
@@ -352,6 +419,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
             }
         }
     }
+    
  // !!! REMOVE FROM FINAL PRODUCT, FOR TESTING ONLY
     @IBAction func bypassPressed(_ sender: Any) {
         // Reset game status

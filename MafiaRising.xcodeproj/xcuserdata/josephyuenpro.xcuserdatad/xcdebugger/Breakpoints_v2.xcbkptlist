@@ -88,11 +88,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MafiaRising/3CardRevealViewController.swift"
-            timestampString = "519726056.327439"
+            timestampString = "526683637.946691"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -104,12 +104,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MafiaRising/7ChooseViewController.swift"
-            timestampString = "521570762.771622"
+            timestampString = "526685794.880473"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "326"
-            endingLineNumber = "326"
-            landmarkName = "checkForEndGame(players:)"
+            startingLineNumber = "327"
+            endingLineNumber = "327"
+            landmarkName = "goToNextScreen(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -120,12 +120,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MafiaRising/7ChooseViewController.swift"
-            timestampString = "521570762.771622"
+            timestampString = "526685794.880473"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "340"
-            endingLineNumber = "340"
-            landmarkName = "checkForEndGame(players:)"
+            startingLineNumber = "341"
+            endingLineNumber = "341"
+            landmarkName = "goToNextScreen(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

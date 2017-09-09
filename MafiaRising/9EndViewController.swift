@@ -113,7 +113,26 @@ class _EndViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func goToHome(_ sender: Any) {
         // Play button click sound effect
         playClick()
-        performSegue(withIdentifier: "EndToHome", sender: self)
+        
+        // Play main menu music
+        let trackTitle = "Main Menu"
+        if let sound = NSDataAsset(name: trackTitle) {
+            // Do any additional setup after loading the view, typically from a nib.
+            do {
+                musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                musicPlayer.numberOfLoops = -1
+                
+                // !!! STOP PLAYER
+                musicPlayer.volume = optionsParameters.musicVol
+                musicPlayer.prepareToPlay()
+                musicPlayer.play()
+                
+            } catch {
+                print(error)
+            }
+        }
+        
+        performSegue(withIdentifier: "finish", sender: self)
     }
     
     // Touch Portrait

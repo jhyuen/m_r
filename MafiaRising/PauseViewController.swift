@@ -76,7 +76,7 @@ class PauseViewController: UIViewController {
             }
         }
 
-        performSegue(withIdentifier: "PauseToHome", sender: self)
+        performSegue(withIdentifier: "unwindHome", sender: self)
     }
     
     // Roles Button

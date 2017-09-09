@@ -59,6 +59,11 @@ class HomeViewController: UIViewController {
     
     // New Game Button
     @IBAction func pushNewGame(_ sender: Any) {
+        
+        if !currentGameFinished {
+            createContinueAlert(title: "Start new game?", message: "Your continue file will be overriden")
+        } else {
+        
         // Reset globals
         passedReady = false
         currentGameFinished = true
@@ -66,11 +71,12 @@ class HomeViewController: UIViewController {
         isDay = false
         UserDefaults.standard.set(isDay, forKey: "isDay")
         narrationStarted = false
-        
+           
         // Play button click sound effect
         playClick()
-        
+            
         performSegue(withIdentifier: "HomeToPlayers", sender: self)
+        }
     }
     
     // Continue Button
@@ -102,6 +108,28 @@ class HomeViewController: UIViewController {
                 performSegue(withIdentifier: "ContinueToDay", sender: savedMasterArray)
             }
         }
+    }
+    
+    func createContinueAlert (title:String, message:String)
+    {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        //Add buttons and actions
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            print ("No")
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            print("Yes")
+            
+            self.performSegue(withIdentifier: "HomeToPlayers", sender: self)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+        
     }
     
     // Options Button
