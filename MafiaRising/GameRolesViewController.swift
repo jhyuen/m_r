@@ -109,7 +109,7 @@ class GameRolesViewController: UIViewController, UIScrollViewDelegate {
     }
     
     // Touch Portrait
-    func touchPortrait() {
+    @objc func touchPortrait() {
         let randNum = Int(arc4random_uniform(UInt32(profileNoisesNames.count)))
         print("randNum is \(randNum)")
         print("You hit a button")
@@ -118,7 +118,7 @@ class GameRolesViewController: UIViewController, UIScrollViewDelegate {
         if let sound = NSDataAsset(name: trackTitle) {
             // Do any additional setup after loading the view, typically from a nib.
             do {
-                soundEffectPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                soundEffectPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileType.mp3.rawValue)
                 //audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: trackTitle, ofType: "mp3")!))
                 
                 if soundEffectPlayer.isPlaying {

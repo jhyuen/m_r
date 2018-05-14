@@ -99,11 +99,11 @@ class _PlayersViewController: UIViewController, AVAudioPlayerDelegate {
         performSegue(withIdentifier: "PlayersToInfo", sender: self)
     }
     
-    func doneClicked() {
+    @objc func doneClicked() {
         view.endEditing(true)
     }
     
-    func keyboardWillShow(notification: NSNotification) {
+    @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0{
                 self.view.frame.origin.y -= (keyboardSize.height / 2)
@@ -111,7 +111,7 @@ class _PlayersViewController: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
-    func keyboardWillHide(notification: NSNotification) {
+    @objc func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y != 0{
                 self.view.frame.origin.y += (keyboardSize.height / 2)
@@ -119,7 +119,7 @@ class _PlayersViewController: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
-    func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         numPlayerField.resignFirstResponder()
     }
     

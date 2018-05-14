@@ -31,7 +31,7 @@ class CheckBox: UIButton {
         self.isChecked = true
     }
     
-    func buttonClicked(sender: UIButton) {
+    @objc func buttonClicked(sender: UIButton) {
         if sender == self {
             isChecked = !isChecked
         }

@@ -456,7 +456,7 @@ class _ChooseViewController: UIViewController {
                     if let sound = NSDataAsset(name: trackTitle) {
                         // Do any additional setup after loading the view, typically from a nib.
                         do {
-                            musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                            musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileType.mp3.rawValue)
                             musicPlayer.numberOfLoops = -1
                             
                             // !!! STOP PLAYER
@@ -488,7 +488,7 @@ class _ChooseViewController: UIViewController {
             if let sound = NSDataAsset(name: trackTitle) {
                 // Do any additional setup after loading the view, typically from a nib.
                 do {
-                    soundEffectPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                    soundEffectPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileType.mp3.rawValue)
                     
                     if soundEffectPlayer.isPlaying {
                         soundEffectPlayer.stop()
@@ -507,7 +507,7 @@ class _ChooseViewController: UIViewController {
             if let sound = NSDataAsset(name: trackTitle) {
                 // Do any additional setup after loading the view, typically from a nib.
                 do {
-                    soundEffectPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                    soundEffectPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileType.mp3.rawValue)
                     
                     if soundEffectPlayer.isPlaying {
                         soundEffectPlayer.stop()
@@ -688,7 +688,7 @@ class _ChooseViewController: UIViewController {
         if let sound = NSDataAsset(name: trackTitle) {
             // Do any additional setup after loading the view, typically from a nib.
             do {
-                narrationPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                narrationPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileType.mp3.rawValue)
                 
                 narrationPlayer.delegate = self
                 narrationPlayer.prepareToPlay()
@@ -780,7 +780,7 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
         print(indexPath.row)
     }
     
-    func selectPlayer(sender: UIButton) {
+    @objc func selectPlayer(sender: UIButton) {
         let borderSize = 10
         
         removeBorderAndIndicator(reset: true)
@@ -881,7 +881,7 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
             if let sound = NSDataAsset(name: trackTitle) {
                 // Do any additional setup after loading the view, typically from a nib.
                 do {
-                    musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                    musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileType.mp3.rawValue)
                     musicPlayer.numberOfLoops = -1
                     
                     // !!! STOP PLAYER
@@ -905,7 +905,7 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
             if let sound = NSDataAsset(name: trackTitle) {
                 // Do any additional setup after loading the view, typically from a nib.
                 do {
-                    musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                    musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileType.mp3.rawValue)
                     musicPlayer.numberOfLoops = -1
                     
                     musicPlayer.volume = optionsParameters.musicVol

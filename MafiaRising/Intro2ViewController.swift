@@ -18,7 +18,7 @@ class Intro2ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func segue() {
+    @objc func segue() {
         // Load sound defaults
         if let enableDirections = UserDefaults.standard.object(forKey: "EnableDirections") as? Bool {
             optionsParameters.enableDirections = enableDirections
@@ -56,7 +56,7 @@ class Intro2ViewController: UIViewController {
         if let sound = NSDataAsset(name: trackTitle) {
             // Do any additional setup after loading the view, typically from a nib.
             do {
-                musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileType.mp3.rawValue)
                 musicPlayer.numberOfLoops = -1
                 
                 // !!! STOP PLAYER

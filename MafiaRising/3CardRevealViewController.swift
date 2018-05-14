@@ -85,10 +85,10 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         //        }
         
         // Set up camera feed
-        let deviceSession = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInDualCamera,.builtInTelephotoCamera, .builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .unspecified)
+        let deviceSession = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInDualCamera,AVCaptureDevice.DeviceType.builtInTelephotoCamera, AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .unspecified)
         
-        for device in (deviceSession?.devices)!{
-            if device.position == AVCaptureDevicePosition.front {
+        for device in (deviceSession.devices){
+            if device.position == AVCaptureDevice.Position.front {
                 do {
                     let input = try AVCaptureDeviceInput(device: device)
                     if captureSession.canAddInput(input) {
@@ -98,8 +98,8 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
                             captureSession.addOutput(sessionOutput)
                             
                             previewLayer = AVCaptureVideoPreviewLayer(session:captureSession)
-                            previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-                            previewLayer.connection.videoOrientation = .portrait
+                            previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+                            previewLayer.connection?.videoOrientation = .portrait
                             
                             cameraView.layer.addSublayer(previewLayer)
                             
@@ -287,7 +287,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     
     // Camera Button
     @IBAction func takePhoto(_ sender: Any) {
-        let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo)
+        let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
         if cameraAuthorizationStatus != .authorized {
             createCameraAlert(title: "Please enable your camera.", message: "Additional Message")
         } else {
@@ -309,7 +309,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     }
     
     // Process picture
-    func capture(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhotoSampleBuffer photoSampleBuffer: CMSampleBuffer?, previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
+    func photoOutput(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?, previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
         
         if let error = error {
             print(error.localizedDescription)

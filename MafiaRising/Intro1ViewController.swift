@@ -17,7 +17,7 @@ class Intro1ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func segue() {
+    @objc func segue() {
         performSegue(withIdentifier: "Intro1ToIntro2", sender: self)
     }
     

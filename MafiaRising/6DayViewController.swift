@@ -26,7 +26,7 @@ class _DayViewController: UIViewController {
         if let sound = NSDataAsset(name: trackTitle) {
             // Do any additional setup after loading the view, typically from a nib.
             do {
-                musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileType.mp3.rawValue)
 
                 // !!! STOP PLAYER
                 musicPlayer.volume = optionsParameters.musicVol
@@ -73,7 +73,7 @@ class _DayViewController: UIViewController {
             if let sound = NSDataAsset(name: trackTitle) {
                 // Do any additional setup after loading the view, typically from a nib.
                 do {
-                    musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+                    musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileType.mp3.rawValue)
                     musicPlayer.numberOfLoops = -1
                     
                     // !!! STOP PLAYER
