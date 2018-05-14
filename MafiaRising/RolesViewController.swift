@@ -20,6 +20,8 @@ class RolesViewController: UIViewController {
     
     // Back Button
     @IBAction func backBtnPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         dismiss(animated: true, completion: nil)
     }
     
@@ -33,42 +35,10 @@ class RolesViewController: UIViewController {
     
     // Role Buttons
     @IBAction func onRoleBtnTapped(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         if let btnTapped: Int = (sender as AnyObject).tag {
             performSegue(withIdentifier: "RolesToRoleInformation", sender: btnTapped)
-            
-            
-            /* switch btnTapped {
-             
-             case Roles.MODERATOR.rawValue:
-             
-             let characterTag = 0
-             
-             
-             case Roles.CITIZEN.rawValue:
-             
-             let characterTag = 1
-             goToNextScreen(characterTag: characterTag)
-             
-             case Roles.MAFIA.rawValue:
-             
-             let characterTag = 2
-             goToNextScreen(characterTag: characterTag)
-             
-             case Roles.DOCTOR.rawValue:
-             
-             let characterTag = 3
-             goToNextScreen(characterTag: characterTag)
-             
-             case Roles.POLICE.rawValue:
-             
-             let characterTag = 4
-             goToNextScreen(characterTag: characterTag)
-             
-             default:
-             
-             let characterTag = 5
-             goToNextScreen(characterTag: characterTag)
-             */
         }
     }
     

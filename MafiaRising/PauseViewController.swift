@@ -7,51 +7,114 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PauseViewController: UIViewController {
-
+    
+    @IBOutlet weak var rolesBtn: UIButton!
+    
+    // Transfer Array
+    var masterPlayerArray: Array<Player> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if masterPlayerArray.count == 0 {
+            rolesBtn.isEnabled = false
+        } else {
+            rolesBtn.isEnabled = true
+        }
+        
+}
     
     // Back Button
     @IBAction func backBtnPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         dismiss(animated: true, completion: nil)
     }
     
     // Home Button
-    // Add segue
-    // Remember to keep game data for continue
+    @IBAction func homeBtnPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
+        // Undo murder that occurred
+        if recentlyMurdered >= 0 {
+            if masterPlayerArray[recentlyMurdered].isDead{
+                masterPlayerArray[recentlyMurdered].revive()
+                UserDefaults.standard.set(cycle, forKey: "Cycle")
+            }
+        }
+        // Untarget, unprotect, and enables all players
+        for player in masterPlayerArray {
+            player.save()
+            player.enablePlayer()
+        }
+        savedMasterArray = masterPlayerArray
+        let data = NSKeyedArchiver.archivedData(withRootObject: savedMasterArray)
+        UserDefaults.standard.set(data, forKey: "savedMasterArray")
+        
+        // Play main menu music
+        let trackTitle = "Main Menu"
+        if let sound = NSDataAsset(name: trackTitle) {
+            // Do any additional setup after loading the view, typically from a nib.
+            do {
+                musicPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileType.mp3.rawValue)
+                musicPlayer.numberOfLoops = -1
+                
+                // !!! STOP PLAYER
+                musicPlayer.volume = optionsParameters.musicVol
+                musicPlayer.prepareToPlay()
+                musicPlayer.play()
+                
+            } catch {
+                print(error)
+            }
+        }
+
+        performSegue(withIdentifier: "unwindHome", sender: self)
+    }
     
     // Roles Button
+    @IBAction func rolesBtnPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
+        performSegue(withIdentifier: "PauseToRoles", sender: masterPlayerArray)
+    }
     // Add segue
     // Remember to keep game data for roles screen
     
     // Options Button
     @IBAction func optionsBtnPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         performSegue(withIdentifier: "PauseToOptions", sender: self)
     }
     
     // Rules Button
     @IBAction func rulesBtnPressed(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         performSegue(withIdentifier: "PauseToRules", sender: self)
     }
     
-  /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PauseToRoles" {
+            if let selectedVC = segue.destination as? GameRolesViewController {
+                if let theArray = sender as? Array<Player> {
+                    selectedVC.masterPlayerArray = theArray
+                }
+            }
+        }
+    }
 
 }

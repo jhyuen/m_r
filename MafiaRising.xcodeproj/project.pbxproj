@@ -30,12 +30,12 @@
 		2B280F001ED8859700EF6EE1 /* Manteka.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B280EFF1ED8859700EF6EE1 /* Manteka.ttf */; };
 		2B406E7A1EE8820C0099A0B8 /* RoleInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B406E791EE8820C0099A0B8 /* RoleInfoViewController.swift */; };
 		2B406E7C1EE896360099A0B8 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B406E7B1EE896360099A0B8 /* CheckBox.swift */; };
+		2B47C16A1F473A2A00820478 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B47C1691F473A2A00820478 /* CreditsViewController.swift */; };
 		2B488F041ED3653700A27479 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F031ED3653700A27479 /* HomeViewController.swift */; };
 		2B488F0A1ED366F400A27479 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F091ED366F400A27479 /* OptionsViewController.swift */; };
 		2B488F0C1ED3675800A27479 /* RulesMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F0B1ED3675800A27479 /* RulesMenuViewController.swift */; };
 		2B488F0E1ED3684100A27479 /* Tutorial1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F0D1ED3684100A27479 /* Tutorial1ViewController.swift */; };
 		2B488F121ED3688C00A27479 /* RolesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F111ED3688C00A27479 /* RolesViewController.swift */; };
-		2B488F1A1ED3697300A27479 /* 1PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F191ED3697300A27479 /* 1PlayerViewController.swift */; };
 		2B488F1C1ED3698600A27479 /* 2RoleSetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F1B1ED3698600A27479 /* 2RoleSetUpViewController.swift */; };
 		2B488F1E1ED3699400A27479 /* 3CardRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F1D1ED3699400A27479 /* 3CardRevealViewController.swift */; };
 		2B488F201ED369A100A27479 /* 4ReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F1F1ED369A100A27479 /* 4ReadyViewController.swift */; };
@@ -50,6 +50,10 @@
 		2B488F331ED3A32700A27479 /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F321ED3A32700A27479 /* PauseViewController.swift */; };
 		2B488F351ED3AEBC00A27479 /* GameRolesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F341ED3AEBC00A27479 /* GameRolesViewController.swift */; };
 		2B488F371ED3AFBC00A27479 /* RoleInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F361ED3AFBC00A27479 /* RoleInformationViewController.swift */; };
+		2B5CC8EF1F0C0496002A04B4 /* ChooseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5CC8EE1F0C0496002A04B4 /* ChooseCollectionViewController.swift */; };
+		2B5CC8F31F0C3483002A04B4 /* PlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5CC8F21F0C3483002A04B4 /* PlayerCollectionViewCell.swift */; };
+		2B764C641EF5C37F005BC32B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B764C631EF5C37F005BC32B /* Player.swift */; };
+		2B764D141EF9E9BC005BC32B /* SoundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B764D131EF9E9BC005BC32B /* SoundEffect.swift */; };
 		2BB18CE11EDFABE3005E8515 /* Script01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB18CE01EDFABE3005E8515 /* Script01ViewController.swift */; };
 		2BB18CE41EDFE25C005E8515 /* PlayerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB18CE31EDFE25C005E8515 /* PlayerInfoViewController.swift */; };
 		2BB18CE61EDFE268005E8515 /* OptionsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB18CE51EDFE268005E8515 /* OptionsInfoViewController.swift */; };
@@ -82,8 +86,7 @@
 		2BFEDE021EC4C2E600AB18BD /* MafiaRisingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEDE011EC4C2E600AB18BD /* MafiaRisingTests.swift */; };
 		2BFEDE0D1EC4C2E700AB18BD /* MafiaRisingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEDE0C1EC4C2E700AB18BD /* MafiaRisingUITests.swift */; };
 		2BFEDE1B1EC4C7CE00AB18BD /* Kefa.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 2BFEDE1A1EC4C7CE00AB18BD /* Kefa.ttc */; };
-		84A3C3511EE9D19A00C802E6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3C3501EE9D19A00C802E6 /* Constants.swift */; };
-		84A3C3531EE9DD6900C802E6 /* ScaleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3C3521EE9DD6900C802E6 /* ScaleSegue.swift */; };
+		84A3C3511EE9D19A00C802E6 /* Universal Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3C3501EE9D19A00C802E6 /* Universal Functions.swift */; };
 		84AF22671EE7A12F006D0EA5 /* TutorialPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF22661EE7A12F006D0EA5 /* TutorialPageVC.swift */; };
 		84AF22691EE7A224006D0EA5 /* TutorialPageVCVert1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF22681EE7A224006D0EA5 /* TutorialPageVCVert1.swift */; };
 		84AF226B1EE7A291006D0EA5 /* TutorialPageVCVert2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF226A1EE7A291006D0EA5 /* TutorialPageVCVert2.swift */; };
@@ -100,6 +103,9 @@
 		84AF22821EE7BD3E006D0EA5 /* ScriptPageVCVert9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF22811EE7BD3E006D0EA5 /* ScriptPageVCVert9.swift */; };
 		84CF2CDA1EF05304008A7052 /* RoleImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF2CD91EF05304008A7052 /* RoleImg.swift */; };
 		84D5BFDA1EE864CB0094390A /* ScriptMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5BFD91EE864CB0094390A /* ScriptMainVC.swift */; };
+		84D8E3BD1F41FA1000172221 /* Intro1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D8E3BC1F41FA1000172221 /* Intro1ViewController.swift */; };
+		84D8E3BF1F41FA2000172221 /* Intro2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D8E3BE1F41FA2000172221 /* Intro2ViewController.swift */; };
+		84D8E3C11F42433600172221 /* 1PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D8E3C01F42433600172221 /* 1PlayersViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,12 +149,12 @@
 		2B280EFF1ED8859700EF6EE1 /* Manteka.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Manteka.ttf; sourceTree = "<group>"; };
 		2B406E791EE8820C0099A0B8 /* RoleInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleInfoViewController.swift; sourceTree = "<group>"; };
 		2B406E7B1EE896360099A0B8 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		2B47C1691F473A2A00820478 /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		2B488F031ED3653700A27479 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2B488F091ED366F400A27479 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		2B488F0B1ED3675800A27479 /* RulesMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesMenuViewController.swift; sourceTree = "<group>"; };
 		2B488F0D1ED3684100A27479 /* Tutorial1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial1ViewController.swift; sourceTree = "<group>"; };
 		2B488F111ED3688C00A27479 /* RolesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RolesViewController.swift; sourceTree = "<group>"; };
-		2B488F191ED3697300A27479 /* 1PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 1PlayerViewController.swift; sourceTree = "<group>"; };
 		2B488F1B1ED3698600A27479 /* 2RoleSetUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 2RoleSetUpViewController.swift; sourceTree = "<group>"; };
 		2B488F1D1ED3699400A27479 /* 3CardRevealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 3CardRevealViewController.swift; sourceTree = "<group>"; };
 		2B488F1F1ED369A100A27479 /* 4ReadyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 4ReadyViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +169,10 @@
 		2B488F321ED3A32700A27479 /* PauseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
 		2B488F341ED3AEBC00A27479 /* GameRolesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRolesViewController.swift; sourceTree = "<group>"; };
 		2B488F361ED3AFBC00A27479 /* RoleInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleInformationViewController.swift; sourceTree = "<group>"; };
+		2B5CC8EE1F0C0496002A04B4 /* ChooseCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseCollectionViewController.swift; sourceTree = "<group>"; };
+		2B5CC8F21F0C3483002A04B4 /* PlayerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCollectionViewCell.swift; sourceTree = "<group>"; };
+		2B764C631EF5C37F005BC32B /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		2B764D131EF9E9BC005BC32B /* SoundEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundEffect.swift; sourceTree = "<group>"; };
 		2BB18CE01EDFABE3005E8515 /* Script01ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script01ViewController.swift; sourceTree = "<group>"; };
 		2BB18CE31EDFE25C005E8515 /* PlayerInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerInfoViewController.swift; sourceTree = "<group>"; };
 		2BB18CE51EDFE268005E8515 /* OptionsInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsInfoViewController.swift; sourceTree = "<group>"; };
@@ -201,8 +211,7 @@
 		2BFEDE0C1EC4C2E700AB18BD /* MafiaRisingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MafiaRisingUITests.swift; sourceTree = "<group>"; };
 		2BFEDE0E1EC4C2E700AB18BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BFEDE1A1EC4C7CE00AB18BD /* Kefa.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Kefa.ttc; sourceTree = "<group>"; };
-		84A3C3501EE9D19A00C802E6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		84A3C3521EE9DD6900C802E6 /* ScaleSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleSegue.swift; sourceTree = "<group>"; };
+		84A3C3501EE9D19A00C802E6 /* Universal Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Universal Functions.swift"; sourceTree = "<group>"; };
 		84AF22661EE7A12F006D0EA5 /* TutorialPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageVC.swift; sourceTree = "<group>"; };
 		84AF22681EE7A224006D0EA5 /* TutorialPageVCVert1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageVCVert1.swift; sourceTree = "<group>"; };
 		84AF226A1EE7A291006D0EA5 /* TutorialPageVCVert2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageVCVert2.swift; sourceTree = "<group>"; };
@@ -219,6 +228,9 @@
 		84AF22811EE7BD3E006D0EA5 /* ScriptPageVCVert9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptPageVCVert9.swift; sourceTree = "<group>"; };
 		84CF2CD91EF05304008A7052 /* RoleImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleImg.swift; sourceTree = "<group>"; };
 		84D5BFD91EE864CB0094390A /* ScriptMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptMainVC.swift; sourceTree = "<group>"; };
+		84D8E3BC1F41FA1000172221 /* Intro1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Intro1ViewController.swift; sourceTree = "<group>"; };
+		84D8E3BE1F41FA2000172221 /* Intro2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Intro2ViewController.swift; sourceTree = "<group>"; };
+		84D8E3C01F42433600172221 /* 1PlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 1PlayersViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +258,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B47C16B1F473A5800820478 /* Credits */ = {
+			isa = PBXGroup;
+			children = (
+				2B47C1691F473A2A00820478 /* CreditsViewController.swift */,
+			);
+			name = Credits;
+			sourceTree = "<group>";
+		};
 		2B488F051ED3668900A27479 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +278,8 @@
 		2B488F061ED3668F00A27479 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2B47C16B1F473A5800820478 /* Credits */,
+				84D8E3BB1F41F9F000172221 /* Intro Screens */,
 				2BB18CE21EDFE220005E8515 /* InfoCards */,
 				2B488F031ED3653700A27479 /* HomeViewController.swift */,
 				2B488F151ED368D000A27479 /* Rules */,
@@ -274,8 +296,11 @@
 			children = (
 				2B406E7B1EE896360099A0B8 /* CheckBox.swift */,
 				84CF2CD91EF05304008A7052 /* RoleImg.swift */,
-				84A3C3501EE9D19A00C802E6 /* Constants.swift */,
-				84A3C3521EE9DD6900C802E6 /* ScaleSegue.swift */,
+				84A3C3501EE9D19A00C802E6 /* Universal Functions.swift */,
+				2B764C631EF5C37F005BC32B /* Player.swift */,
+				2B764D131EF9E9BC005BC32B /* SoundEffect.swift */,
+				2B5CC8EE1F0C0496002A04B4 /* ChooseCollectionViewController.swift */,
+				2B5CC8F21F0C3483002A04B4 /* PlayerCollectionViewCell.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -292,7 +317,7 @@
 		2B488F131ED368BB00A27479 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				2B488F191ED3697300A27479 /* 1PlayerViewController.swift */,
+				84D8E3C01F42433600172221 /* 1PlayersViewController.swift */,
 				2B488F1B1ED3698600A27479 /* 2RoleSetUpViewController.swift */,
 				2B488F1D1ED3699400A27479 /* 3CardRevealViewController.swift */,
 				2B488F1F1ED369A100A27479 /* 4ReadyViewController.swift */,
@@ -479,6 +504,15 @@
 			name = PageVCs;
 			sourceTree = "<group>";
 		};
+		84D8E3BB1F41F9F000172221 /* Intro Screens */ = {
+			isa = PBXGroup;
+			children = (
+				84D8E3BC1F41FA1000172221 /* Intro1ViewController.swift */,
+				84D8E3BE1F41FA2000172221 /* Intro2ViewController.swift */,
+			);
+			name = "Intro Screens";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -542,20 +576,31 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Joseph Yuen";
 				TargetAttributes = {
 					2BFEDDE81EC4C2E600AB18BD = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = UV9N6MFHJM;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 					2BFEDDFC1EC4C2E600AB18BD = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = UV9N6MFHJM;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2BFEDDE81EC4C2E600AB18BD;
 					};
 					2BFEDE071EC4C2E600AB18BD = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = UV9N6MFHJM;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2BFEDDE81EC4C2E600AB18BD;
 					};
@@ -617,22 +662,23 @@
 			files = (
 				2B488F0E1ED3684100A27479 /* Tutorial1ViewController.swift in Sources */,
 				2B406E7C1EE896360099A0B8 /* CheckBox.swift in Sources */,
+				2B764D141EF9E9BC005BC32B /* SoundEffect.swift in Sources */,
 				2B488F1C1ED3698600A27479 /* 2RoleSetUpViewController.swift in Sources */,
 				2B0042441EE1E4A100A747BA /* Tutorial13ViewController.swift in Sources */,
 				2B00423C1EE1E47800A747BA /* Tutorial9ViewController.swift in Sources */,
 				84AF22801EE7BD36006D0EA5 /* ScriptPageVCVert8.swift in Sources */,
+				2B47C16A1F473A2A00820478 /* CreditsViewController.swift in Sources */,
 				84AF22741EE7BD01006D0EA5 /* ScriptPageVCVert2.swift in Sources */,
 				2B488F0A1ED366F400A27479 /* OptionsViewController.swift in Sources */,
 				2B488F371ED3AFBC00A27479 /* RoleInformationViewController.swift in Sources */,
 				2BC4AC1B1ED899FD0075D142 /* Script4AViewController.swift in Sources */,
 				2B488F291ED36A0200A27479 /* 7ChooseViewController.swift in Sources */,
-				84A3C3511EE9D19A00C802E6 /* Constants.swift in Sources */,
+				84A3C3511EE9D19A00C802E6 /* Universal Functions.swift in Sources */,
 				2BB18CE81EDFE277005E8515 /* CardsInfoViewController.swift in Sources */,
 				2BC4ABFF1ED888D00075D142 /* Script2ViewController.swift in Sources */,
 				2B00422E1EE1E41900A747BA /* Tutorial2ViewController.swift in Sources */,
 				2B488F1E1ED3699400A27479 /* 3CardRevealViewController.swift in Sources */,
 				2BFEDDED1EC4C2E600AB18BD /* AppDelegate.swift in Sources */,
-				2B488F1A1ED3697300A27479 /* 1PlayerViewController.swift in Sources */,
 				84AF226F1EE7B91D006D0EA5 /* ScriptPageVC.swift in Sources */,
 				2B00423E1EE1E47F00A747BA /* Tutorial10ViewController.swift in Sources */,
 				2B0042401EE1E48800A747BA /* Tutorial11ViewController.swift in Sources */,
@@ -643,9 +689,11 @@
 				84D5BFDA1EE864CB0094390A /* ScriptMainVC.swift in Sources */,
 				2BC4AC171ED899D80075D142 /* Script2AViewController.swift in Sources */,
 				2B488F041ED3653700A27479 /* HomeViewController.swift in Sources */,
+				2B5CC8F31F0C3483002A04B4 /* PlayerCollectionViewCell.swift in Sources */,
 				2BC4AC031ED888E10075D142 /* Script4ViewController.swift in Sources */,
 				2B488F311ED37F6A00A27479 /* Info.swift in Sources */,
 				84AF22691EE7A224006D0EA5 /* TutorialPageVCVert1.swift in Sources */,
+				2B5CC8EF1F0C0496002A04B4 /* ChooseCollectionViewController.swift in Sources */,
 				2B0042321EE1E44500A747BA /* Tutorial4ViewController.swift in Sources */,
 				2BC4AC111ED889330075D142 /* Script11ViewController.swift in Sources */,
 				2BC4AC231ED89A330075D142 /* Script9AViewController.swift in Sources */,
@@ -655,6 +703,7 @@
 				2BC4AC271ED89A490075D142 /* Script12AViewController.swift in Sources */,
 				2B00424A1EE1E4D600A747BA /* Tutorial16ViewController.swift in Sources */,
 				2BB18CE41EDFE25C005E8515 /* PlayerInfoViewController.swift in Sources */,
+				2B764C641EF5C37F005BC32B /* Player.swift in Sources */,
 				2B488F121ED3688C00A27479 /* RolesViewController.swift in Sources */,
 				2BC4AC151ED8894F0075D142 /* Script13ViewController.swift in Sources */,
 				84AF22821EE7BD3E006D0EA5 /* ScriptPageVCVert9.swift in Sources */,
@@ -679,9 +728,9 @@
 				84AF22761EE7BD0C006D0EA5 /* ScriptPageVCVert3.swift in Sources */,
 				2BC4AC211ED89A200075D142 /* Script8AViewController.swift in Sources */,
 				84CF2CDA1EF05304008A7052 /* RoleImg.swift in Sources */,
+				84D8E3BD1F41FA1000172221 /* Intro1ViewController.swift in Sources */,
 				84AF227C1EE7BD26006D0EA5 /* ScriptPageVCVert6.swift in Sources */,
 				2B0042541EE1E50A00A747BA /* Tutorial12AViewController.swift in Sources */,
-				84A3C3531EE9DD6900C802E6 /* ScaleSegue.swift in Sources */,
 				2B0042361EE1E45900A747BA /* Tutorial6ViewController.swift in Sources */,
 				84AF227A1EE7BD1E006D0EA5 /* ScriptPageVCVert5.swift in Sources */,
 				2BC4AC051ED888F00075D142 /* Script5ViewController.swift in Sources */,
@@ -696,8 +745,10 @@
 				2B488F351ED3AEBC00A27479 /* GameRolesViewController.swift in Sources */,
 				2B488F331ED3A32700A27479 /* PauseViewController.swift in Sources */,
 				84AF22781EE7BD14006D0EA5 /* ScriptPageVCVert4.swift in Sources */,
+				84D8E3C11F42433600172221 /* 1PlayersViewController.swift in Sources */,
 				2B488F2B1ED36A3900A27479 /* 8VictoryViewController.swift in Sources */,
 				2B488F201ED369A100A27479 /* 4ReadyViewController.swift in Sources */,
+				84D8E3BF1F41FA2000172221 /* Intro2ViewController.swift in Sources */,
 				2B0042421EE1E49800A747BA /* Tutorial12ViewController.swift in Sources */,
 				2B0042301EE1E43B00A747BA /* Tutorial3ViewController.swift in Sources */,
 				2BC4AC1D1ED89A090075D142 /* Script5AViewController.swift in Sources */,
@@ -765,7 +816,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -773,13 +826,19 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: josephnewbox@gmail.com (6V4R887BBX)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = UV9N6MFHJM;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -796,9 +855,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_CODE_SIGN_FLAGS[sdk=*]" = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -815,7 +875,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -823,13 +885,19 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: josephnewbox@gmail.com (6V4R887BBX)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = UV9N6MFHJM;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -840,7 +908,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -852,11 +920,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = UV9N6MFHJM;
 				INFOPLIST_FILE = MafiaRising/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = illum.MafiaRising;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -865,11 +936,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = UV9N6MFHJM;
 				INFOPLIST_FILE = MafiaRising/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = illum.MafiaRising;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -883,7 +957,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = illum.MafiaRisingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MafiaRising.app/MafiaRising";
 			};
 			name = Debug;
@@ -897,7 +972,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = illum.MafiaRisingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MafiaRising.app/MafiaRising";
 			};
 			name = Release;
@@ -910,7 +986,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = illum.MafiaRisingUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = MafiaRising;
 			};
 			name = Debug;
@@ -923,7 +1000,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = illum.MafiaRisingUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = MafiaRising;
 			};
 			name = Release;

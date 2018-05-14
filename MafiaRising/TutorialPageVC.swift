@@ -40,7 +40,8 @@ class TutorialPageVC: UIPageViewController, UIPageViewControllerDelegate, UIPage
         super.viewDidLoad()
         self.dataSource = self
         self.delegate = self
-        if let firstVC = VCArray.first {
+        
+        if let firstVC = VCArray.first{
             setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
         }
         
@@ -52,10 +53,9 @@ class TutorialPageVC: UIPageViewController, UIPageViewControllerDelegate, UIPage
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if let firstVC = VCArray.first {
-            setViewControllers([firstVC], direction: .forward, animated: false, completion: nil)
-            currentIndex = 0
-        }
+        let firstVC = VCArray[tutorialProgress]
+        setViewControllers([firstVC], direction: .forward, animated: false, completion: nil)
+        currentIndex = tutorialProgress
     }
     
     private func VCInstance (name:String) -> UIViewController {
@@ -64,11 +64,14 @@ class TutorialPageVC: UIPageViewController, UIPageViewControllerDelegate, UIPage
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         // dismisses view when it goes off screen
+        tutorialProgress = currentIndex
         if currentIndex == 0 && scrollView.contentOffset.x < (scrollView.bounds.size.width - slideOffset) {
             scrollView.contentOffset = CGPoint(x: scrollView.bounds.size.width, y: 0)
+            tutorialProgress = 0
             dismissLeftToRight(theVC: self)
         } else if currentIndex == VCArray.count - 1 && scrollView.contentOffset.x > (scrollView.bounds.size.width + slideOffset) {
             scrollView.contentOffset = CGPoint(x: scrollView.bounds.size.width, y: 0)
+            tutorialProgress = 0
             dismissRightToLeft(theVC: self)
         }
     }
@@ -78,8 +81,10 @@ class TutorialPageVC: UIPageViewController, UIPageViewControllerDelegate, UIPage
         if currentIndex == 0 && scrollView.contentOffset.x < (scrollView.bounds.size.width - slideOffset) {
             scrollView.contentOffset = CGPoint(x: scrollView.bounds.size.width, y: 0)
             dismissLeftToRight(theVC: self)
+            tutorialProgress = 0
         } else if currentIndex == VCArray.count - 1 && scrollView.contentOffset.x > (scrollView.bounds.size.width + slideOffset) {
             scrollView.contentOffset = CGPoint(x: scrollView.bounds.size.width, y: 0)
+            tutorialProgress = 0
             dismissRightToLeft(theVC: self)
         }
     }
@@ -93,14 +98,12 @@ class TutorialPageVC: UIPageViewController, UIPageViewControllerDelegate, UIPage
         
         // creates continuous looping of ViewControllers
         guard previousIndex >= 0 else {
-            //  return VCArray.last
             return nil
         }
         
         guard VCArray.count > previousIndex else {
             return nil
         }
-        
         return VCArray[previousIndex]
     }
     
@@ -113,14 +116,12 @@ class TutorialPageVC: UIPageViewController, UIPageViewControllerDelegate, UIPage
         
         // creates continuous looping of ViewControllers
         guard nextIndex < VCArray.count else {
-            // return VCArray.first
             return nil
         }
         
         guard VCArray.count > nextIndex else {
             return nil
         }
-        
         return VCArray[nextIndex]
     }
     

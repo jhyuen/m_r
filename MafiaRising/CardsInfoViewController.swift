@@ -23,6 +23,8 @@ class CardsInfoViewController: UIViewController {
     
     // Back Button
     @IBAction func goBackToCards(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         dismiss(animated: true, completion: nil)
     }
 

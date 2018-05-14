@@ -7,26 +7,40 @@
 //
 
 import UIKit
+import AVFoundation
 
-class _PlayerViewController: UIViewController {
+class _PlayerVC: UIViewController, AVAudioPlayerDelegate {
 
-    let minimumPlayers = 5
-    let maximumPlayers = 30
-    
+    // UI Outlets
     @IBOutlet weak var numPlayerField: UITextField!
     @IBOutlet weak var toolBar: UIToolbar!
     @IBOutlet weak var errorLabel: UILabel!
+
+    // Constants
+    let minimumPlayers = 5
+    let maximumPlayers = 30
+    
+    var audioPlayer = AVAudioPlayer()
+    
+    var masterPlayerArray: Array<Player> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("Player View Controller")
         
-        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(_PlayerViewController.dismissKeyboard)))
+        errorLabel.isHidden = true
+        numPlayerField.text = ""
         
-        // notifications that allow view to be pushed up when keyboard appears
-        NotificationCenter.default.addObserver(self, selector: #selector(_PlayerViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(_PlayerViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-
-        //setup keyboard toolbar
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(_PlayerVC.dismissKeyboard)))
+        
+        // Notifications that allow view to be pushed up when keyboard appears
+        NotificationCenter.default.addObserver(self, selector: #selector(_PlayerVC.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(_PlayerVC.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        // Setup keyboard toolbar
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
         
@@ -37,6 +51,48 @@ class _PlayerViewController: UIViewController {
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
         
         numPlayerField.inputAccessoryView = toolBar
+        
+        // Begin narration after 1 second
+        if optionsParameters.enableDirections && !narrationStarted {
+          //  DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                print("S_SU_01")
+                playNarration(trackTitle: "S_SU_01")
+           // })
+        }
+    }
+    
+    // Pause Button
+    @IBAction func pauseBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: "PlayersToPause", sender: masterPlayerArray)
+    }
+
+    // Proceed Arrow
+    @IBAction func goToRoleSetUp(_ sender: Any) {
+        
+        if numPlayerField.text?.isEmpty == false {
+            
+            if (Int(numPlayerField.text!))! >= minimumPlayers && (Int(numPlayerField.text!))! <= maximumPlayers {
+                
+                if let numPlayers: Int = (Int(numPlayerField.text!)) {
+                    narrationPlayer.stop()
+                    narrationStarted = false
+                    performSegue(withIdentifier: "PlayersToRoleSetUp", sender: numPlayers)
+                    errorLabel.isHidden = true
+                }
+                
+            } else {
+                errorLabel.isHidden = false
+                errorLabel.text = "Enter a number from 5-30"
+            }
+        } else {
+            errorLabel.isHidden = false
+            errorLabel.text = "Please Enter the Number of Players"
+        }
+    }
+    
+    // Info Button
+    @IBAction func goToPlayerInfo(_ sender: Any) {
+        performSegue(withIdentifier: "PlayersToInfo", sender: self)
     }
     
     func doneClicked() {
@@ -59,11 +115,6 @@ class _PlayerViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        errorLabel.isHidden = true
-        numPlayerField.text = ""
-    }
-    
     func dismissKeyboard() {
         numPlayerField.resignFirstResponder()
     }
@@ -73,35 +124,24 @@ class _PlayerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // Pause Button
-    @IBAction func pauseBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: "PlayersToPause", sender: self)
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        print("finished")
     }
-
-    // Proceed Arrow
-    @IBAction func goToRoleSetUp(_ sender: Any) {
-        
-        if numPlayerField.text?.isEmpty == false {
-            
-            if (Int(numPlayerField.text!))! >= minimumPlayers && (Int(numPlayerField.text!))! <= maximumPlayers {
-                
-                let numPlayers: Int = (Int(numPlayerField.text!))!
-                performSegue(withIdentifier: "goToRoleSetUp", sender: numPlayers)
-                errorLabel.isHidden = true
-            } else {
-                errorLabel.isHidden = false
-                errorLabel.text = "The Valid Player Range is 5 to 30"
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PlayersToRoleSetUp" {
+            if let selectedVC = segue.destination as? _RoleSetUpViewController {
+                if let theNumPlayers = sender as? Int {
+                    selectedVC.numPlayers = theNumPlayers
+                }
             }
-        } else {
-            errorLabel.isHidden = false
-            errorLabel.text = "Please Enter the Number of Players"
+        } else 
+        if segue.identifier == "PlayersToPause" {
+            if let selectedVC = segue.destination as? PauseViewController {
+                if let theArray = sender as? Array<Player> {
+                    selectedVC.masterPlayerArray = theArray
+                }
+            }
         }
     }
-    
-    // Info Button
-    @IBAction func goToPlayerInfo(_ sender: Any) {
-        performSegue(withIdentifier: "PlayersToInfo", sender: self)
-    }
-    
-
 }

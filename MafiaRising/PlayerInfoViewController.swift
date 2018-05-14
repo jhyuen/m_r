@@ -23,6 +23,8 @@ class PlayerInfoViewController: UIViewController {
     
     // Back Button
     @IBAction func goBackToPlayer(_ sender: Any) {
+        // Play button click sound effect
+        playClick()
         dismiss(animated: true, completion: nil)
     }
 
