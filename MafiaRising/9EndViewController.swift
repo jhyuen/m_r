@@ -113,7 +113,7 @@ class _EndViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func goToHome(_ sender: Any) {
         // Play button click sound effect
         playClick()
-        
+        musicPlayer.stop()
         // Play main menu music
         let trackTitle = "Main Menu"
         if let sound = NSDataAsset(name: trackTitle) {

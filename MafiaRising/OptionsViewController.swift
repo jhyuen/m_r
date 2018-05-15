@@ -61,7 +61,8 @@ class OptionsViewController: UIViewController {
         
         // Play button click sound effect
         playClick()
-        dismiss(animated: true, completion: nil)
+        dismissLeftToRight(theVC: self)
+        
     }
     
     // Info Button

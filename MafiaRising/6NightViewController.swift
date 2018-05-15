@@ -40,7 +40,7 @@ class _NightViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         print("NightViewController")
         print("Cycle is \(cycle)")
         print("Part is \(part)")

@@ -221,7 +221,6 @@ func dismissRightToLeft (theVC: UIViewController) {
     theVC.dismiss(animated: false, completion: nil)
 }
 
-
 func dismissTopToBottom (theVC: UIViewController) {
     let transition: CATransition = CATransition()
     transition.duration = 0.5

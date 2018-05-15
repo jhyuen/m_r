@@ -186,12 +186,12 @@ volume for best experience</string>
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="3B4-aq-i8L" kind="show" identifier="HomeToPlayers" id="RLX-xd-W8t"/>
-                        <segue destination="Uxu-yi-Eea" kind="show" identifier="HomeToRules" id="jGj-z5-JdE"/>
-                        <segue destination="9nD-tn-Rq4" kind="show" identifier="HomeToOptions" id="bB7-vs-abW"/>
+                        <segue destination="3B4-aq-i8L" kind="presentation" identifier="HomeToPlayers" animates="NO" modalTransitionStyle="crossDissolve" id="RLX-xd-W8t"/>
+                        <segue destination="Uxu-yi-Eea" kind="presentation" identifier="HomeToRules" modalTransitionStyle="crossDissolve" id="jGj-z5-JdE"/>
+                        <segue destination="9nD-tn-Rq4" kind="presentation" identifier="HomeToOptions" modalTransitionStyle="crossDissolve" id="bB7-vs-abW"/>
                         <segue destination="q0j-zv-644" kind="show" identifier="ContinueToReady" id="nwm-Dp-aeN"/>
-                        <segue destination="QpL-Dl-0m0" kind="show" identifier="ContinueToDay" id="YkS-pf-4aO"/>
-                        <segue destination="x6I-ks-Nig" kind="show" identifier="ContinueToNight" id="SvW-si-1fZ"/>
+                        <segue destination="QpL-Dl-0m0" kind="presentation" identifier="ContinueToDay" modalTransitionStyle="crossDissolve" id="YkS-pf-4aO"/>
+                        <segue destination="x6I-ks-Nig" kind="presentation" identifier="ContinueToNight" modalTransitionStyle="crossDissolve" id="SvW-si-1fZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zua-Ax-IX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -498,7 +498,7 @@ volume for best experience</string>
                     <connections>
                         <segue destination="XFl-YP-TYn" kind="show" identifier="RulesToTut" id="mcV-tc-pkP"/>
                         <segue destination="mhI-wP-5BT" kind="show" identifier="RulesToScript" id="yqx-8T-zyb"/>
-                        <segue destination="TVh-SV-JGu" kind="show" identifier="RulesToRoles" id="8wV-LJ-1eU"/>
+                        <segue destination="TVh-SV-JGu" kind="presentation" identifier="RulesToRoles" modalTransitionStyle="crossDissolve" id="8wV-LJ-1eU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7X2-x6-R6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -697,7 +697,7 @@ Swipe Left to learn more!</string>
                     </view>
                     <connections>
                         <outlet property="nightNum" destination="3Gj-vT-1E7" id="bmS-0E-ZMD"/>
-                        <segue destination="kEY-wj-tGy" kind="show" identifier="NightToChoose" id="DTs-jA-27W"/>
+                        <segue destination="kEY-wj-tGy" kind="presentation" identifier="NightToChoose" modalTransitionStyle="crossDissolve" id="DTs-jA-27W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aJA-iM-fTQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -833,7 +833,7 @@ Swipe Left to learn more!</string>
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="43W-eP-keW" kind="show" identifier="RolesToRoleInformation" id="If8-vf-kA5"/>
+                        <segue destination="43W-eP-keW" kind="presentation" identifier="RolesToRoleInformation" modalTransitionStyle="crossDissolve" id="If8-vf-kA5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C8U-Yw-u10" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3181,8 +3181,8 @@ The end..."</string>
                     <connections>
                         <outlet property="rolesBtn" destination="1Pr-Fv-ppd" id="96h-2h-al2"/>
                         <segue destination="9nD-tn-Rq4" kind="show" identifier="PauseToOptions" id="xw3-iS-S4C"/>
-                        <segue destination="Uxu-yi-Eea" kind="show" identifier="PauseToRules" id="I53-ci-Nq8"/>
-                        <segue destination="3SB-Ud-paO" kind="show" identifier="PauseToRoles" id="c66-br-zBn"/>
+                        <segue destination="Uxu-yi-Eea" kind="show" identifier="PauseToRules" animates="NO" id="I53-ci-Nq8"/>
+                        <segue destination="3SB-Ud-paO" kind="show" identifier="PauseToRoles" animates="NO" id="c66-br-zBn"/>
                         <segue destination="TBE-rj-uHk" kind="show" identifier="PauseToHome" animates="NO" id="0DV-6h-Xny"/>
                         <segue destination="VIZ-0j-dYr" kind="unwind" identifier="unwindHome" animates="NO" unwindAction="unwindToHomeVCWithSegue:" id="XnU-EL-WZP"/>
                     </connections>
@@ -3385,7 +3385,7 @@ of Players</string>
                         <outlet property="toolBar" destination="Kl9-lF-JOS" id="dPm-QW-JUs"/>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="PlayersToPause" id="IiT-7w-mNC"/>
                         <segue destination="lcA-mS-A5M" kind="show" identifier="PlayersToInfo" id="nbH-fj-q58"/>
-                        <segue destination="2Ec-qL-fxS" kind="show" identifier="PlayersToRoleSetUp" animates="NO" id="4Im-KK-ClF"/>
+                        <segue destination="2Ec-qL-fxS" kind="presentation" identifier="PlayersToRoleSetUp" modalTransitionStyle="crossDissolve" id="4Im-KK-ClF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JvO-E4-Sae" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3539,7 +3539,7 @@ of Players</string>
                     <connections>
                         <outlet property="isDoctor" destination="QMv-vd-Lw1" id="byd-UX-CHf"/>
                         <outlet property="isPolice" destination="WcW-4r-gEs" id="ehb-vr-dUn"/>
-                        <segue destination="JET-0x-enT" kind="show" identifier="RolesToCards" animates="NO" id="bun-w4-Bvq"/>
+                        <segue destination="JET-0x-enT" kind="presentation" identifier="RolesToCards" modalTransitionStyle="crossDissolve" id="bun-w4-Bvq"/>
                         <segue destination="MMk-s6-MBe" kind="show" identifier="RolesToInfo" id="5DK-wl-vuS"/>
                     </connections>
                 </viewController>
@@ -3740,7 +3740,7 @@ of Players</string>
                         <outlet property="roleLbl" destination="ADi-VS-fQM" id="ti4-e1-gor"/>
                         <segue destination="TZg-g4-ZaJ" kind="show" identifier="CardsToInfo" id="dH3-a9-kdI"/>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="CardsToPause" id="5oF-XY-W7M"/>
-                        <segue destination="q0j-zv-644" kind="show" identifier="CardsToReady" animates="NO" id="oaV-mC-QWl"/>
+                        <segue destination="q0j-zv-644" kind="presentation" identifier="CardsToReady" modalTransitionStyle="crossDissolve" id="oaV-mC-QWl"/>
                         <segue destination="MWT-pF-ud1" kind="unwind" identifier="CardsToHome" animates="NO" unwindAction="unwindToHomeVCWithSegue:" id="FdP-Jh-Fac"/>
                         <segue destination="TBE-rj-uHk" kind="show" identifier="CardsToHome" animates="NO" id="Jpp-ob-yFi"/>
                     </connections>
@@ -3811,7 +3811,7 @@ of Players</string>
                     </view>
                     <connections>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="ReadyToPause" id="TDa-wu-gPe"/>
-                        <segue destination="MAm-3Z-Idg" kind="show" identifier="ReadyToStory" animates="NO" id="kkV-ey-5fO"/>
+                        <segue destination="MAm-3Z-Idg" kind="presentation" identifier="ReadyToStory" modalTransitionStyle="crossDissolve" id="kkV-ey-5fO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTE-F1-sMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3964,8 +3964,8 @@ of Players</string>
                         <outlet property="scrollView" destination="Twh-X9-WTE" id="60X-q5-5st"/>
                         <outlet property="tribunalVictim" destination="lae-Hg-4vM" id="A8B-u7-1kQ"/>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="StoryToPause" id="dhy-OQ-mIy"/>
-                        <segue destination="x6I-ks-Nig" kind="show" identifier="StoryToNight" id="XfW-qg-n7e"/>
-                        <segue destination="kEY-wj-tGy" kind="show" identifier="StoryToChoose" animates="NO" id="nFz-PG-5cK"/>
+                        <segue destination="x6I-ks-Nig" kind="presentation" identifier="StoryToNight" modalTransitionStyle="crossDissolve" id="XfW-qg-n7e"/>
+                        <segue destination="kEY-wj-tGy" kind="presentation" identifier="StoryToChoose" modalTransitionStyle="crossDissolve" id="nFz-PG-5cK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uCi-wI-uQT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4029,7 +4029,7 @@ of Players</string>
                     </view>
                     <connections>
                         <outlet property="dayNum" destination="FK6-EW-Tci" id="S13-vT-qb3"/>
-                        <segue destination="MAm-3Z-Idg" kind="show" identifier="DayToStory" id="Jyo-Dw-ayh"/>
+                        <segue destination="MAm-3Z-Idg" kind="presentation" identifier="DayToStory" modalTransitionStyle="crossDissolve" id="Jyo-Dw-ayh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QNp-ku-F01" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4211,9 +4211,9 @@ of Players</string>
                         <outlet property="soundEffectBtn2" destination="APn-t6-4Jl" id="Pvg-Xs-0Jr"/>
                         <outlet property="soundEffectBtn3" destination="VyX-Lg-MZx" id="3XI-i7-02S"/>
                         <outlet property="soundEffectBtn4" destination="Glf-kc-3hI" id="3vY-fl-mo8"/>
-                        <segue destination="QpL-Dl-0m0" kind="show" identifier="ChooseToDay" id="Xxf-v6-6cj"/>
-                        <segue destination="MAm-3Z-Idg" kind="show" identifier="ChooseToStory" animates="NO" id="Y5H-lc-M15"/>
-                        <segue destination="Mzs-IF-RIf" kind="show" identifier="ChooseToVictory" animates="NO" id="HeH-F8-GWu"/>
+                        <segue destination="QpL-Dl-0m0" kind="presentation" identifier="ChooseToDay" modalTransitionStyle="crossDissolve" id="Xxf-v6-6cj"/>
+                        <segue destination="MAm-3Z-Idg" kind="presentation" identifier="ChooseToStory" modalTransitionStyle="crossDissolve" id="Y5H-lc-M15"/>
+                        <segue destination="Mzs-IF-RIf" kind="presentation" identifier="ChooseToVictory" modalTransitionStyle="crossDissolve" id="HeH-F8-GWu"/>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="ChooseToPause" id="wNd-ep-vfX"/>
                     </connections>
                 </viewController>
@@ -4283,7 +4283,7 @@ of Players</string>
                         <outlet property="btmLbl" destination="2Yx-cc-pz3" id="0EL-lq-JPw"/>
                         <outlet property="dot" destination="L7T-g4-1CY" id="IpH-56-oEX"/>
                         <outlet property="winnerImage" destination="wni-xX-whe" id="1xE-0a-JI3"/>
-                        <segue destination="e96-xE-FgR" kind="show" identifier="VictoryToEnd" animates="NO" id="GtG-eL-rWC"/>
+                        <segue destination="e96-xE-FgR" kind="presentation" identifier="VictoryToEnd" modalTransitionStyle="crossDissolve" id="GtG-eL-rWC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SId-vD-l1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4372,8 +4372,7 @@ of Players</string>
                     <connections>
                         <outlet property="rolesScrollView" destination="fCd-Vz-N3P" id="ynX-tx-FJw"/>
                         <segue destination="PC0-jt-mGo" kind="show" identifier="EndToPause" id="QFZ-Cg-Yd8"/>
-                        <segue destination="TBE-rj-uHk" kind="show" identifier="EndToHome" animates="NO" id="yK5-p8-VUz"/>
-                        <segue destination="7YV-X8-tav" kind="unwind" identifier="finish" unwindAction="unwindToHomeVCWithSegue:" id="Fqw-ZV-88B"/>
+                        <segue destination="7YV-X8-tav" kind="unwind" identifier="finish" animates="NO" unwindAction="unwindToHomeVCWithSegue:" id="Fqw-ZV-88B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9p-ge-hZ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -6629,14 +6628,14 @@ be a jerk ;)</string>
         <image name="portraitFiller" width="433" height="653"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nFz-PG-5cK"/>
-        <segue reference="Xxf-v6-6cj"/>
-        <segue reference="Y5H-lc-M15"/>
-        <segue reference="nwm-Dp-aeN"/>
-        <segue reference="wNd-ep-vfX"/>
+        <segue reference="DTs-jA-27W"/>
+        <segue reference="YkS-pf-4aO"/>
+        <segue reference="kkV-ey-5fO"/>
+        <segue reference="oaV-mC-QWl"/>
+        <segue reference="QFZ-Cg-Yd8"/>
         <segue reference="SvW-si-1fZ"/>
         <segue reference="jGj-z5-JdE"/>
         <segue reference="bB7-vs-abW"/>
-        <segue reference="yK5-p8-VUz"/>
+        <segue reference="RsP-pv-hyJ"/>
     </inferredMetricsTieBreakers>
 </document>

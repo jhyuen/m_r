@@ -22,7 +22,7 @@ class RolesViewController: UIViewController {
     @IBAction func backBtnPressed(_ sender: Any) {
         // Play button click sound effect
         playClick()
-        dismiss(animated: true, completion: nil)
+        dismissLeftToRight(theVC: self)
     }
     
     enum Roles: Int {

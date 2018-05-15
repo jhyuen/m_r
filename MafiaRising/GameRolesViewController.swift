@@ -105,7 +105,7 @@ class GameRolesViewController: UIViewController, UIScrollViewDelegate {
     
     // Back Button
     @IBAction func backBtnPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dismissLeftToRight(theVC: self)
     }
     
     // Touch Portrait
