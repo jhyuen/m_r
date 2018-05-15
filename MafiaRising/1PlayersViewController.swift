@@ -112,15 +112,14 @@ class _PlayersViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y != 0{
-                self.view.frame.origin.y += (keyboardSize.height / 2)
-            }
+        if self.view.frame.origin.y != 0{
+            self.view.frame.origin.y = 0
         }
     }
     
     @objc func dismissKeyboard() {
-        numPlayerField.resignFirstResponder()
+//        numPlayerField.resignFirstResponder()
+        view.endEditing(true)
     }
     
     override func didReceiveMemoryWarning() {
