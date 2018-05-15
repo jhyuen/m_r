@@ -787,7 +787,9 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
         
         if sender.tag > 0 {
             // Play button click sound effect
-            playClick()
+            if masterPlayerArray[sender.tag - 1].isEnabled {
+                playClick()
+            }
             // Police Select
             if roleLbl.text == "POLICE" {
                 var role: UIImageView

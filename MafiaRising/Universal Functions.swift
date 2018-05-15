@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-let animateSegues: Bool = true
+let animateSegues: Bool = false
 
 // Sound Effect List
 // Basic Sound Effects
