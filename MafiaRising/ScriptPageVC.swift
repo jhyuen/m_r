@@ -47,6 +47,13 @@ class ScriptPageVC: UIPageViewController, UIPageViewControllerDelegate, UIPageVi
         let firstVC = VCArray[scriptProgress]
         setViewControllers([firstVC], direction: .forward, animated: false, completion: nil)
         currentIndex = scriptProgress
+        
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
     }
     
     private func VCInstance (name:String) -> UIViewController {
