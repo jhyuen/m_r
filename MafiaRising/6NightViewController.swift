@@ -41,6 +41,8 @@ class _NightViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        UIApplication.shared.statusBarStyle = .lightContent
+
         print("NightViewController")
         print("Cycle is \(cycle)")
         print("Part is \(part)")

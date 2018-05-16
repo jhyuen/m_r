@@ -74,6 +74,8 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
             // Story Intro
             mainTitle.text = "STORY"
             mainPicture.image = storyIntroImage
+            //mainPicture.layer.borderWidth = 5
+            //mainPicture.layer.borderColor = black as UIColor
             
 //            let hfactor = (mainPicture.image?.size.width)! / mainPicture.frame.size.width
 //            let vfactor = (mainPicture.image?.size.height)! / mainPicture.frame.size.height
