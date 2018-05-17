@@ -37,7 +37,7 @@ class _VictoryViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        UIApplication.shared.statusBarStyle = .lightContent
+        
         btmLbl.text = bottomMessage
         
         switch conclusion {
@@ -48,6 +48,9 @@ class _VictoryViewController: UIViewController {
             winnerImage.image = UIImage(named: "MRFinal CitizensWinC1")
             dot.image = UIImage(named: "MRFinal CitzensWinC2")
             btmLbl.textColor = blackColor
+            
+            UIApplication.shared.statusBarStyle =  UIStatusBarStyle.default
+
             /*
             musicPlayer.stop()
             // Play background music
@@ -79,6 +82,8 @@ class _VictoryViewController: UIViewController {
             winnerImage.image = UIImage(named: "MRFinal MafiaWinC1")
             dot.image = UIImage(named: "MRFinal MafiaWinC2")
             btmLbl.textColor = whiteColor
+            
+            UIApplication.shared.statusBarStyle = .lightContent
             /*
             // Play background music
             let trackTitle = "Mafia Win"

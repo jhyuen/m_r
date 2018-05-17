@@ -84,6 +84,9 @@ class GameRolesViewController: UIViewController, UIScrollViewDelegate {
             btnView.contentMode = .scaleToFill
             imgView.contentMode = .scaleToFill
             
+            imgView.layer.borderWidth = 2
+            imgView.layer.borderColor = UIColor.black.cgColor
+            
             // set label font
             roleLbl.font = UIFont(name: "Kefa", size: FONTSIZE)
             

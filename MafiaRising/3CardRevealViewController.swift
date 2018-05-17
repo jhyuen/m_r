@@ -51,6 +51,10 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         super.viewDidLoad()
         bypassBtn.isHidden = false;
         
+        // Add Borders to camera and portrait view
+        playerImage.layer.borderWidth = 3
+        cameraView.layer.borderWidth = 3
+        
         // test previous segue and global variables
         print("\(masterIndexArray)")
         print("\(policeExist)")
@@ -452,10 +456,10 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         UserDefaults.standard.set(data, forKey: "savedMasterArray")
         
         // !!! populating the master array for testing
-        let citImage = UIImage(named: "MRFinal RolesCitizen")
-        let polImage = UIImage(named: "MRFinal RolesPolice")
-        let mafImage = UIImage(named: "MRFinal RolesMafia")
-        let docImage = UIImage(named: "MRFinal RolesDoctor")
+        let citImage = UIImage(named: "citizentest")
+        let polImage = UIImage(named: "policetest")
+        let mafImage = UIImage(named: "mafiatest")
+        let docImage = UIImage(named: "doctortest")
         
         for index in 1...masterIndexArray.count {
             if index % 3 == 0 {

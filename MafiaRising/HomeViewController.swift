@@ -46,6 +46,9 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
+
         if narrationStarted {
             narrationPlayer.stop()
             narrationStarted = false

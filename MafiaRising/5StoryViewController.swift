@@ -17,6 +17,7 @@ var dayStoryTrackNum: Int = 0
 var tribunalTrackNum: Int = 0
 var storyIntroImage: UIImage = UIImage(named: "Field.png")!
 
+
 class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
     
     // UI Outlet
@@ -32,6 +33,8 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
     let WIDTH: CGFloat = 90
     let HEIGHT: CGFloat = 135
     
+    // Portrait Border Width
+    let portraitThickness: CGFloat = 2.0
     
     // Transfer Array
     var masterPlayerArray: Array<Player> = []
@@ -74,7 +77,7 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
             // Story Intro
             mainTitle.text = "STORY"
             mainPicture.image = storyIntroImage
-            //mainPicture.layer.borderWidth = 5
+            mainPicture.layer.borderWidth = 5
             //mainPicture.layer.borderColor = black as UIColor
             
 //            let hfactor = (mainPicture.image?.size.width)! / mainPicture.frame.size.width
@@ -164,12 +167,14 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
                 print("Saved")
                 mainPicture.image = UIImage(named: "DayRecapBackgroundSaveFinal")
                 nightVictim.image = masterPlayerArray[docSelected].picture
+
             } else if mafiaSelected != docSelected && mafiaSelected != -1 {
                 // Player Murdered
                 print("Murdered")
                 mainPicture.image = UIImage(named: "DayRecapBackgroundFinal")
                 nightVictim.image = masterPlayerArray[mafiaSelected].picture
             }
+        
         }
         
         
@@ -198,6 +203,21 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
             // Set portrait to "scale to fill"
             btnView.contentMode = .scaleToFill
             imgView.contentMode = .scaleToFill
+            
+            if (player == 0) {
+        
+                imgView.addBorder(toSide: .Left, withColor: UIColor.black.cgColor, andThickness: portraitThickness)
+                imgView.addBorder(toSide: .Right, withColor: UIColor.black.cgColor, andThickness: portraitThickness/2)
+            } else if (player == masterPlayerArray.count-1) {
+                imgView.addBorder(toSide: .Left, withColor: UIColor.black.cgColor, andThickness: portraitThickness/2)
+                imgView.addBorder(toSide: .Right, withColor: UIColor.black.cgColor, andThickness: portraitThickness)
+            } else {
+                imgView.addBorder(toSide: .Left, withColor: UIColor.black.cgColor, andThickness: portraitThickness/2)
+                imgView.addBorder(toSide: .Right, withColor: UIColor.black.cgColor, andThickness: portraitThickness/2)
+            }
+            
+            imgView.addBorder(toSide: .Top, withColor: UIColor.black.cgColor, andThickness: portraitThickness)
+            imgView.addBorder(toSide: .Bottom, withColor: UIColor.black.cgColor, andThickness: portraitThickness)
             
             // Set button functionality
             if !masterPlayerArray[player].isDead {
@@ -545,5 +565,30 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
                 }
             }
         }
+    }
+    
+}
+
+extension UIView {
+    
+    // Example use: myView.addBorder(toSide: .Left, withColor: UIColor.redColor().CGColor, andThickness: 1.0)
+    
+    enum ViewSide {
+        case Left, Right, Top, Bottom
+    }
+    
+    func addBorder(toSide side: ViewSide, withColor color: CGColor, andThickness thickness: CGFloat) {
+        
+        let border = CALayer()
+        border.backgroundColor = color
+        
+        switch side {
+        case .Left: border.frame = CGRect(x: frame.minX, y: frame.minY, width: thickness, height: frame.height); break
+        case .Right: border.frame = CGRect(x: frame.maxX - thickness, y: frame.minY, width: thickness, height: frame.height); break
+        case .Top: border.frame = CGRect(x: frame.minX, y: frame.minY, width: frame.width, height: thickness); break
+        case .Bottom: border.frame = CGRect(x: frame.minX, y: frame.maxY - thickness, width: frame.width, height: thickness); break
+        }
+        
+        layer.addSublayer(border)
     }
 }

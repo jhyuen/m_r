@@ -35,6 +35,9 @@ class _ChooseViewController: UIViewController {
     // Transfer Array
     var masterPlayerArray: Array<Player> = []
     
+    // Portrait Thickness
+    let soundEffectBtnThickness: CGFloat = 10.0
+    
     // Collection View
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -183,7 +186,6 @@ class _ChooseViewController: UIViewController {
             }
             // updateSounds(arrayType: tribunalSoundEffectsArray)
         }
-        
     }
     
     // Pause Button
@@ -416,6 +418,7 @@ class _ChooseViewController: UIViewController {
                     narrationPlayer.stop()
                     playEndMusic()
                     performSegue(withIdentifier: "ChooseToVictory", sender: masterPlayerArray)
+        
                 } else {
                     subPart = subPart + 1
                     part = part + 1
@@ -673,7 +676,9 @@ class _ChooseViewController: UIViewController {
     func removeBorderAndIndicator(reset: Bool) {
         if selectedPlayerIndex >= 0 {
             // Has effect of untinting the currently selected button
-            masterPlayerArray[selectedPlayerIndex].pictureView.layer.borderWidth = 0
+            masterPlayerArray[selectedPlayerIndex].pictureView.layer.borderWidth = 2
+            masterPlayerArray[selectedPlayerIndex].pictureView.layer.borderColor = UIColor.black.cgColor
+
             let role = masterPlayerArray[selectedPlayerIndex].role
             if  role == "MAFIA" {
                 masterPlayerArray[selectedPlayerIndex].pictureView.viewWithTag(30)?.removeFromSuperview()
@@ -761,6 +766,11 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
         playerCell.playerBtnView.addSubview(imgView)
         // fits imageView to bounds of button
         imgView.frame = playerCell.playerBtnView.bounds
+        
+        // add border !!!
+        imgView.layer.borderWidth = 2
+        imgView.layer.borderColor = UIColor.black.cgColor
+        
         // tag is 1 greater than index to avoid default tag
         playerCell.playerBtnView.tag = indexPath.row + 1
         if !masterPlayerArray[indexPath.row].isDead {
@@ -798,11 +808,11 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
                 var role: UIImageView
                 if  policeAreAlive {
                     if  masterPlayerArray[sender.tag - 1].role == "MAFIA" {
-                        masterPlayerArray[sender.tag - 1].pictureView.layer.borderColor = UIColor.green.withAlphaComponent(0.5).cgColor
+                        masterPlayerArray[sender.tag - 1].pictureView.layer.borderColor = UIColor.green.withAlphaComponent(1).cgColor
                         role = UIImageView(image: UIImage(named: "ThumbsUp"))
                         role.tag = 30
                     } else {
-                        masterPlayerArray[sender.tag - 1].pictureView.layer.borderColor = UIColor.red.withAlphaComponent(0.5).cgColor
+                        masterPlayerArray[sender.tag - 1].pictureView.layer.borderColor = UIColor.red.withAlphaComponent(1).cgColor
                         role = UIImageView(image: UIImage(named: "ThumbsDown"))
                         role.tag = 31
                     }
@@ -818,7 +828,7 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
             } else {
                 // Other Selections
                 if (roleLbl.text == "DOCTOR" && doctorsAreAlive) || roleLbl.text != "DOCTOR" {
-                    masterPlayerArray[sender.tag - 1].pictureView.layer.borderColor = UIColor.white.withAlphaComponent(0.5).cgColor
+                    masterPlayerArray[sender.tag - 1].pictureView.layer.borderColor = UIColor.green.withAlphaComponent(1).cgColor
                 }
             }
             
@@ -837,6 +847,7 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func generateBasicButtons() {
+        
         // Setup buttons
         soundEffectBtn1.setImage(UIImage(named: basicSoundEffectsArray[potentialIndex[0]].picture), for: .normal)
         // Make tag, the index the basicSoundEffectsArray + 1, to avoid tag of 0

@@ -108,7 +108,7 @@ class Player: NSObject, NSCoding {
     func murder() {
         _isDead = true
         _isTargeted = false
-        self._pictureView.layer.borderColor = UIColor.red.withAlphaComponent(0.5).cgColor
+        self._pictureView.layer.borderColor = UIColor.red.withAlphaComponent(0.75).cgColor
         self._pictureView.layer.borderWidth = 100
     }
     
@@ -123,7 +123,8 @@ class Player: NSObject, NSCoding {
             self._pictureView.layer.borderColor = UIColor.red.withAlphaComponent(0.5).cgColor
             self._pictureView.layer.borderWidth = 100
         } else {
-            self._pictureView.layer.borderWidth = 0
+            self._pictureView.layer.borderColor = UIColor.black.withAlphaComponent(1).cgColor
+            self._pictureView.layer.borderWidth = 2
         }
         self._isEnabled = true
     }

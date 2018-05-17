@@ -3180,9 +3180,9 @@ The end..."</string>
                     </view>
                     <connections>
                         <outlet property="rolesBtn" destination="1Pr-Fv-ppd" id="96h-2h-al2"/>
-                        <segue destination="9nD-tn-Rq4" kind="show" identifier="PauseToOptions" id="xw3-iS-S4C"/>
-                        <segue destination="Uxu-yi-Eea" kind="show" identifier="PauseToRules" animates="NO" id="I53-ci-Nq8"/>
-                        <segue destination="3SB-Ud-paO" kind="show" identifier="PauseToRoles" animates="NO" id="c66-br-zBn"/>
+                        <segue destination="9nD-tn-Rq4" kind="presentation" identifier="PauseToOptions" modalTransitionStyle="crossDissolve" id="xw3-iS-S4C"/>
+                        <segue destination="Uxu-yi-Eea" kind="presentation" identifier="PauseToRules" modalTransitionStyle="crossDissolve" id="I53-ci-Nq8"/>
+                        <segue destination="3SB-Ud-paO" kind="presentation" identifier="PauseToRoles" modalTransitionStyle="crossDissolve" id="c66-br-zBn"/>
                         <segue destination="TBE-rj-uHk" kind="show" identifier="PauseToHome" animates="NO" id="0DV-6h-Xny"/>
                         <segue destination="VIZ-0j-dYr" kind="unwind" identifier="unwindHome" animates="NO" unwindAction="unwindToHomeVCWithSegue:" id="XnU-EL-WZP"/>
                     </connections>
@@ -4121,7 +4121,7 @@ of Players</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j3f-06-DTM">
                                 <rect key="frame" x="0.0" y="567" width="375" height="100"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="X5W-TO-XiN">
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="X5W-TO-XiN">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpC-4i-Lpb">
@@ -4153,10 +4153,6 @@ of Players</string>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="VyX-Lg-MZx" firstAttribute="height" secondItem="APn-t6-4Jl" secondAttribute="height" id="Kut-iO-ztc"/>
-                                            <constraint firstItem="VyX-Lg-MZx" firstAttribute="width" secondItem="APn-t6-4Jl" secondAttribute="width" id="x0Y-zD-lbe"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -6632,10 +6628,10 @@ be a jerk ;)</string>
         <segue reference="Xxf-v6-6cj"/>
         <segue reference="Y5H-lc-M15"/>
         <segue reference="oaV-mC-QWl"/>
-        <segue reference="dhy-OQ-mIy"/>
+        <segue reference="wNd-ep-vfX"/>
         <segue reference="XfW-qg-n7e"/>
-        <segue reference="jGj-z5-JdE"/>
-        <segue reference="bB7-vs-abW"/>
+        <segue reference="I53-ci-Nq8"/>
+        <segue reference="xw3-iS-S4C"/>
         <segue reference="RsP-pv-hyJ"/>
     </inferredMetricsTieBreakers>
 </document>

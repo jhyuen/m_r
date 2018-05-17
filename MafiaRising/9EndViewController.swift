@@ -85,6 +85,9 @@ class _EndViewController: UIViewController, UIScrollViewDelegate {
             btnView.contentMode = .scaleToFill
             imgView.contentMode = .scaleToFill
             
+            imgView.layer.borderWidth = 2
+            imgView.layer.borderColor = UIColor.black.cgColor
+            
             if masterPlayerArray[player].isDead {
                 applyFilter(imageView: imgView)
             } else {
