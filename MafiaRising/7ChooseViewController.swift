@@ -255,6 +255,7 @@ class _ChooseViewController: UIViewController {
             playClick()
             
             // reenables all players and check police and doctor status
+            
             for player in masterPlayerArray {
                 if player.role == "POLICE" && !player.isDead {
                     policeAreAlive = true
@@ -264,6 +265,14 @@ class _ChooseViewController: UIViewController {
                 if !player.isEnabled {
                     player.enablePlayer()
                 }
+            }
+            
+            if roleLbl.text == "MAFIA" && policeExist && policeAreAlive {
+                proceedBtn.isHidden = true
+            } else if ((roleLbl.text == "MAFIA" && !policeExist) || roleLbl.text == "POLICE") && doctorsAreAlive {
+                proceedBtn.isHidden = true }
+            else {
+                proceedBtn.isHidden = false
             }
             
             // Finish Mafia Selection

@@ -36,6 +36,9 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
     // Portrait Border Width
     let portraitThickness: CGFloat = 2.0
     
+    // Main Picture Border Size
+    let mainBorderSize: CGFloat = 20
+    
     // Transfer Array
     var masterPlayerArray: Array<Player> = []
     
@@ -76,9 +79,7 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
         if cycle == 1 && part == 0 {
             // Story Intro
             mainTitle.text = "STORY"
-            mainPicture.image = storyIntroImage
-            mainPicture.layer.borderWidth = 5
-            //mainPicture.layer.borderColor = black as UIColor
+            mainPicture.image = storyIntroImage.imageWithBorder(width: mainBorderSize, color: UIColor.black)
             
 //            let hfactor = (mainPicture.image?.size.width)! / mainPicture.frame.size.width
 //            let vfactor = (mainPicture.image?.size.height)! / mainPicture.frame.size.height
@@ -139,7 +140,8 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
             // Tribunal recap
             print("Tribunal recap")
             
-            mainPicture.image = UIImage(named: "TribunalRecapBackgroundFinal")
+            let tribunalRecapBackground = UIImage.init(named: "TribunalRecapBackgroundFinal")
+            mainPicture.image = tribunalRecapBackground?.imageWithBorder(width: mainBorderSize / 2, color: UIColor.black)
             tribunalVictim.image = masterPlayerArray[recentlyMurdered].picture
             
             if optionsParameters.enableStory && !narrationStarted {
@@ -165,13 +167,15 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
             if mafiaSelected == docSelected && mafiaSelected != -1 {
                 // Player Saved
                 print("Saved")
-                mainPicture.image = UIImage(named: "DayRecapBackgroundSaveFinal")
+                let dayRecapBackgroundSave = UIImage.init(named: "DayRecapBackgroundSaveFinal")
+                mainPicture.image = dayRecapBackgroundSave?.imageWithBorder(width: mainBorderSize / 2, color: UIColor.black)
                 nightVictim.image = masterPlayerArray[docSelected].picture
 
             } else if mafiaSelected != docSelected && mafiaSelected != -1 {
                 // Player Murdered
                 print("Murdered")
-                mainPicture.image = UIImage(named: "DayRecapBackgroundFinal")
+                let dayRecapBackground = UIImage.init(named: "DayRecapBackgroundFinal")
+                mainPicture.image = dayRecapBackground?.imageWithBorder(width: mainBorderSize / 2, color: UIColor.black)
                 nightVictim.image = masterPlayerArray[mafiaSelected].picture
             }
         
@@ -592,3 +596,24 @@ extension UIView {
         layer.addSublayer(border)
     }
 }
+
+extension UIImage {
+    
+    func imageWithBorder(width: CGFloat, color: UIColor) -> UIImage? {
+        let square = CGSize(width: size.width, height: size.height)
+        let imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: square))
+        imageView.contentMode = .center
+        imageView.image = self
+        imageView.layer.borderWidth = width
+        imageView.layer.borderColor = color.cgColor
+        UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, false, scale)
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        imageView.layer.render(in: context)
+        let result = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return result
+    }
+    
+}
+
+

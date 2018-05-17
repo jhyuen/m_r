@@ -4112,32 +4112,32 @@ of Players</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j3f-06-DTM">
                                 <rect key="frame" x="0.0" y="567" width="375" height="100"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="X5W-TO-XiN">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="X5W-TO-XiN">
+                                        <rect key="frame" x="2" y="2" width="371" height="96"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpC-4i-Lpb">
-                                                <rect key="frame" x="0.0" y="0.0" width="94" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="96"/>
                                                 <color key="backgroundColor" red="0.57112640142440796" green="0.077838368713855743" blue="0.021155845373868942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="pressSoundEffectBtn:" destination="kEY-wj-tGy" eventType="touchUpInside" id="hTF-QU-wpU"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APn-t6-4Jl">
-                                                <rect key="frame" x="94" y="0.0" width="93.5" height="100"/>
+                                                <rect key="frame" x="93.5" y="0.0" width="91" height="96"/>
                                                 <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="pressSoundEffectBtn:" destination="kEY-wj-tGy" eventType="touchUpInside" id="FQx-aH-KtX"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VyX-Lg-MZx">
-                                                <rect key="frame" x="187.5" y="0.0" width="94" height="100"/>
+                                                <rect key="frame" x="186.5" y="0.0" width="91.5" height="96"/>
                                                 <color key="backgroundColor" red="0.57111865282058716" green="0.080035187304019928" blue="0.017216935753822327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="pressSoundEffectBtn:" destination="kEY-wj-tGy" eventType="touchUpInside" id="Q7F-lj-5B4"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Glf-kc-3hI">
-                                                <rect key="frame" x="281.5" y="0.0" width="93.5" height="100"/>
+                                                <rect key="frame" x="280" y="0.0" width="91" height="96"/>
                                                 <color key="backgroundColor" red="0.75288265943527222" green="0.75297415256500244" blue="0.75285154581069946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="pressSoundEffectBtn:" destination="kEY-wj-tGy" eventType="touchUpInside" id="YwY-4M-5Pt"/>
@@ -4146,12 +4146,13 @@ of Players</string>
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="5Kg-Rr-Ngq"/>
-                                    <constraint firstAttribute="bottom" secondItem="X5W-TO-XiN" secondAttribute="bottom" id="CVA-tU-qXo"/>
-                                    <constraint firstAttribute="trailing" secondItem="X5W-TO-XiN" secondAttribute="trailing" id="Ylo-1x-qt6"/>
-                                    <constraint firstItem="X5W-TO-XiN" firstAttribute="top" secondItem="j3f-06-DTM" secondAttribute="top" id="lMM-Uq-Rt8"/>
-                                    <constraint firstItem="X5W-TO-XiN" firstAttribute="leading" secondItem="j3f-06-DTM" secondAttribute="leading" id="zgd-gb-POG"/>
+                                    <constraint firstAttribute="bottom" secondItem="X5W-TO-XiN" secondAttribute="bottom" constant="2" id="CVA-tU-qXo"/>
+                                    <constraint firstAttribute="trailing" secondItem="X5W-TO-XiN" secondAttribute="trailing" constant="2" id="Ylo-1x-qt6"/>
+                                    <constraint firstItem="X5W-TO-XiN" firstAttribute="top" secondItem="j3f-06-DTM" secondAttribute="top" constant="2" id="lMM-Uq-Rt8"/>
+                                    <constraint firstItem="X5W-TO-XiN" firstAttribute="leading" secondItem="j3f-06-DTM" secondAttribute="leading" constant="2" id="zgd-gb-POG"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zb-v7-ckI">
@@ -4321,7 +4322,7 @@ of Players</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROLES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbt-Yj-YOt">
-                                <rect key="frame" x="95" y="40" width="187" height="45"/>
+                                <rect key="frame" x="94" y="40" width="187" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="NYc-sq-rcW"/>
                                 </constraints>
@@ -6615,9 +6616,9 @@ be a jerk ;)</string>
     <inferredMetricsTieBreakers>
         <segue reference="nFz-PG-5cK"/>
         <segue reference="Xxf-v6-6cj"/>
-        <segue reference="kkV-ey-5fO"/>
+        <segue reference="Y5H-lc-M15"/>
         <segue reference="oaV-mC-QWl"/>
-        <segue reference="dhy-OQ-mIy"/>
+        <segue reference="wNd-ep-vfX"/>
         <segue reference="XfW-qg-n7e"/>
         <segue reference="I53-ci-Nq8"/>
         <segue reference="xw3-iS-S4C"/>
