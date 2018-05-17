@@ -228,7 +228,7 @@ volume for best experience</string>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="9NJ-z3-qPP">
-                                <rect key="frame" x="44" y="122" width="200" height="295"/>
+                                <rect key="frame" x="44" y="122" width="200" height="307"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="H60-DQ-hbr">
                                         <rect key="frame" x="0.0" y="0.0" width="167.5" height="113"/>
@@ -310,16 +310,19 @@ volume for best experience</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="O64-qx-CbY">
-                                        <rect key="frame" x="0.0" y="225" width="200" height="70"/>
+                                        <rect key="frame" x="0.0" y="225" width="200" height="82"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5f0-Q6-52K">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="35"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbD-Sl-DJH">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="47"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="47" id="uVP-Z8-dyx"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.050000000000000003" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q77-Q7-qP2">
-                                                <rect key="frame" x="-2" y="40" width="204" height="31"/>
+                                                <rect key="frame" x="-2" y="52" width="204" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="ZNu-lF-scu"/>
                                                     <constraint firstAttribute="width" constant="200" id="xQh-t5-RWf"/>
@@ -3582,7 +3585,7 @@ of Players</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wkj-F9-U7c">
-                                <rect key="frame" x="150.5" y="607" width="75" height="35"/>
+                                <rect key="frame" x="150" y="607" width="75" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Uws-ho-uL6"/>
                                 </constraints>
@@ -3693,6 +3696,7 @@ of Players</string>
                             <constraint firstItem="5xW-xF-fcw" firstAttribute="top" secondItem="0r9-L6-Ued" secondAttribute="bottom" constant="42" id="5nX-sS-kdZ"/>
                             <constraint firstItem="5xW-xF-fcw" firstAttribute="top" secondItem="dOi-Cc-5p3" secondAttribute="bottom" constant="10" id="5pS-9e-9PQ"/>
                             <constraint firstItem="2tx-Kf-NXZ" firstAttribute="centerX" secondItem="QJ8-FU-1bY" secondAttribute="centerX" id="7cq-Px-iOT"/>
+                            <constraint firstItem="ADi-VS-fQM" firstAttribute="leading" relation="lessThanOrEqual" secondItem="0r9-L6-Ued" secondAttribute="trailing" constant="20.5" id="87k-ys-kkr"/>
                             <constraint firstItem="nFU-Ah-YNl" firstAttribute="top" secondItem="QJ8-FU-1bY" secondAttribute="top" id="9oi-Y6-EVL"/>
                             <constraint firstAttribute="trailing" secondItem="dOi-Cc-5p3" secondAttribute="trailing" constant="10" id="EBx-1Z-MpG"/>
                             <constraint firstItem="EO8-NG-3pV" firstAttribute="centerX" secondItem="QJ8-FU-1bY" secondAttribute="centerX" id="Eji-4F-Yh8"/>
@@ -3895,7 +3899,7 @@ of Players</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STORY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsO-4H-IUz">
-                                <rect key="frame" x="113.5" y="40" width="149.5" height="45"/>
+                                <rect key="frame" x="113" y="40" width="149.5" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="qRA-yi-eEm"/>
                                 </constraints>
@@ -4317,7 +4321,7 @@ of Players</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROLES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbt-Yj-YOt">
-                                <rect key="frame" x="94.5" y="40" width="187" height="45"/>
+                                <rect key="frame" x="95" y="40" width="187" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="NYc-sq-rcW"/>
                                 </constraints>
