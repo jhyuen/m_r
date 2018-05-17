@@ -227,66 +227,114 @@ volume for best experience</string>
                                     <constraint firstAttribute="height" constant="13" id="C0q-TW-0Ir"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Narration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MA5-DC-Hj9">
-                                <rect key="frame" x="44" y="122" width="132" height="35"/>
-                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Directions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8a-TW-LFc">
-                                <rect key="frame" x="96" y="169" width="115.5" height="29"/>
-                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y46-hZ-wN3">
-                                <rect key="frame" x="96" y="210" width="60.5" height="29"/>
-                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound Effects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bv6-cE-oQK">
-                                <rect key="frame" x="44" y="250" width="227" height="47"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="227" id="3YJ-vS-YMs"/>
-                                    <constraint firstAttribute="height" constant="47" id="ERE-jv-kio"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5f0-Q6-52K">
-                                <rect key="frame" x="44" y="343" width="78.5" height="35"/>
-                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.050000000000000003" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fhb-Il-Ccn">
-                                <rect key="frame" x="42" y="298" width="187" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="AHa-Fw-E4d"/>
-                                    <constraint firstAttribute="width" constant="183" id="vaj-nf-Rgx"/>
-                                </constraints>
-                                <color key="minimumTrackTintColor" red="0.12939286229999999" green="0.12942269440000001" blue="0.12939092520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="maximumTrackTintColor" red="0.12939286229999999" green="0.12942269440000001" blue="0.12939092520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="thumbTintColor" red="0.35534605383872986" green="0.045701585710048676" blue="0.0048077204264700413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="soundEffectsSlider:" destination="9nD-tn-Rq4" eventType="valueChanged" id="AFT-LK-vco"/>
-                                </connections>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.050000000000000003" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q77-Q7-qP2">
-                                <rect key="frame" x="42" y="373" width="187" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ZNu-lF-scu"/>
-                                    <constraint firstAttribute="width" constant="183" id="xQh-t5-RWf"/>
-                                </constraints>
-                                <color key="minimumTrackTintColor" red="0.12939286229999999" green="0.12942269440000001" blue="0.12939092520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="maximumTrackTintColor" red="0.12939286229999999" green="0.12942269440000001" blue="0.12939092520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="thumbTintColor" red="0.35899248719215393" green="0.045655831694602966" blue="0.0045297639444470406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="musicSlider:" destination="9nD-tn-Rq4" eventType="valueChanged" id="Mf3-tn-B70"/>
-                                </connections>
-                            </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="9NJ-z3-qPP">
+                                <rect key="frame" x="44" y="122" width="200" height="295"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="H60-DQ-hbr">
+                                        <rect key="frame" x="0.0" y="0.0" width="167.5" height="113"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Narration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MA5-DC-Hj9">
+                                                <rect key="frame" x="0.0" y="0.0" width="132" height="35"/>
+                                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="G9s-4x-eBk">
+                                                <rect key="frame" x="0.0" y="43" width="167.5" height="31"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xod-P0-8L3" customClass="CheckBox" customModule="MafiaRising" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="31"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="31" id="DsE-pB-jwC"/>
+                                                            <constraint firstAttribute="width" constant="30" id="kiH-Bx-azI"/>
+                                                        </constraints>
+                                                        <state key="normal" image="MRFinal OptionsC4"/>
+                                                        <connections>
+                                                            <action selector="checkBoxPressed:" destination="9nD-tn-Rq4" eventType="touchUpInside" id="tFi-iv-bU6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Directions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8a-TW-LFc">
+                                                        <rect key="frame" x="52" y="0.0" width="115.5" height="31"/>
+                                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="2AM-aV-ea3">
+                                                <rect key="frame" x="0.0" y="82" width="112.5" height="31"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHa-AV-2WO" customClass="CheckBox" customModule="MafiaRising" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="31"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="31" id="DcX-zb-Bxi"/>
+                                                            <constraint firstAttribute="width" constant="30" id="lBI-LK-wlv"/>
+                                                        </constraints>
+                                                        <state key="normal" image="MRFinal OptionsC4"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y46-hZ-wN3">
+                                                        <rect key="frame" x="52" y="0.0" width="60.5" height="31"/>
+                                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fvU-cg-P7r">
+                                        <rect key="frame" x="0.0" y="128" width="200" height="82"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound Effects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bv6-cE-oQK">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="47"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="47" id="ERE-jv-kio"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.050000000000000003" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fhb-Il-Ccn">
+                                                <rect key="frame" x="-2" y="52" width="204" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="AHa-Fw-E4d"/>
+                                                    <constraint firstAttribute="width" constant="200" id="vaj-nf-Rgx"/>
+                                                </constraints>
+                                                <color key="minimumTrackTintColor" red="0.12939286229999999" green="0.12942269440000001" blue="0.12939092520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="maximumTrackTintColor" red="0.12939286229999999" green="0.12942269440000001" blue="0.12939092520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="thumbTintColor" red="0.35534605383872986" green="0.045701585710048676" blue="0.0048077204264700413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="soundEffectsSlider:" destination="9nD-tn-Rq4" eventType="valueChanged" id="AFT-LK-vco"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="O64-qx-CbY">
+                                        <rect key="frame" x="0.0" y="225" width="200" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5f0-Q6-52K">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="35"/>
+                                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.050000000000000003" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q77-Q7-qP2">
+                                                <rect key="frame" x="-2" y="40" width="204" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="ZNu-lF-scu"/>
+                                                    <constraint firstAttribute="width" constant="200" id="xQh-t5-RWf"/>
+                                                </constraints>
+                                                <color key="minimumTrackTintColor" red="0.12939286229999999" green="0.12942269440000001" blue="0.12939092520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="maximumTrackTintColor" red="0.12939286229999999" green="0.12942269440000001" blue="0.12939092520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="thumbTintColor" red="0.35899248719215393" green="0.045655831694602966" blue="0.0045297639444470406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="musicSlider:" destination="9nD-tn-Rq4" eventType="valueChanged" id="Mf3-tn-B70"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxn-JP-cLp" userLabel="OptionInfo" customClass="Info" customModule="MafiaRising" customModuleProvider="target">
                                 <rect key="frame" x="323" y="615" width="42" height="42"/>
                                 <constraints>
@@ -309,25 +357,6 @@ volume for best experience</string>
                                     <action selector="backBtnPressed:" destination="9nD-tn-Rq4" eventType="touchUpInside" id="RJQ-JJ-cFc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xod-P0-8L3" customClass="CheckBox" customModule="MafiaRising" customModuleProvider="target">
-                                <rect key="frame" x="44" y="168" width="30" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="DsE-pB-jwC"/>
-                                    <constraint firstAttribute="width" constant="30" id="kiH-Bx-azI"/>
-                                </constraints>
-                                <state key="normal" image="MRFinal OptionsC4"/>
-                                <connections>
-                                    <action selector="checkBoxPressed:" destination="9nD-tn-Rq4" eventType="touchUpInside" id="tFi-iv-bU6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHa-AV-2WO" customClass="CheckBox" customModule="MafiaRising" customModuleProvider="target">
-                                <rect key="frame" x="44" y="209" width="30" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="DcX-zb-Bxi"/>
-                                    <constraint firstAttribute="width" constant="30" id="lBI-LK-wlv"/>
-                                </constraints>
-                                <state key="normal" image="MRFinal OptionsC4"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icq-cv-LAQ">
                                 <rect key="frame" x="319" y="40.5" width="40" height="40"/>
                                 <constraints>
@@ -343,38 +372,23 @@ volume for best experience</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="fxn-JP-cLp" secondAttribute="trailing" constant="10" id="1Vx-LU-D4B"/>
-                            <constraint firstItem="Y46-hZ-wN3" firstAttribute="top" secondItem="r8a-TW-LFc" secondAttribute="bottom" constant="12" id="1Wt-7c-mJc"/>
-                            <constraint firstItem="r8a-TW-LFc" firstAttribute="top" secondItem="MA5-DC-Hj9" secondAttribute="bottom" constant="12" id="2e8-NG-vGD"/>
                             <constraint firstItem="9cZ-g2-raz" firstAttribute="top" secondItem="YyI-cr-CeW" secondAttribute="top" id="2tK-Zh-phY"/>
-                            <constraint firstItem="r8a-TW-LFc" firstAttribute="centerY" secondItem="Xod-P0-8L3" secondAttribute="centerY" id="4Vj-Vr-kU9"/>
                             <constraint firstItem="odX-CE-iNp" firstAttribute="centerX" secondItem="YyI-cr-CeW" secondAttribute="centerX" id="4YO-o4-ORz"/>
                             <constraint firstItem="g0T-nO-qbW" firstAttribute="centerX" secondItem="YyI-cr-CeW" secondAttribute="centerX" id="6Tq-iS-ZAU"/>
+                            <constraint firstItem="9NJ-z3-qPP" firstAttribute="top" secondItem="odX-CE-iNp" secondAttribute="bottom" constant="8" id="Abd-l9-Aig"/>
                             <constraint firstItem="icq-cv-LAQ" firstAttribute="centerY" secondItem="g0T-nO-qbW" secondAttribute="centerY" id="Cp5-2C-5xp"/>
-                            <constraint firstItem="Q77-Q7-qP2" firstAttribute="leading" secondItem="MA5-DC-Hj9" secondAttribute="leading" id="DoR-j9-oqH"/>
                             <constraint firstItem="g0T-nO-qbW" firstAttribute="top" secondItem="VZe-R4-PJu" secondAttribute="bottom" constant="20" id="EeL-gX-hwK"/>
-                            <constraint firstItem="bv6-cE-oQK" firstAttribute="leading" secondItem="MA5-DC-Hj9" secondAttribute="leading" id="GeT-CA-Ajo"/>
                             <constraint firstItem="g0T-nO-qbW" firstAttribute="centerY" secondItem="8YO-WX-dZY" secondAttribute="centerY" id="J9k-1R-4Rv"/>
                             <constraint firstItem="GoL-f7-Zw3" firstAttribute="top" secondItem="fxn-JP-cLp" secondAttribute="bottom" constant="10" id="NHM-jf-UIv"/>
                             <constraint firstAttribute="trailing" secondItem="9cZ-g2-raz" secondAttribute="trailing" id="QWG-1B-W37"/>
-                            <constraint firstItem="5f0-Q6-52K" firstAttribute="top" secondItem="Fhb-Il-Ccn" secondAttribute="bottom" constant="15" id="SuQ-bG-xuD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="icq-cv-LAQ" secondAttribute="trailing" id="Th5-oh-MEi"/>
-                            <constraint firstItem="Fhb-Il-Ccn" firstAttribute="top" secondItem="bv6-cE-oQK" secondAttribute="bottom" constant="1" id="V1A-Ah-nr8"/>
-                            <constraint firstItem="MA5-DC-Hj9" firstAttribute="leading" secondItem="YyI-cr-CeW" secondAttribute="leadingMargin" constant="28" id="Wjv-s8-nQm"/>
-                            <constraint firstItem="Y46-hZ-wN3" firstAttribute="centerY" secondItem="gHa-AV-2WO" secondAttribute="centerY" id="YyD-sP-1Hv"/>
-                            <constraint firstItem="Y46-hZ-wN3" firstAttribute="leading" secondItem="gHa-AV-2WO" secondAttribute="trailing" constant="22" id="b6V-Qt-KmV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9NJ-z3-qPP" secondAttribute="trailing" constant="115" id="cs4-IW-CfD"/>
+                            <constraint firstItem="9NJ-z3-qPP" firstAttribute="leading" secondItem="YyI-cr-CeW" secondAttribute="leadingMargin" constant="28" id="egb-bE-Vm5"/>
                             <constraint firstItem="g0T-nO-qbW" firstAttribute="centerX" secondItem="YyI-cr-CeW" secondAttribute="centerX" id="gLd-YU-LkJ"/>
-                            <constraint firstItem="MA5-DC-Hj9" firstAttribute="top" secondItem="odX-CE-iNp" secondAttribute="bottom" constant="8" id="i6r-FY-W04"/>
                             <constraint firstItem="8YO-WX-dZY" firstAttribute="leading" secondItem="YyI-cr-CeW" secondAttribute="leadingMargin" id="j4d-vR-8lh"/>
-                            <constraint firstItem="r8a-TW-LFc" firstAttribute="leading" secondItem="Xod-P0-8L3" secondAttribute="trailing" constant="22" id="jxY-s7-j3V"/>
-                            <constraint firstItem="Xod-P0-8L3" firstAttribute="leading" secondItem="MA5-DC-Hj9" secondAttribute="leading" id="mQh-EC-zG8"/>
-                            <constraint firstItem="5f0-Q6-52K" firstAttribute="leading" secondItem="MA5-DC-Hj9" secondAttribute="leading" id="oT8-9F-Wfa"/>
                             <constraint firstItem="9cZ-g2-raz" firstAttribute="leading" secondItem="YyI-cr-CeW" secondAttribute="leading" id="oUm-u0-b85"/>
-                            <constraint firstItem="Q77-Q7-qP2" firstAttribute="top" secondItem="Fhb-Il-Ccn" secondAttribute="bottom" constant="45" id="ofw-ao-leE"/>
-                            <constraint firstItem="bv6-cE-oQK" firstAttribute="top" secondItem="gHa-AV-2WO" secondAttribute="bottom" constant="10" id="qpi-kX-otl"/>
-                            <constraint firstItem="Fhb-Il-Ccn" firstAttribute="leading" secondItem="MA5-DC-Hj9" secondAttribute="leading" id="rBh-7z-E0T"/>
                             <constraint firstItem="odX-CE-iNp" firstAttribute="top" secondItem="g0T-nO-qbW" secondAttribute="bottom" constant="20" id="rpp-Yw-VOH"/>
                             <constraint firstItem="GoL-f7-Zw3" firstAttribute="top" secondItem="9cZ-g2-raz" secondAttribute="bottom" id="wuB-fx-kgf"/>
-                            <constraint firstItem="gHa-AV-2WO" firstAttribute="leading" secondItem="MA5-DC-Hj9" secondAttribute="leading" id="y9G-Ec-iOA"/>
                         </constraints>
                     </view>
                     <connections>
@@ -437,7 +451,6 @@ volume for best experience</string>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qad-zh-Vu7">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="75"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="eYg-c9-N1S"/>
                                             <constraint firstAttribute="height" constant="75" id="q95-vl-YE3"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
@@ -451,7 +464,6 @@ volume for best experience</string>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xay-uU-XWE">
                                         <rect key="frame" x="0.0" y="95" width="200" height="75"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="iyg-N7-jJI"/>
                                             <constraint firstAttribute="height" constant="75" id="oXv-th-bpk"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
@@ -465,7 +477,6 @@ volume for best experience</string>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBR-bh-gOV">
                                         <rect key="frame" x="0.0" y="190" width="200" height="75"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="6Dx-xh-gxZ"/>
                                             <constraint firstAttribute="height" constant="75" id="oKd-hC-lem"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
@@ -477,6 +488,9 @@ volume for best experience</string>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="PHo-41-Kt3"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -664,10 +678,9 @@ Swipe Left to learn more!</string>
                                 <color key="textColor" red="0.53297722339999998" green="0.13033376629999999" blue="0.066634103659999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRESS ANYWHERE TO CONTINUE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xri-cR-u5b">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRESS ANYWHERE TO CONTINUE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xri-cR-u5b">
                                 <rect key="frame" x="72" y="645" width="232" height="17"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="232" id="QKS-7T-dig"/>
                                     <constraint firstAttribute="height" constant="17.5" id="b3N-Ed-wiq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="15"/>
@@ -738,9 +751,6 @@ Swipe Left to learn more!</string>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cte-aE-38N">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="82"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="aib-XF-89e"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
                                         <state key="normal" title="MODERATOR" backgroundImage="MRGeneralButton">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -751,9 +761,6 @@ Swipe Left to learn more!</string>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nf-Rw-Za1">
                                         <rect key="frame" x="0.0" y="102" width="200" height="82"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="kyc-Iw-rHz"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
                                         <state key="normal" title="CITIZEN" backgroundImage="MRGeneralButton">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -764,9 +771,6 @@ Swipe Left to learn more!</string>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1E-KJ-Pnf">
                                         <rect key="frame" x="0.0" y="204" width="200" height="82"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="WMT-he-8iG"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
                                         <state key="normal" title="MAFIA" backgroundImage="MRGeneralButton">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -777,9 +781,6 @@ Swipe Left to learn more!</string>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyW-pX-uYY">
                                         <rect key="frame" x="0.0" y="306" width="200" height="82"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="8VY-iQ-Svc"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
                                         <state key="normal" title="DOCTOR" backgroundImage="MRGeneralButton">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -790,9 +791,6 @@ Swipe Left to learn more!</string>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaq-Lu-ozQ">
                                         <rect key="frame" x="0.0" y="408" width="200" height="82"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="fj9-vd-RlJ"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
                                         <state key="normal" title="POLICE" backgroundImage="MRGeneralButton">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -802,6 +800,9 @@ Swipe Left to learn more!</string>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="1p4-GR-f0L"/>
+                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gl-C1-kl8">
                                 <rect key="frame" x="16" y="43" width="42" height="24"/>
@@ -908,7 +909,7 @@ Swipe Left to learn more!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSI-ea-wWy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-489" y="770"/>
+            <point key="canvasLocation" x="-466" y="779"/>
         </scene>
         <!--Role Information View Controller-->
         <scene sceneID="815-F5-kwT">
@@ -926,14 +927,14 @@ Swipe Left to learn more!</string>
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MRDivider" translatesAutoresizingMaskIntoConstraints="NO" id="Lof-83-5WX">
-                                <rect key="frame" x="67" y="99" width="240" height="13"/>
+                                <rect key="frame" x="67" y="93.5" width="240" height="13"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="4vs-79-ydP"/>
                                     <constraint firstAttribute="height" constant="13" id="XUq-MM-Rsz"/>
+                                    <constraint firstAttribute="width" constant="240" id="xEu-G4-gij"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a81-b6-vzR">
-                                <rect key="frame" x="16" y="44" width="42" height="24"/>
+                                <rect key="frame" x="16" y="41" width="42" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="GJv-0L-Mzr"/>
                                     <constraint firstAttribute="width" constant="42" id="hTe-Wj-jo4"/>
@@ -943,43 +944,42 @@ Swipe Left to learn more!</string>
                                     <action selector="backBtnPressed:" destination="43W-eP-keW" eventType="touchUpInside" id="nbX-si-6wm"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POLICE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ab-DE-7Rj">
-                                <rect key="frame" x="68" y="40" width="240" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="1pS-BN-F0E"/>
-                                    <constraint firstAttribute="width" constant="240" id="srl-bN-Yzz"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POLICE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ab-DE-7Rj">
+                                <rect key="frame" x="138" y="40" width="100.5" height="25.5"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
                                 <color key="textColor" red="0.36999309062957764" green="0.049627780914306641" blue="0.0033425497822463512" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRO-TOWN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnF-cF-eAH">
-                                <rect key="frame" x="140" y="81" width="95" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRO-TOWN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnF-cF-eAH">
+                                <rect key="frame" x="143.5" y="75.5" width="88" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="QSt-wL-4Ky"/>
-                                    <constraint firstAttribute="width" constant="95" id="aea-8k-acB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="w7s-he-ovs">
-                                <rect key="frame" x="68" y="132" width="240" height="515"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="w7s-he-ovs">
+                                <rect key="frame" x="68" y="126.5" width="240" height="520.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="270" verticalCompressionResistancePriority="630" image="MRFinal RolesMafia" translatesAutoresizingMaskIntoConstraints="NO" id="naG-Hl-V7v">
-                                        <rect key="frame" x="37.5" y="0.0" width="165" height="247.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="naG-Hl-V7v" secondAttribute="height" multiplier="1:1" id="OfX-9j-Jxk"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="200" verticalCompressionResistancePriority="820" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xlo-Nf-Uc1">
-                                        <rect key="frame" x="0.0" y="267.5" width="240" height="247.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="200" verticalCompressionResistancePriority="820" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xlo-Nf-Uc1">
+                                        <rect key="frame" x="0.0" y="260" width="240" height="260.5"/>
                                         <string key="text">The POLICE's duty is to investigate the criminals of his or her town. At night, the POLICE indicates to the MODERATOR who he wants to suspect. If the POLICE has correctly identitifed the MAFIA, the MODERATOR will notify the POLICE with a nod. I f the POLICE has NOT identified the MAFIA, the MODERATOR will notify the POLICE with a shake of the head. During the day, the POLICE will use the information gathered to sway the public opinion to hopefully kill the MAFIA.</string>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="pIO-NE-qqk"/>
+                                    <constraint firstItem="naG-Hl-V7v" firstAttribute="width" secondItem="w7s-he-ovs" secondAttribute="width" id="yi2-CP-gOx"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -988,18 +988,17 @@ Swipe Left to learn more!</string>
                             <constraint firstItem="cR9-M8-vQY" firstAttribute="leading" secondItem="a6M-h0-mDJ" secondAttribute="leading" id="8a1-wN-LZV"/>
                             <constraint firstItem="pnF-cF-eAH" firstAttribute="top" secondItem="8Ab-DE-7Rj" secondAttribute="bottom" constant="10" id="EEG-wr-Wf8"/>
                             <constraint firstItem="8Ab-DE-7Rj" firstAttribute="top" secondItem="qQi-ex-vZY" secondAttribute="bottom" constant="20" id="G01-Lc-N26"/>
-                            <constraint firstItem="O5u-WA-Nth" firstAttribute="top" secondItem="w7s-he-ovs" secondAttribute="bottom" constant="20" id="GHW-Qa-NYg"/>
                             <constraint firstItem="Lof-83-5WX" firstAttribute="centerX" secondItem="a6M-h0-mDJ" secondAttribute="centerX" id="IgH-Oq-Fph"/>
                             <constraint firstItem="8Ab-DE-7Rj" firstAttribute="centerX" secondItem="a6M-h0-mDJ" secondAttribute="centerX" id="N9w-NH-VP8"/>
                             <constraint firstItem="pnF-cF-eAH" firstAttribute="centerX" secondItem="a6M-h0-mDJ" secondAttribute="centerX" id="OVA-4f-jvS"/>
                             <constraint firstItem="O5u-WA-Nth" firstAttribute="top" secondItem="cR9-M8-vQY" secondAttribute="bottom" id="TSD-XX-6i8"/>
                             <constraint firstItem="cR9-M8-vQY" firstAttribute="top" secondItem="a6M-h0-mDJ" secondAttribute="top" id="YAc-A6-Ndb"/>
                             <constraint firstItem="Lof-83-5WX" firstAttribute="top" secondItem="pnF-cF-eAH" secondAttribute="bottom" constant="3" id="YvA-8H-d6O"/>
-                            <constraint firstItem="w7s-he-ovs" firstAttribute="width" secondItem="Lof-83-5WX" secondAttribute="width" id="ZhF-ZK-DrU"/>
                             <constraint firstItem="w7s-he-ovs" firstAttribute="centerX" secondItem="a6M-h0-mDJ" secondAttribute="centerX" id="fok-e9-0uo"/>
                             <constraint firstItem="w7s-he-ovs" firstAttribute="top" secondItem="Lof-83-5WX" secondAttribute="bottom" constant="20" id="hgL-AW-4hL"/>
                             <constraint firstItem="a81-b6-vzR" firstAttribute="leading" secondItem="a6M-h0-mDJ" secondAttribute="leadingMargin" id="vCu-7G-1El"/>
                             <constraint firstItem="8Ab-DE-7Rj" firstAttribute="centerY" secondItem="a81-b6-vzR" secondAttribute="centerY" id="yuW-bU-xOE"/>
+                            <constraint firstItem="O5u-WA-Nth" firstAttribute="top" relation="greaterThanOrEqual" secondItem="w7s-he-ovs" secondAttribute="bottom" constant="20" id="zP7-mO-kke"/>
                         </constraints>
                     </view>
                     <connections>
@@ -2831,7 +2830,7 @@ night and day cycles until the citizens of mafia have won</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sxf-LF-4r1">
                                 <rect key="frame" x="0.0" y="160" width="375" height="507"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="186-Vg-S8q">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="186-Vg-S8q">
                                         <rect key="frame" x="20" y="20" width="335" height="467"/>
                                         <string key="text">Once an end game scenario has 
 been achieved, the app will reveal 
@@ -3106,7 +3105,6 @@ The end..."</string>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvT-Rm-h9c">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="gPf-Tq-rxY"/>
                                             <constraint firstAttribute="height" constant="60" id="gtI-Nc-dgM"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
@@ -3120,7 +3118,6 @@ The end..."</string>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pr-Fv-ppd">
                                         <rect key="frame" x="0.0" y="80" width="200" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="B3F-35-u2E"/>
                                             <constraint firstAttribute="height" constant="60" id="CTA-gA-ln0"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
@@ -3135,7 +3132,6 @@ The end..."</string>
                                         <rect key="frame" x="0.0" y="160" width="200" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="3Il-KF-TN6"/>
-                                            <constraint firstAttribute="width" constant="200" id="REO-tg-KGq"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
                                         <state key="normal" title="OPTIONS" backgroundImage="MRGeneralButton">
@@ -3148,7 +3144,6 @@ The end..."</string>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxy-zi-T1X">
                                         <rect key="frame" x="0.0" y="240" width="200" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="pVr-VR-4Mh"/>
                                             <constraint firstAttribute="height" constant="60" id="zOe-5B-AI7"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
@@ -3160,6 +3155,9 @@ The end..."</string>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="fMp-T3-8kh"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -3324,10 +3322,9 @@ The end..."</string>
                                     <action selector="pauseBtnPressed:" destination="3B4-aq-i8L" eventType="touchUpInside" id="8kh-Fc-kii"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D21-FT-HGD">
-                                <rect key="frame" x="55" y="154" width="266" height="100"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D21-FT-HGD">
+                                <rect key="frame" x="93.5" y="154" width="189" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="266" id="NeY-ts-bmC"/>
                                     <constraint firstAttribute="height" constant="100" id="aig-LE-Jp0"/>
                                 </constraints>
                                 <string key="text">Number
@@ -3364,7 +3361,7 @@ of Players</string>
                             <constraint firstItem="DcU-de-Uof" firstAttribute="top" secondItem="L00-qA-e7P" secondAttribute="bottom" constant="20" id="PAF-Du-zCF"/>
                             <constraint firstItem="DcU-de-Uof" firstAttribute="centerY" secondItem="Z5j-mC-FZg" secondAttribute="centerY" id="PmP-kr-5SQ"/>
                             <constraint firstItem="DcU-de-Uof" firstAttribute="centerX" secondItem="03N-eO-Gb2" secondAttribute="centerX" id="QBt-qE-8hB"/>
-                            <constraint firstItem="ClL-mv-6MZ" firstAttribute="leading" secondItem="03N-eO-Gb2" secondAttribute="leading" constant="40" id="Tgf-9b-ujc"/>
+                            <constraint firstItem="ClL-mv-6MZ" firstAttribute="leading" relation="lessThanOrEqual" secondItem="03N-eO-Gb2" secondAttribute="leading" constant="40" id="Tgf-9b-ujc"/>
                             <constraint firstItem="vtC-Cg-A6j" firstAttribute="top" secondItem="D21-FT-HGD" secondAttribute="bottom" constant="30" id="VUo-7C-qMo"/>
                             <constraint firstItem="XKJ-8A-6CI" firstAttribute="top" secondItem="DcU-de-Uof" secondAttribute="bottom" constant="20" id="Yvc-s9-1a5"/>
                             <constraint firstItem="UFJ-cA-t4K" firstAttribute="top" secondItem="wah-ju-OK5" secondAttribute="bottom" id="d0c-8X-bLQ"/>
@@ -3375,7 +3372,7 @@ of Players</string>
                             <constraint firstAttribute="trailing" secondItem="wah-ju-OK5" secondAttribute="trailing" id="joB-Dg-h4Z"/>
                             <constraint firstItem="XKJ-8A-6CI" firstAttribute="centerX" secondItem="03N-eO-Gb2" secondAttribute="centerX" id="kBz-Sx-OKR"/>
                             <constraint firstItem="ClL-mv-6MZ" firstAttribute="top" secondItem="vtC-Cg-A6j" secondAttribute="bottom" constant="10" id="lfX-PV-X8W"/>
-                            <constraint firstAttribute="trailing" secondItem="ClL-mv-6MZ" secondAttribute="trailing" constant="40" id="ry8-Xw-o0u"/>
+                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ClL-mv-6MZ" secondAttribute="trailing" constant="40" id="ry8-Xw-o0u"/>
                             <constraint firstItem="p0m-tX-ykc" firstAttribute="trailing" secondItem="03N-eO-Gb2" secondAttribute="trailingMargin" id="vi2-xt-dwd"/>
                         </constraints>
                     </view>
@@ -3660,9 +3657,8 @@ of Players</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0r9-L6-Ued">
-                                <rect key="frame" x="33" y="590" width="100" height="35"/>
+                                <rect key="frame" x="33" y="590" width="75" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="AtG-eE-wT6"/>
                                     <constraint firstAttribute="height" constant="35" id="cDa-iX-9jO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Kefa-Bold" family="Kefa" pointSize="45"/>
@@ -3898,24 +3894,17 @@ of Players</string>
                                     <action selector="pauseBtnPressed:" destination="MAm-3Z-Idg" eventType="touchUpInside" id="c4s-hf-CW6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STORY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsO-4H-IUz">
-                                <rect key="frame" x="88" y="40" width="200" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STORY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsO-4H-IUz">
+                                <rect key="frame" x="113.5" y="40" width="149.5" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="QrW-v6-5PP"/>
                                     <constraint firstAttribute="height" constant="45" id="qRA-yi-eEm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Kefa-Bold" family="Kefa" pointSize="45"/>
                                 <color key="textColor" red="0.57095879316329956" green="0.062791772186756134" blue="0.0014788985718041658" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twh-X9-WTE">
-                                <rect key="frame" x="0.0" y="531" width="375" height="135"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="portraitFiller" translatesAutoresizingMaskIntoConstraints="NO" id="EXB-kT-b0t">
-                                        <rect key="frame" x="0.0" y="0.0" width="90" height="136"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twh-X9-WTE">
+                                <rect key="frame" x="0.0" y="532" width="375" height="135"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="135" id="3tH-6v-eoY"/>
                                 </constraints>
@@ -3942,10 +3931,10 @@ of Players</string>
                             <constraint firstItem="xtC-lB-Ka1" firstAttribute="top" secondItem="wzt-Dq-xme" secondAttribute="bottom" id="FyQ-qW-0UL"/>
                             <constraint firstItem="09D-aU-LRa" firstAttribute="top" secondItem="pUr-b2-F1F" secondAttribute="bottom" constant="10" id="I4G-wf-NjB"/>
                             <constraint firstItem="AsO-4H-IUz" firstAttribute="centerY" secondItem="7nA-ad-vvF" secondAttribute="centerY" id="NsX-18-Wej"/>
+                            <constraint firstItem="xtC-lB-Ka1" firstAttribute="top" secondItem="Twh-X9-WTE" secondAttribute="bottom" id="Psr-mL-EAl"/>
                             <constraint firstItem="Twh-X9-WTE" firstAttribute="top" secondItem="09D-aU-LRa" secondAttribute="bottom" constant="15" id="VGg-kd-ql3"/>
                             <constraint firstItem="AsO-4H-IUz" firstAttribute="top" secondItem="Uxu-lI-nfT" secondAttribute="bottom" constant="20" id="WgP-bG-lUc"/>
-                            <constraint firstItem="xtC-lB-Ka1" firstAttribute="top" secondItem="Twh-X9-WTE" secondAttribute="bottom" id="Xu4-HC-CSD"/>
-                            <constraint firstAttribute="trailing" secondItem="Twh-X9-WTE" secondAttribute="trailing" id="c1G-sf-Yed"/>
+                            <constraint firstAttribute="trailing" secondItem="Twh-X9-WTE" secondAttribute="trailing" id="aHt-3P-eW8"/>
                             <constraint firstItem="wzt-Dq-xme" firstAttribute="leading" secondItem="oFQ-jJ-QIM" secondAttribute="leading" id="cKc-vh-Jse"/>
                             <constraint firstItem="AsO-4H-IUz" firstAttribute="centerX" secondItem="oFQ-jJ-QIM" secondAttribute="centerX" id="cuJ-D4-poR"/>
                             <constraint firstAttribute="trailing" secondItem="wzt-Dq-xme" secondAttribute="trailing" id="dmD-ie-bGI"/>
@@ -3996,11 +3985,10 @@ of Players</string>
                                 <color key="textColor" red="0.53297722339999998" green="0.13033376629999999" blue="0.066634103659999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRESS ANYWHERE TO CONTINUE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvC-bK-5G0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRESS ANYWHERE TO CONTINUE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvC-bK-5G0">
                                 <rect key="frame" x="72" y="645" width="232" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17.5" id="puS-iH-Ohk"/>
-                                    <constraint firstAttribute="width" constant="232" id="r3O-UM-Hy2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -4051,10 +4039,9 @@ of Players</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MRGeneralBg" translatesAutoresizingMaskIntoConstraints="NO" id="rg9-Ca-hH8">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOOSE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="9A4-1K-mif">
-                                <rect key="frame" x="98" y="40" width="180" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOOSE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9A4-1K-mif">
+                                <rect key="frame" x="116.5" y="40" width="143" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="1Jb-w7-MfE"/>
                                     <constraint firstAttribute="height" constant="45" id="RVz-fs-sru"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Kefa-Bold" family="Kefa" pointSize="35"/>
@@ -4229,11 +4216,10 @@ of Players</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRESS ANYWHERE TO CONTINUE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Yx-cc-pz3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRESS ANYWHERE TO CONTINUE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Yx-cc-pz3">
                                 <rect key="frame" x="72" y="645" width="232" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17.5" id="eDK-Xr-p4h"/>
-                                    <constraint firstAttribute="width" constant="232" id="p5t-YH-P5E"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -4330,11 +4316,10 @@ of Players</string>
                                     <action selector="pauseBtnPressed:" destination="e96-xE-FgR" eventType="touchUpInside" id="28p-OY-lM6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROLES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbt-Yj-YOt">
-                                <rect key="frame" x="88" y="40" width="200" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROLES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbt-Yj-YOt">
+                                <rect key="frame" x="94.5" y="40" width="187" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="NYc-sq-rcW"/>
-                                    <constraint firstAttribute="width" constant="200" id="imu-bC-u5O"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Kefa-Bold" family="Kefa" pointSize="58"/>
                                 <color key="textColor" red="0.67940989847715738" green="0.078435444885407352" blue="0.0019291702925212861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -6626,12 +6611,12 @@ be a jerk ;)</string>
     <inferredMetricsTieBreakers>
         <segue reference="nFz-PG-5cK"/>
         <segue reference="Xxf-v6-6cj"/>
-        <segue reference="Y5H-lc-M15"/>
+        <segue reference="kkV-ey-5fO"/>
         <segue reference="oaV-mC-QWl"/>
-        <segue reference="wNd-ep-vfX"/>
+        <segue reference="dhy-OQ-mIy"/>
         <segue reference="XfW-qg-n7e"/>
         <segue reference="I53-ci-Nq8"/>
         <segue reference="xw3-iS-S4C"/>
-        <segue reference="RsP-pv-hyJ"/>
+        <segue reference="Jpp-ob-yFi"/>
     </inferredMetricsTieBreakers>
 </document>
