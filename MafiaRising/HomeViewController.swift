@@ -97,9 +97,19 @@ class HomeViewController: UIViewController {
             storyIntroTrackNum = 0
             dayStoryTrackNum = 0
             tribunalTrackNum = 0
-            docSelected = -1
-            mafiaSelected = -1
             narrationStarted = false
+            
+            // Load Saved Selections
+            if let mafiaSelection = UserDefaults.standard.object(forKey: "mafiaSelection") as? Int {
+                mafiaSelected = mafiaSelection
+            }
+            if let doctorSelection = UserDefaults.standard.object(forKey: "doctorSelection") as? Int {
+                docSelected = doctorSelection
+            }
+            if let mostRecentMurder = UserDefaults.standard.object(forKey: "mostRecentMurder") as? Int {
+                recentlyMurdered = mostRecentMurder
+            }
+            
             if !isDay {
                 part = 1
                 performSegue(withIdentifier: "ContinueToNight", sender: savedMasterArray)

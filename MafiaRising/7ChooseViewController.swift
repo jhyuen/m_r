@@ -335,6 +335,9 @@ class _ChooseViewController: UIViewController {
                         savedMasterArray = masterPlayerArray
                         let data = NSKeyedArchiver.archivedData(withRootObject: savedMasterArray)
                         UserDefaults.standard.set(data, forKey: "savedMasterArray")
+                        // Save selection choices
+                        UserDefaults.standard.set(mafiaSelected, forKey: "mafiaSelection")
+                        UserDefaults.standard.set(docSelected, forKey: "doctorSelection")
                         narrationPlayer.stop()
                         performSegue(withIdentifier: "ChooseToDay", sender: masterPlayerArray)
                     }
@@ -388,6 +391,9 @@ class _ChooseViewController: UIViewController {
                         savedMasterArray = masterPlayerArray
                         let data = NSKeyedArchiver.archivedData(withRootObject: savedMasterArray)
                         UserDefaults.standard.set(data, forKey: "savedMasterArray")
+                        // Save selection choices
+                        UserDefaults.standard.set(mafiaSelected, forKey: "mafiaSelection")
+                        UserDefaults.standard.set(docSelected, forKey: "doctorSelection")
                         narrationPlayer.stop()
                         performSegue(withIdentifier: "ChooseToDay", sender: masterPlayerArray)
                     }
@@ -440,6 +446,9 @@ class _ChooseViewController: UIViewController {
                     savedMasterArray = masterPlayerArray
                     let data = NSKeyedArchiver.archivedData(withRootObject: savedMasterArray)
                     UserDefaults.standard.set(data, forKey: "savedMasterArray")
+                    // Save selection choices
+                    UserDefaults.standard.set(mafiaSelected, forKey: "mafiaSelection")
+                    UserDefaults.standard.set(docSelected, forKey: "doctorSelection")
                     narrationPlayer.stop()
                     performSegue(withIdentifier: "ChooseToDay", sender: masterPlayerArray)
                 }
@@ -484,6 +493,8 @@ class _ChooseViewController: UIViewController {
                         }
                     }
                     narrationPlayer.stop()
+                    // Save selection choices
+                    UserDefaults.standard.set(recentlyMurdered, forKey: "mostRecentMurder")
                     performSegue(withIdentifier: "ChooseToStory", sender: masterPlayerArray)
                 }
             }
