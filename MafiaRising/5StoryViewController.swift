@@ -266,7 +266,7 @@ class _StoryViewController: UIViewController, AVAudioPlayerDelegate {
                 narrationPlayer.stop()
                 print(tribunalStoryOrder[0])
                 playNarrationQueue(trackTitle: tribunalStoryOrder[0])
-                dayStoryTrackNum = 1
+                tribunalTrackNum = 1
             } else if cycle >= 1 && part > 0 {
                 // Night recap
                 narrationPlayer.stop()
