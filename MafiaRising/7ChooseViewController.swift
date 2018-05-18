@@ -186,6 +186,13 @@ class _ChooseViewController: UIViewController {
             }
             // updateSounds(arrayType: tribunalSoundEffectsArray)
         }
+        
+        for player in 0..<masterPlayerArray.count {
+            if !(masterPlayerArray[player].isDead) && (masterPlayerArray[player].isEnabled == true) {
+                masterPlayerArray[player].pictureView.layer.borderWidth = 2
+                masterPlayerArray[player].pictureView.layer.borderColor = UIColor.black.cgColor
+            }
+        }
     }
     
     // Pause Button
@@ -676,7 +683,11 @@ class _ChooseViewController: UIViewController {
     
     func disableAll() {
         for player in masterPlayerArray {
-            player.disablePlayer()
+            if player.isDead {
+                player.murder()
+            } else {
+                player.disablePlayer()
+            }
         }
     }
     
@@ -685,9 +696,18 @@ class _ChooseViewController: UIViewController {
     func removeBorderAndIndicator(reset: Bool) {
         if selectedPlayerIndex >= 0 {
             // Has effect of untinting the currently selected button
-            masterPlayerArray[selectedPlayerIndex].pictureView.layer.borderWidth = 2
-            masterPlayerArray[selectedPlayerIndex].pictureView.layer.borderColor = UIColor.black.cgColor
+            
+            //masterPlayerArray[selectedPlayerIndex].pictureView.layer.borderWidth = 2
+            //masterPlayerArray[selectedPlayerIndex].pictureView.layer.borderColor = UIColor.black.cgColor
 
+            // Hopefully this works
+            for player in 0..<masterPlayerArray.count {
+                if !(masterPlayerArray[player].isDead) && (masterPlayerArray[player].isEnabled == true) {
+                    masterPlayerArray[player].pictureView.layer.borderWidth = 2
+                    masterPlayerArray[player].pictureView.layer.borderColor = UIColor.black.cgColor
+                }
+            }
+            
             let role = masterPlayerArray[selectedPlayerIndex].role
             if  role == "MAFIA" {
                 masterPlayerArray[selectedPlayerIndex].pictureView.viewWithTag(30)?.removeFromSuperview()
@@ -776,12 +796,11 @@ extension _ChooseViewController: UICollectionViewDelegate, UICollectionViewDataS
         // fits imageView to bounds of button
         imgView.frame = playerCell.playerBtnView.bounds
         
-        // add border !!!
-        imgView.layer.borderWidth = 2
-        imgView.layer.borderColor = UIColor.black.cgColor
+        // Don't put default black border here or else it will overwrite selection borders
         
         // tag is 1 greater than index to avoid default tag
         playerCell.playerBtnView.tag = indexPath.row + 1
+        
         if !masterPlayerArray[indexPath.row].isDead {
             playerCell.playerBtnView.addTarget(self, action: #selector(selectPlayer(sender:)), for: .touchUpInside)
         } else {

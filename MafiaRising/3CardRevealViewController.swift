@@ -312,7 +312,36 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
         }
     }
     
-    // Process picture
+    // Process Picture - iOS11 version
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        
+        if let error = error {
+            print(error.localizedDescription)
+            return
+        }
+        
+        if let dataImage = photo.fileDataRepresentation() {
+            
+            // Old views hidden
+            cameraView.isHidden = true
+            cameraBtn.isHidden = true
+            preNumLbl.isHidden = true
+            
+            // New views unhidden
+            playerImage.image = UIImage(data: dataImage)
+            playerImage.isHidden = false
+            roleLbl.isHidden = false
+            numberLbl.isHidden = false
+            repeatPictureBtn.isHidden = false
+            proceedBtn.isHidden = false
+            
+            // may delete if stupid
+            portraitHelper.isHidden = true
+        }
+    }
+    
+    /*
+    // Process picture - old version
     func photoOutput(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?, previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
         
         if let error = error {
@@ -344,7 +373,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
             
         }
     
-    }
+    }*/
     
     // Update number label with current player
     func updateNumberLbl() {
