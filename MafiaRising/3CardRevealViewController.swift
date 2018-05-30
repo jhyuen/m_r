@@ -122,6 +122,12 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        if optionsParameters.enableDirections && !narrationStarted {
+            print("S_SU_03")
+            playNarration(trackTitle: "S_SU_03")
+            narrationStarted = false
+        }
       /*
         // test previous segue and global variables
         print("\(masterIndexArray)")
@@ -306,6 +312,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
             
             // Begin narration after 1 second
             if !narrationStarted {
+                //narrationPlayer.stop()
                 print("S_SU_04")
                 playNarration(trackTitle: "S_SU_04")
             }

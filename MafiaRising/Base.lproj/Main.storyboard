@@ -1367,7 +1367,7 @@ close their eyes</string>
                                         <rect key="frame" x="35" y="30" width="305" height="427"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal ScriptC04" translatesAutoresizingMaskIntoConstraints="NO" id="owT-9f-1He">
-                                                <rect key="frame" x="65" y="0.0" width="175" height="249.5"/>
+                                                <rect key="frame" x="64.5" y="0.0" width="176" height="249.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="owT-9f-1He" secondAttribute="height" multiplier="166:235" id="0O4-Ue-GOK"/>
                                                 </constraints>
@@ -4683,13 +4683,13 @@ some information</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal TutorialC2" translatesAutoresizingMaskIntoConstraints="NO" id="nMM-pW-SwQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="305" height="431"/>
+                                                <rect key="frame" x="49" y="0.0" width="207" height="292.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="nMM-pW-SwQ" secondAttribute="height" multiplier="166:235" id="hBg-CJ-iOw"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ezl-0W-k3R" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="3.5" y="456" width="298.5" height="1"/>
+                                                <rect key="frame" x="3.5" y="317.5" width="298.5" height="139.5"/>
                                                 <string key="text">Enter the number 
 of Players in 
 your party</string>
@@ -4765,13 +4765,13 @@ your party</string>
                                         <rect key="frame" x="35" y="30" width="305" height="457"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="280" image="MRFinal TutorialC3" translatesAutoresizingMaskIntoConstraints="NO" id="8TN-oo-RlX">
-                                                <rect key="frame" x="1" y="0.0" width="303" height="429"/>
+                                                <rect key="frame" x="52.5" y="0.0" width="200" height="283.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="8TN-oo-RlX" secondAttribute="height" multiplier="166:235" id="jhA-sU-BJc"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="b2M-Vk-rSo" userLabel="Tell your party to close their eyes">
-                                                <rect key="frame" x="17.5" y="454" width="270" height="3"/>
+                                                <rect key="frame" x="17.5" y="308.5" width="270" height="148.5"/>
                                                 <string key="text">Use or don't use special
 Characters in your game
 
@@ -6266,8 +6266,8 @@ wrap up the game</string>
         <image name="MRFinal TutorialC10" width="160" height="230"/>
         <image name="MRFinal TutorialC11" width="166" height="235"/>
         <image name="MRFinal TutorialC12" width="166" height="236"/>
-        <image name="MRFinal TutorialC2" width="1242" height="2208"/>
-        <image name="MRFinal TutorialC3" width="1242" height="2208"/>
+        <image name="MRFinal TutorialC2" width="166" height="235"/>
+        <image name="MRFinal TutorialC3" width="166" height="235"/>
         <image name="MRFinal TutorialC4" width="166" height="235"/>
         <image name="MRFinal TutorialC5" width="166" height="235"/>
         <image name="MRFinal TutorialC6" width="166" height="235"/>
@@ -6287,9 +6287,9 @@ wrap up the game</string>
         <image name="portraitFiller" width="433" height="653"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DTs-jA-27W"/>
+        <segue reference="nFz-PG-5cK"/>
         <segue reference="Xxf-v6-6cj"/>
-        <segue reference="Y5H-lc-M15"/>
+        <segue reference="kkV-ey-5fO"/>
         <segue reference="oaV-mC-QWl"/>
         <segue reference="5oF-XY-W7M"/>
         <segue reference="XfW-qg-n7e"/>
