@@ -8,6 +8,7 @@
 
 import UIKit
 import  AVFoundation
+import SpriteKit
 
 // Sequence number of tutorial
 var tutorialProgress = 0;
@@ -180,5 +181,9 @@ class HomeViewController: UIViewController {
     // Similar to prepare for segue, necessary for unwinding segue
     @IBAction func unwindToHomeVC(segue: UIStoryboardSegue) {
         // May take action before segue occurs
+    }
+    
+    func newSmokeEmitter() -> SKEmitterNode? {
+        return SKEmitterNode(fileNamed: "SmokeParticle.sks")
     }
 }

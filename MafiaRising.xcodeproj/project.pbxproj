@@ -52,6 +52,8 @@
 		2B488F371ED3AFBC00A27479 /* RoleInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B488F361ED3AFBC00A27479 /* RoleInformationViewController.swift */; };
 		2B5CC8EF1F0C0496002A04B4 /* ChooseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5CC8EE1F0C0496002A04B4 /* ChooseCollectionViewController.swift */; };
 		2B5CC8F31F0C3483002A04B4 /* PlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5CC8F21F0C3483002A04B4 /* PlayerCollectionViewCell.swift */; };
+		2B6CDE4F20C0612B000D36E2 /* SmokeParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2B6CDE4E20C0612B000D36E2 /* SmokeParticle.sks */; };
+		2B6CDE5220C06990000D36E2 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6CDE5120C06990000D36E2 /* SpriteKit.framework */; };
 		2B764C641EF5C37F005BC32B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B764C631EF5C37F005BC32B /* Player.swift */; };
 		2B764D141EF9E9BC005BC32B /* SoundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B764D131EF9E9BC005BC32B /* SoundEffect.swift */; };
 		2BB18CE11EDFABE3005E8515 /* Script01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB18CE01EDFABE3005E8515 /* Script01ViewController.swift */; };
@@ -171,6 +173,8 @@
 		2B488F361ED3AFBC00A27479 /* RoleInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleInformationViewController.swift; sourceTree = "<group>"; };
 		2B5CC8EE1F0C0496002A04B4 /* ChooseCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseCollectionViewController.swift; sourceTree = "<group>"; };
 		2B5CC8F21F0C3483002A04B4 /* PlayerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCollectionViewCell.swift; sourceTree = "<group>"; };
+		2B6CDE4E20C0612B000D36E2 /* SmokeParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SmokeParticle.sks; sourceTree = "<group>"; };
+		2B6CDE5120C06990000D36E2 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		2B764C631EF5C37F005BC32B /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		2B764D131EF9E9BC005BC32B /* SoundEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundEffect.swift; sourceTree = "<group>"; };
 		2BB18CE01EDFABE3005E8515 /* Script01ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script01ViewController.swift; sourceTree = "<group>"; };
@@ -238,6 +242,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B6CDE5220C06990000D36E2 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +299,7 @@
 		2B488F071ED3669700A27479 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2B6CDE4E20C0612B000D36E2 /* SmokeParticle.sks */,
 				2B406E7B1EE896360099A0B8 /* CheckBox.swift */,
 				84CF2CD91EF05304008A7052 /* RoleImg.swift */,
 				84A3C3501EE9D19A00C802E6 /* Universal Functions.swift */,
@@ -422,6 +428,14 @@
 			name = Roles;
 			sourceTree = "<group>";
 		};
+		2B6CDE5020C06990000D36E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B6CDE5120C06990000D36E2 /* SpriteKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2BB18CE21EDFE220005E8515 /* InfoCards */ = {
 			isa = PBXGroup;
 			children = (
@@ -440,6 +454,7 @@
 				2BFEDE001EC4C2E600AB18BD /* MafiaRisingTests */,
 				2BFEDE0B1EC4C2E700AB18BD /* MafiaRisingUITests */,
 				2BFEDDEA1EC4C2E600AB18BD /* Products */,
+				2B6CDE5020C06990000D36E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -632,6 +647,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BFEDE1B1EC4C7CE00AB18BD /* Kefa.ttc in Resources */,
+				2B6CDE4F20C0612B000D36E2 /* SmokeParticle.sks in Resources */,
 				2BFEDDF71EC4C2E600AB18BD /* LaunchScreen.storyboard in Resources */,
 				2B280F001ED8859700EF6EE1 /* Manteka.ttf in Resources */,
 				2BFEDDF41EC4C2E600AB18BD /* Assets.xcassets in Resources */,
