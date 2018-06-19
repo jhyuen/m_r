@@ -64,8 +64,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gV-xb-wav">
-                                <rect key="frame" x="20" y="310.5" width="335" height="46.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gV-xb-wav">
+                                <rect key="frame" x="66.5" y="310.5" width="242.5" height="46.5"/>
                                 <string key="text">please turn up speaker
 volume for best experience</string>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
@@ -75,8 +75,8 @@ volume for best experience</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="5gV-xb-wav" secondAttribute="trailing" constant="20" id="2jN-wu-gbe"/>
-                            <constraint firstItem="5gV-xb-wav" firstAttribute="leading" secondItem="G2K-zc-WFr" secondAttribute="leading" constant="20" id="6Sk-FN-hOF"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5gV-xb-wav" secondAttribute="trailing" constant="20" id="2jN-wu-gbe"/>
+                            <constraint firstItem="5gV-xb-wav" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="G2K-zc-WFr" secondAttribute="leading" constant="20" id="6Sk-FN-hOF"/>
                             <constraint firstItem="5gV-xb-wav" firstAttribute="centerX" secondItem="G2K-zc-WFr" secondAttribute="centerX" id="h2x-tx-D3d"/>
                             <constraint firstItem="5gV-xb-wav" firstAttribute="centerY" secondItem="G2K-zc-WFr" secondAttribute="centerY" id="qLy-o2-5Lt"/>
                         </constraints>
@@ -898,7 +898,7 @@ Swipe Left to learn more!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSI-ea-wWy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-466" y="779"/>
+            <point key="canvasLocation" x="-466" y="955"/>
         </scene>
         <!--Role Information View Controller-->
         <scene sceneID="815-F5-kwT">
@@ -3655,10 +3655,10 @@ of Players</string>
                                 <color key="textColor" red="0.57095879319999998" green="0.062791772189999998" blue="0.0014788985720000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rLZ-fR-LaI">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rLZ-fR-LaI">
                                 <rect key="frame" x="16" y="95" width="343" height="457"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="MRDivider" translatesAutoresizingMaskIntoConstraints="NO" id="LOz-Ro-mHU">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MRDivider" translatesAutoresizingMaskIntoConstraints="NO" id="LOz-Ro-mHU">
                                         <rect key="frame" x="51.5" y="0.0" width="240" height="13"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="Y2v-KB-d9J"/>
@@ -3666,7 +3666,7 @@ of Players</string>
                                             <constraint firstAttribute="height" constant="13" id="oXY-sU-bFY"/>
                                         </constraints>
                                     </imageView>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="1" ambiguous="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7NJ-Bu-miy">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="1" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7NJ-Bu-miy">
                                         <rect key="frame" x="0.0" y="23" width="343" height="399.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="500" id="P8k-Fo-srL"/>
@@ -3695,7 +3695,7 @@ of Players</string>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zb-v7-ckI">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zb-v7-ckI">
                                         <rect key="frame" x="159.5" y="432.5" width="24" height="24.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="6Iu-ZC-nbO"/>
@@ -6295,6 +6295,6 @@ wrap up the game</string>
         <segue reference="SvW-si-1fZ"/>
         <segue reference="jGj-z5-JdE"/>
         <segue reference="xw3-iS-S4C"/>
-        <segue reference="0DV-6h-Xny"/>
+        <segue reference="RsP-pv-hyJ"/>
     </inferredMetricsTieBreakers>
 </document>
