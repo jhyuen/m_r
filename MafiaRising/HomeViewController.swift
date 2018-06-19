@@ -64,6 +64,9 @@ class HomeViewController: UIViewController {
     // New Game Button
     @IBAction func pushNewGame(_ sender: Any) {
         
+        // Play button click sound effect
+        playClick()
+        
         if !currentGameFinished {
             createContinueAlert(title: "Start new game?", message: "Your continue file will be overriden")
         } else {
@@ -76,8 +79,7 @@ class HomeViewController: UIViewController {
         UserDefaults.standard.set(isDay, forKey: "isDay")
         narrationStarted = false
            
-        // Play button click sound effect
-        playClick()
+        
             
         performSegue(withIdentifier: "HomeToPlayers", sender: self)
         }
