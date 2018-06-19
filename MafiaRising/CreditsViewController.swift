@@ -16,7 +16,7 @@ class CreditsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Set frame of ScrollView
-        creditScrollView.contentSize = CGSize(width: creditScrollView.frame.size.width, height: 1490)
+        creditScrollView.contentSize = CGSize(width: creditScrollView.frame.size.width, height: 1625)
         
         // Generate Content
         //let thanksLbl = UILabel()
