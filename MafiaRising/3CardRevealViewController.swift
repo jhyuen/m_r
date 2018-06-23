@@ -20,7 +20,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     @IBOutlet weak var repeatPictureBtn: UIButton!
     @IBOutlet weak var proceedBtn: UIButton!
     @IBOutlet weak var preNumLbl: UILabel!
-    @IBOutlet weak var bypassBtn: UIButton!
+    //@IBOutlet weak var bypassBtn: UIButton!
     
     // may delete if stupid
     @IBOutlet weak var portraitHelper: UIImageView!
@@ -49,7 +49,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bypassBtn.isHidden = false;
+        //bypassBtn.isHidden = false; // comment out for final product
         
         // Add Borders to camera and portrait view
         playerImage.layer.borderWidth = 3
@@ -462,7 +462,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
     }
     
  // !!! REMOVE FROM FINAL PRODUCT, FOR TESTING ONLY
-    @IBAction func bypassPressed(_ sender: Any) {
+    /*@IBAction func bypassPressed(_ sender: Any) {
         // Reset game status
         // Reset cycle
         conclusion = 0
@@ -510,7 +510,7 @@ class _CardRevealViewController: UIViewController, AVCapturePhotoCaptureDelegate
             }
         }
         performSegue(withIdentifier: "CardsToReady", sender: masterPlayerArray)
-    }
+    }*/
     
     func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage? {
         
