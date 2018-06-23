@@ -23,7 +23,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string></string>
+	<string>Mafia Rising requires access to the camera to generate player profiles</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Kefa.ttc</string>
