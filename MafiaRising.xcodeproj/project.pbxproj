@@ -596,7 +596,7 @@
 				TargetAttributes = {
 					2BFEDDE81EC4C2E600AB18BD = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = UV9N6MFHJM;
+						DevelopmentTeam = 9B8N77PSA8;
 						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -607,14 +607,14 @@
 					};
 					2BFEDDFC1EC4C2E600AB18BD = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = UV9N6MFHJM;
+						DevelopmentTeam = 9B8N77PSA8;
 						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2BFEDDE81EC4C2E600AB18BD;
 					};
 					2BFEDE071EC4C2E600AB18BD = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = UV9N6MFHJM;
+						DevelopmentTeam = 9B8N77PSA8;
 						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2BFEDDE81EC4C2E600AB18BD;
@@ -852,11 +852,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: josephnewbox@gmail.com (6V4R887BBX)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = UV9N6MFHJM;
+				DEVELOPMENT_TEAM = 9B8N77PSA8;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -913,11 +913,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: josephnewbox@gmail.com (6V4R887BBX)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = UV9N6MFHJM;
+				DEVELOPMENT_TEAM = 9B8N77PSA8;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -941,11 +941,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = UV9N6MFHJM;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9B8N77PSA8;
 				INFOPLIST_FILE = MafiaRising/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = illum.MafiaRising;
+				PRODUCT_BUNDLE_IDENTIFIER = com.illum.MafiaRising;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -957,11 +959,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = UV9N6MFHJM;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9B8N77PSA8;
 				INFOPLIST_FILE = MafiaRising/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = illum.MafiaRising;
+				PRODUCT_BUNDLE_IDENTIFIER = com.illum.MafiaRising;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
