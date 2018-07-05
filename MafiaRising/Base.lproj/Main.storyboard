@@ -3642,10 +3642,10 @@ of Players</string>
                                 <color key="textColor" red="0.57095879319999998" green="0.062791772189999998" blue="0.0014788985720000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rLZ-fR-LaI">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rLZ-fR-LaI">
                                 <rect key="frame" x="16" y="95" width="343" height="457"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="MRDivider" translatesAutoresizingMaskIntoConstraints="NO" id="LOz-Ro-mHU">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MRDivider" translatesAutoresizingMaskIntoConstraints="NO" id="LOz-Ro-mHU">
                                         <rect key="frame" x="51.5" y="0.0" width="240" height="13"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="Y2v-KB-d9J"/>
@@ -3653,7 +3653,7 @@ of Players</string>
                                             <constraint firstAttribute="height" constant="13" id="oXY-sU-bFY"/>
                                         </constraints>
                                     </imageView>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="1" ambiguous="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7NJ-Bu-miy">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="1" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7NJ-Bu-miy">
                                         <rect key="frame" x="0.0" y="23" width="343" height="399.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="500" id="P8k-Fo-srL"/>
@@ -3682,7 +3682,7 @@ of Players</string>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zb-v7-ckI">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zb-v7-ckI">
                                         <rect key="frame" x="159.5" y="432.5" width="24" height="24.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="6Iu-ZC-nbO"/>
@@ -6274,14 +6274,15 @@ wrap up the game</string>
         <image name="portraitFiller" width="433" height="653"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="RLX-xd-W8t"/>
         <segue reference="nFz-PG-5cK"/>
         <segue reference="YkS-pf-4aO"/>
         <segue reference="kkV-ey-5fO"/>
-        <segue reference="oaV-mC-QWl"/>
+        <segue reference="nwm-Dp-aeN"/>
         <segue reference="5oF-XY-W7M"/>
         <segue reference="SvW-si-1fZ"/>
         <segue reference="jGj-z5-JdE"/>
-        <segue reference="xw3-iS-S4C"/>
+        <segue reference="bB7-vs-abW"/>
         <segue reference="Jpp-ob-yFi"/>
     </inferredMetricsTieBreakers>
 </document>

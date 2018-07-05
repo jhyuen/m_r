@@ -51,7 +51,7 @@ class RoleInformationViewController: UIViewController {
             roleCharacter.text = "MODERATOR"
             roleAllegiance.text = "NEUTRAL"
             roleImg.image = UIImage(named: moderatorImg)
-            roleDescription.text = "The MODERATOR creates an immersive story for the players to play in. By interacting with various characters in the game, the MODERATOR controls the game's prograssion. Also, the MODERATOR may add sound effects to dramatize the game experience."
+            roleDescription.text = "The MODERATOR creates an immersive story for the players to play in. By interacting with various characters in the game, the MODERATOR controls the game's progression. Also, the MODERATOR may add sound effects to dramatize the game experience."
             
         case 1:
             
@@ -79,7 +79,7 @@ class RoleInformationViewController: UIViewController {
             roleCharacter.text = "POLICE"
             roleAllegiance.text = "PRO-TOWN"
             roleImg.image = UIImage(named: policeImg)
-            roleDescription.text = "The POLICE's duty is to investigate the criminals of his or her town. At night, the POLICE indicates to the MODERATOR who he wants to suspect. If the POLICE has correctly identitifed the MAFIA, the MODERATOR will notify the POLICE with a nod. I f the POLICE has NOT identified the MAFIA, the MODERATOR will notify the POLICE with a shake of the head. During the day, the POLICE will use the information gathered to sway the public opinion to hopefully kill the MAFIA."
+            roleDescription.text = "The POLICE's duty is to investigate the criminals of his or her town. At night, the POLICE indicates to the MODERATOR whom he wants to suspect. If the POLICE has correctly identitifed the MAFIA, the MODERATOR will notify the POLICE with a nod. If the POLICE has NOT identified the MAFIA, the MODERATOR will notify the POLICE with a shake of the head. During the day, the POLICE will use the information gathered to sway the public opinion to hopefully kill the MAFIA."
             
         default:
             
