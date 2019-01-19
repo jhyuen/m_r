@@ -28,6 +28,10 @@ class ScriptPageVC: UIPageViewController, UIPageViewControllerDelegate, UIPageVi
     var currentIndex = 0
     let slideOffset: CGFloat = 5
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = self
@@ -48,12 +52,11 @@ class ScriptPageVC: UIPageViewController, UIPageViewControllerDelegate, UIPageVi
         setViewControllers([firstVC], direction: .forward, animated: false, completion: nil)
         currentIndex = scriptProgress
         
-        UIApplication.shared.statusBarStyle = .lightContent
+        setNeedsStatusBarAppearanceUpdate()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
     }
     
     private func VCInstance (name:String) -> UIViewController {

@@ -32,7 +32,7 @@ class _EndViewController: UIViewController, UIScrollViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
+        setNeedsStatusBarAppearanceUpdate()
         
         // don't worry about this recognizer code... I was trying
         // to make an image view a button... didn't exactly work the way I wanted

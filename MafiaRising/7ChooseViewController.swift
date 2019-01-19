@@ -104,7 +104,7 @@ class _ChooseViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
+        setNeedsStatusBarAppearanceUpdate() 
         
         print("FTM: \(firstTimeMafia)")
         // Determines the number of roles in the game, MUST BE UPDATED IF ROLES ARE ADDED

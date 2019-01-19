@@ -19,6 +19,10 @@ class _NightViewController: UIViewController {
     // Transfer Array
     var masterPlayerArray: Array<Player> = []
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let trackTitle = "Night Transition"
@@ -41,8 +45,9 @@ class _NightViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        UIApplication.shared.statusBarStyle = .lightContent
-
+        //UIApplication.shared.statusBarStyle = .lightContent
+        setNeedsStatusBarAppearanceUpdate() 
+        
         print("NightViewController")
         print("Cycle is \(cycle)")
         print("Part is \(part)")

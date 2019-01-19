@@ -30,6 +30,10 @@ class _VictoryViewController: UIViewController {
     // Transfer Array
     var masterPlayerArray: Array<Player> = []
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -48,8 +52,6 @@ class _VictoryViewController: UIViewController {
             winnerImage.image = UIImage(named: "MRFinal CitizensWinC1")
             dot.image = UIImage(named: "MRFinal CitzensWinC2")
             btmLbl.textColor = blackColor
-            
-            UIApplication.shared.statusBarStyle =  UIStatusBarStyle.default
 
             /*
             musicPlayer.stop()
@@ -83,7 +85,7 @@ class _VictoryViewController: UIViewController {
             dot.image = UIImage(named: "MRFinal MafiaWinC2")
             btmLbl.textColor = whiteColor
             
-            UIApplication.shared.statusBarStyle = .lightContent
+            setNeedsStatusBarAppearanceUpdate()
             /*
             // Play background music
             let trackTitle = "Mafia Win"
