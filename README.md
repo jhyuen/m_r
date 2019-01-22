@@ -1,12 +1,7 @@
 # README #
-
 ## Mafia Rising V1.0 ##
 
-### What is this repository for? ###
-
-* Storing versions of Mafia Rising for iOS devices.
-
-### What is Mafia Rising? ###
+### Description ###
 Mafia Rising is an innovative and immersive app for those who love role-playing party games that powerfully enhances the game atmosphere with thousands of randomly generated stories, music, and visuals. Are you a fan of the party game "Mafia"? Relive the suspense and intrigue of discovering the mafia killers in your group! Designed for flexibility, the app allows the moderator to customize many options to draw their listeners into the story and fire up animated discussions. 
 
 Even if you are new to "Mafia" or party games, you will love using this app! The easy-to-use button layout and step-by-step audio directions guide you through a typical game session. All you need is 5 people or more (but more is better!) to get this suspenseful game underway. Let the games begin...!!!
