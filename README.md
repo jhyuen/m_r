@@ -1,6 +1,6 @@
 # README #
 
-## Mafia Rising V1.0##
+## Mafia Rising V1.0 ##
 
 ### What is this repository for? ###
 
