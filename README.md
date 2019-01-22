@@ -19,7 +19,7 @@ Once the project is loaded into Xcode, hit the run button to boot up a device em
 ### How do I download Mafia Rising on the app store? ###
 [Download Mafia Rising iOS here!](https://itunes.apple.com/us/app/mafia-rising/id1402781106?ls=1&mt=8)
 
-### Who do I talk to? ###
+### Contact ###
 
 * Joseph Yuen @jhyuen
 * Illum @illumgroupbox@gmail.com
